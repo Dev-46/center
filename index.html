@@ -287,7 +287,7 @@
       top: 33.5em;
       left: 0;
       z-index: 111;
-      text-align: center;
+      text-align: left;
       font-size: 18px;
       font-weight: bold;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -335,12 +335,12 @@
     }
   </style>
   <div id="logo" class="logo">
-    <video style="display: none;" width="52" height="8" src="https://www.youtube.com/embed/dUW8KsJBuR8" title="🥳"
-      autoplay>
-      <source src="moneer.mp4" type="video/mp4">
-      <source src="moneer.ogg" type="video/ogg">
-    </video>
+
   </div>
+      <audio id="moneer" width="20" height="40">
+      <source src="moneer.mp3" type="audio/mpeg">
+      <source src="moneer.ogg" type="audio/ogg">
+      </audio>
   <div class="cube" id="cube">
     <div class="top"></div>
     <div class="pen1"></div>
@@ -367,6 +367,13 @@
   </div>
   <div class="footer">مع تحياتي / ابراهيم حسان</div>
   <script>
+    
+    let vid = document.getElementById("moneer");
+    vid.autoplay = true;
+    vid.loop = true;
+    vid.load();
+    vid.play();
+
     let d = new Date();
     let s = d.getSeconds();
     function arr(id, name, item1, item2, item3, item4, item5, item6, item7) {
@@ -450,6 +457,12 @@
       });
     }
     function show() {
+      
+    vid.autoplay = true;
+    vid.loop = true;
+    vid.load();
+    vid.play();
+
       arr(
         "fronts",
         "images",
