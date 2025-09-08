@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز تنمية القدرات</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+        :root {
+            --w: 3em;
+            --h: 3em;
+            --z: calc(var(--w)/2);
+            --f: .3em;
+            --sf: 4px;
+            --bk: rgb(253, 238, 238);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Noto Kufi Arabic", sans-serif;
+            border: none;
+            transition: .6s;
+            outline: none;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(239, 231, 231);
+            background-image: url('./exhibition/top.jpeg');
+            font-size: 105px;
+            overflow: hidden;
+            /* show like real exhbition room*/
+            perspective: 6em;
+            perspective-origin: 50% calc(50% - 2em);
+        }
+
+        .cube {
+            animation: cubeRotate 26s infinite linear;
+            transform-style: preserve-3d;
+            position: absolute;
+            top: .9em;
+            width: var(--w);
+            height: var(--h);
+            text-align: center;
+
+            .top {
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(128, 255, 0, 0.256);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: translateY(-50%) rotateX(90deg);
+                box-sizing: border-box;
+            }
+
+            .bottom {
+                bottom: 0;
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(79, 57, 104, 0.363);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: translateY(50%) rotateX(90deg);
+                box-sizing: border-box;
+                box-shadow: -12px 52px 92px 22px rgba(46, 44, 57, 0.515);
+            }
+
+            .front {
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(128, 255, 0, 0.226);
+                background-color: rgba(254, 254, 253, 0.233);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: translateZ(var(--z));
+                box-sizing: border-box;
+            }
+
+            .back {
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(172, 55, 143, 0.312);
+                background-color: rgba(2, 2, 2, 0.23);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: rotateY(180deg) translateZ(var(--z));
+                box-sizing: border-box;
+            }
+
+            .left {
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(172, 55, 143, 0.312);
+                background-color: rgba(162, 159, 2, 0.159);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: rotateY(270deg) translateZ(var(--z));
+                box-sizing: border-box;
+            }
+
+            .right {
+                position: absolute;
+                width: var(--w);
+                height: var(--h);
+                background-color: rgba(172, 55, 143, 0.312);
+                background-color: rgba(28, 9, 23, 0.172);
+                background-color: var(--bk);
+                box-shadow: 0 0 0.5em #000a inset;
+                transform: rotateY(90deg) translateZ(var(--z));
+                box-sizing: border-box;
+            }
+        }
+
+        .cube img {
+            width: 300px;
+            height: 300px;
+            border: var(--sf) solid rgba(5, 5, 5, 0.962);
+            opacity: 1;
+            box-sizing: border-box;
+            padding: 20px 16px 22px 16px;
+            box-shadow: 5px 5px 5px 2px black inset;
+        }
+
+        @keyframes cubeRotate {
+            to {
+                transform: rotateY(360deg)
+            }
+        }
+
+        .logo {
+            background: linear-gradient(to left, rgb(87, 111, 132), transparent, rgb(22, 84, 138));
+            background: linear-gradient(to bottom, rgb(87, 111, 132), transparent, rgb(9, 44, 75));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 1px;
+            z-index: 111;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(12, 60, 102);
+            padding: 1px 0;
+            min-width: 100%;
+            text-shadow: 2px 2px 5px rgb(255, 255, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .logo button {
+            background: linear-gradient(to bottom, silver, rgb(9, 39, 39));
+            border: 2px solid rgba(11, 21, 28, 0.783);
+            border-bottom: 6px solid rgba(0, 0, 0, 0.783);
+            text-shadow: 2px 2px 2px black;
+            color: rgb(248, 242, 242);
+            width: 110px;
+            height: 60px;
+            font-size: 30px;
+            padding-left: 4px;
+            margin-left: 2px;
+            transition: .4s;
+        }
+
+        .logo button:hover {
+            background: linear-gradient(to bottom, #00000000, rgb(14, 23, 23));
+            cursor: pointer;
+            text-shadow: 2px 2px 2px black;
+            transition: 1s;
+        }
+
+        .logo .title {
+            padding-right: 4px;
+            margin-right: 2px;
+            filter: brightness(10%);
+        }
+
+        @keyframes cubeRotates {
+            to {
+                transform: rotateZ(-360deg)
+            }
+        }
+
+        .pen1 {
+            position: absolute;
+            background-color: rgb(67, 158, 15);
+            border-left: var(--sf) solid #111;
+            width: 5%;
+            height: 100%;
+            z-index: 122;
+            transform: translateZ(1.5em) rotateY(180deg);
+        }
+
+        .pen2 {
+            position: absolute;
+            background-color: rgb(70, 70, 97);
+            width: 5%;
+            height: 100%;
+            z-index: 144;
+            transform: translateZ(-1.5em) rotateY(360deg) translateX(2.8em);
+            border-left: var(--sf) solid #111;
+        }
+
+        .pen3 {
+            position: absolute;
+            background-color: rgb(11, 11, 11);
+            width: 5%;
+            height: 100%;
+            z-index: 444;
+            transform: translateZ(-1.4em) rotateY(360deg) translateX(2.94em) rotateY(90deg);
+        }
+
+        .pen4 {
+            position: absolute;
+            background-color: rgb(212, 212, 14);
+            width: 7%;
+            height: 100%;
+            z-index: 124;
+            transform: rotateY(180deg) translateZ(1.5em);
+            border-left: var(--sf) solid #111;
+        }
+
+        .pen5 {
+            position: absolute;
+            background-color: rgb(17, 57, 42);
+            border-right: var(--sf) solid #111;
+            width: 5%;
+            height: 100%;
+            z-index: 123;
+            transform: translateZ(1.4em) translateX(-50%) rotateY(90deg);
+        }
+
+        .pen6 {
+            position: absolute;
+            background-color: rgb(164, 11, 67);
+            border-left: var(--sf) solid #111;
+            width: 5%;
+            height: 100%;
+            z-index: 124;
+            transform: translateZ(-1.4em) translateX(-50%) rotateY(90deg);
+        }
+
+        .pen7 {
+            position: absolute;
+            background-color: rgb(14, 6, 55);
+            border-left: var(--sf) solid #111;
+            width: 5%;
+            height: 100%;
+            z-index: 333;
+            transform: translateX(2.7em) rotateY(360deg) translateX(.1em) translateZ(1.5em);
+        }
+
+        .pen8 {
+            position: absolute;
+            background-color: rgb(243, 158, 12);
+            border-right: var(--sf) solid #111;
+            width: 7%;
+            height: 100%;
+            z-index: 124;
+            transform: translateX(2.9em) rotateY(360deg) translateZ(1.39em) rotateY(90deg);
+        }
+
+        .footer {
+            background: linear-gradient(to top, rgb(158, 194, 226), transparent, rgb(6, 26, 44));
+            position: sticky;
+            top: 33.5em;
+            left: 0;
+            z-index: 111;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(1, 7, 12);
+            padding: 1px 0;
+            min-width: 100%;
+            height: 2.4em;
+            text-shadow: 2px 2px 5px rgb(255, 255, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+
+        @media(max-width: 600px) {
+            .directorate-logo {
+                display: none;
+            }
+
+            .directorate-logo img {
+                display: none;
+            }
+
+            .logo .title {
+                font-size: 16px;
+            }
+        }
+
+        @media(min-width: 600px) {
+            .directorate-logo {
+                display: block;
+                width: 112px;
+                height: 112px;
+                color: transparent;
+                position: fixed;
+                left: 46%;
+                border-radius: 50% !important;
+                background-color: rgb(244, 247, 247);
+            }
+
+            .directorate-logo img {
+                display: block;
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+            }
+        }
+    </style>
+    <div id="logo" class="logo"></div>
+    <div class="cube" id="cube">
+        <div class="top"> </div>
+        <div class="pen1"> </div>
+        <div class="pen2"> </div>
+        <div class="pen3"> </div>
+        <div class="pen4"> </div>
+        <div class="front"><img src="./exhibition/front1.jpeg" alt="front" id="fronts"> </div>
+        <div class="back"><img src="./exhibition/back1.jpeg" alt="back" id="backs"> </div>
+        <div class="left"><img src="./exhibition/left1.jpeg" alt="left" id="lefts"> </div>
+        <div class="right"><img src="./exhibition/right1.jpeg" alt="right" id="rights"> </div>
+        <div class="pen5"> </div>
+        <div class="pen6"> </div>
+        <div class="pen7"> </div>
+        <div class="pen8"> </div>
+        <div class="bottom"> </div>
+    </div>
+    <div class="footer">مع تحياتي / ابراهيم حسان / 01557389997 </div>
+    <script> let d = new Date(); let s = d.getSeconds(); function arr(id, name, item1, item2, item3, item4, item5, item6, item7) { setInterval(() => { let dd = new Date(); let ss = dd.getSeconds(); ss < 20 ? document.getElementById('logo').innerHTML = '<a href="superex.html"><button>دخول</button></a>' + '<div class="directorate-logo"><img src="./exhibition/logos1.png" alt="logos" /></div>' + '<span class="title">' + 'إِدَارَة مَرْكَزِ كَفْرِ اَلدَّوَّارِ اَلتَّعْلِيمِيَّةِ' + '</span>' : ss < 40 ? document.getElementById("logo").innerHTML = '<a href="superex.html"><button>دخول</button></a>' + '<div class="directorate-logo"><img src="./exhibition/logos1.png" alt="logos" /></div>' + '<span class="title">' + 'اَلْمَعْرِض اَلسَّنَوِيِّ لِلتَّرْبِيَةِ اَلْفَنِّيَّةِ' + '</span>' : ss < 49 ? document.getElementById("logo").innerHTML = '<a href="superex.html"><button>دخول</button></a>' + '<div class="directorate-logo"><img src="./exhibition/logos1.png" alt="logos" /></div>' + '<span class="title">' + 'لِعَام 2024 ' + '</span>' : ss < 59 ? document.getElementById('logo').innerHTML = '<a href="superex.html"><button>دخول</button></a>' + '<div class="directorate-logo"><img src="./exhibition/logos1.png" alt="logos" /></div>' + '<span class="title">' + ' شُكْرًا لِكُلٍّ مِنْ سَاهَمَ بِالْمَعْرِضِ' + '</span>' : null; }, 1000); let t = 59; name = [item1, item2, item3, item4, item5, item6, item7]; name.forEach((element, i) => { setInterval(() => { if (t > s) { let n = i; n === 0 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 9000) : n === 1 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 18000) : n === 2 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 27000) : n === 3 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 36000) : n === 4 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 45000) : n === 5 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 54000) : n === 6 ? setTimeout(() => { document.getElementById(id).src = 'exhibition/' + element + '.jpeg'; }, 63000) : null; } }, 9000); }); } function show() { arr('fronts', 'images', 'front1', 'front2', 'front3', 'front4', 'front5', 'front6', 'front7'); arr('backs', 'images', 'back1', 'back2', 'back3', 'back4', 'back5', 'back6', 'back7'); arr('lefts', 'images', 'left1', 'left2', 'left3', 'left4', 'left5', 'left6', 'left7'); arr('rights', 'images', 'right1', 'right2', 'right3', 'right4', 'right5', 'right6', 'right7'); } show(); </script>
+</body>
+
+</html>
