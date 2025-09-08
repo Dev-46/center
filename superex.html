@@ -196,6 +196,14 @@
     </div>
   </div>
   <script>
+     let allimages = document.getElementsByTagName("img");
+    for (let i = 0; i < allimages.length; i++){
+      let myimage = allimages[i];
+      myimage.onload =()=>{
+        myimage.style.opacity = 1;
+        myimage.style.filter = "contrast(150%)";
+      }
+    }
     let vid1 = document.getElementById("moneer1");
     vid1.autoplay = true;
     vid1.loop = true;
@@ -217,7 +225,7 @@
               '<br /><a href="index.html"><button>خروج</button></a>')
             : ss < 49
               ? (document.getElementById("logo").innerHTML =
-                "لِعَام 2024 " +
+                "لِعَام 2025 " +
                 '<br /><a href="index.html"><button>خروج</button></a>')
               : ss < 59
                 ? (document.getElementById("logo").innerHTML =
