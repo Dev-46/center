@@ -1,8 +1,19 @@
 *{
     padding: 0;
     margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
+}
+h2{
+    color: rgb(76, 206, 206) !important;
+    font-display:fallback;
+    font-size: 25px !important;
+    font-style: italic;
+    margin-bottom: 20px !important;
+    border: 2px solid rgb(76, 206, 206) !important;
+    text-align: center;
 }
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
+
