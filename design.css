@@ -14,7 +14,7 @@ h2{
     text-align: center;
 }
 #teaching-center-img{
-    background-image:url("teacher.png");
+    background-image:url("teach-transparent.png");
     background-repeat: no-repeat;
     background-size: 180px 340px;
     background-position:center bottom;
@@ -22,6 +22,7 @@ h2{
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
+
 
 
 
