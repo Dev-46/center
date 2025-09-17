@@ -14,11 +14,12 @@ h2{
     text-align: center;
 }
 #teaching-center-img{
-    background-img:url("teacher.png");
+    background-image:url("teacher.png");
 }
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
+
 
 
 
