@@ -16,12 +16,13 @@ h2{
 #teaching-center-img{
     background-image:url("teacher.png");
     background-repeat: no-repeat;
-    background-size: 200px 340px;
+    background-size: 180px 340px;
     background-position:center bottom;
 }
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
+
 
 
 
