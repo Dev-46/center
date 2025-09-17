@@ -15,14 +15,16 @@ h2{
 }
 #teaching-center-img{
     background-repeat: no-repeat;
-    background-size: 180px 340px;
-    background-position:center bottom;
 }
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
 .info-grad{
-    background:linear-gradient(45deg, #34cceb,#14cceb,#04cceb);
+    background:linear-gradient(245deg,rgb(10, 10, 10), #2f3638a8,#219aafce,#109aaf,transparent,transparent,transparent,transparent,transparent);
+}
+#logo-img{
+    margin-left: 0;
+    filter: contrast(200%);
 }
 
 
