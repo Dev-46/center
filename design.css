@@ -37,8 +37,8 @@ html, body{
 }
 .navbar-toggler{
     position: fixed;
-    top: 50px;
-    left: 200px;
+    top: 40px;
+    left: 100px;
     color: rgb(95, 195, 212);
     border-width: 1px;
     background-color: rgba(144, 201, 201, 0.664);
@@ -53,6 +53,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
