@@ -38,7 +38,7 @@ html, body{
      border-right: none !important;
     margin-left: -80px !important;
     margin-right: 1px !important;
-    width: 140px !important;
+    width: 150px !important;
     height: 180px !important;
     background:white;
     z-index:12;
@@ -61,6 +61,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
