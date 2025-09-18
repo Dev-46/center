@@ -22,6 +22,7 @@ h2{
      border: 1px solid rgb(76, 206, 206) !important;
      border-left: none !important;
     background:white;
+    z-index:20;
 }
 html, body{
     background-color: rgba(0, 0, 0, 0.644);
@@ -40,6 +41,7 @@ html, body{
     width: 180px !important;
     height: 180px !important;
     background:white;
+    z-index:12;
 }
 .navbar-toggler{
     position: fixed;
@@ -59,6 +61,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
