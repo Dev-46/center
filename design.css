@@ -20,20 +20,42 @@ html, body{
     background-color: rgba(0, 0, 0, 0.644);
 }
 .info-grad{
-    background:linear-gradient(245deg,rgb(10, 10, 10), #2f3638a8,#219aafce,#109aaf,transparent,transparent,transparent,transparent,transparent);
+    background:linear-gradient(245deg,rgba(10, 10, 10, 0.747), #2f3638a8,#219aafce,#109aaf,transparent,transparent,transparent,transparent,transparent);
 }
 #logo-img{
     margin-left: 0;
     filter: contrast(200%);
 }
 .navbar-toggler{
-   position: fixed;
+    position: fixed;
     top: 10px;
     right: 10px;
     color: rgb(95, 195, 212);
     border-width: 1px;
     background-color: rgba(144, 201, 201, 0.664);
 }
+.w-1000{
+    width: 200px !important;
+}
+.w-30{
+    width: 160px !important;
+}
+.w-10{
+    width: 80px !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
