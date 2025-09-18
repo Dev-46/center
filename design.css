@@ -32,8 +32,8 @@ html, body{
     border: 1px solid rgb(76, 206, 206) !important;
     margin-left: -50px !important;
     margin-right: 20px !important;
-    width: 200px !important;
-    height: 200px !important;
+    width: 180px !important;
+    height: 180px !important;
 }
 .navbar-toggler{
     position: fixed;
@@ -53,6 +53,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
