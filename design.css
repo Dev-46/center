@@ -26,6 +26,11 @@ html, body{
     margin-left: 0;
     filter: contrast(200%);
 }
+.navbar-toggler{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
 
 
 
