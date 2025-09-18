@@ -38,8 +38,8 @@ html, body{
      border-right: none !important;
     margin-left: -80px !important;
     margin-right: 1px !important;
-    width: 180px !important;
-    height: 180px !important;
+    width: 140px !important;
+    height: 140px !important;
     background:white;
     z-index:12;
 }
@@ -61,6 +61,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
