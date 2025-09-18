@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-dark h-100 m-0 p-0 justify-content-center align-items-center">
+    <div class="container-fluid bg-dark h-100 m-0 p-5 justify-content-center align-items-center w-100">
         <!--
         <nav class="navbar navbar-expand-lg border-bottom border-dark info-grad m-0 p-0">
             <div class="container-fluid p-0">
@@ -42,8 +42,8 @@
 
         </nav>
         -->
-        <nav class="navbar navbar-expand-lg navbar-light info-grad">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light info-grad m-0 p-5">
+            <div class="container-fluid p-0">
                 <a class="navbar-brand d-flex" href="#">
                     <img src="tclogo.png" class="w-50" alt="logo" id="logo-img" />
                     <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
@@ -57,21 +57,27 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse w-100 h-50" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 ms-0">
                         <li class="nav-item d-flex justify-space-between align-items-center mb-2">
-                            <a class="nav-link fs-2  text-light border border-light rounded-pill p-3 pt-0 pb-0" href="teachers.html">Teachers</a>
+                            <a class="nav-link fs-4  text-light border border-light rounded-pill p-3 pt-0 pb-0"
+                                href="teachers.html">Teachers</a>
                             <span class="d-lg-none"></span>
                         </li>
                         <li class="nav-item d-flex justify-space-between w-sm-100 align-items-center me-2">
-                            <a class="nav-link fs-2 text-light border border-light rounded-pill p-5 pt-0 pb-0" href="subjects.html">Subjects</a>
+                            <a class="nav-link fs-4 text-light border border-light rounded-pill p-5 pt-0 pb-0"
+                                href="subjects.html">Subjects</a>
                             <span class="d-lg-none"></span>
                         </li>
+                        <li class="mt-2 nav-item d-flex justify-space-between w-1000 align-items-center me-2">
+                            <form class="d-flex w-50">
+                                <input class="form-control me-2 w-30" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-light w-10 ps-2 me-2" type="submit">Search</button>
+                            </form>
+                        </li>
                     </ul>
-                    <form class="d-flex w-100">
-                        <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light w-25 ps-2 me-2" type="submit">Search</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -180,6 +186,7 @@
 </body>
 
 </html>
+
 
 
 
