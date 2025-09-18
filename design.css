@@ -27,10 +27,14 @@ html, body{
     filter: contrast(200%);
 }
 .navbar-toggler{
-    position: fixed;
-    top: 5px;
-    right: 5px;
+   position: fixed;
+    top: 10px;
+    right: 10px;
+    color: rgb(95, 195, 212);
+    border-width: 1px;
+    background-color: rgba(144, 201, 201, 0.664);
 }
+
 
 
 
