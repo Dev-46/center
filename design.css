@@ -18,7 +18,7 @@ h2{
      width: 180px !important;
     height: 180px !important;
     margin-top: -18px !important;
-    margin-left:-40px !important;
+    margin-left:10px !important;
      border: 1px solid rgb(76, 206, 206) !important;
      border-left: none !important;
     background:white;
@@ -39,7 +39,7 @@ html, body{
     margin-left: -80px !important;
     margin-right: 1px !important;
     width: 140px !important;
-    height: 140px !important;
+    height: 180px !important;
     background:white;
     z-index:12;
 }
@@ -61,6 +61,7 @@ html, body{
     width: 80px !important;
 
 }
+
 
 
 
