@@ -1,8 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 h2{
     color: rgb(76, 206, 206) !important;
@@ -36,7 +35,7 @@ html, body{
     filter: contrast(200%);
     border: 1px solid rgb(76, 206, 206) !important;
      border-right: none !important;
-    margin-left: -80px !important;
+    margin-left: 0px !important;
     margin-right: 1px !important;
     width: 150px !important;
     height: 180px !important;
@@ -59,8 +58,9 @@ html, body{
 }
 .w-10{
     width: 80px !important;
-
 }
+
+
 
 
 
