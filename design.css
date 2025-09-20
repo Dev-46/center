@@ -11,6 +11,7 @@ h2{
     margin-bottom: 20px !important;
     border: 2px solid rgb(76, 206, 206) !important;
     text-align: center;
+    min-width:370px !important;
 }
 #teaching-center-img{
     background-repeat: no-repeat;
@@ -59,6 +60,8 @@ html, body{
 .w-10{
     width: 80px !important;
 }
+
+
 
 
 
