@@ -1,460 +1,859 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Teaching-Center</title>
-    <link rel="stylesheet" href="design.css">
-</head>
-<style>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <style>
     /**/
-    .link-name{
-        font-family:'Trebuchet MS',Helvetica,sans-serif;
-        font-size:24px;
-        font-style:normal;
-        line-height:26px;
-        font-weight:400;
-        color:#2d77ff;
-        display:inline;
-        text-decoration:none;
+    .link-name {
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      line-height: 26px;
+      font-weight: 400;
+      color: #2d77ff;
+      display: inline;
+      text-decoration: none;
     }
-    .span-top{
-        font-family:'Trebuchet MS',Helvetica,sans-serif;
-        font-size:13px;
-        font-style:normal;
-        line-height:15px;
-        font-weight:400;
-        color:#2d77ff;
-        display:inline;
+    .span-top {
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-size: 13px;
+      font-style: normal;
+      line-height: 15px;
+      font-weight: 400;
+      color: #2d77ff;
+      display: inline;
     }
-    .span-normal{
-        font-family:'Trebuchet MS',Helvetica,sans-serif;
-        font-size:13px;
-        font-style:normal;
-        line-height:15px;
-        font-weight:400;
-        color:#948c8c;
-        display:inline;
+    .span-normal {
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-size: 13px;
+      font-style: normal;
+      line-height: 15px;
+      font-weight: 400;
+      color: #948c8c;
+      display: inline;
     }
-    table.info{
-        margin-left:-30px !important;
+    table.info {
+      margin-left: -30px !important;
     }
-    table.top-info-table{}
+    table.top-info-table {
+    }
     table#zs-output-sig {
-        border-top:4px double #222;
-        border-bottom:4px double #222;
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 0px;
-        font-size: 1px;
-        padding: 0px !important;
-        border-spacing: 0px;
-        margin: 0px;
-        border-collapse: collapse;
-        width: fit-content;
-        background-color: black;
-        height: 200px !important;
-        width:360px;
+      border-top: 4px double #222;
+      border-bottom: 4px double #222;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 0px;
+      font-size: 1px;
+      padding: 0px !important;
+      border-spacing: 0px;
+      margin: 0px;
+      border-collapse: collapse;
+      width: fit-content;
+      background-color: black;
+      height: 200px !important;
+      width: 360px;
     }
 
     table#inner-table {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 0px;
-        font-size: 1px;
-        padding: 0px !important;
-        border-spacing: 0px;
-        margin: 0px;
-        border-collapse: collapse;
-        max-width: 250px;
-        /*border:1px solid blue;*/
-        background-color: black;
-
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 0px;
+      font-size: 1px;
+      padding: 0px !important;
+      border-spacing: 0px;
+      margin: 0px;
+      border-collapse: collapse;
+      max-width: 250px;
+      /*border:1px solid blue;*/
+      background-color: black;
     }
 
-    td{
-        max-width: 200px !important;
-        /*border: 1px solid white;*/
-        p{
-            min-width:100px !important;
-        }
+    td {
+      max-width: 200px !important;
+      /*border: 1px solid white;*/
+      p {
+        min-width: 100px !important;
+      }
     }
-    .info p{
-        min-width: 220px !important;
+    .info p {
+      min-width: 220px !important;
     }
-    .social p{
-        min-width: 60px !important;
-        max-width: 60px !important;
-        margin-left:10px !important;
+    .social p {
+      min-width: 60px !important;
+      max-width: 60px !important;
+      margin-left: 10px !important;
     }
-    .social tr{
-        /*border: 4px solid rgba(98, 173, 28, 0.007);*/
-        min-width: 200px !important;
-        max-width: 200px !important;
-        height: fit-content !important;
+    .social tr {
+      /*border: 4px solid rgba(98, 173, 28, 0.007);*/
+      min-width: 200px !important;
+      max-width: 200px !important;
+      height: fit-content !important;
     }
-     .social td{
-        /*border: 4px solid rgba(98, 173, 28, 0.007);*/
-        min-width: 40px !important;
-        max-width: 40px !important;
-        height: fit-content !important;
-        margin-left:4px !important;
+    .social td {
+      /*border: 4px solid rgba(98, 173, 28, 0.007);*/
+      min-width: 40px !important;
+      max-width: 40px !important;
+      height: fit-content !important;
+      margin-left: 4px !important;
     }
-    table{
-        border:2px solid transparent;
-        background-color: black;
+    table {
+      border: 2px solid transparent;
+      background-color: black;
     }
-</style>
-<body>
-    
-    <div class="container-fluid bg-dark h-100 m-0 p-0 pt-5 pb-5 justify-content-center align-items-center w-100">
-        
-        <nav class="navbar navbar-expand-lg navbar-light info-grad m-0 p-0 pb-0 w-100">
-            <div class="container-fluid p-0 ms-0 w-100">
-                <a class="navbar-brand d-flex" href="#">
-                    <img src="TCL.png" class="w-50" alt="logo" id="logo-img" />
-                    <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
-                        <img id="teaching-center-img" src="ibrahim-with-laptop-transparent-left.png" width="200px"
-                            height="300px" alt="teacher image" />
-
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation" id="myButton">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse w-100 h-50" id="navbarSupportedContent">
-                    <ul class="navbar-nav  mb-2 mb-lg-0 ms-0 mt-5">
-                        <li class="nav-item d-flex justify-space-between align-items-center mb-2 ms-3">
-                            <a class="nav-link fs-4  text-light border border-light rounded-pill p-3 pt-0 pb-0"
-                                href="teachers.html">Teachers</a>
-                            <span class="d-lg-none"></span>
-                        </li>
-                        <li class="nav-item d-flex justify-space-between w-sm-100 align-items-center me-2 ms-3">
-                            <a class="nav-link fs-4 text-light border border-light rounded-pill p-5 pt-0 pb-0"
-                                href="subjects.html">Subjects</a>
-                            <span class="d-lg-none"></span>
-                        </li>
-                        <li class="mt-2 nav-item d-flex justify-space-between w-1000 align-items-center me-2 ms-3">
-                            <form class="d-flex w-50">
-                                <input class="form-control me-2 w-30" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-outline-light w-10 ps-2 me-2" type="submit">Search</button>
-                            </form>
-                        </li>
-                    </ul>
-
-                </div>
+    a{
+        text-decoration: none;
+    }
+  </style>
+  <body>
+    <div
+      class="container-fluid bg-dark h-100 m-0 p-0 pt-5 pb-5 justify-content-center align-items-center w-100"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-light info-grad m-0 p-0 pb-0 w-100"
+      >
+        <div class="container-fluid p-0 ms-0 w-100">
+          <a class="navbar-brand d-flex" href="#">
+            <img src="TCL.png" class="w-50" alt="logo" id="logo-img" />
+            <div
+              class="mt-5 d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                id="teaching-center-img"
+                src="ibrahim-with-laptop-transparent-left.png"
+                width="200px"
+                height="300px"
+                alt="teacher image"
+              />
             </div>
-        </nav>
-
-        <!-- Your content goes here -->
-        <div class="container-fluid m-0 p-0 mt-2 mb-5 bg-dark rounded shadow-lg h-100 ">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-dark text-white">
-                    <div class="row ">
-                        <div class="col-md-4">
-                            <h2 class="me-5">Qura'n Teachers</h2>
-                            <p class="d-flex justify-content-center ms-0 me-5">
-                                A good Quran teacher must possess strong Islamic knowledge, including mastery of
-                                the Quran,Tajweed (recitation rules), and the Arabic language. They also need essential
-                                personal qualities like sincerity, patience, compassion, and an exemplary Islamic
-                                character to serve as a role model. Furthermore, effective teaching skills are crucial,
-                                involving the ability to adapt to diverse learning levels, provide clear and encouraging
-                                feedback, create a positive learning environment, and utilize appropriate methodologies
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <h2 class="me-5">English Teachers</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                English teachers must have excellent English proficiency, communication skills, and
-                                knowledge of grammar and literature, along with strong classroom management, adaptable
-                                teaching strategies, and patience. Key personal qualities include empathy, enthusiasm
-                                for the subject, open-mindedness, and a continuous desire to learn
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <h2 class="me-5">Online Teaching skills</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                You can teach a wide range of technical and creative skills online, including coding,
-                                digital marketing, data analytics, graphic design, photography, and writing, as well as
-                                soft skills like communication, project management, and language proficiency. To be an
-                                effective online instructor, you also need strong pedagogical skills such as
-                                technological literacy, time management, creativity, and the ability to engage students
-                                and provide constructive feedback
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="list-group-item bg-dark text-white">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h2 class="me-5">Mastery of the Quran</h2>
-                           <p class="text-wrap text-align-justify ms-0 me-5">
-                                In-depth knowledge of the Quran's verses, themes, and context is essential for accurate
-                                interpretation and teaching
-                            </p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h2 class="me-5">Strong English proficiency</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                A deep understanding of English language, grammar, vocabulary, and literature is
-                                fundamental.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <h2 class="me-5">Technical & Creative Skills</h2>
-                           <p class="text-wrap text-align-justify ms-0 me-5">
-                                Proficiency with digital tools and platforms like Zoom, Google Meet, and Content
-                                Management Systems (CMS)
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="list-group-item bg-dark text-white">
-                    <div class="row">
-                        <div class="col-md-4">
-                           <h2 class="me-5">Tajweed Expertise</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                A strong command of Tajweed, the rules for proper Quranic pronunciation and recitation,
-                                is a fundamental requirement.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <h2 class="me-5">Communication Skills</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                Ability to convey ideas clearly, actively listen, and build rapport with students
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <h2 class="me-5">Student Engagement</h2>
-                            <p class="text-wrap text-align-justify ms-0 me-5">
-                                Strategies for encouraging active participation and collaboration in a virtual
-                                environment.
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="myButton"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse w-100 h-50"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-0 mt-5">
+              <li
+                class="nav-item d-flex justify-space-between align-items-center mb-2 ms-3"
+              >
+                <a
+                  class="nav-link fs-4 text-light border border-light rounded-pill p-3 pt-0 pb-0"
+                  href="teachers.html"
+                  >Teachers</a
+                >
+                <span class="d-lg-none"></span>
+              </li>
+              <li
+                class="nav-item d-flex justify-space-between w-sm-100 align-items-center me-2 ms-3"
+              >
+                <a
+                  class="nav-link fs-4 text-light border border-light rounded-pill p-5 pt-0 pb-0"
+                  href="subjects.html"
+                  >Subjects</a
+                >
+                <span class="d-lg-none"></span>
+              </li>
+              <li
+                class="mt-2 nav-item d-flex justify-space-between w-1000 align-items-center me-2 ms-3"
+              >
+                <form class="d-flex w-50">
+                  <input
+                    class="form-control me-2 w-30"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-light w-10 ps-2 me-2"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </form>
+              </li>
             </ul>
+          </div>
         </div>
+      </nav>
+      <!-- index list -->
+      <div
+        class="container-fluid m-0 p-0 mt-2 mb-5 bg-dark rounded shadow-lg h-100"
+      >
+        <div class="row">
+          <div class="col-md-12 pb-5 bt-2">
+            <a href="#Q-T">
+                <h2 class="ms-2 me-2 mt-5 mb-1">Qura'n Teachers</h2>
+            </a>
+            <a href="#E-T">
+                <h2 class="ms-2 me-2 mt-1 mb-1">English Teachers</h2>
+            </a>
+            <a href="#Q-T-S">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Online Teaching skills</h2>
+            </a>
+            <a href="#M-Q">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Mastery of the Quran</h2>
+            </a>
+            <a href="#S-E-P">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Strong English proficiency</h2>
+            </a>
+            <a href="#T-C-S">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Technical & Creative Skills</h2>
+            </a>
+            <a href="#T-E">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Tajweed Expertise</h2>
+            </a>
+            <a href="#C-S">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Communication Skills</h2>
+            </a>
+            <a href="#S-E">
+                <h2 class="ms-2 me-2 mt-1 mb-1">Student Engagement</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Your content goes here -->
+      <div
+        class="container-fluid m-0 p-0 mt-2 mb-5 bg-dark rounded shadow-lg h-100"
+      >
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark text-white">
+            <div class="row">
+              <div class="col-md-4">
+                <h2 class="me-5" id="Q-T">Qura'n Teachers</h2>
+                <p class="d-flex justify-content-center ms-0 me-5">
+                  A good Quran teacher must possess strong Islamic knowledge,
+                  including mastery of the Quran,Tajweed (recitation rules), and
+                  the Arabic language. They also need essential personal
+                  qualities like sincerity, patience, compassion, and an
+                  exemplary Islamic character to serve as a role model.
+                  Furthermore, effective teaching skills are crucial, involving
+                  the ability to adapt to diverse learning levels, provide clear
+                  and encouraging feedback, create a positive learning
+                  environment, and utilize appropriate methodologies
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="me-5" id="E-T">English Teachers</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  English teachers must have excellent English proficiency,
+                  communication skills, and knowledge of grammar and literature,
+                  along with strong classroom management, adaptable teaching
+                  strategies, and patience. Key personal qualities include
+                  empathy, enthusiasm for the subject, open-mindedness, and a
+                  continuous desire to learn
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="me-5" id="Q-T-S">Online Teaching skills</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  You can teach a wide range of technical and creative skills
+                  online, including coding, digital marketing, data analytics,
+                  graphic design, photography, and writing, as well as soft
+                  skills like communication, project management, and language
+                  proficiency. To be an effective online instructor, you also
+                  need strong pedagogical skills such as technological literacy,
+                  time management, creativity, and the ability to engage
+                  students and provide constructive feedback
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item bg-dark text-white">
+            <div class="row">
+              <div class="col-md-4">
+                <h2 class="me-5" id="M-Q">Mastery of the Quran</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  In-depth knowledge of the Quran's verses, themes, and context
+                  is essential for accurate interpretation and teaching
+                </p>
+              </div>
+
+              <div class="col-md-4">
+                <h2 class="me-5" id="S-E-P">Strong English proficiency</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  A deep understanding of English language, grammar, vocabulary,
+                  and literature is fundamental.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="me-5" id="T-C-S">Technical & Creative Skills</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  Proficiency with digital tools and platforms like Zoom, Google
+                  Meet, and Content Management Systems (CMS)
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item bg-dark text-white">
+            <div class="row">
+              <div class="col-md-4">
+                <h2 class="me-5" id="T-E">Tajweed Expertise</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  A strong command of Tajweed, the rules for proper Quranic
+                  pronunciation and recitation, is a fundamental requirement.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="me-5" id="C-S">Communication Skills</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  Ability to convey ideas clearly, actively listen, and build
+                  rapport with students
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="me-5" id="S-E">Student Engagement</h2>
+                <p class="text-wrap text-align-justify ms-0 me-5">
+                  Strategies for encouraging active participation and
+                  collaboration in a virtual environment.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
         <div>
-            <div>
-       <!-- card goes here -->
-    
+          <!-- card goes here -->
 
-    <table id="zs-output-sig" border="0" cellpadding="0" cellspacing="0">
-        <tbody>
-            <tr>
-                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                    <table id="inner-table" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
+          <table id="zs-output-sig" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    padding: 0px !important;
+                    width: inherit;
+                    height: inherit;
+                  "
+                >
+                  <table
+                    id="inner-table"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                  >
+                    <tbody>
+                      <tr>
+                        <td
+                          style="
+                            border-collapse: collapse;
+                            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+                            font-size: 13px;
+                            font-style: normal;
+                            line-height: 15px;
+                            font-weight: 400;
+                            padding-bottom: 20px;
+                            width: inherit;
+                            height: inherit;
+                          "
+                        >
+                          <p style="margin: 0.04px">
+                            <span
+                              style="
+                                font-family: 'Trebuchet MS', Helvetica,
+                                  sans-serif;
+                                font-size: 13px;
+                                font-style: normal;
+                                line-height: 15px;
+                                font-weight: 400;
+                                color: #454545;
+                                display: inline;
+                              "
+                              >Kind Regards,</span
+                            >
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 0px !important;
+                    width: inherit;
+                    height: inherit;
+                  "
+                >
+                  <table
+                    id="inner-table"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                  >
+                    <tbody>
+                      <tr>
+                        <td
+                          width="167"
+                          style="
+                            padding-right: 4px;
+                            width: inherit;
+                            height: inherit;
+                          "
+                        >
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              font-family: Arial, Helvetica, sans-serif;
+                              line-height: 0px;
+                              font-size: 1px;
+                              padding: 0px !important;
+                              border-spacing: 0px;
+                              margin: 0px;
+                              border-collapse: collapse;
+                            "
+                          >
+                            <tbody>
+                              <tr>
                                 <td
-                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 15px; font-weight: 400; padding-bottom: 20px; width: inherit; height: inherit;">
-                                    <p style="margin: 0.04px;"><span
-                                            style="font-family:'Trebuchet MS',Helvetica,sans-serif;font-size:13px;font-style:normal;line-height:15px;font-weight:400;color:#454545;display:inline;">Kind
-                                            Regards,</span>
-                                    </p>
+                                  style="
+                                    border-collapse: collapse;
+                                    line-height: 0px;
+                                    padding-bottom: 10px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <p style="margin: 0.04px">
+                                    <a
+                                      style="font-size: 0px; line-height: 0px"
+                                      target="_blank"
+                                      rel="nofollow"
+                                      href="https://dev-46.github.io/center/"
+                                      ><img
+                                        height="154"
+                                        width="120"
+                                        alt="image"
+                                        border="0"
+                                        src="https://img2.gimm.io/27559ab4-065f-4561-9829-6884847034fb/-/crop/324x299/59,16/-/preview/image.png"
+                                        style="
+                                          border-radius: 14px;
+                                          ms-border-radius: 14px;
+                                          webkit-border-radius: 14px;
+                                          o-border-radius: 14px;
+                                          khtml-border-radius: 14px;
+                                          moz-border-radius: 14px;
+                                        "
+                                    /></a>
+                                  </p>
                                 </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                    <table id="inner-table" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="167" style="padding-right: 4px; width: inherit; height: inherit;">
-                                    <table border="0" cellpadding="0" cellspacing="0"
-                                        style="font-family:Arial,Helvetica,sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
-                                        <tbody>
-                                            <tr>
-                                                <td
-                                                    style="border-collapse: collapse; line-height: 0px; padding-bottom: 10px; width: inherit; height: inherit;">
-                                                    <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;"
-                                                            target="_blank" rel="nofollow"
-                                                            href="https://dev-46.github.io/center/"><img height="154"
-                                                                width="120" alt="image" border="0"
-                                                                src="https://img2.gimm.io/27559ab4-065f-4561-9829-6884847034fb/-/crop/324x299/59,16/-/preview/image.png"
-                                                                style="border-radius:14px; ms-border-radius:14px; webkit-border-radius:14px; o-border-radius:14px; khtml-border-radius:14px; moz-border-radius:14px;"></a>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td
+                          style="
+                            padding: 0px !important;
+                            width: inherit;
+                            height: inherit;
+                          "
+                        >
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            class="top-info-table"
+                            style="
+                              font-family: Arial, Helvetica, sans-serif;
+                              line-height: 0px;
+                              font-size: 1px;
+                              padding: 0px !important;
+                              border-spacing: 0px;
+                              margin: 0px;
+                              border-collapse: collapse;
+                            "
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    padding-right: 6px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="t-info"
+                                    style="
+                                      font-family: Arial, Helvetica, sans-serif;
+                                      line-height: 0px;
+                                      font-size: 1px;
+                                      padding: 0px !important;
+                                      border-spacing: 0px;
+                                      margin: 0px;
+                                      border-collapse: collapse;
+                                    "
+                                  >
+                                    <tbody>
+                                      <tr class="info">
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 24px;
+                                            font-style: normal;
+                                            line-height: 26px;
+                                            font-weight: 400;
+                                            padding: 0px !important;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span
+                                              ><a
+                                                target="_blank"
+                                                rel="nofollow"
+                                                href="https://dev-46.github.io/center/"
+                                                class="link-name"
+                                                >IBRAHIM ELSEBAEY
+                                              </a></span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr class="info">
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 21px;
+                                            font-style: italic;
+                                            line-height: 23px;
+                                            font-weight: 400;
+                                            padding-bottom: 4px;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span
+                                              ><a
+                                                target="_blank"
+                                                rel="nofollow"
+                                                href="https://dev-46.github.io/center/teachers.html"
+                                                style="
+                                                  font-family: 'Trebuchet MS',
+                                                    Helvetica, sans-serif;
+                                                  font-size: 21px;
+                                                  font-style: italic;
+                                                  line-height: 23px;
+                                                  font-weight: 400;
+                                                  color: #666666;
+                                                  display: inline;
+                                                  text-decoration: none;
+                                                "
+                                              >
+                                                ENGLISH TEACHER
+                                              </a></span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr class="info">
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 13px;
+                                            font-style: normal;
+                                            line-height: 15px;
+                                            font-weight: 400;
+                                            padding: 0px !important;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span class="span-top">T.</span>
+                                            <span class="span-normal"
+                                              >+2 (012) 7417 9870</span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr class="info">
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 13px;
+                                            font-style: normal;
+                                            line-height: 15px;
+                                            font-weight: 400;
+                                            padding: 0px !important;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span class="span-top">M.</span>
+                                            <span class="span-normal"
+                                              >+2 (015) 5738 9997</span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr class="info">
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 13px;
+                                            font-style: normal;
+                                            line-height: 15px;
+                                            font-weight: 400;
+                                            padding: 0px !important;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span class="span-top">A.</span>
+                                            <span class="span-normal"
+                                              >Esalam St, Sidi Shaha, kafr El
+                                              Dawwar</span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          style="
+                                            border-collapse: collapse;
+                                            font-family: 'Trebuchet MS',
+                                              Helvetica, sans-serif;
+                                            font-size: 13px;
+                                            font-style: normal;
+                                            line-height: 15px;
+                                            font-weight: 400;
+                                            padding-bottom: 8px;
+                                            width: inherit;
+                                            height: inherit;
+                                          "
+                                        >
+                                          <p style="margin: 0.04px">
+                                            <span class="span-top">W.</span>
+                                            <span class="span-normal"
+                                              >https://dev-46.github.io/center/</span
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </td>
-                                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                                    <table border="0" cellpadding="0" cellspacing="0" class="top-info-table"
-                                        style="font-family:Arial,Helvetica,sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding-right: 6px; width: inherit; height: inherit;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" class="t-info"
-                                                        style="font-family:Arial,Helvetica,sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
-                                                        <tbody>
-                                                            <tr class="info">
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 24px; font-style: normal; line-height: 26px; font-weight: 400; padding: 0px !important; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;"><span><a target="_blank"
-                                                                                rel="nofollow"
-                                                                                href="https://dev-46.github.io/center/"
-                                                                                class="link-name">IBRAHIM ELSEBAEY </a></span></p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="info">
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 21px; font-style: italic; line-height: 23px; font-weight: 400; padding-bottom: 4px; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;"><span><a target="_blank"
-                                                                                rel="nofollow"
-                                                                                href="https://dev-46.github.io/center/teachers.html"
-                                                                                style="font-family:'Trebuchet MS',Helvetica,sans-serif;font-size:21px;font-style:italic;line-height:23px;font-weight:400;color:#666666;display:inline;text-decoration:none;">
-                                                                                ENGLISH TEACHER </a></span></p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="info">
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 15px; font-weight: 400; padding: 0px !important; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;">
-                                                                        <span class="span-top">T.</span>
-                                                                        <span class="span-normal">+2
-                                                                            (012) 7417 9870</span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="info">
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 15px; font-weight: 400; padding: 0px !important; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;">
-                                                                        <span class="span-top">M.</span>
-                                                                        <span class="span-normal">+2 (015) 5738 9997</span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="info">
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 15px; font-weight: 400; padding: 0px !important; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;">
-                                                                        <span class="span-top">A.</span>
-                                                                        <span class="span-normal"
-                                                                            >Esalam
-                                                                            St, Sidi Shaha, kafr El Dawwar</span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td
-                                                                    style="border-collapse: collapse; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 15px; font-weight: 400; padding-bottom: 8px; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;">
-                                                                        <span class="span-top">W.</span>
-                                                                        <span class="span-normal" >https://dev-46.github.io/center/</span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                                                    <!--<table border="0" cellpadding="0" cellspacing="0"
-                                                        style="font-family:Arial,Helvetica,sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td
-                                                                    style="border-collapse: collapse; line-height: 0px; padding-right: 1px; width: inherit; height: inherit;">
-                                                                    <p style="margin: 0.04px;"><img height="136"
-                                                                            width="150" alt="image" border="0"
-                                                                            src="https://img2.gimm.io/144a5130-db26-4fef-abb6-9d448f64732a/-/resize/300x272/image.png">
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>-->
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table border="0" cellpadding="0" cellspacing="0" class="social"
-                                        style="font-family:Arial,Helvetica,sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding-right: 2px; width: inherit; height: inherit;">
-                                                    <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;"
-                                                            target="_blank" rel="nofollow"
-                                                            href="https://www.facebook.com/ibrahim.hassan.6852/"><img
-                                                                height="24" width="24" alt="facebook" border="0"
-                                                                src="https://img1.gimm.io/assets/social/96/native/4/facebook.png"></a>
-                                                    </p>
-                                                </td>
-                                                <td style="padding-right: 2px; width: inherit; height: inherit;">
-                                                    <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;"
-                                                            target="_blank" rel="nofollow"
-                                                            href="https://www.linkedin.com/in/ibrahim-elsebaey-92a7a6202/"><img
-                                                                height="24" width="24" alt="linkedin" border="0"
-                                                                src="https://img1.gimm.io/assets/social/96/native/4/linkedin.png"></a>
-                                                    </p>
-                                                </td>
-                                                <td style="padding-right: 2px; width: inherit; height: inherit;">
-                                                    <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;"
-                                                            target="_blank" rel="nofollow"
-                                                            href="https://x.com/MrIbrah28338880"><img height="24"
-                                                                width="24" alt="twitter" border="0"
-                                                                src="https://img1.gimm.io/assets/social/96/native/4/twitter.png"></a>
-                                                    </p>
-                                                </td>
-                                                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                                                    <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;"
-                                                            target="_blank" rel="nofollow"
-                                                            href="https://maps.app.goo.gl/tc47g26bg9dBCTWYA"><img
-                                                                height="24" width="24" alt="map" border="0"
-                                                                src="https://img1.gimm.io/assets/social/96/native/4/map.png"></a>
-                                                    </p>
-                                                </td>
-                                                <td style="padding: 0px !important; width: inherit; height: inherit;">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    style="border-collapse: collapse; padding-bottom: 8px; width: inherit; height: inherit;">
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <td
+                                  style="
+                                    padding: 0px !important;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                ></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            class="social"
+                            style="
+                              font-family: Arial, Helvetica, sans-serif;
+                              line-height: 0px;
+                              font-size: 1px;
+                              padding: 0px !important;
+                              border-spacing: 0px;
+                              margin: 0px;
+                              border-collapse: collapse;
+                            "
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    padding-right: 2px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <p style="margin: 0.04px">
+                                    <a
+                                      style="font-size: 0px; line-height: 0px"
+                                      target="_blank"
+                                      rel="nofollow"
+                                      href="https://www.facebook.com/ibrahim.hassan.6852/"
+                                      ><img
+                                        height="24"
+                                        width="24"
+                                        alt="facebook"
+                                        border="0"
+                                        src="https://img1.gimm.io/assets/social/96/native/4/facebook.png"
+                                    /></a>
+                                  </p>
                                 </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <td
+                                  style="
+                                    padding-right: 2px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <p style="margin: 0.04px">
+                                    <a
+                                      style="font-size: 0px; line-height: 0px"
+                                      target="_blank"
+                                      rel="nofollow"
+                                      href="https://www.linkedin.com/in/ibrahim-elsebaey-92a7a6202/"
+                                      ><img
+                                        height="24"
+                                        width="24"
+                                        alt="linkedin"
+                                        border="0"
+                                        src="https://img1.gimm.io/assets/social/96/native/4/linkedin.png"
+                                    /></a>
+                                  </p>
+                                </td>
+                                <td
+                                  style="
+                                    padding-right: 2px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <p style="margin: 0.04px">
+                                    <a
+                                      style="font-size: 0px; line-height: 0px"
+                                      target="_blank"
+                                      rel="nofollow"
+                                      href="https://x.com/MrIbrah28338880"
+                                      ><img
+                                        height="24"
+                                        width="24"
+                                        alt="twitter"
+                                        border="0"
+                                        src="https://img1.gimm.io/assets/social/96/native/4/twitter.png"
+                                    /></a>
+                                  </p>
+                                </td>
+                                <td
+                                  style="
+                                    padding: 0px !important;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                >
+                                  <p style="margin: 0.04px">
+                                    <a
+                                      style="font-size: 0px; line-height: 0px"
+                                      target="_blank"
+                                      rel="nofollow"
+                                      href="https://maps.app.goo.gl/tc47g26bg9dBCTWYA"
+                                      ><img
+                                        height="24"
+                                        width="24"
+                                        alt="map"
+                                        border="0"
+                                        src="https://img1.gimm.io/assets/social/96/native/4/map.png"
+                                    /></a>
+                                  </p>
+                                </td>
+                                <td
+                                  style="
+                                    padding: 0px !important;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    border-collapse: collapse;
+                                    padding-bottom: 8px;
+                                    width: inherit;
+                                    height: inherit;
+                                  "
+                                ></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
-            </tr>
-            <tr>
-                <td style="border-collapse: collapse; padding-bottom: 16px; width: inherit; height: inherit;">
-                    <span></span>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    border-collapse: collapse;
+                    padding-bottom: 16px;
+                    width: inherit;
+                    height: inherit;
+                  "
+                >
+                  <span></span>
                 </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-            </div>
-            <div class="text-center text-light d-flex justify-content-center align-items-center">
-                <img height="136" width="150" alt="image" border="0" src="https://img2.gimm.io/144a5130-db26-4fef-abb6-9d448f64732a/-/resize/300x272/image.png">
-                <span class="span-normal">CREATED BY IBRAHIM ELSEBAEY</span>
-            </div>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <div
+          class="text-center text-light d-flex justify-content-center align-items-center"
+        >
+          <img
+            height="136"
+            width="150"
+            alt="image"
+            border="0"
+            src="https://img2.gimm.io/144a5130-db26-4fef-abb6-9d448f64732a/-/resize/300x272/image.png"
+          />
+          <span class="span-normal">CREATED BY IBRAHIM ELSEBAEY</span>
+        </div>
+      </div>
     </div>
     <script src="dynamic.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+
+
 
 
 
