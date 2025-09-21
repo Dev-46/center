@@ -63,6 +63,102 @@ html, body{
 .w-10{
     width: 80px !important;
 }
+/**/
+    .link-name{
+        font-family:'Trebuchet MS',Helvetica,sans-serif;
+        font-size:24px;
+        font-style:normal;
+        line-height:26px;
+        font-weight:400;
+        color:#2d77ff;
+        display:inline;
+        text-decoration:none;
+    }
+    .span-top{
+        font-family:'Trebuchet MS',Helvetica,sans-serif;
+        font-size:13px;
+        font-style:normal;
+        line-height:15px;
+        font-weight:400;
+        color:#2d77ff;
+        display:inline;
+    }
+    .span-normal{
+        font-family:'Trebuchet MS',Helvetica,sans-serif;
+        font-size:13px;
+        font-style:normal;
+        line-height:15px;
+        font-weight:400;
+        color:#948c8c;
+        display:inline;
+    }
+    table.info{
+        margin-left:-30px !important;
+    }
+    table.top-info-table{}
+    table#zs-output-sig {
+        border-top:4px double #222;
+        border-bottom:4px double #222;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 0px;
+        font-size: 1px;
+        padding: 0px !important;
+        border-spacing: 0px;
+        margin: 0px;
+        border-collapse: collapse;
+        width: fit-content;
+        background-color: black;
+        height: 200px !important;
+        width:360px;
+    }
+
+    table#inner-table {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 0px;
+        font-size: 1px;
+        padding: 0px !important;
+        border-spacing: 0px;
+        margin: 0px;
+        border-collapse: collapse;
+        max-width: 250px;
+        /*border:1px solid blue;*/
+        background-color: black;
+
+    }
+
+    td{
+        max-width: 200px !important;
+        /*border: 1px solid white;*/
+        p{
+            min-width:100px !important;
+        }
+    }
+    .info p{
+        min-width: 220px !important;
+    }
+    .social p{
+        min-width: 60px !important;
+        max-width: 60px !important;
+        margin-left:10px !important;
+    }
+    .social tr{
+        /*border: 4px solid rgba(98, 173, 28, 0.007);*/
+        min-width: 200px !important;
+        max-width: 200px !important;
+        height: fit-content !important;
+    }
+     .social td{
+        /*border: 4px solid rgba(98, 173, 28, 0.007);*/
+        min-width: 40px !important;
+        max-width: 40px !important;
+        height: fit-content !important;
+        margin-left:4px !important;
+    }
+    table{
+        border:2px solid transparent;
+        background-color: black;
+    }
+
 
 
 
