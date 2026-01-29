@@ -99,7 +99,7 @@
       }
 
       /* سيتم تطبيق هذا التنسيق فقط على الشاشات التي يقل عرضها عن 600 بكسل */
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 600px) { /* was 800 */
         body {
           background-color: lightblue;
         }
@@ -125,10 +125,20 @@
           border: 15px solid rgba(12, 12, 12, 0.932) !important;
         }
       }
+      .mouse{
+        position:fixed;
+        top:5px;
+        left:300px;
+        color:gold;
+        background:#000;
+      }
     </style>
   </head>
   <body>
     <div id="board">
+      <div class='mouse'>
+        <a href="index.html">HOME</a>
+      </div>
       <div id="lettersboard"></div>
       <div id="whiteboard"></div>
       <div id="middlewhiteboard">
@@ -845,3 +855,4 @@
     </script>
   </body>
 </html>
+
