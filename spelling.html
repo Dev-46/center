@@ -1,0 +1,847 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SPELLING AREA</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        border: none !important;
+        padding: 0;
+        margin: 0;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      body {
+        background: rgb(8, 8, 8);
+        width: 100wv;
+        height: 100hv;
+        overflow: hidden;
+      }
+      #board {
+        border: 10px double white !important;
+        height: 100vh;
+      }
+      .diver {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        font-size: 3.2rem !important;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        text-shadow: 1px 1px 1px rgb(178, 236, 60);
+        text-shadow: 1px 2px 3px rgb(10, 10, 10);
+        border-left: 1px solid rgb(135, 153, 135);
+        border-top: 1px solid rgb(159, 184, 159);
+        border-right: 1px solid rgb(10, 39, 10);
+        border-bottom: 1px solid rgb(14, 44, 14);
+        background: rgba(196, 196, 196, 0);
+        color: rgb(159, 199, 50); /* black */
+        z-index: 100;
+      }
+
+      #lettersboard {
+        width: 31%;
+        margin-bottom: 10px !important;
+        height: 53vh !important;
+        min-height: 53vh !important;
+        max-height: 53vh !important;
+        overflow: hidden;
+        background-color: rgb(68, 49, 77);
+        background: linear-gradient(
+          to left,
+          rgba(56, 83, 54, 0.63),
+          rgba(128, 58, 113, 0.774),
+          rgb(12, 12, 12)
+        );
+        top: 12px;
+        left: 12px;
+        position: absolute;
+        z-index: 1;
+        border: 8px solid rgb(17, 17, 16) !important;
+      }
+      #whiteboard {
+        width: 410px !important;
+        margin-bottom: 10px !important;
+        height: 49vh !important;
+        min-height: 49vh !important;
+        max-height: 49vh !important;
+        overflow: hidden;
+        background-color: rgb(248, 250, 246);
+        background-color: rgb(60, 66, 51);
+        bottom: 10px;
+        position: absolute;
+        margin-left: 10px;
+        z-index: 0;
+        border-top: 49px solid rgba(151, 180, 106, 0.897) !important;
+      }
+
+      #middlewhiteboard {
+        font-size: 30px;
+        text-shadow: 1px 2px 3px rgba(181, 201, 72, 0.753);
+        width: 66.4% !important;
+        text-indent: 15% !important;
+        line-height: 190% !important;
+        margin-bottom: 10px !important;
+        height: 95vh !important;
+        min-height: 95vh !important;
+        max-height: 95vh !important;
+        overflow: hidden;
+        background-color: rgb(248, 250, 246);
+        background-color: rgb(96, 114, 78);
+        bottom: 10px;
+        position: fixed;
+        right: 20px;
+        z-index: 0;
+        border-top: 48px solid rgba(162, 187, 125, 0.897) !important;
+      }
+      hr {
+        border: 0.1px solid rgba(12, 12, 12, 0.637) !important;
+      }
+
+      /* سيتم تطبيق هذا التنسيق فقط على الشاشات التي يقل عرضها عن 600 بكسل */
+      @media screen and (max-width: 800px) {
+        body {
+          background-color: lightblue;
+        }
+        #lettersboard {
+          width: 100%;
+          height: 50vh !important;
+          min-height: 50vh !important;
+          max-height: 50vh !important;
+          background: none;
+          background-color: rgb(243, 245, 247);
+        }
+        .diver {
+          font-size: 2.5rem !important;
+          color: rgb(14, 21, 59) !important;
+          text-shadow: 1px 1px 1px rgb(140, 171, 207);
+        }
+        #middlewhiteboard {
+          background-color: antiquewhite;
+          line-height: 100% !important;
+          z-index: 0;
+          right: 0px;
+          width: 100vw !important;
+          border: 15px solid rgba(12, 12, 12, 0.932) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="board">
+      <div id="lettersboard"></div>
+      <div id="whiteboard"></div>
+      <div id="middlewhiteboard">
+        WORD AREA
+        <hr />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+      </div>
+    </div>
+    <script>
+      const smallLetters = [
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "z",
+        "y",
+        "x",
+        "w",
+        "v",
+        "u",
+        "t",
+        "s",
+        "r",
+        "q",
+        "p",
+        "o",
+        "n",
+        "m",
+        "l",
+        "k",
+        "j",
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",  
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        ".",
+        ",",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        "!",
+        "?",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "*"
+    
+      ];
+      smallLetters.forEach((item, i) => {
+        var ele = document.createElement("div");
+        ele.id = item;
+        //ele.textContent = i + 1;
+        ele.textContent = item;
+        ele.className = "diver";
+        document.body.appendChild(ele);
+
+        if (item === "a") {
+          ele.style.left = `${30}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "b") {
+          ele.style.left = `${75}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "c") {
+          ele.style.left = `${115}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "d") {
+          ele.style.left = `${150}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "e") {
+          ele.style.left = `${190}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "f") {
+          ele.style.left = `${225}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "g") {
+          ele.style.left = `${255}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "h") {
+          ele.style.left = `${300}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "i") {
+          ele.style.left = `${339}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "j") {
+          ele.style.left = `${368}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "k") {
+          ele.style.left = `${390}px`;
+          ele.style.top = `${20}px`;
+        } else if (item === "l") {
+          ele.style.left = `${25}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "m") {
+          ele.style.left = `${50}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "n") {
+          ele.style.left = `${110}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "o") {
+          ele.style.left = `${150}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "p") {
+          ele.style.left = `${190}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "q") {
+          ele.style.left = `${230}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "r") {
+          ele.style.left = `${273}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "s") {
+          ele.style.left = `${300}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "t") {
+          ele.style.left = `${330}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "u") {
+          ele.style.left = `${355}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "v") {
+          ele.style.left = `${388}px`;
+          ele.style.top = `${60}px`;
+        } else if (item === "w") {
+          ele.style.left = `${30}px`;
+          ele.style.top = `${100}px`;
+        } else if (item === "x") {
+          ele.style.left = `${80}px`;
+          ele.style.top = `${100}px`;
+        } else if (item === "y") {
+          ele.style.left = `${109}px`;
+          ele.style.top = `${100}px`;
+        } else if (item === "z") {
+          ele.style.left = `${153}px`;
+          ele.style.top = `${100}px`;
+        }else if (item ==="."){
+          ele.style.top =`${100}px`;
+          ele.style.left =`${260}px`;
+        }else if (item ===","){
+          ele.style.top =`${100}px`;
+          ele.style.left =`${230}px`;
+        }else if (item ==="!"){
+          ele.style.top =`${100}px`;
+          ele.style.left =`${280}px`;
+        }else if (item ==="?"){
+          ele.style.top =`${100}px`;
+          ele.style.left =`${296}px`;
+        }else if (item ==="A"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${30}px`;
+        }else if (item ==="B"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${80}px`;
+        }else if (item ==="C"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${120}px`;
+        }
+        else if (item ==="D"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${160}px`;
+        }
+        else if (item ==="E"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${200}px`;
+        }
+        else if (item ==="F"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${240}px`;
+        }
+        else if (item ==="G"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${280}px`;
+        }
+        else if (item ==="H"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${330}px`;
+        }
+        else if (item ==="I"){
+          ele.style.top =`${160}px`;
+          ele.style.left =`${380}px`;
+        }
+        else if (item ==="J"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${40}px`;
+        }
+        
+        else if (item ==="K"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${70}px`;
+        }
+        else if (item ==="L"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${110}px`;
+        }
+        else if (item ==="M"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${150}px`;
+        }
+        else if (item ==="N"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${198}px`;
+        }
+        else if (item ==="O"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${240}px`;
+        }
+        else if (item ==="P"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${280}px`;
+        }
+        else if (item ==="Q"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${310}px`;
+        }
+        else if (item ==="R"){
+          ele.style.top =`${220}px`;
+          ele.style.left =`${360}px`;
+        }
+        else if (item ==="S"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${40}px`;
+        }
+        else if (item ==="T"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${70}px`;
+        } 
+        else if (item ==="U"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${103}px`;
+        }
+        else if (item ==="V"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${140}px`;
+        }
+        else if (item ==="W"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${200}px`;
+        }
+        else if (item ==="X"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${260}px`;
+        }
+        else if (item ==="Y"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${300}px`;
+        }
+        else if (item ==="Z"){
+          ele.style.top =`${280}px`;
+          ele.style.left =`${340}px`;
+        }
+
+
+        else{
+          ele.style.top =`${390}px`;
+          ele.style.left =`${60}px`;
+        }
+          
+    
+      
+        
+        ele.addEventListener("click", () => {
+          /*if (ele.textContent == i + 1) {
+            ele.textContent = item;
+          } else {
+            ele.textContent = i + 1;
+          }*/
+          ele.style.fontSize = "30px";
+        });
+        dragElement(ele);
+        function dragElement(element) {
+          var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
+          if (document.getElementById(element.id + "header")) {
+            document.getElementById(element.id + "header").onmousedown =
+              dragMouseDown;
+          } else {
+            element.onmousedown = dragMouseDown;
+          }
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+          }
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+
+            element.style.top = element.offsetTop - pos2 + "px";
+            element.style.left = element.offsetLeft - pos1 + "px";
+          }
+          function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
