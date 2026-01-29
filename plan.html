@@ -3,22 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.9.1/mammoth.browser.min.js"
+      integrity="sha512-N4Uo11qseyexXRHHXEqTzmr6paAgBuR3KKv3XLEYoAEYKUYAmbt3dagx3R3YQKZ8NLtwFfnqSOFnH45O1MY0Iw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.9.1/mammoth.browser.js"
+      integrity="sha512-SFoj6DqpzCoTFA9kFm0SszqscxRISAfGKDpMnl3UtnrTrtcnyBmWbs/HeKNKB2Y/+r7Wqs6VhFXlSmDJzvWA5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>individual-plans</title>
     <link rel="stylesheet" href="plan.css" />
   </head>
   <body>
     <div id="printer">
+      <div name="info" id="information">
+        <ul>
+          <h3 id="info-title">Information</h3>
+
+          <li>Escape yellow</li>
+          <li>Enter grey</li>
+        </ul>
+      </div>
       <div class="providers">
         <button id="providerbtn" onclick="moveFocus(1)">Next</button>
-        <!--<input type="text" id="providerinput" autofocus/>-->
-           <button id="providerbtn" onclick="moveFocus(-1)">previous</button>
+        <button id="providerbtn" onclick="moveFocus(-1)">previous</button>
       </div>
       <div class="printers">
-        <button id="printbtn" onclick="mine()" disabled></button>
+        <button id="printbtn" onclick="printPlan()" disabled></button>
         <button id="activeprintbtn" onclick="activebtn()"></button>
       </div>
     </div>
-
 
     <div id="plan">
       <div class="sections">
@@ -32,7 +50,7 @@
     </div>
     <script src="plan.js"></script>
     <script>
-      function mine() {
+      function printPlan() {
         document.getElementById("printbtn").disabled = true;
         document.getElementById("printbtn").style.backgroundColor =
           "rgba(12,199,12,.3)";
@@ -41,7 +59,16 @@
         document.getElementById("activeprintbtn").style.transform =
           "scale(1.1)";
         document.getElementById("printbtn").style.transform = "scale(1.1)";
-        document.getElementById("printer").style.width = "32" +"%"; 
+        document.getElementById("printer").style.width = "32" + "%";
+        ///////////////////////////////////////////////////////////////////////////
+        const allTds = document.querySelectorAll("tr");
+
+        // You can iterate over the resulting NodeList using forEach, for...of, etc.
+        allTds.forEach((td) => {
+          td.style.paddingBottom = "1" + "px";
+          td.style.paddingTop = "1" + "px";
+        });
+        /////////////////////////////////////////////////////////////////////////////////
         window.print();
       }
 
@@ -56,20 +83,54 @@
         document.getElementById("printbtn").style.transform = "scale(1.5)";
 
         document.getElementById("printbtn").style.zIndex = "123";
-        document.getElementById("printer").style.width = "200" +"px"; ///////////////////////////
+        document.getElementById("printer").style.width = "200" + "px"; ///////////////////////////
 
-        setTimeout(()=>{
-                     document.getElementById("printbtn").disabled = true;
-        document.getElementById("printbtn").style.backgroundColor =
-          "rgba(12,199,12,.3)";
-        document.getElementById("printbtn").style.color = "rgba(1,101,1,.6)";
-        document.getElementById("printbtn").style.rotate = "0" + "deg";
-        document.getElementById("activeprintbtn").style.transform =
-          "scale(1.1)";
-        document.getElementById("printbtn").style.transform = "scale(1.1)";
-         document.getElementById("printer").style.width = "32" +"%"; 
-        },10000);
+        setTimeout(() => {
+          document.getElementById("printbtn").disabled = true;
+          document.getElementById("printbtn").style.backgroundColor =
+            "rgba(12,199,12,.3)";
+          document.getElementById("printbtn").style.color = "rgba(1,101,1,.6)";
+          document.getElementById("printbtn").style.rotate = "0" + "deg";
+          document.getElementById("activeprintbtn").style.transform =
+            "scale(1.1)";
+          document.getElementById("printbtn").style.transform = "scale(1.1)";
+          document.getElementById("printer").style.width = "32" + "%";
+        }, 10000);
       }
+
+      addEventListener("keyup", (e) => {
+        if (e.key == "Escape") {
+          document.getElementById("printbtn").disabled = false;
+          document.getElementById("printbtn").style.backgroundColor =
+            "rgba(190,12,12,.9)";
+          document.getElementById("printbtn").style.color = "rgb(221,219,212)";
+          document.getElementById("printbtn").style.rotate = "45" + "deg";
+          document.getElementById("activeprintbtn").style.transform =
+            "scale(1.2)";
+          document.getElementById("printbtn").style.transform = "scale(1.5)";
+
+          document.getElementById("printbtn").style.zIndex = "123";
+          document.getElementById("printer").style.width = "200" + "px"; ///////////////////////////
+          setTimeout(() => {
+            document.getElementById("printbtn").disabled = true;
+            document.getElementById("printbtn").style.backgroundColor =
+              "rgba(12,199,12,.3)";
+            document.getElementById("printbtn").style.color =
+              "rgba(1,101,1,.6)";
+            document.getElementById("printbtn").style.rotate = "0" + "deg";
+            document.getElementById("activeprintbtn").style.transform =
+              "scale(1.1)";
+            document.getElementById("printbtn").style.transform = "scale(1.1)";
+            document.getElementById("printer").style.width = "32" + "%";
+          }, 10000);
+        } else if (e.key == "Enter") {
+          printPlan();
+        } else if (e.key == "ArrowRight") {
+          moveFocus(1);
+        } else if (e.key == "ArrowLeft") {
+          moveFocus(-1);
+        }
+      });
     </script>
   </body>
 </html>
