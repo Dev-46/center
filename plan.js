@@ -1,7 +1,3 @@
-const allTds = document.querySelectorAll(".cell2");
-const allInputFields = document.querySelectorAll(".input-field");
-const allSchoolsFields = document.querySelectorAll(".cell4");
-
 let date = new Date();
 let day = date.getDate();
 let month = date.getMonth();
@@ -21,8 +17,8 @@ const montharabic = [
   "ديسمبر",
 ];
 let month_days = 100;
-const monthn = month + 3; //the exact code not trying one
-const arabic_month_name = montharabic[month + 2]; // the exact code not try one
+const monthn = month + 3;//the exact code not trying one
+const arabic_month_name = montharabic[month + 2];// the exact code not try one
 
 let daysNamesOrder = [];
 let allMonthDaysNames = [];
@@ -395,35 +391,31 @@ for (let index = 0; index < month_days; index++) {
   td4.setAttribute("id", "td4" + cells[index]);
   td4.setAttribute("class", "cell cell4");
   td4.innerHTML = "";
+ 
 
   ////////////////////////////////////////////
   let td5 = document.createElement("input");
   td5.setAttribute("id", "td5" + cells[index]);
   td5.setAttribute("class", "cell cell5 input-field");
 
-  /////////////////////////////////////////////...................... appending cells............................
-  tr.appendChild(td1);
-  tr.appendChild(td2);
-  tr.appendChild(td3);
-  tr.appendChild(td4);
-  tr.appendChild(td5);
-  document.getElementById("mytable").appendChild(tr);
+   //////////////////////////////////////////////.......................
+    const allTds = document.querySelectorAll(".cell2");
+    const allInputFields = document.querySelectorAll(".input-field");
+    const allSchoolsFields = document.querySelectorAll(".cell4");
 
-  ///////////////////////////////////////////................................
-
-  //////////////////////////////////////////////.......................
-
-  // You can iterate over the resulting NodeList using forEach, for...of, etc.
-  allTds.forEach((cell, i) => {
-    if (cell.innerHTML === "الثلاثاء") {
-      allInputFields[i].value = "1001";
-      allSchoolsFields[i].innerHTML = "ادارة";
-    } else if (cell.innerHTML === "السبت" && index < 27) {
-      //cell.style.color = "red";
-      allInputFields[i].value = "1002";
-      allSchoolsFields[i].innerHTML = "راحة";
-    }
-  });
+        // You can iterate over the resulting NodeList using forEach, for...of, etc.
+        allTds.forEach((cell,i) => {
+          if(cell.innerHTML==="الثلاثاء"){
+            allInputFields[i].value="1001";
+            allSchoolsFields[i].innerHTML="ادارة";
+          }else
+          if(cell.innerHTML==="السبت" && index <27){
+            //cell.style.color = "red";
+            allInputFields[i].value="1002";
+            allSchoolsFields[i].innerHTML="راحة";
+          }
+                    
+        });
   /////////////////////////////////////////////.......................
   td5.addEventListener("keyup", function () {
     let code = td5.value;
@@ -1272,6 +1264,13 @@ for (let index = 0; index < month_days; index++) {
         break;
     }
   });
+
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  tr.appendChild(td5);
+  document.getElementById("mytable").appendChild(tr);
 }
 
 const recieverInput = [
@@ -1303,9 +1302,10 @@ const recieverInput = [
 let myinput = document.getElementById("providerinput");
 
 let currentInd = -1;
-const inputs = document.querySelectorAll(".input-field");
 
 function moveFocus(direction) {
+  const inputs = document.querySelectorAll(".input-field");
+
   // حساب المؤشر الجديد (مع معالجة الأرقام السالبة للرجوع للخلف)
   currentInd = (currentInd + direction + inputs.length) % inputs.length;
 
