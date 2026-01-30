@@ -15,7 +15,7 @@ body {
 #plan {
   max-width: 490px;
   min-width: 400px;
-  margin: auto;
+  margin:0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -24,17 +24,18 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   width: 100%;
   background-color: rgb(255, 254, 254);
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
 }
 
 span {
   font-weight: 900;
+  margin: 0;
   margin-left: 10px;
   margin-right: 10px;
   text-align: right;
@@ -51,11 +52,13 @@ span {
 table {
   width: 100%;
   height: fit-content !important;
+  max-height: 400px !important;
+  border: 1px solid rgb(20, 20, 20) !important;
 }
 
 .cell1 {
   max-width: 15px;
-  font-size: 14px !important;
+
 }
 .cell2 {
   max-width: 50px !important;
@@ -80,14 +83,15 @@ table {
   text-align: center;
   color: rgb(16, 17, 17);
   font-weight: bold !important;
+    font-size: 13px !important;
 }
 
 .cell5 {
   max-width: 0px !important;
   min-width: 55px !important;
-  font-size: 16px !important;
-  padding: 1px 0;
-  line-height:15px;
+  font-size: 14px !important;
+  padding: 0 auto;
+  line-height:11px;
 }
 #printer {
   border-right: 2px solid rgba(20, 20, 22, 0.336);
