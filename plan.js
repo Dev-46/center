@@ -39,6 +39,8 @@ mypoptogetinfo.style.top = "0";
 mypoptogetinfo.style.left = "260"+"px";/* 160 */
 mypoptogetinfo.style.bottom = "0";
 mypoptogetinfo.style.height = "99%";
+mypoptogetinfo.style.width = "30%";
+
 mypoptogetinfo.style.backgroundColor = "rgba(67, 62, 73, 0.18)";
 mypoptogetinfo.style.zIndex = "1000";
 mypoptogetinfo.style.margin="2"+"px";
@@ -1713,6 +1715,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
