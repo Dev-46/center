@@ -132,5 +132,22 @@
         }
       });
     </script>
+    <script>
+      let myinfoopener = document.getElementById("inial");
+      myinfoopener.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        myinfocloser.parentNode.style.display = "flex";
+      });
+
+      let myinfocloser = document.getElementById("information");
+      myinfocloser.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        myinfocloser.parentNode.style.display = "none";
+      });
+
+
+    </script>
   </body>
 </html>
