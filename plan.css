@@ -260,6 +260,8 @@ li {
   .printers{
     flex-direction: column;
   }
+  td,
+  tr,
   .cell1,
 .cell2,
 .cell3,
@@ -275,4 +277,5 @@ li {
   margin-bottom: 0px !important;
 }
 }
+
 
