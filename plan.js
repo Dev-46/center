@@ -36,7 +36,7 @@ mypoptogetinfo.style.alignItems = "center";
 mypoptogetinfo.style.position = "fixed";
 mypoptogetinfo.style.top = "0";
 
-mypoptogetinfo.style.right = "160"+"px";
+mypoptogetinfo.style.right = "260"+"px";/* 160 */
 mypoptogetinfo.style.bottom = "0";
 mypoptogetinfo.style.height = "99%";
 mypoptogetinfo.style.backgroundColor = "rgba(67, 62, 73, 0.18)";
@@ -1713,5 +1713,6 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
