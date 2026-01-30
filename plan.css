@@ -6,6 +6,7 @@
   direction: rtl;
   border: none;
   outline: none;
+  max-height: 570px !important;
 }
 
 body {
@@ -23,13 +24,13 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0;
   display: flex;
   width: 100%;
   background-color: rgb(255, 254, 254);
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0;
 }
 
 span {
@@ -37,7 +38,7 @@ span {
   margin-left: 10px;
   margin-right: 10px;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #plans {
@@ -62,7 +63,7 @@ table {
 .cell3 {
   max-width: 120px !important;
   text-align: center;
-  font-size: 15px !important;
+  font-size: 14px !important;
   padding: 0 6px !important;
 }
 
@@ -86,6 +87,7 @@ table {
   min-width: 55px !important;
   font-size: 16px !important;
   padding: 1px 0;
+  line-height:15px;
 }
 #printer {
   border-right: 2px solid rgba(20, 20, 22, 0.336);
@@ -249,33 +251,29 @@ li {
 
 /* Styles for screens 768px or smaller (mobile sizes) */
 @media screen and (max-width: 768px) {
-  
-  .printers{
+  .printers {
     flex-direction: column;
   }
 }
 /* Styles for screens 768px or smaller (mobile sizes) */
 @media screen and (max-width: 375px) {
-  
-  .printers{
+  .printers {
     flex-direction: column;
   }
-  td,
   tr,
+  td,
   .cell1,
-.cell2,
-.cell3,
-.cell4,
-.cell5 {
-  background-color: rgb(250, 250, 250);
-  text-align: center;
-  color: rgb(16, 17, 17);
-  font-weight: bold !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  .cell2,
+  .cell3,
+  .cell4,
+  .cell5 {
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    color: rgb(16, 17, 17);
+    font-weight: bold !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
 }
-}
-
-
