@@ -33,15 +33,10 @@ mypoptogetinfo.style.display = "flex";
 mypoptogetinfo.style.flexDirection = "column";
 mypoptogetinfo.style.justifyContent = "center";
 mypoptogetinfo.style.alignItems = "center";
-//mypoptogetinfo.style.top = "100"+"px";/*390*/
-
 mypoptogetinfo.style.left = "0";/* 160 */
 mypoptogetinfo.style.right = "0";/* 160 */
 mypoptogetinfo.style.bottom = "0";
-//mypoptogetinfo.style.height = "";
 mypoptogetinfo.style.width = "340"+"px";
-
-//mypoptogetinfo.style.backgroundColor = "rgba(67, 62, 73, 0.25)";
 mypoptogetinfo.style.zIndex = "1000";
 mypoptogetinfo.style.margin="300px auto";
 
@@ -1739,6 +1734,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
