@@ -7,6 +7,7 @@
   border: none;
   outline: none;
   max-height: 500px !important; /*570px*/
+  max-width:370px !important;
 }
 
 body {
@@ -260,6 +261,17 @@ li {
 }
 /* Styles for screens 768px or smaller (mobile sizes) */
 @media screen and (max-width: 375px) {
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold !important;
+  direction: rtl;
+  border: none;
+  outline: none;
+  max-height: 500px !important; /*570px*/
+  max-width:370px !important;
+}
   .printers {
     flex-direction: column;
   }
@@ -279,6 +291,7 @@ li {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
+  
   #printer{
     position:absolute;
     top:0;
@@ -288,6 +301,7 @@ li {
     
   }
 }
+
 
 
 
