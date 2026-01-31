@@ -296,6 +296,7 @@ li {
     margin:0px !important;
   }
   
+  
   #printer{
     position:absolute;
     top:0;
@@ -304,14 +305,21 @@ li {
     right:0;
     
   }
+  #plan{
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+    border:1px solid red !important;
+  }
   table {
-  width: 98%;/* 100% */
+  width: 100%;/* 100% */
   height: fit-content !important;
   max-height: 400px !important;
   border: 1px solid rgb(20, 20, 20) !important;
     margin:0 auto;
 }
 }
+
 
 
 
