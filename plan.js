@@ -1758,31 +1758,31 @@ var BrowserDetect = function() {
     // detect browsers (only the ones that have some kind of quirk we need to work around)
     if (ua.match(/ipad/i) !== null)
         return "iPod";
-        alert("ipod");
+        //alert("ipod");
     if (ua.match(/iphone/i) !== null)
         return "iPhone";
-  alert("iphone");
+  //alert("iphone");
     if (ua.match(/android/i) !== null)
         return "Android";
-  alert("Android");
+  //alert("Android");
     if ((nav.appName.toLowerCase().indexOf("microsoft") != -1 || nav.appName.toLowerCase().match(/trident/gi) !== null))
         return "IE";
-  alert("ie");
+  //alert("ie");
     if (ua.match(/chrome/gi) !== null)
         return "Chrome";
-  alert("chrome");
+  //alert("chrome");
     if (ua.match(/firefox/gi) !== null)
         return "Firefox";
-  alert("firefox");
+  //alert("firefox");
     if (ua.match(/webkit/gi) !== null)
         return "Webkit";
-  alert("webkit");
+  //alert("webkit");
     if (ua.match(/gecko/gi) !== null)
         return "Gecko";
-  alert("gecko");
+  //alert("gecko");
     if (ua.match(/opera/gi) !== null)
         return "Opera";
-  alert("opera");
+  //alert("opera");
     //If any case miss we will return null
     return null;
 };
@@ -1803,6 +1803,7 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
     window.location.print();
   }
 }
+
 
 
 
