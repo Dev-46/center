@@ -67,9 +67,9 @@ mypoptogetinfo.appendChild(closeHolder);
 let superinput = document.createElement("input");
 superinput.type = "text";
 superinput.style.fontSize = "30" + "px";
-superinput.style.maxWidth = "110" + "px";
-superinput.style.minWidth = "110" + "px";
-superinput.style.width = "110" + "px";
+superinput.style.maxWidth = "350" + "px";
+superinput.style.minWidth = "350" + "px";
+superinput.style.width = "350" + "px";
 superinput.style.backgroundColor = "#be0a0ac9";
 superinput.style.color = "#f0e65b";
 superinput.style.border = "1px solid #838582e3";
@@ -84,9 +84,9 @@ mypoptogetinfo.appendChild(superinput);
 let yearinput = document.createElement("input");
 yearinput.type = "text";
 yearinput.style.fontSize = "30" + "px";
-yearinput.style.maxWidth = "110" + "px";
-yearinput.style.minWidth = "110" + "px";
-yearinput.style.width = "110" + "px";
+yearinput.style.maxWidth = "350" + "px";
+yearinput.style.minWidth = "350" + "px";
+yearinput.style.width = "350" + "px";
 yearinput.style.backgroundColor = "#fafafafd";
 yearinput.style.color = "#f1f50c";
 yearinput.style.border = "1px solid #81e075";
@@ -102,9 +102,9 @@ mypoptogetinfo.appendChild(yearinput);
 let monthinput = document.createElement("input");
 
 monthinput.style.fontSize = "30" + "px";
-monthinput.style.maxWidth = "110" + "px";
-monthinput.style.minWidth = "110" + "px";
-monthinput.style.width = "110" + "px";
+monthinput.style.maxWidth = "350" + "px";
+monthinput.style.minWidth = "350" + "px";
+monthinput.style.width = "350" + "px";
 monthinput.style.backgroundColor = "#0f0f0e";
 monthinput.style.color = "#fff";
 monthinput.style.border = "1px solid #81e075";
@@ -1746,6 +1746,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
