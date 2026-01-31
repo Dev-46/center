@@ -33,7 +33,7 @@ mypoptogetinfo.style.display = "flex";
 mypoptogetinfo.style.flexDirection = "column";
 mypoptogetinfo.style.justifyContent = "center";
 mypoptogetinfo.style.alignItems = "center";
-mypoptogetinfo.style.top = "390"+"px";
+mypoptogetinfo.style.top = "100"+"px";/*390*/
 
 mypoptogetinfo.style.left = "0"+"px";/* 160 */
 mypoptogetinfo.style.right = "0"+"px";/* 160 */
@@ -47,7 +47,7 @@ mypoptogetinfo.style.margin="2"+"px";
 
 let closeHolder = document.createElement("button");
 //closeHolder.style.maxWidth = "460" + "px";
-closeHolder.style.minWidth = "370" + "px";
+closeHolder.style.minWidth = "350" + "px";
 closeHolder.style.backgroundColor = "rgba(32, 1, 32, 0.9)";
 closeHolder.style.color = "white";
 closeHolder.style.fontSize = "15" + "px";
@@ -76,6 +76,7 @@ superinput.style.borderBottom = "1px solid #ecc2c2c0";
 superinput.placeholder = "اسم الموجه ثنائي";
 superinput.value = "ابراهيم حسان";
 superinput.style.marginTop="-12"+"px";
+superinput.style.textIndent="30"+"px;
 mypoptogetinfo.appendChild(superinput);
 
 let yearinput = document.createElement("input");
@@ -90,6 +91,7 @@ yearinput.placeholder = "  السنة";
 yearinput.value = 2026;
 yearinput.style.zIndex=100;
 yearinput.style.textShadow="2px 2px 2px #000";
+yearinput.style.textIndent="30"+"px;
 
 mypoptogetinfo.appendChild(yearinput);
 
@@ -104,15 +106,15 @@ monthinput.style.borderBottom = "1px solid #756d6d";
 monthinput.placeholder = " number  ";
 monthinput.value = 3;
 monthinput.style.zIndex=100;
-
+monthinput.style.textIndent="30"+"px;
 mypoptogetinfo.appendChild(monthinput);
 
 let executebtn = document.createElement("button");
 executebtn.style.paddingTop = "30"+"px";
 executebtn.style.marginTop = "-30"+"px";
 executebtn.style.fontSize = "60" + "px";
-executebtn.style.maxWidth = "360" + "px";
-executebtn.style.minWidth = "360" + "px";
+executebtn.style.maxWidth = "350" + "px";
+executebtn.style.minWidth = "350" + "px";
 executebtn.style.backgroundColor = "#544757";
 executebtn.style.color = "#c4a5b8";
 executebtn.style.border = "2px double #8b126d";
@@ -1738,6 +1740,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
