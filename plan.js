@@ -1751,6 +1751,11 @@ window.addEventListener('beforeunload', function (e) {
 });
 
 
+//   حفظ البيانات عند التغيير
+//   localStorage.setItem('saved_data', inputField.value);
+
+
+
 
 
 
