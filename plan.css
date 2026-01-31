@@ -349,14 +349,14 @@ li {
   }
    .providers{
     
-        /*display:none !important;/*for mobiles */
+        display:none !important;/*for mobiles */
         width:370px !important;
       min-width:370px !important;
       max-width:370px !important;
     border:5px solid rgba(222, 231, 137, 0.911) !important;
   }
    .printers{
-      /*display:none !important;/*for mobiles */
+      display:none !important;/*for mobiles */
     background-color: rgb(155, 151, 146) !important;
         width:370px !important;
       min-width:370px !important;
@@ -379,6 +379,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
