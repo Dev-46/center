@@ -1738,10 +1738,6 @@ document.body.appendChild(masterInfo);
 
 
 
-
-
-
-
 window.addEventListener('beforeunload', function (e) {
     // إلغاء الحدث كما هو محدد في القياسات
     e.preventDefault();
@@ -1794,7 +1790,20 @@ var BrowserDetect = function() {
 
 
 
-BrowserDetect();
+if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
+  //
+}else{
+  let printBtnCreated = document.createElement("button");
+      printBtnCreated.style.width="50"+"px";
+  printBtnCreated.style.height="50"+"px";
+  printBtnCreated.style.border="5px solid red";
+  printBtnCreated.textContent="print";
+  document.getElementById("mypoptogetinfo").appenChild(printBtnCreated);
+  printBtnCreated.onclick=()=>{
+    window.location.print();
+  }
+}
+
 
 
 
