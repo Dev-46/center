@@ -569,7 +569,7 @@ executebtn.addEventListener("click", function () {
     let td3 = document.createElement("td");
     td3.setAttribute("id", "td3" + cells[index]);
     td3.setAttribute("class", "cell cell3");
-    td3.innerHTML = `${allMonthDaysNumbers[index]}-${monthn}-${year}`;
+    td3.innerHTML = `${year}-${monthn}-${allMonthDaysNumbers[index]}`;
 
     let td4 = document.createElement("td");
     td4.setAttribute("id", "td4" + cells[index]);
@@ -1459,10 +1459,6 @@ executebtn.addEventListener("click", function () {
 
 /////////////////////////////////////////here ............................................................
 
-
-
-
-
 if (year === "2026") {
   switch (monthn) {
     case 3:
@@ -1735,9 +1731,6 @@ if (year === "2026") {
 }
 
 
-
-
-
 let masterInfo = document.createElement("span");
 masterInfo.setAttribute("id", "masterInfo");
 masterInfo.style.color = "black";
@@ -1746,6 +1739,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
