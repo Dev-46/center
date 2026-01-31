@@ -1756,13 +1756,45 @@ window.addEventListener('beforeunload', function (e) {
 
 
 
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-     alert('mobile');
-}else{
-  // code
-}
+var BrowserDetect = function() {
+    var nav = window.navigator,
+    ua = window.navigator.userAgent.toLowerCase();
+    // detect browsers (only the ones that have some kind of quirk we need to work around)
+    if (ua.match(/ipad/i) !== null)
+        return "iPod";
+        alert("ipod");
+    if (ua.match(/iphone/i) !== null)
+        return "iPhone";
+  alert("iphone");
+    if (ua.match(/android/i) !== null)
+        return "Android";
+  alert("Android");
+    if ((nav.appName.toLowerCase().indexOf("microsoft") != -1 || nav.appName.toLowerCase().match(/trident/gi) !== null))
+        return "IE";
+  alert("ie");
+    if (ua.match(/chrome/gi) !== null)
+        return "Chrome";
+  alert("chrome");
+    if (ua.match(/firefox/gi) !== null)
+        return "Firefox";
+  alert("firefox");
+    if (ua.match(/webkit/gi) !== null)
+        return "Webkit";
+  alert("webkit");
+    if (ua.match(/gecko/gi) !== null)
+        return "Gecko";
+  alert("gecko");
+    if (ua.match(/opera/gi) !== null)
+        return "Opera";
+  alert("opera");
+    //If any case miss we will return null
+    return null;
+};
 
 
+
+
+BrowserDetect();
 
 
 
