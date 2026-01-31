@@ -328,6 +328,7 @@ li {
   
   
   #printer{
+    background-color: transparent !important;
     position:absolute;
     top:0;
     left:0;
@@ -383,6 +384,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
