@@ -333,6 +333,9 @@ li {
     left:0;
     bottom:0;
     right:0;
+    width:340px !important;
+      min-width:340px !important;
+      max-width:340px !important;
     padding:20px !important;/*new css */
     display:flex !important;/* flex*/
     flex-direction:column;
@@ -380,6 +383,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
