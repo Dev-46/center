@@ -291,6 +291,10 @@ li {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
+  .rows{
+    padding:0px !important;
+    margin:0px !important;
+  }
   
   #printer{
     position:absolute;
@@ -301,6 +305,7 @@ li {
     
   }
 }
+
 
 
 
