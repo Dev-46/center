@@ -38,7 +38,7 @@ mypoptogetinfo.style.right = "0";/* 160 */
 mypoptogetinfo.style.bottom = "0";
 mypoptogetinfo.style.width = "340"+"px";
 mypoptogetinfo.style.zIndex = "1000";
-mypoptogetinfo.style.margin="300px auto";
+mypoptogetinfo.style.margin="450px auto";
 
 let closeHolder = document.createElement("button");
 //closeHolder.style.maxWidth = "460" + "px";
@@ -1749,6 +1749,7 @@ window.addEventListener('beforeunload', function (e) {
     // بعض المتصفحات تتطلب تعيين قيمة لـ returnValue
     e.returnValue = '';
 });
+
 
 
 
