@@ -111,8 +111,12 @@ table {
   animation: shrinko 9s linear ease-in-out;
   transition: 5s ease-in-out;
 }
+
 #information {
-  line-height: 40px;
+  position: relative;
+  left: 0;
+  right: 0;
+  line-height: 20px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -123,7 +127,9 @@ table {
   background-color: #00000002 !important;
   border: 2px solid rgba(255, 0, 0, 0.014);
   font-size: 1.2rem;
-  width: 150px;
+  min-width: 350px !important;
+  max-width: 350px !important;
+  width: 350px;
   height: 150px;
   overflow: hidden;
   text-shadow: 1px 1px 1px #000;
@@ -132,8 +138,27 @@ table {
 #info-title,
 li {
   background-color: #00000057;
-  width: 100%;
-  padding: 0 14px !important;
+  padding: 0 1px !important;
+  width: 100% !important;
+  text-align: left;
+}
+.yellow{
+  background-color: yellow;
+  color: yellow;
+    text-shadow: 1px 1px 1px yellow;
+    width:  100px !important;
+    min-width: 100px !important;
+    height:  100px !important;
+    min-height: 100px !important;
+}
+.grey{
+  background-color: grey;
+  color: grey;
+    text-shadow: 1px 1px 1px grey;
+     width:  100px !important;
+     min-width: 100px !important;
+     height:  100px !important;
+    min-height: 100px !important;
 }
 #printer button {
   padding: 0.5rem;
@@ -296,8 +321,9 @@ li {
     margin-bottom: 0px !important;
   }
   .rows{
-    padding:0px !important;
-    margin:0px !important;
+    padding:0px auto !important;
+    margin:0px auto !important;
+    
   }
   
   
@@ -311,7 +337,7 @@ li {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    border:1px solid red !important;
+    border:1px solid rgba(255, 0, 0, 0) !important;
   }
   #information{
     
@@ -319,7 +345,7 @@ li {
         width:370px !important;
       min-width:370px !important;
       max-width:370px !important;
-    border:1px solid red !important;
+    border:1px solid rgb(240, 211, 211) !important;
   }
    .providers{
     
@@ -327,28 +353,29 @@ li {
         width:370px !important;
       min-width:370px !important;
       max-width:370px !important;
-    border:1px solid red !important;
+    border:5px solid rgba(222, 231, 137, 0.911) !important;
   }
    .printers{
     
-    
+    background-color: rgb(155, 151, 146) !important;
         width:370px !important;
       min-width:370px !important;
       max-width:370px !important;
-    border:1px solid red !important;
+    border:2px solid rgb(250, 246, 246) !important;
+    border-radius: 25px;
   }
   #plan{
     width:370px !important;
       min-width:370px !important;
       max-width:370px !important;
-    border:1px solid red !important;
+    border:1px solid rgba(255, 0, 0, 0) !important;
     
   }
   table {
   width: 100%;/* 100% */
   height: fit-content !important;
   max-height: 400px !important;
-  border: 1px solid rgb(20, 20, 20) !important;
+  border: 1px solid rgba(20, 20, 20, 0) !important;
     margin:0 auto;
 }
 }
