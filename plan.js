@@ -1742,6 +1742,13 @@ document.body.appendChild(masterInfo);
 
 
 
+window.addEventListener('beforeunload', function (e) {
+    // إلغاء الحدث كما هو محدد في القياسات
+    e.preventDefault();
+    
+    // بعض المتصفحات تتطلب تعيين قيمة لـ returnValue
+    e.returnValue = '';
+});
 
 
 
