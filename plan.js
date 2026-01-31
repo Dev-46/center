@@ -39,7 +39,7 @@ mypoptogetinfo.style.left = "0";/* 160 */
 mypoptogetinfo.style.right = "0";/* 160 */
 mypoptogetinfo.style.bottom = "0";
 //mypoptogetinfo.style.height = "";
-mypoptogetinfo.style.width = "350"+"px";
+mypoptogetinfo.style.width = "340"+"px";
 
 mypoptogetinfo.style.backgroundColor = "rgba(67, 62, 73, 0.25)";
 mypoptogetinfo.style.zIndex = "1000";
@@ -67,7 +67,7 @@ mypoptogetinfo.appendChild(closeHolder);
 let superinput = document.createElement("input");
 superinput.type = "text";
 superinput.style.fontSize = "30" + "px";
-superinput.style.maxWidth = "160" + "px";
+superinput.style.maxWidth = "140" + "px";
 superinput.style.backgroundColor = "#be0a0ac9";
 superinput.style.color = "#f0e65b";
 superinput.style.border = "1px solid #838582e3";
@@ -82,7 +82,7 @@ mypoptogetinfo.appendChild(superinput);
 let yearinput = document.createElement("input");
 yearinput.type = "text";
 yearinput.style.fontSize = "30" + "px";
-yearinput.style.maxWidth = "160" + "px";
+yearinput.style.maxWidth = "140" + "px";
 yearinput.style.backgroundColor = "#fafafafd";
 yearinput.style.color = "#f1f50c";
 yearinput.style.border = "1px solid #81e075";
@@ -98,7 +98,7 @@ mypoptogetinfo.appendChild(yearinput);
 let monthinput = document.createElement("input");
 
 monthinput.style.fontSize = "30" + "px";
-monthinput.style.maxWidth = "160" + "px";
+monthinput.style.maxWidth = "140" + "px";
 monthinput.style.backgroundColor = "#0f0f0e";
 monthinput.style.color = "#fff";
 monthinput.style.border = "1px solid #81e075";
@@ -1740,6 +1740,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
