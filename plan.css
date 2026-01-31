@@ -6,7 +6,7 @@
   direction: rtl;
   border: none;
   outline: none;
-  max-height: 570px !important;
+  max-height: 500px !important; /*570px*/
 }
 
 body {
@@ -21,12 +21,11 @@ body {
 }
 
 .sections {
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   display: flex;
-  width: 100%;
+  /* width:100%;*/
   background-color: rgb(255, 254, 254);
   justify-content: center;
   align-items: center;
@@ -71,7 +70,7 @@ table {
 }
 
 .cell4 {
-  max-width: 292px !important;
+  max-width: 282px !important; /*292*/
   min-width: 155px !important;
 }
 .cell1,
@@ -98,10 +97,10 @@ table {
   z-index: 100;
   background-color: rgba(163, 184, 125, 0.842);
   position: fixed;
-  top: 0;
-  left: 50px;
-  width: 62%;
-  height: 100%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,8 +117,8 @@ table {
   justify-content: space-between;
   align-items: center;
   resize: none;
-  margin-right: 0-50px !important;
-  margin-top: -100px !important;
+ /* margin-right: 0 -50px !important;
+  margin-top: -100px !important;*/
   background-color: #00000002 !important;
   border: 2px solid rgba(255, 0, 0, 0.014);
   font-size: 1.2rem;
@@ -289,5 +288,6 @@ li {
     
   }
 }
+
 
 
