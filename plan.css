@@ -333,6 +333,7 @@ li {
     left:0;
     bottom:0;
     right:0;
+    padding:20px !important;/*new css */
     display:flex !important;/* flex*/
     flex-direction:column;
     justify-content: center;
@@ -379,6 +380,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
