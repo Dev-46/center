@@ -91,7 +91,7 @@ yearinput.placeholder = "  السنة";
 yearinput.value = 2026;
 yearinput.style.zIndex=100;
 yearinput.style.textShadow="2px 2px 2px #000";
-yearinput.style.textIndent="30"+"px;
+yearinput.style.textIndent="30"+"px";
 
 mypoptogetinfo.appendChild(yearinput);
 
@@ -106,7 +106,7 @@ monthinput.style.borderBottom = "1px solid #756d6d";
 monthinput.placeholder = " number  ";
 monthinput.value = 3;
 monthinput.style.zIndex=100;
-monthinput.style.textIndent="30"+"px;
+monthinput.style.textIndent="30"+"px";
 mypoptogetinfo.appendChild(monthinput);
 
 let executebtn = document.createElement("button");
@@ -1740,6 +1740,7 @@ masterInfo.style.width ="fit-content";
 masterInfo.style.right="5"+"%";
 masterInfo.style.top="0.3"+"%";
 document.body.appendChild(masterInfo);
+
 
 
 
