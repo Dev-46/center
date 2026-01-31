@@ -313,6 +313,30 @@ li {
     align-items: center;
     border:1px solid red !important;
   }
+  #information{
+    
+    
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:1px solid red !important;
+  }
+   .providers{
+    
+    
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:1px solid red !important;
+  }
+   .printers{
+    
+    
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:1px solid red !important;
+  }
   #plan{
     width:370px !important;
       min-width:370px !important;
@@ -328,6 +352,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
