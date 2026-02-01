@@ -20,6 +20,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.sections{
+   background-color: rgb(255, 254, 254);
+}
 /*
 .sections {
   justify-content: center;
@@ -397,6 +400,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
