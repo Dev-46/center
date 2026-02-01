@@ -14,8 +14,8 @@ body {
   background-color: rgba(0, 0, 0, 0.226);
 }
 #plan {
-  max-width: 370px;
-  min-width: 370px;
+  max-width: 360px;
+  min-width: 360px;
   margin:0 auto;
   justify-content: center;
   align-items: center;
@@ -390,6 +390,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
