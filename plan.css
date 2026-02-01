@@ -36,8 +36,8 @@ body {
 span {
   font-weight: 900;
   margin: 0;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
   text-align: right;
   font-size: 1rem;
 }
@@ -83,11 +83,11 @@ table {
   text-align: center;
   color: rgb(16, 17, 17);
   font-weight: bold !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
 }
 
 .cell5 {
-  max-width: 0px !important;
+  max-width: 55px !important; /* 0% */
   min-width: 55px !important;
   font-size: 14px !important;
   padding: 0 auto;
@@ -384,6 +384,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
