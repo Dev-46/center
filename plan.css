@@ -326,9 +326,9 @@ li {
     
   }
   .cell5{
-    width:fit-content !important;
-    max-width:fit-content !important;
-    min-width:fit-content !important;
+    width:60 !important;
+    max-width:60 !important;
+    min-width:60 !important;
   }
   
   
@@ -389,6 +389,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
