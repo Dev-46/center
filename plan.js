@@ -42,7 +42,7 @@ mypoptogetinfo.style.margin = "450px auto";
 
 let closeHolder = document.createElement("button");
 //closeHolder.style.maxWidth = "460" + "px";
-closeHolder.style.minWidth = "350" + "px";
+closeHolder.style.minWidth = "300" + "px";
 closeHolder.style.backgroundColor = "rgba(32, 1, 32, 0.9)";
 closeHolder.style.color = "white";
 closeHolder.style.fontSize = "15" + "px";
@@ -62,9 +62,9 @@ mypoptogetinfo.appendChild(closeHolder);
 let superinput = document.createElement("input");
 superinput.type = "text";
 superinput.style.fontSize = "30" + "px";
-superinput.style.maxWidth = "350" + "px";
-superinput.style.minWidth = "350" + "px";
-superinput.style.width = "350" + "px";
+superinput.style.maxWidth = "300" + "px";
+superinput.style.minWidth = "300" + "px";
+superinput.style.width = "300" + "px";
 superinput.style.backgroundColor = "#be0a0ac9";
 superinput.style.color = "#f0e65b";
 superinput.style.border = "1px solid #838582e3";
@@ -79,9 +79,9 @@ mypoptogetinfo.appendChild(superinput);
 let yearinput = document.createElement("input");
 yearinput.type = "text";
 yearinput.style.fontSize = "30" + "px";
-yearinput.style.maxWidth = "350" + "px";
-yearinput.style.minWidth = "350" + "px";
-yearinput.style.width = "350" + "px";
+yearinput.style.maxWidth = "300" + "px";
+yearinput.style.minWidth = "300" + "px";
+yearinput.style.width = "300" + "px";
 yearinput.style.backgroundColor = "#fafafafd";
 yearinput.style.color = "#f1f50c";
 yearinput.style.border = "1px solid #81e075";
@@ -97,9 +97,9 @@ mypoptogetinfo.appendChild(yearinput);
 let monthinput = document.createElement("input");
 
 monthinput.style.fontSize = "30" + "px";
-monthinput.style.maxWidth = "350" + "px";
-monthinput.style.minWidth = "350" + "px";
-monthinput.style.width = "350" + "px";
+monthinput.style.maxWidth = "300" + "px";
+monthinput.style.minWidth = "300" + "px";
+monthinput.style.width = "300" + "px";
 monthinput.style.backgroundColor = "#0f0f0e";
 monthinput.style.color = "#fff";
 monthinput.style.border = "1px solid #81e075";
@@ -114,8 +114,8 @@ let executebtn = document.createElement("button");
 executebtn.style.paddingTop = "30" + "px";
 executebtn.style.marginTop = "-30" + "px";
 executebtn.style.fontSize = "60" + "px";
-executebtn.style.maxWidth = "350" + "px";
-executebtn.style.minWidth = "350" + "px";
+executebtn.style.maxWidth = "300" + "px";
+executebtn.style.minWidth = "300" + "px";
 executebtn.style.backgroundColor = "#544757";
 executebtn.style.color = "#c4a5b8";
 executebtn.style.border = "2px double #8b126d";
@@ -1856,6 +1856,7 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
 }
 
 */
+
 
 
 
