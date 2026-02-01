@@ -382,20 +382,21 @@ li {
     border-radius: 25px;
   }
   #plan{
-    width:370px !important;
-      min-width:370px !important;
-      max-width:370px !important;
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
     border:1px solid rgba(255, 0, 0, 0) !important;
     
   }
   table {
-  width: 100%;/* 100% */
+  /*width: 100%;/* 100% */
   height: fit-content !important;
   max-height: 400px !important;
   border: 1px solid rgba(20, 20, 20, 0) !important;
     margin:0 auto;
 }
 }
+
 
 
 
