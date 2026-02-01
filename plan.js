@@ -702,10 +702,10 @@ executebtn.addEventListener("click", function () {
           td4.innerHTML = "الريادة الخاصة لغات";
           break;
         case "31":
-          td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- ابتدائي";
+          td4.innerHTML = "السبعين تعليم أساسي  - ابتدائي";//  td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- ابتدائي";
           break;
         case "32":
-          td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- إعدادي";
+          td4.innerHTML = "السبعين تعليم أساسي  - إعدادي"; //         td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- إعدادي";
           break;
         case "33":
           td4.innerHTML = "الستين الرسمية لغات - ابتدائي";
@@ -720,16 +720,15 @@ executebtn.addEventListener("click", function () {
           break;
 
         case "36":
-          td4.innerHTML = "السلام الابتدائية بمركز كفرالدوار";
+          td4.innerHTML = "السلام الابتدائية "; //     td4.innerHTML = "السلام الابتدائية بمركز كفرالدوار";
           break;
 
         case "37":
-          td4.innerHTML =
-            "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار - ابتدائي ";
+          td4.innerHTML ="الشعيرة الكبرى تعليم أساسي - ابتدائي "; //   td4.innerHTML ="الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار - ابتدائي ";
           break;
 
         case "38":
-          td4.innerHTML = "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار- إعدادي ";
+          td4.innerHTML = "الشعيرة الكبرى تعليم أساسي  - إعدادي "; //    td4.innerHTML = "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار- إعدادي ";
           break;
 
         case "39":
@@ -787,7 +786,7 @@ executebtn.addEventListener("click", function () {
           break;
 
         case "54":
-          td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية بمركز كفرالدوار";
+          td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية "; //    td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية بمركز كفرالدوار";
           break;
 
         case "55":
@@ -843,10 +842,10 @@ executebtn.addEventListener("click", function () {
           td4.innerHTML = "القومية بأبيس تعليم أساسي - إعدادي";
           break;
         case "72":
-          td4.innerHTML = "الكريون - الابتدائية بمركز كفرالدوار";
+          td4.innerHTML = "الكريون - الابتدائية "; //  td4.innerHTML = "الكريون - الابتدائية بمركز كفرالدوار";
           break;
         case "73":
-          td4.innerHTML = "الكريون - الإعدادية بمركز كفرالدوار";
+          td4.innerHTML = "الكريون - الإعدادية "; //  td4.innerHTML = "الكريون - الإعدادية بمركز كفرالدوار";
           break;
         case "74":
           td4.innerHTML = "الكنايس الابتدائية المشتركة";
@@ -889,14 +888,14 @@ executebtn.addEventListener("click", function () {
           td4.innerHTML = "الوسطانية الابتدائية ب";
           break;
         case "87":
-          td4.innerHTML = "الوكيل الابتدائية بمركز كفرالدوار";
+          td4.innerHTML = "الوكيل الابتدائية"; //   td4.innerHTML = "الوكيل الابتدائية بمركز كفرالدوار";
           break;
         case "88":
-          td4.innerHTML = "الوكيل الإعدادية بمركز كفرالدوار";
+          td4.innerHTML = "الوكيل الإعدادية "; //   td4.innerHTML = "الوكيل الإعدادية بمركز كفرالدوار";
           break;
 
         case "89":
-          td4.innerHTML = "الوكيل تعليم أساسي بمركز كفرالدوار- ابتدائي";
+          td4.innerHTML = "الوكيل تعليم أساسي  - ابتدائي";
           break;
 
         case "90":
@@ -1200,7 +1199,7 @@ executebtn.addEventListener("click", function () {
           break;
 
         case "175":
-          td4.innerHTML = "عبدالقادر خليف   تعليم أساسي - إعدادي";
+          td4.innerHTML = "عبدالقادر خليف  تعليم أساسي - إعدادي";
           break;
 
         case "176":
@@ -1274,13 +1273,13 @@ executebtn.addEventListener("click", function () {
           break;
 
         case "195":
-          td4.innerHTML = "  كدوة الكريون  تعليم أساسي - ابتدائي";
+          td4.innerHTML = "كدوة الكريون  تعليم أساسي - ابتدائي";
           break;
         case "196":
-          td4.innerHTML = "  كدوة الكريون  تعليم أساسي - إعدادي";
+          td4.innerHTML = "كدوة الكريون  تعليم أساسي - إعدادي";
           break;
         case "197":
-          td4.innerHTML = "  كرم 4  الابتدائية";
+          td4.innerHTML = "كرم 4  الابتدائية";
           break;
 
         case "198":
@@ -1321,10 +1320,10 @@ executebtn.addEventListener("click", function () {
           td4.innerHTML = "مارون  تعليم أساسي - إعدادي";
           break;
         case "209":
-          td4.innerHTML = "محطة الكهرباء الابتدائية بمركز كفرالدوار";
+          td4.innerHTML = "محطة الكهرباء الابتدائية "; // td4.innerHTML = "محطة الكهرباء الابتدائية بمركز كفرالدوار";
           break;
         case "210":
-          td4.innerHTML = "محطة الكهرباء الإعدادية بمركز كفرالدوار";
+          td4.innerHTML = "محطة الكهرباء الإعدادية "; // td4.innerHTML = "محطة الكهرباء الإعدادية بمركز كفرالدوار";
           break;
         case "211":
           td4.innerHTML = " محمد علي عودة الإعدادية";
@@ -1857,5 +1856,6 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
 }
 
 */
+
 
 
