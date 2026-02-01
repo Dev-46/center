@@ -335,12 +335,7 @@ li {
     min-width:60px !important;
     border:1px solid red !important;
   }
-  input{
-    width:60px !important;
-    max-width:60px !important;
-    min-width:60px !important;
-    border:1px solid red !important;
-  }
+ 
   
   
   #printer{
@@ -400,6 +395,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
