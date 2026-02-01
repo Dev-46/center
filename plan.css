@@ -26,7 +26,7 @@ body {
   align-items: center;
   margin: 0 auto;
   display: flex;
-  width:370px;
+  width:360px;/* 370px */
   background-color: rgb(255, 254, 254);
   justify-content: center;
   align-items: center;
@@ -64,14 +64,14 @@ table {
   max-width: 50px !important;
 }
 .cell3 {
-  max-width: 110px !important;/*120px*/
+  max-width: 100px !important;/*110px*/
   text-align: center;
-  font-size: 14px !important;
-  padding: 0 6px !important;
+  font-size: 13px !important;/* 14*/
+  padding: 0 2px !important;
 }
 
 .cell4 {
-  max-width: 292px !important; /*280*/
+  max-width: 300px !important; /*280*/
   min-width: 155px !important;
 }
 .cell1,
@@ -396,6 +396,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
