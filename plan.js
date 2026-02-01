@@ -48,10 +48,10 @@ closeHolder.style.color = "white";
 closeHolder.style.fontSize = "15" + "px";
 closeHolder.innerHTML = "X";
 closeHolder.style.textAlign = "left";
-closeHolder.style.paddingLeft = "10px";
+closeHolder.style.paddingLeft = "15px";
 closeHolder.style.cursor = "pointer";
 closeHolder.style.border = "1px solid white";
-closeHolder.style.boxShadow = "25px 20px 100px 44px rgba(100,20,100,0.5)";
+closeHolder.style.boxShadow = "inset 25px 20px 100px 44px rgba(100,20,100,0.5)";
 closeHolder.style.borderRadius = "25px";
 closeHolder.style.zIndex = "1000";
 closeHolder.addEventListener("click", function () {
@@ -1856,6 +1856,7 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
 }
 
 */
+
 
 
 
