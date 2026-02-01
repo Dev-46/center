@@ -20,19 +20,20 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/*
 .sections {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   display: flex;
   width:360px;/* 370px */
+/*
   background-color: rgb(255, 254, 254);
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
-
+*/
 span {
   font-weight: 900;
   margin: 0;
@@ -396,6 +397,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
