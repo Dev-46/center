@@ -60,18 +60,18 @@ table {
   max-width: 15px;
 
 }
-.cell2 {
+.cell2 {  /**/
   max-width: 50px !important;
 }
 .cell3 {
-  max-width: 120px !important;
+  max-width: 110px !important;/*120px*/
   text-align: center;
   font-size: 14px !important;
   padding: 0 6px !important;
 }
 
 .cell4 {
-  max-width: 282px !important; /*292*/
+  max-width: 292px !important; /*280*/
   min-width: 155px !important;
 }
 .cell1,
@@ -384,6 +384,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
