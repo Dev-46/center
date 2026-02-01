@@ -1803,7 +1803,7 @@ window.addEventListener('beforeunload', function (e) {
 //   localStorage.setItem('saved_data', inputField.value);
 
 
-
+/*
 var BrowserDetect = function() {
     var nav = window.navigator,
     ua = window.navigator.userAgent.toLowerCase();
@@ -1856,5 +1856,6 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
   }
 }
 
+*/
 
 
