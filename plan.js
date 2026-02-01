@@ -588,11 +588,11 @@ executebtn.addEventListener("click", function () {
     allTds.forEach((cell, i) => {
       if (cell.innerHTML === "الثلاثاء") {
         allInputFields[i].value = "1001";
-        allSchoolsFields[i].innerHTML = "ادارة";
+        allSchoolsFields[i].innerHTML = "ديوان الادارة";
       } else if (cell.innerHTML === "السبت" && index < 27) {
         //cell.style.color = "red";
         allInputFields[i].value = "1002";
-        allSchoolsFields[i].innerHTML = "راحة";
+        allSchoolsFields[i].innerHTML = "أجازة";
       }
     });
     /////////////////////////////////////////////.......................
@@ -1856,6 +1856,7 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
 }
 
 */
+
 
 
 
