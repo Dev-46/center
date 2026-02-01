@@ -33,12 +33,12 @@ mypoptogetinfo.style.display = "flex";
 mypoptogetinfo.style.flexDirection = "column";
 mypoptogetinfo.style.justifyContent = "center";
 mypoptogetinfo.style.alignItems = "center";
-mypoptogetinfo.style.left = "0";/* 160 */
-mypoptogetinfo.style.right = "0";/* 160 */
+mypoptogetinfo.style.left = "0"; /* 160 */
+mypoptogetinfo.style.right = "0"; /* 160 */
 mypoptogetinfo.style.bottom = "0";
-mypoptogetinfo.style.width = "340"+"px";
+mypoptogetinfo.style.width = "340" + "px";
 mypoptogetinfo.style.zIndex = "1000";
-mypoptogetinfo.style.margin="450px auto";
+mypoptogetinfo.style.margin = "450px auto";
 
 let closeHolder = document.createElement("button");
 //closeHolder.style.maxWidth = "460" + "px";
@@ -47,13 +47,13 @@ closeHolder.style.backgroundColor = "rgba(32, 1, 32, 0.9)";
 closeHolder.style.color = "white";
 closeHolder.style.fontSize = "15" + "px";
 closeHolder.innerHTML = "X";
-closeHolder.style.textAlign="left";
-closeHolder.style.paddingLeft="10px";
-closeHolder.style.cursor="pointer";
-closeHolder.style.border="1px solid white";
-closeHolder.style.boxShadow="25px 20px 100px 44px rgba(100,20,100,0.5)";
-closeHolder.style.borderRadius="25px";
-closeHolder.style.zIndex="1000";
+closeHolder.style.textAlign = "left";
+closeHolder.style.paddingLeft = "10px";
+closeHolder.style.cursor = "pointer";
+closeHolder.style.border = "1px solid white";
+closeHolder.style.boxShadow = "25px 20px 100px 44px rgba(100,20,100,0.5)";
+closeHolder.style.borderRadius = "25px";
+closeHolder.style.zIndex = "1000";
 closeHolder.addEventListener("click", function () {
   document.getElementById("printer").removeChild(mypoptogetinfo);
 });
@@ -68,12 +68,12 @@ superinput.style.width = "350" + "px";
 superinput.style.backgroundColor = "#be0a0ac9";
 superinput.style.color = "#f0e65b";
 superinput.style.border = "1px solid #838582e3";
-superinput.style.paddingTop="16"+"px";
+superinput.style.paddingTop = "16" + "px";
 superinput.style.borderBottom = "1px solid #ecc2c2c0";
 superinput.placeholder = "اسم الموجه ثنائي";
 superinput.value = "ابراهيم حسان";
-superinput.style.marginTop="-12"+"px";
-superinput.style.textIndent="30"+"px";
+superinput.style.marginTop = "-12" + "px";
+superinput.style.textIndent = "30" + "px";
 mypoptogetinfo.appendChild(superinput);
 
 let yearinput = document.createElement("input");
@@ -88,9 +88,9 @@ yearinput.style.border = "1px solid #81e075";
 yearinput.style.borderBottom = "1px solid #b8a8a8";
 yearinput.placeholder = "  السنة";
 yearinput.value = 2026;
-yearinput.style.zIndex=100;
-yearinput.style.textShadow="2px 2px 2px #000";
-yearinput.style.textIndent="30"+"px";
+yearinput.style.zIndex = 100;
+yearinput.style.textShadow = "2px 2px 2px #000";
+yearinput.style.textIndent = "30" + "px";
 
 mypoptogetinfo.appendChild(yearinput);
 
@@ -106,13 +106,13 @@ monthinput.style.border = "1px solid #81e075";
 monthinput.style.borderBottom = "1px solid #756d6d";
 monthinput.placeholder = " number  ";
 monthinput.value = 3;
-monthinput.style.zIndex=100;
-monthinput.style.textIndent="30"+"px";
+monthinput.style.zIndex = 100;
+monthinput.style.textIndent = "30" + "px";
 mypoptogetinfo.appendChild(monthinput);
 
 let executebtn = document.createElement("button");
-executebtn.style.paddingTop = "30"+"px";
-executebtn.style.marginTop = "-30"+"px";
+executebtn.style.paddingTop = "30" + "px";
+executebtn.style.marginTop = "-30" + "px";
 executebtn.style.fontSize = "60" + "px";
 executebtn.style.maxWidth = "350" + "px";
 executebtn.style.minWidth = "350" + "px";
@@ -120,9 +120,9 @@ executebtn.style.backgroundColor = "#544757";
 executebtn.style.color = "#c4a5b8";
 executebtn.style.border = "2px double #8b126d";
 executebtn.style.border = "1px double #8b126d";
-executebtn.style.borderRadius="25px";
-executebtn.style.zIndex=0;
-executebtn.style.boxShadow="2px 20px 1px 1px rgba(100,20,100,0.5)";
+executebtn.style.borderRadius = "25px";
+executebtn.style.zIndex = 0;
+executebtn.style.boxShadow = "2px 20px 1px 1px rgba(100,20,100,0.5)";
 executebtn.style.borderBottom = "3px solid #270e29";
 executebtn.innerText = "  تنفيذ ";
 mypoptogetinfo.appendChild(executebtn);
@@ -130,16 +130,14 @@ mypoptogetinfo.appendChild(executebtn);
 document.getElementById("printer").appendChild(mypoptogetinfo);
 
 executebtn.addEventListener("mouseover", function () {
-  executebtn.style.boxShadow="1px 2px 1px 1px rgba(100,20,100,0.5)";
-  executebtn.style.transition="0.5s";
+  executebtn.style.boxShadow = "1px 2px 1px 1px rgba(100,20,100,0.5)";
+  executebtn.style.transition = "0.5s";
 });
 
 executebtn.addEventListener("mouseout", function () {
-  executebtn.style.boxShadow="2px 20px 1px 1px rgba(100,20,100,0.5)";
-  executebtn.style.transition="0.5s";
+  executebtn.style.boxShadow = "2px 20px 1px 1px rgba(100,20,100,0.5)";
+  executebtn.style.transition = "0.5s";
 });
-
-
 
 executebtn.addEventListener("click", function () {
   if (superinput.value.length > 0) {
@@ -252,7 +250,6 @@ function moveFocus(direction) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 executebtn.addEventListener("click", function () {
-
   document.getElementById("mytable").innerHTML = "";
 
   monthn = parseInt(monthinput.value);
@@ -603,843 +600,903 @@ executebtn.addEventListener("click", function () {
       let code = td5.value;
       switch (code) {
         case "1":
-          td4.innerHTML = "رقم 1";
+          td4.innerHTML = "6 أكتوبر الابتدائية";
           break;
         case "2":
-          td4.innerHTML = "رقم 2";
+          td4.innerHTML = "6 أكتوبر الابتدائية - فصول إعدادي";
           break;
         case "3":
-          td4.innerHTML = "رقم 3";
+          td4.innerHTML = "الإصلاح 241/2 تعليم أساسي - ابتدائي";
           break;
         case "4":
-          td4.innerHTML = "رقم 4";
+          td4.innerHTML = "الإصلاح 241/2 تعليم أساسي - إعدادي";
           break;
 
         case "5":
           td4.innerHTML = "الأربع عزب الجديدة الابتدائية";
           break;
-        case "6":
-          td4.innerHTML = "رقم 6";
-          break;
 
-        case "7":
+        case "6":
           td4.innerHTML = "البدوية الابتدائية";
           break;
-        case "8":
-          td4.innerHTML = "رقم 8 ";
-          break;
-
-        case "9":
+        case "7":
           td4.innerHTML = "البسلقون الابتدائية أ الصباحية ";
           break;
-
-        case "10":
-          td4.innerHTML = "رقم 10 ";
-          break;
-
-        case "11":
+        case "8":
           td4.innerHTML = "البسلقون الابتدائية ب المسائية ";
           break;
 
-        case "12":
+        case "9":
           td4.innerHTML = "البسلقون الاعدادية ";
           break;
 
+        case "10":
+          td4.innerHTML = "البوصة الابتدائية";
+          break;
+
+        case "11":
+          td4.innerHTML = "البوصة الابتدائية - فصول إعدادي";
+          break;
+
+        case "12":
+          td4.innerHTML = "التراس تعليم أساسي - ابتدائي";
+          break;
+
         case "13":
-          td4.innerHTML = "رقم 13 ";
+          td4.innerHTML = "التراس تعليم أساسي - إعدادي";
           break;
 
         case "14":
-          td4.innerHTML = "رقم 14 ";
+          td4.innerHTML = "التمامة تعليم أساسي - ابتدائي";
           break;
+
         case "15":
-          td4.innerHTML = "رقم 15 ";
+          td4.innerHTML = "التمامة تعليم أساسي - إعدادي";
           break;
+
         case "16":
-          td4.innerHTML = "رقم 16 ";
+          td4.innerHTML = " الجزيرة صديقة الفتيات ";
           break;
+
         case "17":
-          td4.innerHTML = "رقم 17 ";
+          td4.innerHTML = " الجلاد الإبتدائية ";
           break;
+
         case "18":
-          td4.innerHTML = "رقم 18 ";
+          td4.innerHTML = " الجيل الواعد الخاصة لغات ";
           break;
         case "19":
-          td4.innerHTML = "رقم 19 ";
+          td4.innerHTML = "الخراشي تعليم أساسي - ابتدائي";
           break;
         case "20":
-          td4.innerHTML = "رقم 20 ";
+          td4.innerHTML = "الخراشي تعليم أساسي - إعدادي";
           break;
         case "21":
-          td4.innerHTML = "رقم 21 ";
+          td4.innerHTML = "الخواجة الرسمية لغات";
           break;
         case "22":
-          td4.innerHTML = "رقم 22 ";
+          td4.innerHTML = "الخواجة تعليم أساسي - ابدائي";
           break;
         case "23":
-          td4.innerHTML = "رقم 23 ";
+          td4.innerHTML = "الدوار تعليم أساسي - ابتدائي";
           break;
         case "24":
-          td4.innerHTML = "رقم 24 ";
+          td4.innerHTML = "الدوار تعليم أساسي - إعدادي";
           break;
         case "25":
-          td4.innerHTML = "رقم 25 ";
+          td4.innerHTML = "الربعمائة تعليم أساسي - ابتدائي";
           break;
         case "26":
-          td4.innerHTML = "رقم 26 ";
+          td4.innerHTML = "الربعمائة تعليم أساسي - إعدادي";
           break;
         case "27":
-          td4.innerHTML = "رقم 27 ";
+          td4.innerHTML = "الروضة تعليم أساسي - ابتدائي";
           break;
         case "28":
-          td4.innerHTML = "رقم 28 ";
+          td4.innerHTML = "الروضة تعليم أساسي - إعدادي";
           break;
         case "29":
-          td4.innerHTML = "رقم 29 ";
+          td4.innerHTML = "الريادة الخاصة عربي";
           break;
         case "30":
-          td4.innerHTML = "رقم 30 ";
+          td4.innerHTML = "الريادة الخاصة لغات";
           break;
         case "31":
-          td4.innerHTML = "رقم 31 ";
+          td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- ابتدائي";
           break;
         case "32":
-          td4.innerHTML = "رقم 32 ";
+          td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- إعدادي";
           break;
         case "33":
-          td4.innerHTML = "رقم 33 ";
+          td4.innerHTML = "الستين الرسمية لغات - ابتدائي";
           break;
+
         case "34":
-          td4.innerHTML = "رقم 34 ";
+          td4.innerHTML = "الستين تعليم أساسي - ابتدائي";
           break;
+
         case "35":
-          td4.innerHTML = "رقم 35 ";
+          td4.innerHTML = "الستين تعليم أساسي - إعدادي";
           break;
+
         case "36":
-          td4.innerHTML = "رقم 36 ";
+          td4.innerHTML = "السلام الابتدائية بمركز كفرالدوار";
           break;
 
         case "37":
-          td4.innerHTML = "الربعمائة تعليم أساسي - ابتدائي ";
+          td4.innerHTML =
+            "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار - ابتدائي ";
           break;
 
         case "38":
-          td4.innerHTML = "الربعمائة تعليم أساسي - إعدادي ";
+          td4.innerHTML = "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار- إعدادي ";
           break;
 
         case "39":
-          td4.innerHTML = "الروضة تعليم أساسي - ابتدائي ";
+          td4.innerHTML = "الشنديدي الجديدة الابتدائية ";
           break;
 
         case "40":
-          td4.innerHTML = "الروضة تعليم أساسي - إعدادي ";
+          td4.innerHTML = "الشهيد الصافي رجب الابتدائية ";
+          break;
+        case "41":
+          td4.innerHTML = "الشهيد ابراهيم مبارك الابتدائية ";
           break;
 
-        case "41":
-          td4.innerHTML = "رقم 41 ";
-          break;
         case "42":
-          td4.innerHTML = "رقم 42 ";
+          td4.innerHTML = "الشهيد أحمد حامد خليفة الإعدادية";
           break;
+
         case "43":
-          td4.innerHTML = "رقم 43 ";
+          td4.innerHTML = "الشهيد تامر محمد مصطفى محمد الإعدادية";
           break;
+
         case "44":
-          td4.innerHTML = "رقم 44 ";
+          td4.innerHTML = "الشهيد سعيد سرحان تعليم أساسي - ابتدائي";
           break;
+
         case "45":
-          td4.innerHTML = "رقم 45 ";
+          td4.innerHTML = "الشهيد سعيد سرحان تعليم أساسي - إعدادي";
           break;
         case "46":
-          td4.innerHTML = "رقم 46 ";
+          td4.innerHTML = "الشهيد شحاتة عبدالفتاح الدسوقي - الابتدائية";
           break;
         case "47":
-          td4.innerHTML = "رقم 47 ";
+          td4.innerHTML = "الشهيد عادل صلاح شرمانة - الابتدائية";
           break;
         case "48":
-          td4.innerHTML = "رقم 48 ";
+          td4.innerHTML = "الشهيد فوزي ابراهيم - الابتدائية";
           break;
+
         case "49":
-          td4.innerHTML = "رقم 49 ";
+          td4.innerHTML = "الشهيد كارم محمود يوسف  - الإعدادية";
           break;
         case "50":
-          td4.innerHTML = "رقم 50 ";
+          td4.innerHTML = "الشهيد محمد ابراهيم سلمان - الابتدائية";
           break;
+
         case "51":
-          td4.innerHTML = "رقم 51 ";
+          td4.innerHTML = "الشهيد محمد سعد عبد الواحد تعليم أساسي - ابتدائي";
           break;
         case "52":
-          td4.innerHTML = "رقم 52 ";
+          td4.innerHTML = "الشهيد محمد سعد عبد الواحد تعليم أساسي - إعدادي";
           break;
+
         case "53":
-          td4.innerHTML = "رقم 53 ";
+          td4.innerHTML = "الشهيد محمد عبدالمنعم - الابتدائية";
           break;
+
         case "54":
-          td4.innerHTML = "رقم 54 ";
+          td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية بمركز كفرالدوار";
           break;
+
         case "55":
-          td4.innerHTML = "رقم 55 ";
+          td4.innerHTML = "الصيادين تعليم أساسي - ابتدائي";
           break;
         case "56":
-          td4.innerHTML = "رقم 56 ";
+          td4.innerHTML = "الصيادين تعليم أساسي - إعدادي";
           break;
         case "57":
-          td4.innerHTML = "رقم 57 ";
+          td4.innerHTML = "الطاهرالصافي - الابتدائية";
           break;
-
         case "58":
-          td4.innerHTML = "الشعيرة الكبرى تعليم أساسي - ابتدائي ";
+          td4.innerHTML = "الطاهرالصافي - الاعدادية";
           break;
-
         case "59":
-          td4.innerHTML = "الشعيرة الكبرى تعليم أساسي - إعدادي ";
+          td4.innerHTML = "الطرح تعليم أساسي - ابتدائي";
           break;
         case "60":
-          td4.innerHTML = "رقم 60 ";
+          td4.innerHTML = "الطرح تعليم أساسي - إعدادي";
           break;
-
         case "61":
-          td4.innerHTML = "الشنديدي الجديدة الابتدائية ";
+          td4.innerHTML = "العاشر من رمضان تعليم أساسي - ابتدائي";
           break;
         case "62":
-          td4.innerHTML = "رقم 62 ";
+          td4.innerHTML = "العاشر من رمضان تعليم أساسي - إعدادي";
           break;
         case "63":
-          td4.innerHTML = "رقم 63 ";
+          td4.innerHTML = "العالي - الابتدائية";
           break;
-
         case "64":
-          td4.innerHTML = "الشهيد ابراهيم امبارك الابتدائية ";
+          td4.innerHTML = "العالي - الإعدادية";
           break;
         case "65":
-          td4.innerHTML = "رقم 65 ";
+          td4.innerHTML = "العرقوب تعليم أساسي - ابتدائي";
           break;
         case "66":
-          td4.innerHTML = "رقم 66 ";
+          td4.innerHTML = "العرقوب تعليم أساسي - إعدادي";
           break;
+
         case "67":
-          td4.innerHTML = "رقم 67 ";
+          td4.innerHTML = "الفقي - الابتدائية بمركز كفرالدوار";
           break;
         case "68":
-          td4.innerHTML = "رقم 68 ";
+          td4.innerHTML = "القاضي تعليم أساسي - ابتدائي";
           break;
         case "69":
-          td4.innerHTML = "رقم 69 ";
+          td4.innerHTML = "القاضي تعليم أساسي - إعدادي";
           break;
         case "70":
-          td4.innerHTML = "رقم 70 ";
+          td4.innerHTML = "القومية بأبيس تعليم أساسي - ابتدائي";
           break;
-
         case "71":
-          td4.innerHTML = "الشهيد شحاتة عبدالفتاح دسوقي الابتدائية ";
+          td4.innerHTML = "القومية بأبيس تعليم أساسي - إعدادي";
           break;
         case "72":
-          td4.innerHTML = "رقم 72 ";
+          td4.innerHTML = "الكريون - الابتدائية بمركز كفرالدوار";
           break;
         case "73":
-          td4.innerHTML = "رقم 73 ";
+          td4.innerHTML = "الكريون - الإعدادية بمركز كفرالدوار";
           break;
         case "74":
-          td4.innerHTML = "رقم 74 ";
+          td4.innerHTML = "الكنايس الابتدائية المشتركة";
           break;
         case "75":
-          td4.innerHTML = "رقم 75 ";
+          td4.innerHTML = "الكنايس الاعدادية";
           break;
         case "76":
-          td4.innerHTML = "رقم 76 ";
+          td4.innerHTML = "المرحوم إبراهيم شرف تعليم أساسي - ابتدائي";
           break;
         case "77":
-          td4.innerHTML = "رقم 77 ";
+          td4.innerHTML = "المرحوم إبراهيم شرف تعليم أساسي - إعدادي";
           break;
         case "78":
-          td4.innerHTML = "رقم 78 ";
+          td4.innerHTML = "المصرية السويسرية الخاصة عربي";
           break;
         case "79":
-          td4.innerHTML = "رقم 79 ";
+          td4.innerHTML = "المصرية السويسرية الخاصة لغات";
           break;
         case "80":
-          td4.innerHTML = "الشهيد محمد سعد عبد الواحد تعليم أساسي - ابتدائي ";
+          td4.innerHTML = "الملقة - الابتدائية";
           break;
-
         case "81":
-          td4.innerHTML = "الشهيد محمد سعد عبد الواحد تعليم أساسي - إعدادي ";
+          td4.innerHTML = "الملقة - الإعدادية";
           break;
         case "82":
-          td4.innerHTML = "رقم 82 ";
+          td4.innerHTML = "النبراوية - الابتدائية";
           break;
         case "83":
-          td4.innerHTML = "رقم 83 ";
+          td4.innerHTML = "النبراوية  الابتدائية - فصول إعدادي";
           break;
         case "84":
-          td4.innerHTML = "رقم 84 ";
+          td4.innerHTML = "الوحدة صديقة الفتيات";
           break;
+
         case "85":
-          td4.innerHTML = "رقم 85 ";
+          td4.innerHTML = "الوسطانية الابتدائية أ";
           break;
         case "86":
-          td4.innerHTML = "رقم 86 ";
+          td4.innerHTML = "الوسطانية الابتدائية ب";
           break;
         case "87":
-          td4.innerHTML = "رقم 87 ";
+          td4.innerHTML = "الوكيل الابتدائية بمركز كفرالدوار";
           break;
         case "88":
-          td4.innerHTML = "رقم 88 ";
+          td4.innerHTML = "الوكيل الإعدادية بمركز كفرالدوار";
           break;
+
         case "89":
-          td4.innerHTML = "رقم 89 ";
+          td4.innerHTML = "الوكيل تعليم أساسي بمركز كفرالدوار- ابتدائي";
           break;
 
         case "90":
-          td4.innerHTML = "الطاهر الصافي الابتدائية ";
+          td4.innerHTML = "اليمينية تعليم أساسي - ابتدائي";
           break;
         case "91":
-          td4.innerHTML = "رقم 91";
+          td4.innerHTML = "اليمينية تعليم أساسي - إعدادي";
           break;
 
         case "92":
-          td4.innerHTML = "الطاهر الصافي الإعدادية ";
+          td4.innerHTML = "أبوحسين الابتدائية";
           break;
-
         case "93":
-          td4.innerHTML = "الطرح تعليم أساسي - ابتدائي ";
+          td4.innerHTML = "أبوحسين الإعدادية";
           break;
 
         case "94":
-          td4.innerHTML = "الطرح تعليم أساسي - إعدادي ";
-          break;
-        case "95":
-          td4.innerHTML = "رقم 95 ";
-          break;
-        case "96":
-          td4.innerHTML = "رقم 96 ";
-          break;
-        case "97":
-          td4.innerHTML = "رقم 97 ";
-          break;
-        case "98":
-          td4.innerHTML = "رقم 98 ";
-          break;
-        case "99":
-          td4.innerHTML = "رقم 99 ";
-          break;
-        case "100":
-          td4.innerHTML = "رقم 100 ";
-          break;
-
-        case "1001":
-          td4.innerHTML = "الادارة";
-          break;
-
-        case "1002":
-          td4.innerHTML = "راحة";
-          break;
-
-        case "121":
-          td4.innerHTML = "الملقة الابتدائية";
-          break;
-        case "122":
-          td4.innerHTML = "الملقة الاعدادية";
-          break;
-        case "123":
-          td4.innerHTML = "رقم 123";
-          break;
-        case "124":
-          td4.innerHTML = "رقم 124";
-          break;
-        case "125":
-          td4.innerHTML = "رقم 125";
-          break;
-        case "126":
-          td4.innerHTML = "رقم 126";
-          break;
-        case "127":
-          td4.innerHTML = "رقم 127";
-          break;
-        case "128":
-          td4.innerHTML = "رقم 128";
-          break;
-        case "129":
-          td4.innerHTML = "رقم 129";
-          break;
-        case "130":
-          td4.innerHTML = "رقم 130";
-          break;
-        case "131":
-          td4.innerHTML = "رقم 131";
-          break;
-        case "122":
-          td4.innerHTML = "الملقة الاعدادية";
-          break;
-
-        case "133":
-          td4.innerHTML = "الوكيل تعليم أساسي - ابتدائي";
-          break;
-        case "134":
-          td4.innerHTML = "رقم 134";
-          break;
-        case "135":
-          td4.innerHTML = "رقم 135";
-          break;
-        case "136":
-          td4.innerHTML = "رقم 136";
-          break;
-        case "137":
-          td4.innerHTML = "رقم 137";
-          break;
-        case "138":
-          td4.innerHTML = "رقم 138";
-          break;
-        case "139":
-          td4.innerHTML = "رقم 139";
-          break;
-        case "140":
-          td4.innerHTML = "رقم 140 ";
-          break;
-
-        case "141":
           td4.innerHTML = "أبوزيد خليفة تعليم أساسي - ابتدائي";
           break;
 
-        case "142":
+        case "95":
           td4.innerHTML = "أبوزيد خليفة تعليم أساسي - إعدادي";
           break;
+
+        case "96":
+          td4.innerHTML = "أبوغفيلة الابتدائية";
+          break;
+        case "97":
+          td4.innerHTML = "أبيس 1/5 تعليم مجتمعي";
+          break;
+        case "98":
+          td4.innerHTML = "أبيس 10/3 تعليم مجتمعي";
+          break;
+        case "99":
+          td4.innerHTML = "أبيس 3 الابتدائية";
+          break;
+        case "100":
+          td4.innerHTML = "أبيس 3 الإعدادية";
+          break;
+
+        case "101":
+          td4.innerHTML = "أبيس 3 الرسمية عربي";
+          break;
+        case "102":
+          td4.innerHTML = "أبيس 3 الرسمية لغات";
+          break;
+
+        case "103":
+          td4.innerHTML = "أبيس 5 الابتدائية";
+          break;
+
+        case "104":
+          td4.innerHTML = "أبيس 6 الابتدائية";
+          break;
+
+        case "105":
+          td4.innerHTML = "أبيس 6 الثانوية التجارية";
+          break;
+
+        case "106":
+          td4.innerHTML = "أبيس 6 الثانوية التجارية - فصول الخدمات";
+          break;
+
+        case "107":
+          td4.innerHTML = "أبيس 6 الثانوية المشتركة";
+          break;
+
+        case "108":
+          td4.innerHTML = "أبيس 6 الثانوية المشتركة - فصول الخدمات";
+          break;
+
+        case "109":
+          td4.innerHTML = "أبيس 8/3 فصل واحد";
+          break;
+
+        case "110":
+          td4.innerHTML = "أحمد أبوزهرة الابتدائية";
+          break;
+
+        case "111":
+          td4.innerHTML = "باباه الكبرى تعليم أساسي - ابتدائي";
+          break;
+        case "112":
+          td4.innerHTML = "باباه الكبرى تعليم أساسي - إعدادي";
+          break;
+
+        case "113":
+          td4.innerHTML = "بديوي  تعليم أساسي - ابتدائي";
+          break;
+        case "114":
+          td4.innerHTML = "بديوي  تعليم أساسي - إعدادي";
+          break;
+
+        case "115":
+          td4.innerHTML = " بردلة الابتدائية";
+          break;
+        case "116":
+          td4.innerHTML = "بركات الحمراء تعليم أساسي - ابتدائي";
+          break;
+        case "117":
+          td4.innerHTML = "بركات الحمراء تعليم أساسي - إعدادي";
+          break;
+
+        case "118":
+          td4.innerHTML = "بشير المختار تعليم أساسي - ابتدائي";
+          break;
+        case "119":
+          td4.innerHTML = "بشير المختار تعليم أساسي - إعدادي";
+          break;
+        case "120":
+          td4.innerHTML = "توفيق الهلباوي تعليم أساسي - ابتدائي";
+          break;
+        case "121":
+          td4.innerHTML = "توفيق الهلباوي تعليم أساسي - إعدادي";
+          break;
+        case "122":
+          td4.innerHTML = "جاب الله  تعليم أساسي - ابتدائي";
+          break;
+        case "123":
+          td4.innerHTML = "جاب الله  تعليم أساسي - إعدادي";
+          break;
+
+        case "124":
+          td4.innerHTML = "جلال أبوالحاج الابتدائية";
+          break;
+
+        case "125":
+          td4.innerHTML = "حسن محمد بيومي  الابتدائية";
+          break;
+        case "126":
+          td4.innerHTML = "حلمي إبراهيم عامر الإعدادية";
+          break;
+        case "127":
+          td4.innerHTML = "حليص  تعليم أساسي - ابتدائي";
+          break;
+        case "128":
+          td4.innerHTML = " حليص  تعليم أساسي - إعدادي";
+          break;
+        case "129":
+          td4.innerHTML = " حماد الصعيدي  تعليم أساسي - ابتدائي";
+          break;
+        case "130":
+          td4.innerHTML = " حماد الصعيدي  تعليم أساسي - إعدادي";
+          break;
+
+        case "131":
+          td4.innerHTML = " حميد عبدالرحمن  تعليم أساسي - ابتدائي";
+          break;
+        case "132":
+          td4.innerHTML = " حميد عبدالرحمن  تعليم أساسي - إعدادي";
+          break;
+        case "133":
+          td4.innerHTML = " حوض 7  تعليم أساسي - ابتدائي";
+          break;
+        case "134":
+          td4.innerHTML = " حوض 7  تعليم أساسي - إعدادي";
+          break;
+
+        case "135":
+          td4.innerHTML = " خالد الأقرع  تعليم أساسي - ابتدائي";
+          break;
+        case "136":
+          td4.innerHTML = " خالد الأقرع  تعليم أساسي - إعدادي";
+          break;
+
+        case "137":
+          td4.innerHTML = "خليل  تعليم مجتمعي";
+          break;
+
+        case "138":
+          td4.innerHTML = " زكي الابراشي  الابتدائية";
+          break;
+        case "139":
+          td4.innerHTML = " زكي الابراشي  الإعدادية";
+          break;
+
+        case "140":
+          td4.innerHTML = " زلط  تعليم أساسي - ابتدائي";
+          break;
+        case "141":
+          td4.innerHTML = " زلط  تعليم أساسي - إعدادي";
+          break;
+        case "142":
+          td4.innerHTML = "زهرة الابتدائية المشتركة";
+          break;
         case "143":
-          td4.innerHTML = "رقم 143";
+          td4.innerHTML = "زهرة الإعدادية";
           break;
         case "144":
-          td4.innerHTML = "رقم 144";
+          td4.innerHTML = "سليمان بلبع  الابتدائية";
           break;
+
         case "145":
-          td4.innerHTML = "رقم 145";
+          td4.innerHTML = "سيدي غازي  الابتدائية الجديدة";
           break;
+
         case "146":
-          td4.innerHTML = "رقم 146";
+          td4.innerHTML = "سيدي غازي  الثانوية - فصول الخدمات ";
           break;
+
         case "147":
-          td4.innerHTML = "رقم 147";
+          td4.innerHTML = "سيدي غازي  الثانوية المشتركة ";
           break;
+
         case "148":
-          td4.innerHTML = "رقم 148";
+          td4.innerHTML = " سيف النصر  الابتدائية";
           break;
+
         case "149":
-          td4.innerHTML = "رقم 149";
+          td4.innerHTML = " سيف النصر  الابتدائية - فصول إعدادي";
           break;
+
         case "150":
-          td4.innerHTML = "رقم 150";
+          td4.innerHTML = " شارلو  الابتدائية";
           break;
+
         case "151":
-          td4.innerHTML = "رقم 151";
+          td4.innerHTML = " شبل  الابتدائية";
           break;
+
         case "152":
-          td4.innerHTML = "رقم 152";
+          td4.innerHTML = "شحاتة صديقة الفتيات";
           break;
+
         case "153":
-          td4.innerHTML = "رقم 153";
+          td4.innerHTML = " شركة عواد  تعليم أساسي - ابتدائي";
           break;
         case "154":
-          td4.innerHTML = "رقم 154";
+          td4.innerHTML = " شركة عواد  تعليم أساسي - إعدادي";
           break;
+
         case "155":
-          td4.innerHTML = "رقم 155";
+          td4.innerHTML = " شفيق أبوصالح  الابتدائية";
           break;
+
         case "156":
-          td4.innerHTML = "رقم 156";
+          td4.innerHTML = "  صدقي  تعليم أساسي - ابتدائي";
           break;
+
         case "157":
-          td4.innerHTML = "رقم 157";
+          td4.innerHTML = "  صدقي  تعليم أساسي - إعدادي";
           break;
+
         case "158":
-          td4.innerHTML = "رقم 158";
+          td4.innerHTML = "  صدقي سنيحة  تعليم أساسي - ابتدائي";
           break;
         case "159":
-          td4.innerHTML = "رقم 159";
+          td4.innerHTML = "  صدقي سنيحة  تعليم أساسي - إعدادي";
           break;
         case "160":
-          td4.innerHTML = "رقم 160";
+          td4.innerHTML = "  صيدناوي الحمراء  تعليم أساسي - ابتدائي";
           break;
         case "161":
-          td4.innerHTML = "رقم 161";
+          td4.innerHTML = "صيدناوي الحمراء  تعليم أساسي - إعدادي";
           break;
         case "162":
-          td4.innerHTML = "رقم 162";
+          td4.innerHTML = " صيدناوي الوسطى  الابتدائية";
           break;
         case "163":
-          td4.innerHTML = "رقم 163";
+          td4.innerHTML = "  صيدناوي الوسطى  الابتدائية - فصول إعدادي";
           break;
         case "164":
-          td4.innerHTML = "رقم 164";
+          td4.innerHTML = "  صيدناوي الكبرى  تعليم أساسي - ابتدائي";
           break;
         case "165":
-          td4.innerHTML = "رقم 165";
+          td4.innerHTML = "  صيدناوي الكبرى  تعليم أساسي - إعدادي";
           break;
 
         case "166":
-          td4.innerHTML = " بردلة الابتدائية";
+          td4.innerHTML = "صيرة الإعدادية";
           break;
         case "167":
-          td4.innerHTML = "رقم 167";
+          td4.innerHTML = "  ضيف  الابتدائية";
           break;
+
         case "168":
-          td4.innerHTML = "رقم 168";
+          td4.innerHTML = "  عاداه الغربية  الابتدائية";
           break;
+
         case "169":
-          td4.innerHTML = "رقم 169";
+          td4.innerHTML = "عباس سيد أحمد الإعدادية";
           break;
+
         case "170":
-          td4.innerHTML = "رقم 170";
+          td4.innerHTML = "عبدالحميد عزت زعتر  تعليم أساسي - ابتدائي";
           break;
+
         case "171":
-          td4.innerHTML = "رقم 171";
+          td4.innerHTML = "عبدالحميد عزت زعتر  تعليم أساسي - إعدادي";
           break;
+
         case "172":
-          td4.innerHTML = "رقم 172";
+          td4.innerHTML = " عبدالصمد النمر  الابتدائية - ابتدائي";
           break;
+
         case "173":
-          td4.innerHTML = "رقم 173";
+          td4.innerHTML = "عبدالعزيز حبشي  الابتدائية";
           break;
         case "174":
-          td4.innerHTML = "رقم 174";
+          td4.innerHTML = "عبدالعزيز حبشي  الابتدائية - فصول إعدادي";
           break;
 
         case "175":
-          td4.innerHTML = " جاب الله تعليم أساسي - ابتدائي";
+          td4.innerHTML = "عبدالقادر خليف   تعليم أساسي - إعدادي";
           break;
 
         case "176":
-          td4.innerHTML = " جاب الله تعليم أساسي - إعدادي";
-          break;
-        case "177":
-          td4.innerHTML = "رقم 177";
-          break;
-        case "178":
-          td4.innerHTML = "رقم 178";
-          break;
-        case "179":
-          td4.innerHTML = "رقم 179";
-          break;
-        case "180":
-          td4.innerHTML = "رقم 180";
-          break;
-        case "181":
-          td4.innerHTML = "رقم 181";
-          break;
-        case "182":
-          td4.innerHTML = "رقم 182";
-          break;
-        case "183":
-          td4.innerHTML = "رقم 183";
-          break;
-        case "184":
-          td4.innerHTML = "رقم 184";
-          break;
-        case "185":
-          td4.innerHTML = "رقم 185";
-          break;
-        case "186":
-          td4.innerHTML = "رقم 186";
-          break;
-        case "187":
-          td4.innerHTML = "رقم 187";
-          break;
-        case "188":
-          td4.innerHTML = "رقم 188";
+          td4.innerHTML = "عبدالوهاب الخراشي  الابتدائية";
           break;
 
+        case "177":
+          td4.innerHTML = "عبدالوهاب الخراشي  الإعدادية";
+          break;
+
+        case "178":
+          td4.innerHTML = "عزب نوبار الابتدائية المشتركة";
+          break;
+
+        case "179":
+          td4.innerHTML = "عزبة البنك  تعليم أساسي - ابتدائي";
+          break;
+
+        case "180":
+          td4.innerHTML = "عزبة البنك  تعليم أساسي - إعدادي";
+          break;
+
+        case "181":
+          td4.innerHTML = "عمر الحريري صديقة الفتيات";
+          break;
+
+        case "182":
+          td4.innerHTML = "عنتر درويش  الابتدائية المشتركة";
+          break;
+
+        case "183":
+          td4.innerHTML = " عوض التبي  تعليم أساسي - ابتدائي";
+          break;
+        case "184":
+          td4.innerHTML = " عوض التبي  تعليم أساسي - إعدادي";
+          break;
+
+        case "185":
+          td4.innerHTML = " فصول الحمراء  الإعدادية";
+          break;
+
+        case "186":
+          td4.innerHTML = " فصول كرم 4  الإعدادية";
+          break;
+
+        case "187":
+          td4.innerHTML = " فصول مرجان  الإعدادية";
+          break;
+        case "188":
+          td4.innerHTML = " فصول منشأة ناصر  الإعدادية";
+          break;
         case "189":
-          td4.innerHTML = " حوض 7 تعليم أساسي - ابتدائي";
+          td4.innerHTML = " فصول هلل  الإعدادية";
           break;
 
         case "190":
-          td4.innerHTML = " حوض 7 تعليم أساسي - إعدادي";
+          td4.innerHTML = " قومبانية أبوقير  الابتدائية";
           break;
         case "191":
-          td4.innerHTML = "رقم 191";
+          td4.innerHTML = " قومبانية أبوقير  الإعدادية المشتركة";
           break;
         case "192":
-          td4.innerHTML = "رقم 192";
+          td4.innerHTML = " قومبانية لوقين  الابتدائية";
           break;
-
         case "193":
-          td4.innerHTML = "رقم 193";
+          td4.innerHTML = " قومبانية لوقين  الإعدادية";
           break;
 
         case "194":
-          td4.innerHTML = "رقم 194";
+          td4.innerHTML = "كدوة الرويعي  فصل واحد ";
           break;
+
         case "195":
-          td4.innerHTML = "رقم 195";
+          td4.innerHTML = "  كدوة الكريون  تعليم أساسي - ابتدائي";
           break;
         case "196":
-          td4.innerHTML = "رقم 196";
+          td4.innerHTML = "  كدوة الكريون  تعليم أساسي - إعدادي";
           break;
         case "197":
-          td4.innerHTML = "رقم 197";
+          td4.innerHTML = "  كرم 4  الابتدائية";
           break;
+
         case "198":
-          td4.innerHTML = "رقم 198";
+          td4.innerHTML = " كناكي صديقة الفتيات";
           break;
 
         case "199":
-          td4.innerHTML = " زكي الابراشي الابتدائية";
-          break;
-        case "200":
-          td4.innerHTML = "رقم 200";
+          td4.innerHTML = "كوم الطرفاية الابتدائية";
           break;
 
+        case "200":
+          td4.innerHTML = "كوم الطرفاية الإعدادية";
+          break;
         case "201":
-          td4.innerHTML = " زكي الابراشي الاعدادية";
+          td4.innerHTML = "كوم النص الابتدائية";
           break;
         case "202":
-          td4.innerHTML = "رقم 202";
+          td4.innerHTML = "كوم النص الإعدادية";
           break;
         case "203":
-          td4.innerHTML = "رقم 203";
+          td4.innerHTML = " كوم النص صديقة الفتيات";
           break;
+
         case "204":
-          td4.innerHTML = "رقم 204";
+          td4.innerHTML = "كوم دفشو الابتدائية القديمة";
           break;
 
         case "205":
-          td4.innerHTML = " زهرة الابتدائية المشتركة";
+          td4.innerHTML = "كوم مازن  تعليم أساسي - ابتدائي";
           break;
         case "206":
-          td4.innerHTML = "رقم 206";
+          td4.innerHTML = "كوم مازن  تعليم أساسي - إعدادي";
           break;
-
         case "207":
-          td4.innerHTML = " زهرة الإعدادية";
+          td4.innerHTML = "مارون  تعليم أساسي - ابتدائي";
           break;
         case "208":
-          td4.innerHTML = "رقم 208";
+          td4.innerHTML = "مارون  تعليم أساسي - إعدادي";
           break;
         case "209":
-          td4.innerHTML = "رقم 209";
+          td4.innerHTML = "محطة الكهرباء الابتدائية بمركز كفرالدوار";
           break;
         case "210":
-          td4.innerHTML = "رقم 210";
+          td4.innerHTML = "محطة الكهرباء الإعدادية بمركز كفرالدوار";
           break;
         case "211":
-          td4.innerHTML = " سيدي غازي الثانوية ";
+          td4.innerHTML = " محمد علي عودة الإعدادية";
           break;
 
         case "212":
-          td4.innerHTML = " سيدي غازي الثانوية ";
+          td4.innerHTML = "مرتانة  تعليم أساسي - ابتدائي";
           break;
         case "213":
-          td4.innerHTML = "رقم 213";
+          td4.innerHTML = "مرتانة  تعليم أساسي - إعدادي";
           break;
         case "214":
-          td4.innerHTML = "رقم 214";
+          td4.innerHTML = " مرجان الابتدائية";
           break;
         case "215":
-          td4.innerHTML = "رقم 215";
+          td4.innerHTML = "معتوق  تعليم أساسي - ابتدائي";
           break;
         case "216":
-          td4.innerHTML = "رقم 216";
+          td4.innerHTML = "معتوق  تعليم أساسي - إعدادي";
           break;
-
         case "217":
-          td4.innerHTML = "شبل الابتدائية";
+          td4.innerHTML = "معمل القزاز البلد الجديدة";
           break;
         case "218":
-          td4.innerHTML = "رقم 218";
+          td4.innerHTML = "معمل القزاز البلد الابتدائية";
           break;
-
-        case "119":
-          td4.innerHTML = " شركة عواد تعليم أساسي - ابتدائي";
+        case "219":
+          td4.innerHTML = "معمل القزاز البلد الإعدادية";
           break;
-
         case "220":
-          td4.innerHTML = " شركة عواد تعليم أساسي - إعدادي";
+          td4.innerHTML = "معمل القزاز البلد الثانوية المشتركة";
           break;
         case "221":
-          td4.innerHTML = "رقم 221";
+          td4.innerHTML = "معمل القزاز البلد الثانوية المشتركة - فصول الخدمات";
           break;
         case "222":
-          td4.innerHTML = "رقم 222";
+          td4.innerHTML = "  منشأة بسيوني الابتدائية";
           break;
         case "223":
-          td4.innerHTML = "رقم 223";
+          td4.innerHTML = "منشأة بسيوني  تعليم أساسي - ابتدائي";
           break;
         case "224":
-          td4.innerHTML = "رقم 224";
+          td4.innerHTML = "منشأة بسيوني  تعليم أساسي - إعدادي";
           break;
         case "225":
-          td4.innerHTML = "رقم 225";
+          td4.innerHTML = "  منشأة عامر الابتدائية";
           break;
         case "226":
-          td4.innerHTML = "رقم 226";
+          td4.innerHTML = "منشأة ناصر الابتدائية بالكريون";
           break;
         case "227":
-          td4.innerHTML = "رقم 227";
+          td4.innerHTML = "منشأة أبوقير  تعليم أساسي - ابتدائي";
           break;
         case "228":
-          td4.innerHTML = "رقم 228";
+          td4.innerHTML = "منشأة أبوقير  تعليم أساسي - إعدادي";
           break;
+
         case "229":
-          td4.innerHTML = "رقم 229";
+          td4.innerHTML = "  منشأة بلبع الابتدائية";
           break;
         case "230":
-          td4.innerHTML = "رقم 230";
+          td4.innerHTML = "منشأة بولين  تعليم أساسي - ابتدائي";
           break;
         case "231":
-          td4.innerHTML = "رقم 231";
+          td4.innerHTML = "منشأة بولين  تعليم أساسي - إعدادي";
           break;
         case "232":
-          td4.innerHTML = "رقم 232";
+          td4.innerHTML = "منشأة يونس الابتدائية";
           break;
         case "233":
-          td4.innerHTML = "رقم 233";
+          td4.innerHTML = "منصور الشنديدي الابتدائية";
           break;
         case "234":
-          td4.innerHTML = "رقم 234";
+          td4.innerHTML = " نجع الشيخ عون  تعليم أساسي - ابتدائي";
           break;
         case "235":
-          td4.innerHTML = "رقم 235";
+          td4.innerHTML = " نجع الشيخ عون  تعليم أساسي - إعدادي";
           break;
         case "236":
-          td4.innerHTML = "رقم 236";
+          td4.innerHTML = " هشام فرج شهاب الابتدائية";
           break;
-
-        //////////////////////////////////////////////////////////////////////////
-
         case "237":
-          td4.innerHTML = "ضيف الابتدائية ";
-          break;
-        case "238":
-          td4.innerHTML = "رقم 238";
-          break;
-        case "239":
-          td4.innerHTML = "رقم 239";
-          break;
-        case "240":
-          td4.innerHTML = "رقم 240";
-          break;
-        case "241":
-          td4.innerHTML = "رقم 241";
+          td4.innerHTML = " هلل الابتدائية";
           break;
 
-        case "242":
-          td4.innerHTML = "عبد الصمد النمر المغازي الابتدائية - ابتدائ";
-          break;
-        case "243":
-          td4.innerHTML = "عبد الصمد النمر المغازي  - إعدادي";
-          break;
-        case "244":
-          td4.innerHTML = "رقم 244";
-          break;
-        case "245":
-          td4.innerHTML = "رقم 245";
-          break;
-        case "246":
-          td4.innerHTML = "رقم 246";
-          break;
-        case "247":
-          td4.innerHTML = "رقم 247";
+         
+        /////////////////(new series of code)///////////////////////
+        case "1001":
+          td4.innerHTML = "ديوان الادارة";
           break;
 
-        case "248":
-          td4.innerHTML = " عبد القادر خليف تعليم أساسي - إعدادي ";
-          break;
-        case "249":
-          td4.innerHTML = " رقم 249 ";
-
-        case "250":
-          td4.innerHTML = "عزب نوبار الابتدائية المشتركة";
-          break;
-        case "251":
-          td4.innerHTML = "رقم 251";
-          break;
-        case "252":
-          td4.innerHTML = "رقم 252";
-          break;
-        case "253":
-          td4.innerHTML = "رقم 253";
+        case "1002":
+          td4.innerHTML = "أجازة";
           break;
 
-        case "254":
-          td4.innerHTML = "رقم 254";
+        case "1003":
+          td4.innerHTML = "ادارة بندر كفرالدوار";
           break;
-        case "255":
-          td4.innerHTML = "رقم 255";
+        case "1004":
+          td4.innerHTML = "ادارة المحمودية";
           break;
-        case "256":
-          td4.innerHTML = "رقم 256";
+        case "1005":
+          td4.innerHTML = "ادارة ادكو";
           break;
-        case "257":
-          td4.innerHTML = "رقم 257";
+        case "1006":
+          td4.innerHTML = "ادارة رشيد";
           break;
-        case "258":
-          td4.innerHTML = "رقم 258";
+        case "1007":
+          td4.innerHTML = "المديرية المركزية";
           break;
-        case "259":
-          td4.innerHTML = "رقم 259";
+        case "1008":
+          td4.innerHTML = "مأمورية";
           break;
-        case "260":
-          td4.innerHTML = "رقم 260";
+        case "1009":
+          td4.innerHTML = "مسابقة";
           break;
-
-        case "261":
-          td4.innerHTML = " فصول مرجان الإعدادية";
+        case "1010":
+          td4.innerHTML = "معرض";
           break;
-        case "262":
-          td4.innerHTML = "رقم 262";
+        case "1011":
+          td4.innerHTML = "المعسكر الكشفي";
           break;
-        case "263":
-          td4.innerHTML = "رقم 263";
+        case "1012":
+          td4.innerHTML = "جهات لا تتبع التعليم";
           break;
-
-        case "264":
-          td4.innerHTML = " قومبانية أبوقير الابتدائية";
+        case "1013":
+          td4.innerHTML = "ديوان المحافظة";
           break;
-
-        case "265":
-          td4.innerHTML = " قومبانية أبوقير الاعدادية المشتركة";
+        case "1014":
+          td4.innerHTML = "ديوان الوزارة";
           break;
-
-        case "266":
-          td4.innerHTML = " قومبانية لوقين الابتدائية";
+        case "1015":
+          td4.innerHTML = "كنترول";
           break;
-        case "267":
-          td4.innerHTML = "   رقم 267";
+        case "1016":
+          td4.innerHTML = "لجنة امتحانات";
           break;
-
-        case "268":
-          td4.innerHTML = " قومبانية لوقين الإعدادية";
+        case "1017":
+          td4.innerHTML = "لجنة إدارية";
           break;
-
-        /*/ مش مدارسي*/
-        case "278":
-          td4.innerHTML = "  كوم الطرفايةالإعدادية";
+        case "1018":
+          td4.innerHTML = "المطبعة السرية";
           break;
-
-        case "296":
-          td4.innerHTML = "مرجان الأبتدائية";
+        case "1019":
+          td4.innerHTML = "المعرض";
           break;
-
-        case "298":
-          td4.innerHTML = "معتوق تعليم أساسي - ابتدائي";
+        case "1020":
+          td4.innerHTML = "مركز الموهوبين والتعليم الذكي";
           break;
-
-        case "299":
-          td4.innerHTML = "معتوق تعليم أساسي - إعدادي";
+        case "1021":
+          td4.innerHTML = "مركز إعداد قادة";
           break;
-
-        case "305":
-          td4.innerHTML = "معمل القزاز الثانوية المشتركة";
+        case "1022":
+          td4.innerHTML = "مركز توزيع الأسئلة";
           break;
-
-        case "315":
-          td4.innerHTML = "منشأة أبوقير تعليم أساسي - ابتدائي";
+        case "1023":
+          td4.innerHTML = "رعاية الطلاب";
           break;
-
-        case "316":
-          td4.innerHTML = "منشأة أبوقير تعليم أساسي - إعدادي";
+        case "1024":
+          td4.innerHTML = "تدريب";
+          break;
+        case "1025":
+          td4.innerHTML = "تدريب عملي";
+          break;
+        case "1026":
+          td4.innerHTML = "المدرسة الأصلية";
+          break;
+        case "1027":
+          td4.innerHTML = "إجازة نصف الوقت";
           break;
 
-        case "325":
-          td4.innerHTML = "منصور الشنديدي الابتدائية ";
-          break;
+        /////////////////(new series of code)
 
         default:
           td4.innerHTML = "لم تكود بعد";
@@ -1448,12 +1505,9 @@ executebtn.addEventListener("click", function () {
     });
   }
 
-/////////////////////////////////////////end of execute ......................................................
 });
 
-
-/////////////////////////////////////////here ............................................................
-
+//////// the year of the plan
 if (year === "2026") {
   switch (monthn) {
     case 3:
@@ -1725,16 +1779,14 @@ if (year === "2026") {
   document.getElementById("month").innerHTML = arabic_month_name;
 }
 
-
 let masterInfo = document.createElement("span");
 masterInfo.setAttribute("id", "masterInfo");
 masterInfo.style.color = "black";
-masterInfo.style.position ="fixed";
-masterInfo.style.width ="fit-content";
-masterInfo.style.right="5"+"%";
-masterInfo.style.top="0.3"+"%";
+masterInfo.style.position = "fixed";
+masterInfo.style.width = "fit-content";
+masterInfo.style.right = "5" + "%";
+masterInfo.style.top = "0.3" + "%";
 document.body.appendChild(masterInfo);
-
 
 
 
@@ -1803,13 +1855,6 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
     window.location.print();
   }
 }
-
-
-
-
-
-
-
 
 
 
