@@ -325,6 +325,11 @@ li {
     margin:0px auto !important;
     
   }
+  .cell5{
+    width:fit-content !important;
+    max-width:fit-content !important;
+    min-width:fit-content !important;
+  }
   
   
   #printer{
@@ -384,6 +389,7 @@ li {
     margin:0 auto;
 }
 }
+
 
 
 
