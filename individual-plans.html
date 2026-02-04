@@ -1058,14 +1058,14 @@
 
     superinput.addEventListener("keyup", () => {
       if (ar_letters.includes(superinput.value)) {
-        msg = "VALID NAME";
-        closeHolder.innerHTML = "X   " + "VALID NAME";
-        if (superinput.value.length < ar_letters.indexOf(superinput.value+1)) {
+        msg = "GOOD JOB!";
+        closeHolder.innerHTML = "X   " + "GOOD JOB!";
+        if (superinput.value.length < 8) {
           msg = "YOU NEED TO ADD SURNAME";
           closeHolder.innerHTML = "X   " + "ADD SURNAME";
         } else {
-          msg = "READY TO ADD NAME";
-          closeHolder.innerHTML = "X   " + "READY TO ADD NAME";
+          msg = "COMPLETED";
+          closeHolder.innerHTML = "X   " + "COMPLETED!";
           executebtn.disabled = false;
         }
 
