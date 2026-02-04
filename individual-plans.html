@@ -1060,9 +1060,10 @@
       if (ar_letters.includes(superinput.value)) {
         msg = "GOOD JOB!";
         closeHolder.innerHTML = "X   " + "GOOD JOB!";
-        if (superinput.value.length < 8) {
+        if (superinput.value.length < 9) {
           msg = "YOU NEED TO ADD SURNAME";
           closeHolder.innerHTML = "X   " + "ADD SURNAME";
+           executebtn.disabled = true;
         } else {
           msg = "COMPLETED";
           closeHolder.innerHTML = "X   " + "COMPLETED!";
