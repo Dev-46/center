@@ -731,10 +731,10 @@
     <div class="sections">
       <span id="inial"> الخطة الشهرية </span>
       <span> أ/ </span>
-      <span id="sir"> </span>
-      <span> عن شهر </span>
-      <span id="month"> </span>
-      <span id="year"> </span>
+      <span id="sir"></span>
+      <span > عن شهر </span>
+      <span id="month" onclick="autoScreenShot()"></span>
+      <span id="year"></span>
     </div>
 
     <div id="plans"></div>
@@ -1220,6 +1220,8 @@
     /////////////////////////////////////////////////////////////////////////////////// **************************************************************************************************
 
     executebtn.addEventListener("click", function () {
+
+      //empty the table.....
       document.getElementById("mytable").innerHTML = "";
       monthn = parseInt(monthinput.value);
 
@@ -1248,10 +1250,50 @@
       } else if (monthn === 2) {
         arabic_month_name = "فبراير";
       }
-
+      //show the month name in arabic
       document.getElementById("month").innerHTML = arabic_month_name;
 
       /////////////////////////////////////////////////////////////////////////////////////
+      // set the month days here...
+
+      switch(arabic_month_name){
+       
+           case "مارس":
+          month_days=27;
+          break;
+           case "أبريل":
+          month_days=26;
+          break;
+           case "مايو":
+          month_days=26;
+          break;
+           case "يونيو":
+          month_days=26;
+          break;
+           case "يوليو":
+          month_days=26;
+          break;
+           case "أغسطس":
+          month_days=27;
+          break;
+           case "سبتمبر":////////////////
+          month_days=26;
+          break;
+           case "أكتوبر":////////////////////////////////////
+          month_days=26;
+          break;
+           case "نوفمبر":
+          month_days=26;
+          break;
+           case "ديسمبر":
+          month_days=27;
+          break;
+          default:
+            break;
+      }
+
+
+      /////////////////////////////////////////////////////////////////////////////////////////////// here ....
 
       for (let index = 0; index < month_days; index++) {
         //////////////////////////////////////////////////************************************ الايام
@@ -2502,6 +2544,42 @@
         document.getElementById("year").innerHTML = year;
         return year;
       }
+
+
+////////////////// functions///////////////////////////////
+
+    // Function to check all required fields
+function allFieldsAreNotEmpty(classes) {
+    // Select all elements with the class 'required-field'
+    const fields = document.querySelectorAll(classes);
+    
+    // Use Array.prototype.every() to check if all fields meet the condition
+    const allNotEmpty = Array.from(fields).every(element => {
+        // Trim whitespace and check if the value is not an empty string
+        // This handles inputs, textareas, and select elements
+        return element.value.trim() !== ''; 
+    });
+
+    return allNotEmpty;
+}
+
+
+
+function autoScreenShot(){
+    if(allFieldsAreNotEmpty(".input-field")){
+      setTimeout(takeScreenShot, 15000);
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////
+
+
+
+
+
+
     });
     //***************************************************************** */
     //////// the year of the plan
@@ -2913,27 +2991,6 @@
     });
   }
     
-
-    // Function to check all required fields
-function allFieldsAreNotEmpty(classes) {
-    // Select all elements with the class 'required-field'
-    const fields = document.querySelectorAll(classes);
-    
-    // Use Array.prototype.every() to check if all fields meet the condition
-    const allNotEmpty = Array.from(fields).every(element => {
-        // Trim whitespace and check if the value is not an empty string
-        // This handles inputs, textareas, and select elements
-        return element.value.trim() !== ''; 
-    });
-
-    return allNotEmpty;
-}
-
-document.getElementById("sir").onclick =()=>{
-    if(allFieldsAreNotEmpty(".input-field")){
-        setTimeout(takeScreenShot, 15000);
-    }
-};
 
 
 </script>
