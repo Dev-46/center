@@ -728,7 +728,7 @@
   </div>
 
   <div id="plan">
-    <div class="sections" onclick="autoScreenShot()">
+    <div class="sections" onclick="printPlan()">
       <span id="inial"> الخطة الشهرية </span>
       <span> أ/ </span>
       <span id="sir"></span>
@@ -2953,45 +2953,6 @@
     });
   </script>
 
-
-<script>
-  
-  function takeScreenShot(){
-    html2canvas(document.body).then(canvas=>{
-      const image = canvas.toDataURL("image/png");
-      const link = document.createElement('a');
-      link.download = 'my-screenshot.png';
-      link.href = image;
-      link.click();
-
-    });
-  }
-
-  
-    // Function to check all required fields
-function allFieldsAreNotEmpty(classes) {
-    // Select all elements with the class 'required-field'
-    const fields = document.querySelectorAll(classes);
-    
-    // Use Array.prototype.every() to check if all fields meet the condition
-    const allNotEmpty = Array.from(fields).every(element => {
-        // Trim whitespace and check if the value is not an empty string
-        // This handles inputs, textareas, and select elements
-        return element.value.trim() !== ''; 
-    });
-
-    return allNotEmpty;
-}
-
-
-
-function autoScreenShot(){
-    if(allFieldsAreNotEmpty(".input-field")){
-      setTimeout(takeScreenShot, 15000);
-    }
-}
-
-</script>
 </body>
 
 </html>
