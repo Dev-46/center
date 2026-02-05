@@ -2548,30 +2548,6 @@
 
 ////////////////// functions///////////////////////////////
 
-    // Function to check all required fields
-function allFieldsAreNotEmpty(classes) {
-    // Select all elements with the class 'required-field'
-    const fields = document.querySelectorAll(classes);
-    
-    // Use Array.prototype.every() to check if all fields meet the condition
-    const allNotEmpty = Array.from(fields).every(element => {
-        // Trim whitespace and check if the value is not an empty string
-        // This handles inputs, textareas, and select elements
-        return element.value.trim() !== ''; 
-    });
-
-    return allNotEmpty;
-}
-
-
-
-function autoScreenShot(){
-    if(allFieldsAreNotEmpty(".input-field")){
-      setTimeout(takeScreenShot, 15000);
-    }
-}
-
-
 
 ///////////////////////////////////////////////////////////
 
@@ -2990,8 +2966,30 @@ function autoScreenShot(){
 
     });
   }
-    
 
+  
+    // Function to check all required fields
+function allFieldsAreNotEmpty(classes) {
+    // Select all elements with the class 'required-field'
+    const fields = document.querySelectorAll(classes);
+    
+    // Use Array.prototype.every() to check if all fields meet the condition
+    const allNotEmpty = Array.from(fields).every(element => {
+        // Trim whitespace and check if the value is not an empty string
+        // This handles inputs, textareas, and select elements
+        return element.value.trim() !== ''; 
+    });
+
+    return allNotEmpty;
+}
+
+
+
+function autoScreenShot(){
+    if(allFieldsAreNotEmpty(".input-field")){
+      setTimeout(takeScreenShot, 15000);
+    }
+}
 
 </script>
 </body>
