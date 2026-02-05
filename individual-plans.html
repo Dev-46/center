@@ -1568,6 +1568,8 @@
         if (isMobileScreen) {
           // Code to run for mobile screens (viewport width <= 768px)
           console.log("This is a mobile screen.");
+           document.getElementById("printer").style.backgroundColor="transparent";
+           document.getElementById("printer").style.color="transparent";
           document.getElementById("printer").style.zIndex="0";
           document.getElementById("mytable").style.zIndex="1000";
         } else {
