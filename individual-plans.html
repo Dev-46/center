@@ -729,7 +729,7 @@
 
   <div id="plan">
 
-    <div class="sections" id="published">
+    <div class="sections" id="published" onclick="printPlan()">
       <span id="inial"> الخطة الشهرية </span>
       <span> أ/ </span>
       <span id="sir">ابراهيم حسان</span>
@@ -2961,14 +2961,15 @@
     });
 
 
-
+ document.getElementById("published").removeEventListener("click", printPlan);
     const emptyAr = [];
         const filledAr = [];
         const allinputs = document.querySelectorAll('.input-field');
         const inputsLength = allinputs.length;
         for (let index = 0; index < allinputs.length; index++) {
           if (allinputs[index].innerHTML = '') {
-            emptyAr.push(`empty${index}`)
+            emptyAr.push(index);
+            
           } else {
             filledAr.push(allinputs[index]);
             if (filledAr.length === inputsLength) {
