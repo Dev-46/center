@@ -729,7 +729,7 @@
 
   <div id="plan">
 
-    <div class="sections" id="published" onclick="printPlan()">
+    <div class="sections" id="published">
       <span id="inial"> الخطة الشهرية </span>
       <span> أ/ </span>
       <span id="sir">ابراهيم حسان</span>
@@ -746,6 +746,7 @@
     const ar_letters = [
 
       " ",
+      "ا",
       "اب",
       "ابر",
       "ابرا",
@@ -758,6 +759,7 @@
       "ابراهيم حسا",
       "ابراهيم حسان",
       "ابراهيم حسان ",
+      "إ",
       "إب",
       "إبر",
       "إبرا",
@@ -782,6 +784,10 @@
       "امل إبراهي",
       "امل إبراهيم",
       "امل إبراهيم ",
+      "ا",
+      "ام",
+      "امل",
+      "امل ",
       "امل ا",
       "امل اب",
       "امل ابر",
@@ -802,6 +808,10 @@
       "أمل إبراهي",
       "أمل إبراهيم",
       "أمل إبراهيم ",
+      "أ",
+      "أم",
+      "أمل",
+      "أمل ",
       "أمل ا",
       "أمل اب",
       "أمل ابر",
@@ -1216,29 +1226,7 @@
         "rgba(253, 251, 251, 0.93)";
       document.getElementById(recieverInput[currentInd]).style.textShadow =
         "1px 2px 3px rgba(5, 5, 5, 0.93)";
-      ///////////////////////////////////////////////////////////////////////////////
-
-
-      document.getElementById("published").removeEventListener("click", printPlan);
-      const emptyAr = [];
-      const filledAr = [];
-
-      const inputsLength = inputs.length;
-      for (let index = 0; index < inputs.length; index++) {
-        if (inputs[index].innerHTML = '') {
-          emptyAr.push(index);
-
-        } else {
-          filledAr.push(inputs[index]);
-          if (filledAr.length === inputsLength) {
-            document.getElementById("published").addEventListener("click", printPlan);
-          } else {
-            document.getElementById("published").removeEventListener("click", printPlan);
-          }
-        }
-      }
-
-      //////////////////////////////////////////////////////////////////////////////////////////////      
+           
     }
 
     /////////////////////////////////////////////////////////////////////////////////// **************************************************************************************************
