@@ -728,13 +728,14 @@
   </div>
 
   <div id="plan">
-    <div class="sections" onclick="printPlan()">
+
+    <div class="sections" id="published">
       <span id="inial"> الخطة الشهرية </span>
       <span> أ/ </span>
-      <span id="sir"></span>
-      <span > عن شهر </span>
-      <span id="month"></span>
-      <span id="year"></span>
+      <span id="sir">ابراهيم حسان</span>
+      <span> عن شهر </span>
+      <span id="month">مارس</span>
+      <span id="year">2026</span>
     </div>
 
     <div id="plans"></div>
@@ -1256,40 +1257,40 @@
       /////////////////////////////////////////////////////////////////////////////////////
       // set the month days here...
 
-      switch(arabic_month_name){
-       
-           case "مارس":
-          month_days=27;
+      switch (arabic_month_name) {
+
+        case "مارس":
+          month_days = 27;
           break;
-           case "أبريل":
-          month_days=26;
+        case "أبريل":
+          month_days = 26;
           break;
-           case "مايو":
-          month_days=26;
+        case "مايو":
+          month_days = 26;
           break;
-           case "يونيو":
-          month_days=26;
+        case "يونيو":
+          month_days = 26;
           break;
-           case "يوليو":
-          month_days=26;
+        case "يوليو":
+          month_days = 26;
           break;
-           case "أغسطس":
-          month_days=27;
+        case "أغسطس":
+          month_days = 27;
           break;
-           case "سبتمبر":////////////////
-          month_days=26;
+        case "سبتمبر":////////////////
+          month_days = 26;
           break;
-           case "أكتوبر":////////////////////////////////////
-          month_days=26;
+        case "أكتوبر":////////////////////////////////////
+          month_days = 26;
           break;
-           case "نوفمبر":
-          month_days=26;
+        case "نوفمبر":
+          month_days = 26;
           break;
-           case "ديسمبر":
-          month_days=27;
+        case "ديسمبر":
+          month_days = 27;
           break;
-          default:
-            break;
+        default:
+          break;
       }
 
 
@@ -1590,7 +1591,29 @@
         tr.appendChild(td5);
         document.getElementById("mytable").appendChild(tr);
 
-        //////////////////////////////////////////////.......................
+
+
+        ////////////////////////////////////////////////////-----------------------------------------
+        const emptyAr = [];
+        const filledAr = [];
+        const allinputs = document.querySelectorAll('.input-field');
+        const inputsLength = allinputs.length;
+        for (let index = 0; index < allinputs.length; index++) {
+          if (allinputs[index].innerHTML = '') {
+            emptyAr.bush(`empty${index}`)
+          } else {
+            filledAr.bush(allinputs[index]);
+            if (filledAr.length === inputsLength) {
+              document.getElementById("published").addEventListener("click", printPlan);
+            } else {
+              document.getElementById("published").removeEventListener("click", printPlan);
+            }
+          }
+        }
+        //////////////////////////////////////////////..............................................
+
+
+
         const allTds = document.querySelectorAll(".cell2");
         const allInputFields = document.querySelectorAll(".input-field");
         const allSchoolsFields = document.querySelectorAll(".cell4");
@@ -1612,11 +1635,11 @@
         if (isMobileScreen) {
           // Code to run for mobile screens (viewport width <= 768px)
           console.log("This is a mobile screen.");
-           document.getElementById("printer").style.backgroundColor="transparent";
-           document.getElementById("printer").style.color="transparent";
-          document.getElementById("printer").style.zIndex="0";
-          document.getElementById("printer").innerHTML="";
-          document.getElementById("mytable").style.zIndex="1000";
+          document.getElementById("printer").style.backgroundColor = "transparent";
+          document.getElementById("printer").style.color = "transparent";
+          document.getElementById("printer").style.zIndex = "0";
+          document.getElementById("printer").innerHTML = "";
+          document.getElementById("mytable").style.zIndex = "1000";
         } else {
           // Code to run for non-mobile screens (viewport width > 768px)
           console.log("This is not a mobile screen.");
@@ -1884,10 +1907,10 @@
               td4.innerHTML = "الكنايس الاعدادية";
               break;
             case "76":
-              td4.innerHTML = "المرحوم إبراهيم شرف تعليم أساسي - ابتدائي";
+              td4.innerHTML = " إبراهيم شرف تعليم أساسي - ابتدائي";
               break;
             case "77":
-              td4.innerHTML = "المرحوم إبراهيم شرف تعليم أساسي - إعدادي";
+              td4.innerHTML = " إبراهيم شرف تعليم أساسي - إعدادي";
               break;
             case "78":
               td4.innerHTML = "المصرية السويسرية الخاصة عربي";
@@ -2546,10 +2569,10 @@
       }
 
 
-////////////////// functions///////////////////////////////
+      ////////////////// functions///////////////////////////////
 
 
-///////////////////////////////////////////////////////////
+      ///////////////////////////////////////////////////////////
 
 
 
