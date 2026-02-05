@@ -1600,9 +1600,9 @@
         const inputsLength = allinputs.length;
         for (let index = 0; index < allinputs.length; index++) {
           if (allinputs[index].innerHTML = '') {
-            emptyAr.bush(`empty${index}`)
+            emptyAr.push(`empty${index}`)
           } else {
-            filledAr.bush(allinputs[index]);
+            filledAr.push(allinputs[index]);
             if (filledAr.length === inputsLength) {
               document.getElementById("published").addEventListener("click", printPlan);
             } else {
