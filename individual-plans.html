@@ -1216,6 +1216,29 @@
         "rgba(253, 251, 251, 0.93)";
       document.getElementById(recieverInput[currentInd]).style.textShadow =
         "1px 2px 3px rgba(5, 5, 5, 0.93)";
+      ///////////////////////////////////////////////////////////////////////////////
+
+
+      document.getElementById("published").removeEventListener("click", printPlan);
+      const emptyAr = [];
+      const filledAr = [];
+
+      const inputsLength = inputs.length;
+      for (let index = 0; index < inputs.length; index++) {
+        if (inputs[index].innerHTML = '') {
+          emptyAr.push(index);
+
+        } else {
+          filledAr.push(inputs[index]);
+          if (filledAr.length === inputsLength) {
+            document.getElementById("published").addEventListener("click", printPlan);
+          } else {
+            document.getElementById("published").removeEventListener("click", printPlan);
+          }
+        }
+      }
+
+      //////////////////////////////////////////////////////////////////////////////////////////////      
     }
 
     /////////////////////////////////////////////////////////////////////////////////// **************************************************************************************************
@@ -1594,7 +1617,7 @@
 
 
         ////////////////////////////////////////////////////-----------------------------------------
-        
+
         //////////////////////////////////////////////..............................................
 
 
@@ -2961,24 +2984,6 @@
     });
 
 
- document.getElementById("published").removeEventListener("click", printPlan);
-    const emptyAr = [];
-        const filledAr = [];
-        const allinputs = document.querySelectorAll('.input-field');
-        const inputsLength = allinputs.length;
-        for (let index = 0; index < allinputs.length; index++) {
-          if (allinputs[index].innerHTML = '') {
-            emptyAr.push(index);
-            
-          } else {
-            filledAr.push(allinputs[index]);
-            if (filledAr.length === inputsLength) {
-              document.getElementById("published").addEventListener("click", printPlan);
-            } else {
-              document.getElementById("published").removeEventListener("click", printPlan);
-            }
-          }
-        }
   </script>
 
 </body>
