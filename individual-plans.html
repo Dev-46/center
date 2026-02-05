@@ -2911,16 +2911,33 @@
 
     });
   }
-    setTimeout(takeScreenShot, 15000);
+    
+
+    // Function to check all required fields
+function allFieldsAreNotEmpty(classes) {
+    // Select all elements with the class 'required-field'
+    const fields = document.querySelectorAll(classes);
+    
+    // Use Array.prototype.every() to check if all fields meet the condition
+    const allNotEmpty = Array.from(fields).every(element => {
+        // Trim whitespace and check if the value is not an empty string
+        // This handles inputs, textareas, and select elements
+        return element.value.trim() !== ''; 
+    });
+
+    return allNotEmpty;
+}
 
 addEventListener("keyup", (event)=>{
   let key = event.keyCode;
-  //alert(key);
   
-  if(key===32){
-    //alert(key);
+    if(allFieldsAreNotEmpty(".input-field")){
+        setTimeout(takeScreenShot, 15000);
+    }
     
-  }
+  
+  
+  
 
 });
 
