@@ -2912,10 +2912,13 @@
   }
   //if all table inputs are not empty start screen shot
   const allinputs = document.querySelectorAll(".input-field");
-  if(allinputs.entries.value !=""){
+  allinputs.addEventListener("keyup",()=>{
+if(allinputs.entries.value !=""){
     alert("end fill all inputs ...");
     // setTimeout(takeScreenShot, 15000);
   }
+  })
+  
  
 </script>
 </body>
