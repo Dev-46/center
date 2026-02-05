@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com"></script>
   <title>individual-plans</title>
   <link rel="icon" href="/favicon.ico" />
   <style>
@@ -2896,6 +2897,27 @@
       myinfocloser.parentNode.style.display = "none";
     });
   </script>
+
+
+<script>
+  function takeScreenShot(){
+    html2canvas(document.body).then(canvas=>{
+      const image = canvas.toDataURL("image/png");
+      const link = document.createElement('a');
+      link.download = 'my-screenshot.png';
+      link.href = image;
+      link.click();
+
+    });
+  }
+  //if all table inputs are not empty start screen shot
+  const allinputs = document.querySelectorAll(".input-field");
+  if(allinputs.entries.value !=""){
+    alert("end fill all inputs ...");
+    // setTimeout(takeScreenShot, 15000);
+  }
+ 
+</script>
 </body>
 
 </html>
