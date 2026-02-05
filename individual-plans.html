@@ -1594,22 +1594,7 @@
 
 
         ////////////////////////////////////////////////////-----------------------------------------
-        const emptyAr = [];
-        const filledAr = [];
-        const allinputs = document.querySelectorAll('.input-field');
-        const inputsLength = allinputs.length;
-        for (let index = 0; index < allinputs.length; index++) {
-          if (allinputs[index].innerHTML = '') {
-            emptyAr.push(`empty${index}`)
-          } else {
-            filledAr.push(allinputs[index]);
-            if (filledAr.length === inputsLength) {
-              document.getElementById("published").addEventListener("click", printPlan);
-            } else {
-              document.getElementById("published").removeEventListener("click", printPlan);
-            }
-          }
-        }
+        
         //////////////////////////////////////////////..............................................
 
 
@@ -2974,6 +2959,25 @@
       e.stopPropagation();
       myinfocloser.parentNode.style.display = "none";
     });
+
+
+
+    const emptyAr = [];
+        const filledAr = [];
+        const allinputs = document.querySelectorAll('.input-field');
+        const inputsLength = allinputs.length;
+        for (let index = 0; index < allinputs.length; index++) {
+          if (allinputs[index].innerHTML = '') {
+            emptyAr.push(`empty${index}`)
+          } else {
+            filledAr.push(allinputs[index]);
+            if (filledAr.length === inputsLength) {
+              document.getElementById("published").addEventListener("click", printPlan);
+            } else {
+              document.getElementById("published").removeEventListener("click", printPlan);
+            }
+          }
+        }
   </script>
 
 </body>
