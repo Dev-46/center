@@ -2900,6 +2900,7 @@
 
 
 <script>
+  /*
   function takeScreenShot(){
     html2canvas(document.body).then(canvas=>{
       const image = canvas.toDataURL("image/png");
@@ -2917,7 +2918,29 @@ if(allinputs.entries.value !=""){
     alert("end fill all inputs ...");
     // setTimeout(takeScreenShot, 15000);
   }
-  })
+  });
+  */
+
+
+  // Function to check if all required inputs are filled
+function areAllInputsFilled() {
+    // Select all inputs, textareas, and selects within the form
+    const inputs = document.querySelectorAll('.rows .input-field');
+    
+    // Convert NodeList to an Array and use the every() method
+    const allFilled = Array.from(inputs).every(input => {
+        // Check if the value is not an empty string
+        return input.value.trim() !== ''; 
+    });
+
+    return allFilled;
+}
+
+
+if(areAllInputsFilled){
+    //alert("end fill all inputs ...");
+    setTimeout(takeScreenShot, 15000);
+  }
   
  
 </script>
