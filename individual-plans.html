@@ -1338,7 +1338,7 @@
     yearinput.style.borderBottom = "1px solid #b8a8a8";
     yearinput.placeholder = "  السنة";
     yearinput.value = 2026;
-    yearinput.style.zIndex = 100;
+    yearinput.style.zIndex = 1000;
     yearinput.style.textShadow = "2px 2px 2px #000";
     yearinput.style.textIndent = "30" + "px";
 
@@ -1378,6 +1378,7 @@
     myBox.style.zIndex=900;
     let ladle = document.createElement("div");
     ladle.id = "myHolder";
+    ladle.style.zIndex=900;
     myBox.appendChild(ladle);
     ladle.addEventListener("click", () => {
       myBox.style.display = "none";
