@@ -707,7 +707,8 @@
       color:rgb(124, 148, 85) !important;
       width:250px !important;
       height: 400px !important;
-      
+      overflow: hidden;
+      overflow-y:scroll ;
     }
   </style>
 </head>
@@ -1079,6 +1080,17 @@
     myBox.id="myBoxContainer";
     myBox.className="dataContainer";
     myBox.textContent='';
+    Ibra.forEach((item,index)=>{
+        let coder = document.createElement("span");
+        let schooler = document.createElement("span");
+        coder.innerHTML=item.code;
+        schooler.innerHTML=item.school;
+        let father = document.createElement("div");
+        father.appendChild(coder);
+        father.appendChild(schooler);
+        myBox.appendChild(father);
+
+    });
     document.body.appendChild(myBox);
 
 
