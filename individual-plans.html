@@ -708,8 +708,8 @@
           white,
           white) !important;
 
-      position: absolute;
-      /**/
+      position: fixed;
+      cursor: pointer;
       top: 350px !important;
       right: 110px !important;
       z-index: 2000;
@@ -1125,63 +1125,39 @@
 
     });
     document.body.appendChild(myBox);
+    
 
-    //myBox.style.display = "block";// show again the div
+////////////////////////////////////////////////////////////////
 
-    const draggableDiv = document.getElementById('myBoxContainer');
 
-    draggableDiv.addEventListener('dragstart', (event) => {
-      // Set the data type and value of the dragged data
-      event.dataTransfer.setData('text/plain', event.target.id);
-      // Optionally, change cursor feedback or element appearance
-      event.dataTransfer.effectAllowed = 'move';
-    });
+let newX = 0, newY = 0, startX = 0, startY = 0;
 
-    // The `dragend` event fires when the drag operation finishes (dropped or not).
-    draggableDiv.addEventListener('dragend', (event) => {
-      // Reset any visual changes, e.g., opacity
-    });
+const card = document.getElementById('myBoxContainer')
 
-    /////////////////////////////////////////////////////////////// drag and drop the div
-    /*
-    dragElement(document.getElementById("myBoxContainer"));
-        function dragElement(element) {
-          var pos1 = 0,
-            pos2 = 0,
-            pos3 = 0,
-            pos4 = 0;
-          if (document.getElementById(element.id + "header")) {
-            document.getElementById(element.id + "header").onmousedown =
-              dragMouseDown;
-          } else {
-            element.onmousedown = dragMouseDown;
-          }
-          function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.onmouseup = closeDragElement;
-            document.onmousemove = elementDrag;
-          }
-          function elementDrag(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
+card.addEventListener('mousedown', mouseDown)
 
-            element.style.top = element.offsetTop - pos2 + "px";
-            element.style.left = element.offsetLeft - pos1 + "px";
-          }
-          function closeDragElement() {
-            document.onmouseup = null;
-            document.onmousemove = null;
-          }
-        }
+function mouseDown(e){
+    startX = e.clientX
+    startY = e.clientY
 
-*/
+    document.addEventListener('mousemove', mouseMove)
+    document.addEventListener('mouseup', mouseUp)
+}
+
+function mouseMove(e){
+    newX = startX - e.clientX 
+    newY = startY - e.clientY 
+  
+    startX = e.clientX
+    startY = e.clientY
+
+    card.style.top = (card.offsetTop - newY) + 'px'
+    card.style.left = (card.offsetLeft - newX) + 'px'
+}
+
+function mouseUp(e){
+    document.removeEventListener('mousemove', mouseMove)
+}
 
     //////////////////////////////////////////////////////////////
 
