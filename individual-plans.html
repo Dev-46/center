@@ -1102,7 +1102,7 @@
     /// create a div to contain all data of the arrays
     const myBox = document.createElement("div");
     //properities
-    myBox.draggable = true;
+  
     myBox.id = "myBoxContainer";
     myBox.className = "dataContainer";
     myBox.textContent = '';
@@ -1125,39 +1125,39 @@
 
     });
     document.body.appendChild(myBox);
-    
-
-////////////////////////////////////////////////////////////////
 
 
-let newX = 0, newY = 0, startX = 0, startY = 0;
+    ////////////////////////////////////////////////////////////////
 
-const card = document.getElementById('myBoxContainer')
 
-card.addEventListener('mousedown', mouseDown)
+    let newX = 0, newY = 0, startX = 0, startY = 0;
 
-function mouseDown(e){
-    startX = e.clientX
-    startY = e.clientY
+    const card = document.getElementById('myBoxContainer')
 
-    document.addEventListener('mousemove', mouseMove)
-    document.addEventListener('mouseup', mouseUp)
-}
+    card.addEventListener('mousedown', mouseDown)
 
-function mouseMove(e){
-    newX = startX - e.clientX 
-    newY = startY - e.clientY 
-  
-    startX = e.clientX
-    startY = e.clientY
+    function mouseDown(e) {
+      startX = e.clientX
+      startY = e.clientY
 
-    card.style.top = (card.offsetTop - newY) + 'px'
-    card.style.left = (card.offsetLeft - newX) + 'px'
-}
+      document.addEventListener('mousemove', mouseMove)
+      document.addEventListener('mouseup', mouseUp)
+    }
 
-function mouseUp(e){
-    document.removeEventListener('mousemove', mouseMove)
-}
+    function mouseMove(e) {
+      newX = startX - e.clientX
+      newY = startY - e.clientY
+
+      startX = e.clientX
+      startY = e.clientY
+
+      card.style.top = (card.offsetTop - newY) + 'px'
+      card.style.left = (card.offsetLeft - newX) + 'px'
+    }
+
+    function mouseUp(e) {
+      document.removeEventListener('mousemove', mouseMove)
+    }
 
     //////////////////////////////////////////////////////////////
 
