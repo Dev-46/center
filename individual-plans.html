@@ -57,7 +57,6 @@
 
     table {
       width: 360px;
-      /* 100% */
       height: fit-content !important;
       max-height: 400px !important;
       border: 1px solid rgb(20, 20, 20) !important;
@@ -68,22 +67,18 @@
     }
 
     .cell2 {
-      /**/
       max-width: 50px !important;
     }
 
     .cell3 {
       max-width: 100px !important;
-      /*110px*/
       text-align: center;
       font-size: 13px !important;
-      /* 14*/
       padding: 0 2px !important;
     }
 
     .cell4 {
       max-width: 300px !important;
-      /*280*/
       min-width: 155px !important;
     }
 
@@ -101,7 +96,6 @@
 
     .cell5 {
       max-width: 55px !important;
-      /* 0% */
       min-width: 55px !important;
       font-size: 14px !important;
       padding: 0 auto;
@@ -1301,7 +1295,7 @@
     closeHolder.style.boxShadow =
       "inset 25px 20px 100px 44px rgba(100,20,100,0.5)";
     closeHolder.style.borderRadius = "25px";
-    //closeHolder.style.zIndex = "1000";
+    closeHolder.style.zIndex = 1000;
     closeHolder.addEventListener("click", function () {
       document.getElementById("printer").removeChild(mypoptogetinfo);
       document.getElementById("printer").classList.add("printer-shrink");
@@ -1338,7 +1332,7 @@
     yearinput.style.borderBottom = "1px solid #b8a8a8";
     yearinput.placeholder = "  السنة";
     yearinput.value = 2026;
-    //yearinput.style.zIndex = 1000;
+    yearinput.style.zIndex = 1000;
     yearinput.style.textShadow = "2px 2px 2px #000";
     yearinput.style.textIndent = "30" + "px";
 
@@ -1366,6 +1360,12 @@
 
 
 
+
+
+
+
+    executebtn.addEventListener("click",()=>{
+      
     // the list of schools
     
     /// create a div to contain all data of the arrays
@@ -1375,7 +1375,7 @@
     myBox.id = "myBoxContainer";
     myBox.className = "dataContainer";
     myBox.style.border="1px solid green";
-    myBox.style.zIndex=1000;
+  
     let ladle = document.createElement("div");
     ladle.id = "myHolder";
     ladle.style.zIndex=900;
@@ -1396,7 +1396,8 @@
 
     });
     document.body.appendChild(myBox);
-
+    myBox.style.zIndex=1000;
+    });
 
     //////////////////////////////////////////////////////////////
 
