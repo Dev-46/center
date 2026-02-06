@@ -1094,6 +1094,9 @@
     let ladle = document.createElement("div");
     ladle.id="myHolder";
     myBox.appendChild(ladle);
+    ladle.addEventListener("click", ()=>{
+      myBox.style.display="none";
+    })
     Ibra.forEach((item,index)=>{
         let coder = document.createElement("span");
         let schooler = document.createElement("span");
