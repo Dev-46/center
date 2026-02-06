@@ -702,16 +702,14 @@
 
     #myBoxContainer {
       padding-top: 30px !important;
-      background:linear-gradient(
-        to bottom,
-        #271925,
-        white,
-        white,
-        white
-      ) !important
-      ;
+      background: linear-gradient(to bottom,
+          #271925,
+          white,
+          white,
+          white) !important;
 
-      position: absolute;/**/
+      position: absolute;
+      /**/
       top: 350px !important;
       right: 110px !important;
       z-index: 2000;
@@ -1104,7 +1102,7 @@
     /// create a div to contain all data of the arrays
     const myBox = document.createElement("div");
     //properities
-    myBox.draggable=true;
+    myBox.draggable = true;
     myBox.id = "myBoxContainer";
     myBox.className = "dataContainer";
     myBox.textContent = '';
@@ -1130,9 +1128,39 @@
 
     //myBox.style.display = "block";// show again the div
 
+    const draggableDiv = document.getElementById('myBoxContainer');
+
+    draggableDiv.addEventListener('dragstart', (event) => {
+      // Set the data type and value of the dragged data
+      event.dataTransfer.setData('text/plain', event.target.id);
+      // Optionally, change cursor feedback or element appearance
+      event.dataTransfer.effectAllowed = 'move';
+    });
+
+    // The `dragend` event fires when the drag operation finishes (dropped or not).
+    draggableDiv.addEventListener('dragend', (event) => {
+      // Reset any visual changes, e.g., opacity
+    });
+
+
+    const dropTarget = document.getElementById('mytable');
+
+    // Prevent default to allow drop
+    dropTarget.addEventListener('dragover', (event) => {
+      event.preventDefault();
+    });
+
+    // Handle the drop operation
+    dropTarget.addEventListener('drop', (event) => {
+      event.preventDefault();
+      // Get the dragged data and append the element
+      const data = event.dataTransfer.getData('text/plain');
+      event.target.appendChild(document.getElementById(data));
+    });
 
 
     /////////////////////////////////////////////////////////////// drag and drop the div
+    /*
     dragElement(document.getElementById("myBoxContainer"));
         function dragElement(element) {
           var pos1 = 0,
@@ -1170,7 +1198,7 @@
           }
         }
 
-
+*/
 
     //////////////////////////////////////////////////////////////
 
