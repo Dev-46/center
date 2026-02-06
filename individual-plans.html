@@ -712,7 +712,7 @@
       cursor: pointer;
       top: 20px;
       right: 110px;
-      z-index: 900 !important;
+     
       background-color: #faf4f4 !important;
       color: rgb(27, 39, 8) !important;
       font-size: 23px !important;
@@ -1375,6 +1375,7 @@
     myBox.id = "myBoxContainer";
     myBox.className = "dataContainer";
     myBox.style.border="1px solid green";
+    myBox.style.zIndex=900;
     let ladle = document.createElement("div");
     ladle.id = "myHolder";
     myBox.appendChild(ladle);
