@@ -1142,23 +1142,6 @@
       // Reset any visual changes, e.g., opacity
     });
 
-
-    const dropTarget = document.getElementById('mytable');
-
-    // Prevent default to allow drop
-    dropTarget.addEventListener('dragover', (event) => {
-      event.preventDefault();
-    });
-
-    // Handle the drop operation
-    dropTarget.addEventListener('drop', (event) => {
-      event.preventDefault();
-      // Get the dragged data and append the element
-      const data = event.dataTransfer.getData('text/plain');
-      event.target.appendChild(document.getElementById(data));
-    });
-
-
     /////////////////////////////////////////////////////////////// drag and drop the div
     /*
     dragElement(document.getElementById("myBoxContainer"));
