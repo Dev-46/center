@@ -1099,70 +1099,6 @@
 
 
 
-    /// create a div to contain all data of the arrays
-    const myBox = document.createElement("div");
-    //properities
-  
-    myBox.id = "myBoxContainer";
-    myBox.className = "dataContainer";
-    myBox.style.border="1px solid green";
-    let ladle = document.createElement("div");
-    ladle.id = "myHolder";
-    myBox.appendChild(ladle);
-    ladle.addEventListener("click", () => {
-      myBox.style.display = "none";
-    })
-    Ibra.forEach((item, index) => {
-      let coder = document.createElement("span");
-      let schooler = document.createElement("span");
-      coder.innerHTML = item.code;
-      schooler.innerHTML = item.school;
-      let father = document.createElement("div");
-      father.className = "ourFathers";
-      father.appendChild(coder);
-      father.appendChild(schooler);
-      myBox.appendChild(father);
-
-    });
-    document.body.appendChild(myBox);
-
-
-    ////////////////////////////////////////////////////////////////
-
-/*
-    let newX = 0, newY = 0, startX = 0, startY = 0;
-
-    const card = document.getElementById('myBoxContainer')
-
-    card.addEventListener('mousedown', mouseDown)
-
-    function mouseDown(e) {
-      startX = e.clientX
-      startY = e.clientY
-
-      document.addEventListener('mousemove', mouseMove)
-      document.addEventListener('mouseup', mouseUp)
-    }
-
-    function mouseMove(e) {
-      newX = startX - e.clientX
-      newY = startY - e.clientY
-
-      startX = e.clientX
-      startY = e.clientY
-
-      card.style.top = (card.offsetTop - newY) + 'px'
-      card.style.left = (card.offsetLeft - newX) + 'px'
-    }
-
-    function mouseUp(e) {
-      document.removeEventListener('mousemove', mouseMove)
-    }
-*/
-
-
-    //////////////////////////////////////////////////////////////
-
 
 
     console.log(Ibra);
@@ -1425,6 +1361,43 @@
     ///////////////////////////////////////////////////////////
     msg = "NUMBER IS VALID";
     closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
+
+    //////////////////////////////////////////////////////////
+
+
+
+    // the list of schools
+    
+    /// create a div to contain all data of the arrays
+    const myBox = document.createElement("div");
+    //properities
+  
+    myBox.id = "myBoxContainer";
+    myBox.className = "dataContainer";
+    myBox.style.border="1px solid green";
+    let ladle = document.createElement("div");
+    ladle.id = "myHolder";
+    myBox.appendChild(ladle);
+    ladle.addEventListener("click", () => {
+      myBox.style.display = "none";
+    })
+    Ibra.forEach((item, index) => {
+      let coder = document.createElement("span");
+      let schooler = document.createElement("span");
+      coder.innerHTML = item.code;
+      schooler.innerHTML = item.school;
+      let father = document.createElement("div");
+      father.className = "ourFathers";
+      father.appendChild(coder);
+      father.appendChild(schooler);
+      myBox.appendChild(father);
+
+    });
+    document.body.appendChild(myBox);
+
+
+    //////////////////////////////////////////////////////////////
+
 
     /////////////////////////////////////////////////////////
     addEventListener("load", function () {
