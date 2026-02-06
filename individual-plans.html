@@ -1087,32 +1087,6 @@
     );
 
 
-    /// create a div to contain all data of the arrays
-    const myBox = document.createElement("div");
-    //properities
-    myBox.id="myBoxContainer";
-    myBox.className="dataContainer";
-    myBox.textContent='';
-    let ladle = document.createElement("div");
-    ladle.id="myHolder";
-    myBox.appendChild(ladle);
-    ladle.addEventListener("click", ()=>{
-      myBox.style.display="none";
-    })
-    Ibra.forEach((item,index)=>{
-        let coder = document.createElement("span");
-        let schooler = document.createElement("span");
-        coder.innerHTML=item.code;
-        schooler.innerHTML=item.school;
-        let father = document.createElement("div");
-        father.className="ourFathers";
-        father.appendChild(coder);
-        father.appendChild(schooler);
-        myBox.appendChild(father);
-
-    });
-    document.body.appendChild(myBox);
-
 
 
 
@@ -2947,10 +2921,37 @@
       ///////////////////////////////////////////////////////////
 
 
+    
+    ///////////////////////////////////////////////////
+    
+    /// create a div to contain all data of the arrays
+    const myBox = document.createElement("div");
+    //properities
+    myBox.id="myBoxContainer";
+    myBox.className="dataContainer";
+    myBox.textContent='';
+    let ladle = document.createElement("div");
+    ladle.id="myHolder";
+    myBox.appendChild(ladle);
+    ladle.addEventListener("click", ()=>{
+      myBox.style.display="none";
+    })
+    Ibra.forEach((item,index)=>{
+        let coder = document.createElement("span");
+        let schooler = document.createElement("span");
+        coder.innerHTML=item.code;
+        schooler.innerHTML=item.school;
+        let father = document.createElement("div");
+        father.className="ourFathers";
+        father.appendChild(coder);
+        father.appendChild(schooler);
+        myBox.appendChild(father);
 
+    });
+    document.body.appendChild(myBox);
 
     myBox.style.display="block";// show again the div
-
+   ///////////////////////////////////////////////////
     });
     //***************************************************************** */
     //////// the year of the plan
