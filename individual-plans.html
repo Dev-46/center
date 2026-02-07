@@ -775,6 +775,7 @@
     // https://www.youtube.com/watch?v=ymDjvycjgUM
     // code...
     // schools for each supervisor
+    let superName = 'ابراهيم حسان';
     const Ibra = [];
     const Gha = [];
     const Han = [];
@@ -1317,6 +1318,7 @@
     superinput.style.borderBottom = "1px solid #ecc2c2c0";
     superinput.placeholder = "اسم الموجه ثنائي";
     superinput.value = "ابراهيم حسان";
+    superName = superinput.value;
 
     superinput.style.marginTop = "-12" + "px";
     superinput.style.textIndent = "30" + "px";
@@ -1359,16 +1361,7 @@
     closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
 
     //////////////////////////////////////////////////////////
-
-
-
-
-
-
-
     //////////////////////////////////////////////////////////////
-
-
     /////////////////////////////////////////////////////////
     addEventListener("load", function () {
       if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
@@ -1447,6 +1440,7 @@
           executebtn.disabled = true;
         } else {
           msg = "COMPLETED";
+          superName = superinput.value;
           closeHolder.innerHTML = "X   " + "COMPLETED!";
           executebtn.disabled = false;
         }
@@ -1519,19 +1513,31 @@
       myBox.appendChild(ladle);
       ladle.addEventListener("click", () => {
         myBox.style.display = "none";
-      })
-      Ibra.forEach((item, index) => {
-        let coder = document.createElement("span");
-        let schooler = document.createElement("span");
-        coder.innerHTML = item.code;
-        schooler.innerHTML = item.school;
-        let father = document.createElement("div");
-        father.className = "ourFathers";
-        father.appendChild(coder);
-        father.appendChild(schooler);
-        myBox.appendChild(father);
-
       });
+      // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
+      switch (superName) {
+        case 'ابراهيم حسان':
+        case 'إبراهيم حسان':
+        case 'ابراهيم حسان ':
+        case 'إبراهيم حسان ':
+          Ibra.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+
+          });
+          break;
+        default:
+          break;
+      }
+
+      // end if 
       document.body.appendChild(myBox);
       myBox.style.zIndex = 1000;
     });
