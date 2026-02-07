@@ -1547,11 +1547,11 @@
     document.getElementById("published").addEventListener(
       "click",
       () => {
-        //alert("my clicked is okay!");
-        if (document.body.contains(myBox)) {
-
+         //alert("my clicked is okay!");
+        if (document.getElementById("myBoxContainer").style.display === "none") {
+          document.getElementById("myBoxContainer").style.display === "block";
         } else {
-          document.body.appendChild(myBox);
+          document.getElementById("myBoxContainer").style.display === "none";
         }
       }
     )
