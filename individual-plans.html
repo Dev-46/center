@@ -1397,12 +1397,12 @@
         executebtn.disabled = true;
       } else {
         if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
-          msg === "IT IS NOT NUMBER";
+          msg = "IT IS NOT NUMBER";
           closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
           executebtn.disabled = true;
         } else if (monthinput.value < 3 || monthinput.value > 12) {
-          msg = "NUMBER IS NOT VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS NOT VALID";
+          msg = "NOT VALID";
+          closeHolder.innerHTML = "X   " + "NOT VALID";
           executebtn.disabled = true;
         } else {
           msg = "NUMBER IS VALID";
@@ -1417,13 +1417,9 @@
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
         executebtn.disabled = true;
       } else {
-        if (isNaN(monthinput.value)) {
-          msg === "IT IS NOT NUMBER";
-          closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
-          executebtn.disabled = true;
-        } else if (monthinput.value < 3 || monthinput.value > 12) {
-          msg = "NUMBER IS NOT VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS NOT VALID";
+        if (isNaN(monthinput.value) || monthinput.value <3 || monthinput.value > 12) {
+          msg = "NOT VALID";
+          closeHolder.innerHTML = "X   " + "NOT VALID";
           executebtn.disabled = true;
         } else {
           msg = "NUMBER IS VALID";
@@ -1438,16 +1434,12 @@
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
         executebtn.disabled = true;
       } else {
-        if (isNaN(yearinput.value)) {
-          msg === "IT IS NOT NUMBER";
-          closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
+        if (isNaN(yearinput.value) || yearinput.value > 2026 || yearinput.value < 2026) {
+          msg = "IT IS NOT PROPER YEAR";
+          closeHolder.innerHTML = "X   " + "NOT PROPER YEAR";
           executebtn.disabled = true;
-        } else if (yearinput.value < 2026 || yearinput.value > 2026) {
-          msg = "NUMBER IS NOT VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS NOT VALID";
-          executebtn.disabled = true;
-        } else {
-          msg = "NUMBER IS VALID";
+        }  else {
+          msg = "PROPER YEAR";
           closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
           executebtn.disabled = false;
         }
@@ -1460,10 +1452,29 @@
         closeHolder.innerHTML = "X   " + "EMPTY CELLS!";
         executebtn.disabled = true;
       } else {
-        if (ar_letters.includes(superinput.value)) {
+        if (ar_letters.includes(superinput.value) && superinput.value.length > 8) {
           msg = "GOOD JOB!";
           closeHolder.innerHTML = "X   " + "GOOD JOB!";
-          if (superinput.value.length < 9) {
+          executebtn.disabled = false;
+        } else {
+          msg === "IT IS NOT VALID NAME";
+          superinput.value = "";
+          closeHolder.innerHTML = "X   " + "IT IS NOT VALID NAME";
+          executebtn.disabled = true;
+        }
+      }
+
+    });
+
+    /*
+
+
+    else if (yearinput.value < 2026 || yearinput.value > 2026) {
+          msg = "NUMBER IS NOT VALID";
+          closeHolder.innerHTML = "X   " + "NUMBER IS NOT VALID";
+          executebtn.disabled = true;
+        }
+    if (superinput.value.length < 9) {
             msg = "YOU NEED TO ADD SURNAME";
             closeHolder.innerHTML = "X   " + "ADD SURNAME";
             executebtn.disabled = true;
@@ -1475,15 +1486,8 @@
           }
 
 
-        } else {
-          msg === "IT IS NOT VALID NAME";
-          superinput.value = "";
-          closeHolder.innerHTML = "X   " + "IT IS NOT VALID NAME";
-          executebtn.disabled = true;
-        }
-      }
-
-    });
+    
+    */
     /////////////////////////////////////////////////////////////////////
     monthinput.style.zIndex = 100;
     monthinput.style.textIndent = "30" + "px";
