@@ -1531,15 +1531,16 @@
             father.appendChild(schooler);
             myBox.appendChild(father);
 
+            // end if 
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+
           });
           break;
         default:
           break;
       }
 
-      // end if 
-      document.body.appendChild(myBox);
-      myBox.style.zIndex = 1000;
     });
 
 
