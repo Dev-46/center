@@ -1559,7 +1559,7 @@
         "click",
         () => {
           //alert("my clicked is okay!");
-          if (document.getElementById("myBoxContainer") !==null && document.getElementById("myBoxContainer").style.display === "none") {
+          if (document.getElementById("myBoxContainer")?.style.display === "none") {
             document.getElementById("myBoxContainer").style.display = "block";
           } else{
             document.body.removeChild(mySwitcherBtn);
