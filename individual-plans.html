@@ -1547,26 +1547,27 @@
 
     //alert("my clicked is okay!");
     let mySwitcherBtn = document.createElement("button");
-    if (myBox.style.display === "none") {
-      
-      mySwitcherBtn.position = "fixed";
-      mySwitcherBtn.style.top = "12px";
-      mySwitcherBtn.style.right = "12px";
-      mySwitcherBtn.id = "my_switcher_btn";
-      mySwitcherBtn.innerText="show";
-      document.body.appendChild(mySwitcherBtn);
-      mySwitcherBtn.addEventListener(
-        "click",
-        () => {
-          
+    if (document.body.contains(myBox)) {
+      if (myBox.style.display === "none") {
+
+        mySwitcherBtn.position = "fixed";
+        mySwitcherBtn.style.top = "12px";
+        mySwitcherBtn.style.right = "12px";
+        mySwitcherBtn.id = "my_switcher_btn";
+        mySwitcherBtn.innerText = "show";
+        document.body.appendChild(mySwitcherBtn);
+        mySwitcherBtn.addEventListener(
+          "click",
+          () => {
+
             document.getElementById("myBoxContainer").style.display = "block";
             document.body.removeChild(mySwitcherBtn);
-        }
-      )
-    }else{
-      document.body.removeChild(mySwitcherBtn);
+          }
+        )
+      } else {
+        document.body.removeChild(mySwitcherBtn);
+      }
     }
-
 
 
     //*********************************************************************
