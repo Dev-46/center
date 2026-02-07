@@ -1371,76 +1371,72 @@
     addEventListener("load", function () {
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "" || isNaN(monthinput.value) || isNaN(yearinput.value) || monthinput.value < 3 || monthinput.value > 12) {
         executebtn.disabled = true;
-        msg = "NOT PROPER";
-        closeHolder.innerHTML = "X   " + msg;
+        msg = "EMPTY VALUES";
         document.getElementById("mytable").innerHTML = "";
         executebtn.disabled = true;
       } else {
         msg = "NUMBER IS VALID";
-        closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
         executebtn.disabled = false;
 
       }
-
+      closeHolder.innerHTML = "X   " + msg;
     });
 
     monthinput.addEventListener("focus", function () {
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
         executebtn.disabled = true;
+        msg = "EMPTY VALUES";
       } else {
         if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
           msg = "IT IS NOT NUMBER";
-          closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
           executebtn.disabled = true;
         } else if (monthinput.value < 3 || monthinput.value > 12) {
           msg = "NOT VALID";
-          closeHolder.innerHTML = "X   " + "NOT VALID";
           executebtn.disabled = true;
         } else {
           msg = "NUMBER IS VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
           executebtn.disabled = false;
         }
       }
-
+      closeHolder.innerHTML = "X   " + msg;
     });
 
     monthinput.addEventListener("keyup", function () {
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
         executebtn.disabled = true;
+        msg = "EMPTY VALUES";
       } else {
         if (isNaN(monthinput.value) || monthinput.value < 3 || monthinput.value > 12) {
           msg = "NOT VALID";
-          closeHolder.innerHTML = "X   " + "NOT VALID";
+
           executebtn.disabled = true;
         } else {
           msg = "NUMBER IS VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
           executebtn.disabled = false;
         }
       }
-
+      closeHolder.innerHTML = "X   " + msg;
     });
 
     yearinput.addEventListener("keyup", function () {
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
         executebtn.disabled = true;
+        msg = "EMPTY VALUES";
       } else {
         if (isNaN(yearinput.value) || yearinput.value > 2026 || yearinput.value < 2026) {
           msg = "IT IS NOT PROPER YEAR";
-          closeHolder.innerHTML = "X   " + "NOT PROPER YEAR";
+
           executebtn.disabled = true;
         } else {
           msg = "PROPER YEAR";
-          closeHolder.innerHTML = "X   " + "NUMBER IS VALID";
           executebtn.disabled = false;
         }
       }
-
+      closeHolder.innerHTML = "X   " + msg;
     });
     //   https://www.youtube.com/watch?v=zRkHk2WZwjc
     superinput.addEventListener("keyup", () => {
-        !ar_letters.includes(superinput.value)  ? superinput.value ="" : superinput.value;
+      !ar_letters.includes(superinput.value) ? superinput.value = "" : superinput.value;
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "" || !ar_letters.includes(superinput.value) || superinput.value.length < 9) {
         closeHolder.innerHTML = "X   " + "EMPTY CELLS!";
         executebtn.disabled = true;
@@ -1448,45 +1444,11 @@
         msg = "GOOD JOB!";
         closeHolder.innerHTML = "X   " + "GOOD JOB!";
         executebtn.disabled = false;
-
-        /*
-        if (ar_letters.includes(superinput.value) && superinput.value.length > 8) {
-          msg = "GOOD JOB!";
-          closeHolder.innerHTML = "X   " + "GOOD JOB!";
-          executebtn.disabled = false;
-        } else {
-          msg === "IT IS NOT VALID NAME";
-          superinput.value = "";
-          closeHolder.innerHTML = "X   " + "IT IS NOT VALID NAME";
-          executebtn.disabled = true;
-        }
-          */
       }
 
     });
 
-    /*
 
-
-    else if (yearinput.value < 2026 || yearinput.value > 2026) {
-          msg = "NUMBER IS NOT VALID";
-          closeHolder.innerHTML = "X   " + "NUMBER IS NOT VALID";
-          executebtn.disabled = true;
-        }
-    if (superinput.value.length < 9) {
-            msg = "YOU NEED TO ADD SURNAME";
-            closeHolder.innerHTML = "X   " + "ADD SURNAME";
-            executebtn.disabled = true;
-          } else {
-            msg = "COMPLETED";
-            superName = superinput.value;
-            closeHolder.innerHTML = "X   " + "COMPLETED!";
-            executebtn.disabled = false;
-          }
-
-
-    
-    */
     /////////////////////////////////////////////////////////////////////
     monthinput.style.zIndex = 100;
     monthinput.style.textIndent = "30" + "px";
