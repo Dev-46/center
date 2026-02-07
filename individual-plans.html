@@ -1535,6 +1535,22 @@
             document.body.appendChild(myBox);
             myBox.style.zIndex = 1000;
 
+            //alert("my clicked is okay!");
+            let mySwitcherBtn = document.createElement("button");
+            mySwitcherBtn.position = "fixed";
+            mySwitcherBtn.style.top = "12px";
+            mySwitcherBtn.style.right = "12px";
+            mySwitcherBtn.id = "my_switcher_btn";
+            mySwitcherBtn.innerText = "show";
+            mySwitcherBtn.onclick =()=>{
+              if(myBox.style.display==="block"){
+                myBox.style.display="none";
+              }else{
+                myBox.style.display="block";
+              }
+            }
+            document.body.appendChild(mySwitcherBtn);
+
           });
           break;
         default:
@@ -1545,29 +1561,10 @@
 
 
 
-    //alert("my clicked is okay!");
-    let mySwitcherBtn = document.createElement("button");
-    if (document.body.contains(myBox)) {
-      if (myBox.style.display === "none") {
 
-        mySwitcherBtn.position = "fixed";
-        mySwitcherBtn.style.top = "12px";
-        mySwitcherBtn.style.right = "12px";
-        mySwitcherBtn.id = "my_switcher_btn";
-        mySwitcherBtn.innerText = "show";
-        document.body.appendChild(mySwitcherBtn);
-        mySwitcherBtn.addEventListener(
-          "click",
-          () => {
 
-            document.getElementById("myBoxContainer").style.display = "block";
-            document.body.removeChild(mySwitcherBtn);
-          }
-        )
-      } else {
-        document.body.removeChild(mySwitcherBtn);
-      }
-    }
+
+
 
 
     //*********************************************************************
