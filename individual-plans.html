@@ -1513,6 +1513,7 @@
       myBox.appendChild(ladle);
       ladle.addEventListener("click", () => {
         myBox.style.display = "none";
+
       });
       // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
       switch (superName) {
@@ -1541,12 +1542,15 @@
             mySwitcherBtn.style.zIndex=1200;
             mySwitcherBtn.style.top = "12px";
             mySwitcherBtn.style.right = "12px";
+            mySwitcherBtn.style.backgroundColor="lightgreen";
+            mySwitcherBtn.style.maxWidth="50px";
+            mySwitcherBtn.style.minWidth="50px";
+            mySwitcherBtn.style.maxHeight="50px";
+            mySwitcherBtn.style.minHeight="50px";
             mySwitcherBtn.id = "my_switcher_btn";
-            mySwitcherBtn.innerText = "show";
+            mySwitcherBtn.innerText = "";
             mySwitcherBtn.onclick =()=>{
-              if(myBox.style.display==="block"){
-                myBox.style.display="none";
-              }else{
+              if(myBox.style.display==="none"){
                 myBox.style.display="block";
               }
             }
