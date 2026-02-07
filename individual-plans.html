@@ -1448,10 +1448,15 @@
     });
     //   https://www.youtube.com/watch?v=zRkHk2WZwjc
     superinput.addEventListener("keyup", () => {
-      if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
+      if (monthinput.value === "" || yearinput.value === "" || superinput.value === "" || !ar_letters.includes(superinput.value)) {
         closeHolder.innerHTML = "X   " + "EMPTY CELLS!";
         executebtn.disabled = true;
       } else {
+         msg = "GOOD JOB!";
+          closeHolder.innerHTML = "X   " + "GOOD JOB!";
+          executebtn.disabled = false;
+        
+        /*
         if (ar_letters.includes(superinput.value) && superinput.value.length > 8) {
           msg = "GOOD JOB!";
           closeHolder.innerHTML = "X   " + "GOOD JOB!";
@@ -1462,6 +1467,7 @@
           closeHolder.innerHTML = "X   " + "IT IS NOT VALID NAME";
           executebtn.disabled = true;
         }
+          */
       }
 
     });
