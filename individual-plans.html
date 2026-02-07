@@ -1544,61 +1544,32 @@
     });
 
 
-    document.getElementById("published").addEventListener(
-      "click",
-      () => {
-         //alert("my clicked is okay!");
-        if (document.getElementById("myBoxContainer").style.display === "none") {
-          document.getElementById("myBoxContainer").style.display = "block";
-        } else {
-          document.getElementById("myBoxContainer").style.display = "none";
+
+    //alert("my clicked is okay!");
+    let mySwitcherBtn = document.createElement("button");
+    if (document.getElementById("myBoxContainer").style.display === "none") {
+      
+      mySwitcherBtn.position = "fixed";
+      mySwitcherBtn.style.top = "12px";
+      mySwitcherBtn.style.right = "12px";
+      mySwitcherBtn.id = "my_switcher_btn";
+      mySwitcherBtn.innerText="show";
+      document.body.appendChild(mySwitcherBtn);
+      mySwitcherBtn.addEventListener(
+        "click",
+        () => {
+          //alert("my clicked is okay!");
+          if (document.getElementById("myBoxContainer").style.display === "none") {
+            document.getElementById("myBoxContainer").style.display = "block";
+          } 
         }
-      }
-    )
-    document.getElementById("inial").addEventListener(
-      "click",
-      () => {
-        //alert("my clicked is okay!");
-        if (document.getElementById("myBoxContainer").style.display === "none") {
-          document.getElementById("myBoxContainer").style.display = "block";
-        } else {
-          document.getElementById("myBoxContainer").style.display = "none";
-        }
-      }
-    )
-    document.getElementById("sir").addEventListener(
-      "click",
-      () => {
-        //alert("my clicked is okay!");
-        if (document.getElementById("myBoxContainer").style.display === "none") {
-          document.getElementById("myBoxContainer").style.display = "block";
-        } else {
-          document.getElementById("myBoxContainer").style.display = "none";
-        }
-      }
-    )
-    document.getElementById("month").addEventListener(
-      "click",
-      () => {
-        //alert("my clicked is okay!");
-        if (document.getElementById("myBoxContainer").style.display === "none") {
-          document.getElementById("myBoxContainer").style.display = "block";
-        } else {
-          document.getElementById("myBoxContainer").style.display = "none";
-        }
-      }
-    )
-    document.getElementById("year").addEventListener(
-      "click",
-      () => {
-        //alert("my clicked is okay!");
-        if (document.getElementById("myBoxContainer").style.display === "none") {
-          document.getElementById("myBoxContainer").style.display = "block";
-        } else {
-          document.getElementById("myBoxContainer").style.display = "none";
-        }
-      }
-    )
+      )
+    }else{
+      document.body.removeChild(mySwitcherBtn);
+    }
+
+
+
     //*********************************************************************
 
 
