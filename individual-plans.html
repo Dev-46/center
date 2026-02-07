@@ -1534,10 +1534,11 @@
             // end if 
             document.body.appendChild(myBox);
             myBox.style.zIndex = 1000;
-
-            //alert("my clicked is okay!");
+          });
+          //alert("my clicked is okay!");
             let mySwitcherBtn = document.createElement("button");
             mySwitcherBtn.position = "fixed";
+            mySwitcherBtn.style.zIndex=1200;
             mySwitcherBtn.style.top = "12px";
             mySwitcherBtn.style.right = "12px";
             mySwitcherBtn.id = "my_switcher_btn";
@@ -1550,21 +1551,12 @@
               }
             }
             document.body.appendChild(mySwitcherBtn);
-
-          });
           break;
         default:
           break;
       }
 
     });
-
-
-
-
-
-
-
 
 
     //*********************************************************************
