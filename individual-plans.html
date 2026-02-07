@@ -335,11 +335,15 @@
     }
 
     @media print {
-      #printer, #myBoxContainer, #my_switcher_btn { /*   id="my_switcher_btn" */
+
+      #printer,
+      #myBoxContainer,
+      #my_switcher_btn {
+        /*   id="my_switcher_btn" */
         z-index: 0;
         display: none;
       }
-      
+
 
       #plan {
         display: block;
@@ -1365,6 +1369,9 @@
     //////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////
     addEventListener("load", function () {
+       if(monthinput.value ==="" || yearinput.value==="" || superinput.value ===""){
+        executebtn.disabled = true;
+      }
       if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
         msg === "IT IS NOT NUMBER";
         closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
@@ -1384,6 +1391,9 @@
     });
 
     monthinput.addEventListener("focus", function () {
+       if(monthinput.value ==="" || yearinput.value==="" || superinput.value ===""){
+        executebtn.disabled = true;
+      }
       if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
         msg === "IT IS NOT NUMBER";
         closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
@@ -1400,6 +1410,9 @@
     });
 
     monthinput.addEventListener("keyup", function () {
+      if(monthinput.value ==="" || yearinput.value==="" || superinput.value ===""){
+        executebtn.disabled = true;
+      }
       if (isNaN(monthinput.value)) {
         msg === "IT IS NOT NUMBER";
         closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
@@ -1416,6 +1429,9 @@
     });
 
     yearinput.addEventListener("keyup", function () {
+       if(monthinput.value ==="" || yearinput.value==="" || superinput.value ===""){
+        executebtn.disabled = true;
+      }
       if (isNaN(yearinput.value)) {
         msg === "IT IS NOT NUMBER";
         closeHolder.innerHTML = "X   " + "IT IS NOT NUMBER";
@@ -1432,6 +1448,9 @@
     });
     //   https://www.youtube.com/watch?v=zRkHk2WZwjc
     superinput.addEventListener("keyup", () => {
+       if(monthinput.value ==="" || yearinput.value==="" || superinput.value ===""){
+        executebtn.disabled = true;
+      }
       if (ar_letters.includes(superinput.value)) {
         msg = "GOOD JOB!";
         closeHolder.innerHTML = "X   " + "GOOD JOB!";
@@ -1514,8 +1533,8 @@
       myBox.appendChild(ladle);
       ladle.addEventListener("click", () => {
         myBox.style.display = "none";
-        document.getElementById("my_switcher_btn") ? document.getElementById("my_switcher_btn").style.display="block" :
-        confirm("جاهز لطباعة الخطة");
+        document.getElementById("my_switcher_btn") ? document.getElementById("my_switcher_btn").style.display = "block" :
+          confirm("جاهز لطباعة الخطة");
       });
       // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
       switch (superName) {
@@ -1533,7 +1552,6 @@
             father.appendChild(coder);
             father.appendChild(schooler);
             myBox.appendChild(father);
-
             // end if 
             document.body.appendChild(myBox);
             myBox.style.zIndex = 1000;
