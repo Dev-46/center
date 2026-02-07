@@ -1457,6 +1457,7 @@
     //   https://www.youtube.com/watch?v=zRkHk2WZwjc
     superinput.addEventListener("keyup", () => {
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "") {
+        closeHolder.innerHTML = "X   " + "EMPTY CELLS!";
         executebtn.disabled = true;
       } else {
         if (ar_letters.includes(superinput.value)) {
