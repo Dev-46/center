@@ -600,7 +600,11 @@
 
       #printer,
       #myBoxContainer,
-      #my_switcher_btn {
+      #my_switcher_btn_Ibra,
+      #my_switcher_btn_Aml,
+      #my_switcher_btn_Gha,
+      #my_switcher_btn_Han,
+      #my_switcher_btn_Ema {
         z-index: 0;
         display: none;
       }
@@ -1470,7 +1474,27 @@
       myBox.appendChild(ladle);
       ladle.addEventListener("click", () => {
         myBox.style.display = "none";
-        document.getElementById("my_switcher_btn") ? document.getElementById("my_switcher_btn").style.display = "block" :
+        document.getElementById("my_switcher_btn_Ibra") ? document.getElementById("my_switcher_btn_Ibra").style.display = "block" :
+          confirm("جاهز لطباعة الخطة");
+      });
+       ladle.addEventListener("click", () => {
+        myBox.style.display = "none";
+        document.getElementById("my_switcher_btn_Aml") ? document.getElementById("my_switcher_btn_Aml").style.display = "block" :
+          confirm("جاهز لطباعة الخطة");
+      });
+       ladle.addEventListener("click", () => {
+        myBox.style.display = "none";
+        document.getElementById("my_switcher_btn_Gha") ? document.getElementById("my_switcher_btn_Gha").style.display = "block" :
+          confirm("جاهز لطباعة الخطة");
+      });
+       ladle.addEventListener("click", () => {
+        myBox.style.display = "none";
+        document.getElementById("my_switcher_btn_Han") ? document.getElementById("my_switcher_btn_Han").style.display = "block" :
+          confirm("جاهز لطباعة الخطة");
+      });
+       ladle.addEventListener("click", () => {
+        myBox.style.display = "none";
+        document.getElementById("my_switcher_btn_Ema") ? document.getElementById("my_switcher_btn_Ema").style.display = "block" :
           confirm("جاهز لطباعة الخطة");
       });
       // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
@@ -1493,21 +1517,21 @@
             myBox.style.zIndex = 1000;
           });
           //alert("my clicked is okay!");
-          let mySwitcherBtn = document.createElement("button");
-          mySwitcherBtn.style.position = "fixed";
-          mySwitcherBtn.style.zIndex = 1200;
-          mySwitcherBtn.style.top = "12px";
-          mySwitcherBtn.style.right = "12px";
-          mySwitcherBtn.style.backgroundColor = "lightgreen";
-          mySwitcherBtn.style.maxWidth = "20px";
-          mySwitcherBtn.style.minWidth = "20px";
-          mySwitcherBtn.style.width = "20px";
-          mySwitcherBtn.style.height = "20px";
-          mySwitcherBtn.style.maxHeight = "20px";
-          mySwitcherBtn.style.minHeight = "20px";
-          mySwitcherBtn.id = "my_switcher_btn";
-          mySwitcherBtn.innerText = "";
-          mySwitcherBtn.onclick = () => {
+          let mySwitcherBtnIbra = document.createElement("button");
+          mySwitcherBtnIbra.style.position = "fixed";
+          mySwitcherBtnIbra.style.zIndex = 1200;
+          mySwitcherBtnIbra.style.top = "12px";
+          mySwitcherBtnIbra.style.right = "12px";
+          mySwitcherBtnIbra.style.backgroundColor = "lightgreen";
+          mySwitcherBtnIbra.style.maxWidth = "20px";
+          mySwitcherBtnIbra.style.minWidth = "20px";
+          mySwitcherBtnIbra.style.width = "20px";
+          mySwitcherBtnIbra.style.height = "20px";
+          mySwitcherBtnIbra.style.maxHeight = "20px";
+          mySwitcherBtnIbra.style.minHeight = "20px";
+          mySwitcherBtnIbra.id = "my_switcher_btn_Ibra";
+          mySwitcherBtnIbra.innerText = "";
+          mySwitcherBtnIbra.onclick = () => {
 
             if (confirm("محتاج قائمة المدارس الخاصة بك")) {
               // Code to run if the user clicks "OK" (true is returned)
@@ -1516,10 +1540,10 @@
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
-              mySwitcherBtn.style.display = "none";
+              mySwitcherBtnIbra.style.display = "none";
             }
           }
-          document.body.appendChild(mySwitcherBtn);
+          document.body.appendChild(mySwitcherBtnIbra);
           break;
         case 'امل ابراهيم':
         case 'امل ابراهيم ':
@@ -1543,21 +1567,21 @@
             myBox.style.zIndex = 1000;
           });
           //alert("my clicked is okay!");
-          mySwitcherBtn = document.createElement("button");
-          mySwitcherBtn.style.position = "fixed";
-          mySwitcherBtn.style.zIndex = 1200;
-          mySwitcherBtn.style.top = "12px";
-          mySwitcherBtn.style.right = "12px";
-          mySwitcherBtn.style.backgroundColor = "lightgreen";
-          mySwitcherBtn.style.maxWidth = "20px";
-          mySwitcherBtn.style.minWidth = "20px";
-          mySwitcherBtn.style.width = "20px";
-          mySwitcherBtn.style.height = "20px";
-          mySwitcherBtn.style.maxHeight = "20px";
-          mySwitcherBtn.style.minHeight = "20px";
-          mySwitcherBtn.id = "my_switcher_btn";
-          mySwitcherBtn.innerText = "";
-          mySwitcherBtn.onclick = () => {
+          let mySwitcherBtnAml = document.createElement("button");
+          mySwitcherBtnAml.style.position = "fixed";
+          mySwitcherBtnAml.style.zIndex = 1200;
+          mySwitcherBtnAml.style.top = "12px";
+          mySwitcherBtnAml.style.right = "12px";
+          mySwitcherBtnAml.style.backgroundColor = "lightgreen";
+          mySwitcherBtnAml.style.maxWidth = "20px";
+          mySwitcherBtnAml.style.minWidth = "20px";
+          mySwitcherBtnAml.style.width = "20px";
+          mySwitcherBtnAml.style.height = "20px";
+          mySwitcherBtnAml.style.maxHeight = "20px";
+          mySwitcherBtnAml.style.minHeight = "20px";
+          mySwitcherBtnAml.id = "my_switcher_btn_Aml";
+          mySwitcherBtnAml.innerText = "";
+          mySwitcherBtnAml.onclick = () => {
 
             if (confirm("محتاج قائمة المدارس الخاصة بك")) {
               // Code to run if the user clicks "OK" (true is returned)
@@ -1566,10 +1590,10 @@
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
-              mySwitcherBtn.style.display = "none";
+              mySwitcherBtnAml.style.display = "none";
             }
           }
-          document.body.appendChild(mySwitcherBtn);
+          document.body.appendChild(mySwitcherBtnAml);
 
           ///////
           break;
@@ -1594,21 +1618,21 @@
             myBox.style.zIndex = 1000;
           });
           //alert("my clicked is okay!");
-          mySwitcherBtn = document.createElement("button");
-          mySwitcherBtn.style.position = "fixed";
-          mySwitcherBtn.style.zIndex = 1200;
-          mySwitcherBtn.style.top = "12px";
-          mySwitcherBtn.style.right = "12px";
-          mySwitcherBtn.style.backgroundColor = "lightgreen";
-          mySwitcherBtn.style.maxWidth = "20px";
-          mySwitcherBtn.style.minWidth = "20px";
-          mySwitcherBtn.style.width = "20px";
-          mySwitcherBtn.style.height = "20px";
-          mySwitcherBtn.style.maxHeight = "20px";
-          mySwitcherBtn.style.minHeight = "20px";
-          mySwitcherBtn.id = "my_switcher_btn";
-          mySwitcherBtn.innerText = "";
-          mySwitcherBtn.onclick = () => {
+          let mySwitcherBtnGha = document.createElement("button");
+          mySwitcherBtnGha.style.position = "fixed";
+          mySwitcherBtnGha.style.zIndex = 1200;
+          mySwitcherBtnGha.style.top = "12px";
+          mySwitcherBtnGha.style.right = "12px";
+          mySwitcherBtnGha.style.backgroundColor = "lightgreen";
+          mySwitcherBtnGha.style.maxWidth = "20px";
+          mySwitcherBtnGha.style.minWidth = "20px";
+          mySwitcherBtnGha.style.width = "20px";
+          mySwitcherBtnGha.style.height = "20px";
+          mySwitcherBtnGha.style.maxHeight = "20px";
+          mySwitcherBtnGha.style.minHeight = "20px";
+          mySwitcherBtnGha.id = "my_switcher_btn_Gha";
+          mySwitcherBtnGha.innerText = "";
+          mySwitcherBtnGha.onclick = () => {
 
             if (confirm("محتاج قائمة المدارس الخاصة بك")) {
               // Code to run if the user clicks "OK" (true is returned)
@@ -1617,10 +1641,10 @@
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
-              mySwitcherBtn.style.display = "none";
+              mySwitcherBtnGha.style.display = "none";
             }
           }
-          document.body.appendChild(mySwitcherBtn);
+          document.body.appendChild(mySwitcherBtnGha);
 
           ///////
           break;
@@ -1642,21 +1666,21 @@
             myBox.style.zIndex = 1000;
           });
           //alert("my clicked is okay!");
-          mySwitcherBtn = document.createElement("button");
-          mySwitcherBtn.style.position = "fixed";
-          mySwitcherBtn.style.zIndex = 1200;
-          mySwitcherBtn.style.top = "12px";
-          mySwitcherBtn.style.right = "12px";
-          mySwitcherBtn.style.backgroundColor = "lightgreen";
-          mySwitcherBtn.style.maxWidth = "20px";
-          mySwitcherBtn.style.minWidth = "20px";
-          mySwitcherBtn.style.width = "20px";
-          mySwitcherBtn.style.height = "20px";
-          mySwitcherBtn.style.maxHeight = "20px";
-          mySwitcherBtn.style.minHeight = "20px";
-          mySwitcherBtn.id = "my_switcher_btn";
-          mySwitcherBtn.innerText = "";
-          mySwitcherBtn.onclick = () => {
+          let mySwitcherBtnHan = document.createElement("button");
+          mySwitcherBtnHan.style.position = "fixed";
+          mySwitcherBtnHan.style.zIndex = 1200;
+          mySwitcherBtnHan.style.top = "12px";
+          mySwitcherBtnHan.style.right = "12px";
+          mySwitcherBtnHan.style.backgroundColor = "lightgreen";
+          mySwitcherBtnHan.style.maxWidth = "20px";
+          mySwitcherBtnHan.style.minWidth = "20px";
+          mySwitcherBtnHan.style.width = "20px";
+          mySwitcherBtnHan.style.height = "20px";
+          mySwitcherBtnHan.style.maxHeight = "20px";
+          mySwitcherBtnHan.style.minHeight = "20px";
+          mySwitcherBtnHan.id = "my_switcher_btn_Han";
+          mySwitcherBtnHan.innerText = "";
+          mySwitcherBtnHan.onclick = () => {
 
             if (confirm("محتاج قائمة المدارس الخاصة بك")) {
               // Code to run if the user clicks "OK" (true is returned)
@@ -1665,10 +1689,10 @@
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
-              mySwitcherBtn.style.display = "none";
+              mySwitcherBtnHan.style.display = "none";
             }
           }
-          document.body.appendChild(mySwitcherBtn);
+          document.body.appendChild(mySwitcherBtnHan);
 
           ///////
           break;
@@ -1692,21 +1716,21 @@
             myBox.style.zIndex = 1000;
           });
           //alert("my clicked is okay!");
-          mySwitcherBtn = document.createElement("button");
-          mySwitcherBtn.style.position = "fixed";
-          mySwitcherBtn.style.zIndex = 1200;
-          mySwitcherBtn.style.top = "12px";
-          mySwitcherBtn.style.right = "12px";
-          mySwitcherBtn.style.backgroundColor = "lightgreen";
-          mySwitcherBtn.style.maxWidth = "20px";
-          mySwitcherBtn.style.minWidth = "20px";
-          mySwitcherBtn.style.width = "20px";
-          mySwitcherBtn.style.height = "20px";
-          mySwitcherBtn.style.maxHeight = "20px";
-          mySwitcherBtn.style.minHeight = "20px";
-          mySwitcherBtn.id = "my_switcher_btn";
-          mySwitcherBtn.innerText = "";
-          mySwitcherBtn.onclick = () => {
+          let mySwitcherBtnEma = document.createElement("button");
+          mySwitcherBtnEma.style.position = "fixed";
+          mySwitcherBtnEma.style.zIndex = 1200;
+          mySwitcherBtnEma.style.top = "12px";
+          mySwitcherBtnEma.style.right = "12px";
+          mySwitcherBtnEma.style.backgroundColor = "lightgreen";
+          mySwitcherBtnEma.style.maxWidth = "20px";
+          mySwitcherBtnEma.style.minWidth = "20px";
+          mySwitcherBtnEma.style.width = "20px";
+          mySwitcherBtnEma.style.height = "20px";
+          mySwitcherBtnEma.style.maxHeight = "20px";
+          mySwitcherBtnEma.style.minHeight = "20px";
+          mySwitcherBtnEma.id = "my_switcher_btn_Ema";
+          mySwitcherBtnEma.innerText = "";
+          mySwitcherBtnEma.onclick = () => {
 
             if (confirm("محتاج قائمة المدارس الخاصة بك")) {
               // Code to run if the user clicks "OK" (true is returned)
@@ -1715,10 +1739,10 @@
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
-              mySwitcherBtn.style.display = "none";
+              mySwitcherBtnEma.style.display = "none";
             }
           }
-          document.body.appendChild(mySwitcherBtn);
+          document.body.appendChild(mySwitcherBtnEma);
 
           ///////
           break;
