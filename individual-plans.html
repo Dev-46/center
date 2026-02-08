@@ -1,273 +1,274 @@
 <script>const Master = [{ code: 1, school: '6 أكتوبر ب' },
-    { code: 2, school: '6 أكتوبر - فصول ع' },
-    { code: 3, school: 'ص 2/241 ت أ ب' },
-    { code: 4, school: 'ص 2/241 ت أ ع' },
-    { code: 5, school: 'الأربع عزب ج ب' },
-    { code: 6, school: 'البدوية ب' },
-    { code: 7, school: 'البسلقون أ ص' },
-    { code: 8, school: 'البسلقون ب م' },
-    { code: 9, school: 'البسلقون ع' },
-    { code: 10, school: 'البوصة ب' },
-    { code: 11, school: 'البوصة ب - ف ع' },
-    { code: 12, school: 'التراس ت أ ب' },
-    { code: 13, school: 'التراس ت أ ع' },
-    { code: 14, school: 'التمامة ت أ ب' },
-    { code: 15, school: 'التمامة ت أ ع' },
-    { code: 16, school: 'الجزيرة ص ف' },
-    { code: 17, school: 'الجلاد ب' },
-    { code: 18, school: 'الجيل الواعد لغات' },
-    { code: 19, school: 'الخراشي ت أ ب' },
-    { code: 20, school: 'الخراسي ت أ ع' },
-    { code: 21, school: 'الخواجة الرسمية لغات' },
-    { code: 22, school: 'الخواجة ت أ ب' },
-    { code: 23, school: 'الدوار ت أ ب' },
-    { code: 24, school: 'الدوار ت أ ع' },
-    { code: 25, school: 'الربعمائة ت أ ب' },
-    { code: 26, school: 'الربعمائة ت أ ع' },
-    { code: 27, school: 'الروضة ت أ ب' },
-    { code: 28, school: 'الروضة ت أ ع' },
-    { code: 29, school: 'الريادة خ عربي' },
-    { code: 30, school: 'الريادة خ لغات' },
-    { code: 31, school: 'السبعين ت أ ب' },
-    { code: 32, school: 'السبعين ت أ ع' },
-    { code: 33, school: 'الستين لغات ب' },
-    { code: 34, school: 'الستين ت أ ب' },
-    { code: 35, school: 'الستين ت أ ع' },
-    { code: 36, school: 'السلام ب' },
-    { code: 37, school: 'الشعيرة ك ت أ ب' },
-    { code: 38, school: 'الشعيرة ك ت أ ع' },
-    { code: 39, school: 'الشنديدي الجديدة ب' },
-    { code: 40, school: 'ش الصافي رجب ب' },
-    { code: 41, school: 'ش إبراهيم مبارك ب' },// هل هي الفرنساوي
-    { code: 42, school: 'ش أحمد حامد ع' },
-    { code: 43, school: 'ش تامر مصطفى ع' },
-    { code: 44, school: 'ش سعيد سرحان ت أ ب' },
-    { code: 45, school: 'ش سعيد سرحان ت أ ع' },
-    { code: 46, school: 'ش شحاتة الدسوقي ب' },
-    { code: 47, school: 'ش عادل صلاح ب' },
-    { code: 48, school: 'ش فوزي ابراهيم ب' },
-    { code: 49, school: 'ش كارم محمود ع' },
-    { code: 50, school: 'ش محمد ابراهيم ب' },
-    { code: 51, school: 'ش محمد سعد ت أ ب' },//50
-    { code: 52, school: 'ش محمد سعد ت أ ع' },//51
-    { code: 53, school: 'ش محمد عبدالمنعم ب' },
-    { code: 54, school: 'ش مصطفى كامل ب' },
-    { code: 55, school: 'الصيادين ت أ ب' },
-    { code: 56, school: 'الصيادين ت أ ع' },
-    { code: 57, school: 'الطاهر الصافي ب' },
-    { code: 58, school: 'الطاهر الصافي ع' },
-    { code: 59, school: 'الطرح ت أ ب' },
-    { code: 60, school: 'الطرح ت أ ع' },
-    { code: 61, school: 'العاشر من رمضان ت أ ب' },
-    { code: 62, school: 'العاشر من رمضان ت أ ع' },
-    { code: 63, school: 'العالي ب' },
-    { code: 64, school: 'العالي ع' },
-    { code: 65, school: 'العرقوب ت أ ب' },
-    { code: 66, school: 'العرقوب ت أ ع' },
-    { code: 67, school: 'الفقي ب' },
-    { code: 68, school: 'القاضي ت أ ب' },
-    { code: 69, school: 'القاضي ت أ ع' },
-    { code: 70, school: 'القومية ت أ ب' },
-    { code: 71, school: 'القومية ت أ ع' },
-    { code: 72, school: 'الكريون ب' },
-    { code: 73, school: 'الكريون ع' },
-    { code: 74, school: 'الكنايس ب' },
-    { code: 75, school: 'الكنايس ع' },
-    { code: 76, school: 'ابراهيم شرف ت أ ب' },
-    { code: 77, school: 'ابراهيم شرف ت أ ع' },
-    { code: 78, school: 'السويسرية خ عربي' },
-    { code: 79, school: 'السويسرية خ لغات' },
-    { code: 80, school: 'الملقة ب' },
-    { code: 81, school: 'الملقة ع' },
-    { code: 82, school: 'النبراوية ب' },
-    { code: 83, school: 'النبراوية ب - ف ع' },
-    { code: 84, school: 'الوحدة ص ف' },
-    { code: 85, school: 'الوسطانية الابتدائية أ' },
-    { code: 86, school: 'الوسطانية الابتدائية ب' },
-    { code: 87, school: 'الوكيل ب' },
-    { code: 88, school: 'الوكيل ع' },
-    { code: 89, school: 'الوكيل ت أ ب' },
-    { code: 90, school: 'اليمينية ت ا ب' },
-    { code: 91, school: 'اليمينية ت أ ع' },
-    { code: 92, school: 'أبوحسين ب' },
-    { code: 93, school: 'أبوحسين ع' },
-    { code: 94, school: 'أبوزيد خليفة ت أ ب' },
-    { code: 95, school: 'أبوزيد خليفة ت أ ع' },
-    { code: 96, school: 'أبوغفيلة ب' },
-    { code: 97, school: 'أبيس 1/5 ت م' },
-    { code: 98, school: 'أبيس 3/10 ت م' },
-    { code: 99, school: 'أبيس 3 ب' },
-    { code: 100, school: 'أبيس 3 ع' },
-    { code: 101, school: 'أبيس 3 الرسمية عربي' },
-    { code: 102, school: 'أبيس 3 الرسمية لغات' },
-    { code: 103, school: 'أبيس 5 ب' },
-    { code: 104, school: 'أبيس 6 ب' },
-    { code: 105, school: 'أبيس 6 ث تجاري' },
-    { code: 106, school: 'أبيس 6 ث تجاري - ف خ' },
-    { code: 107, school: 'أبيس 6 ث م' },
-    { code: 108, school: 'أبيس 6 ث المشتركة - ف خ ' },
-    { code: 109, school: 'أبيس 8/3 ف واحد' },
-    { code: 110, school: 'أحمد أبوزهرة ب' },
-    { code: 111, school: 'باباه الكبرى ت أ ب' },
-    { code: 112, school: 'باباه الكبرى ت أ ع' },
-    { code: 113, school: 'بديوي ت أ ب' },
-    { code: 114, school: 'بديوي ت أ ع' },
-    { code: 115, school: 'بردلة ب' },
-    { code: 116, school: 'بركات الحمراء ت أ ب' },
-    { code: 117, school: 'بركات الحمراء ت أ ع' },
-    { code: 118, school: 'بشير المختار ت أ ب' },
-    { code: 119, school: 'بشير المختار ت أ ع' },
-    { code: 120, school: 'توفيق الهلباوي ت أ ب' },
-    { code: 121, school: 'توفيق الهلباوي ت أ ع' },
-    { code: 122, school: 'جاب الله ت أ ب' },
-    { code: 123, school: 'جاب الله ت أ ع' },
-    { code: 124, school: 'جلال أبوالحاج ب' },
-    { code: 125, school: 'حسن بيومي ب' },
-    { code: 126, school: 'حلمي عامر ع' },
-    { code: 127, school: 'حليص ت أ ب' },
-    { code: 128, school: 'حليص ت أ ع' },
-    { code: 129, school: 'حماد الصعيدي ت أ ب' },
-    { code: 130, school: 'حماد الصعيدي ت أ ع' },
-    { code: 131, school: 'حميد عبدالرحمن ت أ ب' },
-    { code: 132, school: 'حميد عبدالرحمن ت أ ع' },
-    { code: 133, school: 'حوض 7 ت أ ب' },
-    { code: 134, school: 'حوض 7 ت أ ع' },
-    { code: 135, school: 'خالد الأقرع ت أ ب' },
-    { code: 136, school: 'خالد الأقرع ت أ ع' },
-    { code: 137, school: 'خليل ت م' },
-    { code: 138, school: 'زكي الابراشي ب' },
-    { code: 139, school: 'زكي الابراشي ع' },
-    { code: 140, school: 'زلط ت أ ب' },
-    { code: 141, school: 'زلط ت أ ع' },
-    { code: 142, school: 'زهرة الابتدائية م' },
-    { code: 143, school: 'زهرة الاعدادية' },
-    { code: 144, school: 'سليمان بلبع ب' },
-    { code: 145, school: 'سيدي غازي ب ج' },
-    { code: 146, school: 'سيدي غازي ث - فصول خ' },
-    { code: 147, school: 'سيدي غازي ث م' },
-    { code: 148, school: 'سيف النصر ب' },
-    { code: 149, school: 'سيف النصر - ف ع' },
-    { code: 150, school: 'شارلو ب' },
-    { code: 151, school: 'شبل ب' },
-    { code: 152, school: 'شحاتة ص ف' },
-    { code: 153, school: 'شركة عواد ت أ ب' },
-    { code: 154, school: 'شركة عواد ت أ ع' },
-    { code: 155, school: 'شفيق أبوصالح ب' },
-    { code: 156, school: 'صدقي ت أ ب' },
-    { code: 157, school: 'صدقي ت أ ع' },
-    { code: 158, school: 'صدقي سنيحة ت أ ب' },
-    { code: 159, school: 'صدقي سنيحة ت أ ع' },
-    { code: 160, school: 'صيدناوي الحمراء ت أ ب' },
-    { code: 161, school: 'صيدناوي الحمراء ت أ ع' },
-    { code: 162, school: 'صيدناوي الوسطى ب' },
-    { code: 163, school: 'صيدناوي الوسطى ب - ف ع' },
-    { code: 164, school: 'صيدناوي الكبرى ت ا ب' },
-    { code: 165, school: 'صيدناوي الكبرى ت أ ع' },
-    { code: 166, school: 'صيرة ع' },
-    { code: 167, school: 'ضيف ب' },
-    { code: 168, school: 'عاداة الغربية ب' },
-    { code: 169, school: 'عباس سيد أحمد ع' },
-    { code: 170, school: 'عبدالحميد عوت ت أ ب' },
-    { code: 171, school: 'عبدالحميد عوت ت أ ع' },
-    { code: 172, school: 'عبد الصمد النمر ب' },
-    { code: 173, school: 'عبدالعزيز حبشي ب' },
-    { code: 174, school: 'عبد العزيز حبشي ب - ف ع' },
-    { code: 175, school: 'عبدالقادر خليف ت أ ع' },
-    { code: 176, school: 'عبدالوهاب الخراشي ب' },
-    { code: 177, school: 'عبدالوهاب الخراشي ع' },
-    { code: 178, school: 'عزب نوبار ب م' },
-    { code: 179, school: 'عزبة البنك ت أ ب' },
-    { code: 180, school: 'عزبة البنك ت أ ع' },
-    { code: 181, school: 'عمر الحريري ص ف' },
-    { code: 182, school: 'عنتر درويش ب م' },
-    { code: 183, school: 'عوض التبي ت أ ب' },
-    { code: 184, school: 'عوض التبي ت أ ع' },
-    { code: 185, school: 'فصول الحمراء ع' },
-    { code: 186, school: 'قصول كرم 4 ع' },
-    { code: 187, school: 'فصول مرجان ع' },
-    { code: 188, school: 'قصول منشأة ناصر ع' },
-    { code: 189, school: 'فصول هلل ع' },
-    { code: 190, school: 'ق أبوقير ب' },
-    { code: 191, school: 'ق أبوقير ع م' },
-    { code: 192, school: 'ق لوقين ب' },
-    { code: 193, school: 'ق لوقين ع' },
-    { code: 194, school: 'كدوة الرويعي ف واحد' },
-    { code: 195, school: 'كدوة الكريون ت أ ب' },
-    { code: 196, school: 'كدوة الكريون ت أ ع' },
-    { code: 197, school: 'كرم 4 ب' },
-    { code: 198, school: 'كناكي ص ف' },
-    { code: 199, school: 'كوم الطرفاية ب' },
-    { code: 200, school: 'كوم الطرفاية ع' },
-    { code: 201, school: 'كوم النص ب' },
-    { code: 202, school: 'كوم النص ع' },
-    { code: 203, school: 'كوم النص ص ف' },
-    { code: 204, school: 'كوم دفشو ب القديمة' },
-    { code: 205, school: 'كوم مازن ت أ ب' },
-    { code: 206, school: 'كوم مازن ت أ ع' },
-    { code: 207, school: 'مارون ت أ ب' },
-    { code: 208, school: 'مارون ت أ ع' },
-    { code: 209, school: 'محطة الكهرباء ب' },
-    { code: 210, school: 'محطة الكهرباء ع' },
-    { code: 211, school: 'محمد علي عودة ع' },
-    { code: 212, school: 'مرتانة ت أ ب' },
-    { code: 213, school: 'مرتانة ت أ ع' },
-    { code: 214, school: 'مرجان ب' },
-    { code: 215, school: 'معتوق ت أ ب' },
-    { code: 216, school: 'معتوق ت أ ع' },
-    { code: 217, school: 'معمل القزاز الجديدة' },
-    { code: 218, school: 'معمل القزاز البلد ب' },
-    { code: 219, school: 'معمل القزاز البلد ع' },
-    { code: 220, school: 'معمل اقزاز البلد ث م' },
-    { code: 221, school: 'معمل القزاز البلد ث م - ف خ' },
-    { code: 222, school: 'منشأة بسيوني ب' },
-    { code: 223, school: 'منشأة بسيوني ت أ ب' },
-    { code: 224, school: 'منشأة بسيوني ت أ ع' },
-    { code: 225, school: 'منشأة عامر ب' },
-    { code: 226, school: 'منشأة ناصر ب بالكريون' },
-    { code: 227, school: 'م أبوقير ت أ ب' },
-    { code: 228, school: 'م أبوقير ت أ ع' },
-    { code: 229, school: 'منشأة بلبع ب' },
-    { code: 230, school: 'منشأة بولين ت أ ب' },
-    { code: 231, school: 'منشأة بولين ت أ ع' },
-    { code: 232, school: 'منشأة يونس ب' },
-    { code: 233, school: 'منصور الشنديدي ب' },
-    { code: 234, school: 'نجع الشيخ عون ت أ ب' },
-    { code: 235, school: 'نجع الشيخ عون ت أ ع' },
-    { code: 236, school: 'هشام فرج ب' },
-    { code: 237, school: 'هلل ب' },
-    { code: 1001, school: 'ديوان الادارة' },
-    { code: 1002, school: 'أجازة' },
-    { code: 1003, school: 'ادارة بندر كفرالدوار' },
-    { code: 1004, school: 'ادارة المحمودية' },
-    { code: 1005, school: 'ادارة ادكو' },
-    { code: 1006, school: 'ادارة رشيد' },
-    { code: 1007, school: 'المديرية المركزية' },
-    { code: 1008, school: 'مأمورية' },
-    { code: 1009, school: 'مسابقة' },
-    { code: 1010, school: 'معرض' },
-    { code: 1011, school: 'المعسكر الكشفي' },
-    { code: 1012, school: 'جهات لاتتبع التعليم' },
-    { code: 1013, school: 'ديوان المحافظة' },
-    { code: 1014, school: 'ديوان الوزارة' },
-    { code: 1015, school: 'كنترول' },
-    { code: 1016, school: 'لجنة امتحانات' },
-    { code: 1017, school: 'لجنة ادارية' },
-    { code: 1018, school: 'المطبعة السرية' },
-    { code: 1019, school: 'المعرض' },
-    { code: 1020, school: 'مركز الموهوبين والتعيم الذكي' },
-    { code: 1021, school: 'مركز اعداد القادة' },
-    { code: 1022, school: 'مركز توزيع اسئلة' },
-    { code: 1023, school: 'رعاية الطلاب' },
-    { code: 1024, school: 'تدريب' },
-    { code: 1025, school: 'تدريب عملي' },
-    { code: 1026, school: 'المدرسة الاصلية' },
-    { code: 1027, school: 'اجازة نصف الوقت' }
-];
+  { code: 2, school: '6 أكتوبر - فصول ع' },
+  { code: 3, school: 'ص 2/241 ت أ ب' },
+  { code: 4, school: 'ص 2/241 ت أ ع' },
+  { code: 5, school: 'الأربع عزب ج ب' },
+  { code: 6, school: 'البدوية ب' },
+  { code: 7, school: 'البسلقون أ ص' },
+  { code: 8, school: 'البسلقون ب م' },
+  { code: 9, school: 'البسلقون ع' },
+  { code: 10, school: 'البوصة ب' },
+  { code: 11, school: 'البوصة ب - ف ع' },
+  { code: 12, school: 'التراس ت أ ب' },
+  { code: 13, school: 'التراس ت أ ع' },
+  { code: 14, school: 'التمامة ت أ ب' },
+  { code: 15, school: 'التمامة ت أ ع' },
+  { code: 16, school: 'الجزيرة ص ف' },
+  { code: 17, school: 'الجلاد ب' },
+  { code: 18, school: 'الجيل الواعد لغات' },
+  { code: 19, school: 'الخراشي ت أ ب' },
+  { code: 20, school: 'الخراسي ت أ ع' },
+  { code: 21, school: 'الخواجة الرسمية لغات' },
+  { code: 22, school: 'الخواجة ت أ ب' },
+  { code: 23, school: 'الدوار ت أ ب' },
+  { code: 24, school: 'الدوار ت أ ع' },
+  { code: 25, school: 'الربعمائة ت أ ب' },
+  { code: 26, school: 'الربعمائة ت أ ع' },
+  { code: 27, school: 'الروضة ت أ ب' },
+  { code: 28, school: 'الروضة ت أ ع' },
+  { code: 29, school: 'الريادة خ عربي' },
+  { code: 30, school: 'الريادة خ لغات' },
+  { code: 31, school: 'السبعين ت أ ب' },
+  { code: 32, school: 'السبعين ت أ ع' },
+  { code: 33, school: 'الستين لغات ب' },
+  { code: 34, school: 'الستين ت أ ب' },
+  { code: 35, school: 'الستين ت أ ع' },
+  { code: 36, school: 'السلام ب' },
+  { code: 37, school: 'الشعيرة ك ت أ ب' },
+  { code: 38, school: 'الشعيرة ك ت أ ع' },
+  { code: 39, school: 'الشنديدي الجديدة ب' },
+  { code: 40, school: 'ش الصافي رجب ب' },
+  { code: 41, school: 'ش إبراهيم مبارك ب' },// هل هي الفرنساوي
+  { code: 42, school: 'ش أحمد حامد ع' },
+  { code: 43, school: 'ش تامر مصطفى ع' },
+  { code: 44, school: 'ش سعيد سرحان ت أ ب' },
+  { code: 45, school: 'ش سعيد سرحان ت أ ع' },
+  { code: 46, school: 'ش شحاتة الدسوقي ب' },
+  { code: 47, school: 'ش عادل صلاح ب' },
+  { code: 48, school: 'ش فوزي ابراهيم ب' },
+  { code: 49, school: 'ش كارم محمود ع' },
+  { code: 50, school: 'ش محمد ابراهيم ب' },
+  { code: 51, school: 'ش محمد سعد ت أ ب' },//50
+  { code: 52, school: 'ش محمد سعد ت أ ع' },//51
+  { code: 53, school: 'ش محمد عبدالمنعم ب' },
+  { code: 54, school: 'ش مصطفى كامل ب' },
+  { code: 55, school: 'الصيادين ت أ ب' },
+  { code: 56, school: 'الصيادين ت أ ع' },
+  { code: 57, school: 'الطاهر الصافي ب' },
+  { code: 58, school: 'الطاهر الصافي ع' },
+  { code: 59, school: 'الطرح ت أ ب' },
+  { code: 60, school: 'الطرح ت أ ع' },
+  { code: 61, school: 'العاشر من رمضان ت أ ب' },
+  { code: 62, school: 'العاشر من رمضان ت أ ع' },
+  { code: 63, school: 'العالي ب' },
+  { code: 64, school: 'العالي ع' },
+  { code: 65, school: 'العرقوب ت أ ب' },
+  { code: 66, school: 'العرقوب ت أ ع' },
+  { code: 67, school: 'الفقي ب' },
+  { code: 68, school: 'القاضي ت أ ب' },
+  { code: 69, school: 'القاضي ت أ ع' },
+  { code: 70, school: 'القومية ت أ ب' },
+  { code: 71, school: 'القومية ت أ ع' },
+  { code: 72, school: 'الكريون ب' },
+  { code: 73, school: 'الكريون ع' },
+  { code: 74, school: 'الكنايس ب' },
+  { code: 75, school: 'الكنايس ع' },
+  { code: 76, school: 'ابراهيم شرف ت أ ب' },
+  { code: 77, school: 'ابراهيم شرف ت أ ع' },
+  { code: 78, school: 'السويسرية خ عربي' },
+  { code: 79, school: 'السويسرية خ لغات' },
+  { code: 80, school: 'الملقة ب' },
+  { code: 81, school: 'الملقة ع' },
+  { code: 82, school: 'النبراوية ب' },
+  { code: 83, school: 'النبراوية ب - ف ع' },
+  { code: 84, school: 'الوحدة ص ف' },
+  { code: 85, school: 'الوسطانية الابتدائية أ' },
+  { code: 86, school: 'الوسطانية الابتدائية ب' },
+  { code: 87, school: 'الوكيل ب' },
+  { code: 88, school: 'الوكيل ع' },
+  { code: 89, school: 'الوكيل ت أ ب' },
+  { code: 90, school: 'اليمينية ت ا ب' },
+  { code: 91, school: 'اليمينية ت أ ع' },
+  { code: 92, school: 'أبوحسين ب' },
+  { code: 93, school: 'أبوحسين ع' },
+  { code: 94, school: 'أبوزيد خليفة ت أ ب' },
+  { code: 95, school: 'أبوزيد خليفة ت أ ع' },
+  { code: 96, school: 'أبوغفيلة ب' },
+  { code: 97, school: 'أبيس 1/5 ت م' },
+  { code: 98, school: 'أبيس 3/10 ت م' },
+  { code: 99, school: 'أبيس 3 ب' },
+  { code: 100, school: 'أبيس 3 ع' },
+  { code: 101, school: 'أبيس 3 الرسمية عربي' },
+  { code: 102, school: 'أبيس 3 الرسمية لغات' },
+  { code: 103, school: 'أبيس 5 ب' },
+  { code: 104, school: 'أبيس 6 ب' },
+  { code: 105, school: 'أبيس 6 ث تجاري' },
+  { code: 106, school: 'أبيس 6 ث تجاري - ف خ' },
+  { code: 107, school: 'أبيس 6 ث م' },
+  { code: 108, school: 'أبيس 6 ث المشتركة - ف خ ' },
+  { code: 109, school: 'أبيس 8/3 ف واحد' },
+  { code: 110, school: 'أحمد أبوزهرة ب' },
+  { code: 111, school: 'باباه الكبرى ت أ ب' },
+  { code: 112, school: 'باباه الكبرى ت أ ع' },
+  { code: 113, school: 'بديوي ت أ ب' },
+  { code: 114, school: 'بديوي ت أ ع' },
+  { code: 115, school: 'بردلة ب' },
+  { code: 116, school: 'بركات الحمراء ت أ ب' },
+  { code: 117, school: 'بركات الحمراء ت أ ع' },
+  { code: 118, school: 'بشير المختار ت أ ب' },
+  { code: 119, school: 'بشير المختار ت أ ع' },
+  { code: 120, school: 'توفيق الهلباوي ت أ ب' },
+  { code: 121, school: 'توفيق الهلباوي ت أ ع' },
+  { code: 122, school: 'جاب الله ت أ ب' },
+  { code: 123, school: 'جاب الله ت أ ع' },
+  { code: 124, school: 'جلال أبوالحاج ب' },
+  { code: 125, school: 'حسن بيومي ب' },
+  { code: 126, school: 'حلمي عامر ع' },
+  { code: 127, school: 'حليص ت أ ب' },
+  { code: 128, school: 'حليص ت أ ع' },
+  { code: 129, school: 'حماد الصعيدي ت أ ب' },
+  { code: 130, school: 'حماد الصعيدي ت أ ع' },
+  { code: 131, school: 'حميد عبدالرحمن ت أ ب' },
+  { code: 132, school: 'حميد عبدالرحمن ت أ ع' },
+  { code: 133, school: 'حوض 7 ت أ ب' },
+  { code: 134, school: 'حوض 7 ت أ ع' },
+  { code: 135, school: 'خالد الأقرع ت أ ب' },
+  { code: 136, school: 'خالد الأقرع ت أ ع' },
+  { code: 137, school: 'خليل ت م' },
+  { code: 138, school: 'زكي الابراشي ب' },
+  { code: 139, school: 'زكي الابراشي ع' },
+  { code: 140, school: 'زلط ت أ ب' },
+  { code: 141, school: 'زلط ت أ ع' },
+  { code: 142, school: 'زهرة الابتدائية م' },
+  { code: 143, school: 'زهرة الاعدادية' },
+  { code: 144, school: 'سليمان بلبع ب' },
+  { code: 145, school: 'سيدي غازي ب ج' },
+  { code: 146, school: 'سيدي غازي ث - فصول خ' },
+  { code: 147, school: 'سيدي غازي ث م' },
+  { code: 148, school: 'سيف النصر ب' },
+  { code: 149, school: 'سيف النصر - ف ع' },
+  { code: 150, school: 'شارلو ب' },
+  { code: 151, school: 'شبل ب' },
+  { code: 152, school: 'شحاتة ص ف' },
+  { code: 153, school: 'شركة عواد ت أ ب' },
+  { code: 154, school: 'شركة عواد ت أ ع' },
+  { code: 155, school: 'شفيق أبوصالح ب' },
+  { code: 156, school: 'صدقي ت أ ب' },
+  { code: 157, school: 'صدقي ت أ ع' },
+  { code: 158, school: 'صدقي سنيحة ت أ ب' },
+  { code: 159, school: 'صدقي سنيحة ت أ ع' },
+  { code: 160, school: 'صيدناوي الحمراء ت أ ب' },
+  { code: 161, school: 'صيدناوي الحمراء ت أ ع' },
+  { code: 162, school: 'صيدناوي الوسطى ب' },
+  { code: 163, school: 'صيدناوي الوسطى ب - ف ع' },
+  { code: 164, school: 'صيدناوي الكبرى ت ا ب' },
+  { code: 165, school: 'صيدناوي الكبرى ت أ ع' },
+  { code: 166, school: 'صيرة ع' },
+  { code: 167, school: 'ضيف ب' },
+  { code: 168, school: 'عاداة الغربية ب' },
+  { code: 169, school: 'عباس سيد أحمد ع' },
+  { code: 170, school: 'عبدالحميد عوت ت أ ب' },
+  { code: 171, school: 'عبدالحميد عوت ت أ ع' },
+  { code: 172, school: 'عبد الصمد النمر ب' },
+  { code: 173, school: 'عبدالعزيز حبشي ب' },
+  { code: 174, school: 'عبد العزيز حبشي ب - ف ع' },
+  { code: 175, school: 'عبدالقادر خليف ت أ ع' },
+  { code: 176, school: 'عبدالوهاب الخراشي ب' },
+  { code: 177, school: 'عبدالوهاب الخراشي ع' },
+  { code: 178, school: 'عزب نوبار ب م' },
+  { code: 179, school: 'عزبة البنك ت أ ب' },
+  { code: 180, school: 'عزبة البنك ت أ ع' },
+  { code: 181, school: 'عمر الحريري ص ف' },
+  { code: 182, school: 'عنتر درويش ب م' },
+  { code: 183, school: 'عوض التبي ت أ ب' },
+  { code: 184, school: 'عوض التبي ت أ ع' },
+  { code: 185, school: 'فصول الحمراء ع' },
+  { code: 186, school: 'قصول كرم 4 ع' },
+  { code: 187, school: 'فصول مرجان ع' },
+  { code: 188, school: 'قصول منشأة ناصر ع' },
+  { code: 189, school: 'فصول هلل ع' },
+  { code: 190, school: 'ق أبوقير ب' },
+  { code: 191, school: 'ق أبوقير ع م' },
+  { code: 192, school: 'ق لوقين ب' },
+  { code: 193, school: 'ق لوقين ع' },
+  { code: 194, school: 'كدوة الرويعي ف واحد' },
+  { code: 195, school: 'كدوة الكريون ت أ ب' },
+  { code: 196, school: 'كدوة الكريون ت أ ع' },
+  { code: 197, school: 'كرم 4 ب' },
+  { code: 198, school: 'كناكي ص ف' },
+  { code: 199, school: 'كوم الطرفاية ب' },
+  { code: 200, school: 'كوم الطرفاية ع' },
+  { code: 201, school: 'كوم النص ب' },
+  { code: 202, school: 'كوم النص ع' },
+  { code: 203, school: 'كوم النص ص ف' },
+  { code: 204, school: 'كوم دفشو ب القديمة' },
+  { code: 205, school: 'كوم مازن ت أ ب' },
+  { code: 206, school: 'كوم مازن ت أ ع' },
+  { code: 207, school: 'مارون ت أ ب' },
+  { code: 208, school: 'مارون ت أ ع' },
+  { code: 209, school: 'محطة الكهرباء ب' },
+  { code: 210, school: 'محطة الكهرباء ع' },
+  { code: 211, school: 'محمد علي عودة ع' },
+  { code: 212, school: 'مرتانة ت أ ب' },
+  { code: 213, school: 'مرتانة ت أ ع' },
+  { code: 214, school: 'مرجان ب' },
+  { code: 215, school: 'معتوق ت أ ب' },
+  { code: 216, school: 'معتوق ت أ ع' },
+  { code: 217, school: 'معمل القزاز الجديدة' },
+  { code: 218, school: 'معمل القزاز البلد ب' },
+  { code: 219, school: 'معمل القزاز البلد ع' },
+  { code: 220, school: 'معمل اقزاز البلد ث م' },
+  { code: 221, school: 'معمل القزاز البلد ث م - ف خ' },
+  { code: 222, school: 'منشأة بسيوني ب' },
+  { code: 223, school: 'منشأة بسيوني ت أ ب' },
+  { code: 224, school: 'منشأة بسيوني ت أ ع' },
+  { code: 225, school: 'منشأة عامر ب' },
+  { code: 226, school: 'منشأة ناصر ب بالكريون' },
+  { code: 227, school: 'م أبوقير ت أ ب' },
+  { code: 228, school: 'م أبوقير ت أ ع' },
+  { code: 229, school: 'منشأة بلبع ب' },
+  { code: 230, school: 'منشأة بولين ت أ ب' },
+  { code: 231, school: 'منشأة بولين ت أ ع' },
+  { code: 232, school: 'منشأة يونس ب' },
+  { code: 233, school: 'منصور الشنديدي ب' },
+  { code: 234, school: 'نجع الشيخ عون ت أ ب' },
+  { code: 235, school: 'نجع الشيخ عون ت أ ع' },
+  { code: 236, school: 'هشام فرج ب' },
+  { code: 237, school: 'هلل ب' },
+  { code: 1001, school: 'ديوان الادارة' },
+  { code: 1002, school: 'أجازة' },
+  { code: 1003, school: 'ادارة بندر كفرالدوار' },
+  { code: 1004, school: 'ادارة المحمودية' },
+  { code: 1005, school: 'ادارة ادكو' },
+  { code: 1006, school: 'ادارة رشيد' },
+  { code: 1007, school: 'المديرية المركزية' },
+  { code: 1008, school: 'مأمورية' },
+  { code: 1009, school: 'مسابقة' },
+  { code: 1010, school: 'معرض' },
+  { code: 1011, school: 'المعسكر الكشفي' },
+  { code: 1012, school: 'جهات لاتتبع التعليم' },
+  { code: 1013, school: 'ديوان المحافظة' },
+  { code: 1014, school: 'ديوان الوزارة' },
+  { code: 1015, school: 'كنترول' },
+  { code: 1016, school: 'لجنة امتحانات' },
+  { code: 1017, school: 'لجنة ادارية' },
+  { code: 1018, school: 'المطبعة السرية' },
+  { code: 1019, school: 'المعرض' },
+  { code: 1020, school: 'مركز الموهوبين والتعيم الذكي' },
+  { code: 1021, school: 'مركز اعداد القادة' },
+  { code: 1022, school: 'مركز توزيع اسئلة' },
+  { code: 1023, school: 'رعاية الطلاب' },
+  { code: 1024, school: 'تدريب' },
+  { code: 1025, school: 'تدريب عملي' },
+  { code: 1026, school: 'المدرسة الاصلية' },
+  { code: 1027, school: 'اجازة نصف الوقت' }
+  ];
 
 </script>
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -938,7 +939,7 @@
 
     #myBoxContainer {
       padding-top: 2px !important;
-       padding-bottom: 20px !important;
+      padding-bottom: 20px !important;
       background: linear-gradient(to bottom,
           #271925,
           white,
@@ -955,7 +956,8 @@
       font-size: 23px !important;
       text-shadow: 2px 2px 2px #f3efef;
       width: 180px !important;
-      height: 80px !important;/* 250*/
+      height: 80px !important;
+      /* 250*/
       overflow: hidden;
       overflow-y: scroll;
     }
@@ -1024,7 +1026,7 @@
     const Han = [];
     const Aml = [];
     const Ema = [];
-    
+
     Ibra.push(Master[4],
       Master[5], Master[6],
       Master[7], Master[8],
@@ -1053,11 +1055,21 @@
       Master[214], Master[215],
       Master[219], Master[226],
       Master[227], Master[232]
-
-
     );
 
-   
+    Aml.push(
+      Master[1], Master[2]
+    );
+
+    Gha.push(
+      Master[3], Master[4]
+    );
+    Han.push(
+      Master[5], Master[6]
+    );
+    Ema.push(
+      Master[7], Master[8]
+    );
     console.log(Ibra);
     let msg = "";
     const ar_letters = [
@@ -1507,6 +1519,207 @@
             }
           }
           document.body.appendChild(mySwitcherBtn);
+          break;
+        case 'امل ابراهيم':
+        case 'امل ابراهيم ':
+        case 'أمل ابراهيم':
+        case 'أمل ابراهيم ':
+        case 'أمل إبراهيم':
+        case 'أمل إبراهيم ':
+          //////
+          // my statments go here...
+          Aml.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          mySwitcherBtn = document.createElement("button");
+          mySwitcherBtn.style.position = "fixed";
+          mySwitcherBtn.style.zIndex = 1200;
+          mySwitcherBtn.style.top = "12px";
+          mySwitcherBtn.style.right = "12px";
+          mySwitcherBtn.style.backgroundColor = "lightgreen";
+          mySwitcherBtn.style.maxWidth = "20px";
+          mySwitcherBtn.style.minWidth = "20px";
+          mySwitcherBtn.style.width = "20px";
+          mySwitcherBtn.style.height = "20px";
+          mySwitcherBtn.style.maxHeight = "20px";
+          mySwitcherBtn.style.minHeight = "20px";
+          mySwitcherBtn.id = "my_switcher_btn";
+          mySwitcherBtn.innerText = "";
+          mySwitcherBtn.onclick = () => {
+
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtn.style.display = "none";
+            }
+          }
+          document.body.appendChild(mySwitcherBtn);
+
+          ///////
+          break;
+        case 'غادة السعيد':
+        case 'غادة السعيد ':
+        case 'غاده السعيد':
+        case 'غاده السعيد ':
+
+          //////
+          // my statments go here...
+          Gha.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          mySwitcherBtn = document.createElement("button");
+          mySwitcherBtn.style.position = "fixed";
+          mySwitcherBtn.style.zIndex = 1200;
+          mySwitcherBtn.style.top = "12px";
+          mySwitcherBtn.style.right = "12px";
+          mySwitcherBtn.style.backgroundColor = "lightgreen";
+          mySwitcherBtn.style.maxWidth = "20px";
+          mySwitcherBtn.style.minWidth = "20px";
+          mySwitcherBtn.style.width = "20px";
+          mySwitcherBtn.style.height = "20px";
+          mySwitcherBtn.style.maxHeight = "20px";
+          mySwitcherBtn.style.minHeight = "20px";
+          mySwitcherBtn.id = "my_switcher_btn";
+          mySwitcherBtn.innerText = "";
+          mySwitcherBtn.onclick = () => {
+
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtn.style.display = "none";
+            }
+          }
+          document.body.appendChild(mySwitcherBtn);
+
+          ///////
+          break;
+        case 'حنان جابر':
+        case 'حنان جابر ':
+          //////
+          // my statments go here...
+          Han.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          mySwitcherBtn = document.createElement("button");
+          mySwitcherBtn.style.position = "fixed";
+          mySwitcherBtn.style.zIndex = 1200;
+          mySwitcherBtn.style.top = "12px";
+          mySwitcherBtn.style.right = "12px";
+          mySwitcherBtn.style.backgroundColor = "lightgreen";
+          mySwitcherBtn.style.maxWidth = "20px";
+          mySwitcherBtn.style.minWidth = "20px";
+          mySwitcherBtn.style.width = "20px";
+          mySwitcherBtn.style.height = "20px";
+          mySwitcherBtn.style.maxHeight = "20px";
+          mySwitcherBtn.style.minHeight = "20px";
+          mySwitcherBtn.id = "my_switcher_btn";
+          mySwitcherBtn.innerText = "";
+          mySwitcherBtn.onclick = () => {
+
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtn.style.display = "none";
+            }
+          }
+          document.body.appendChild(mySwitcherBtn);
+
+          ///////
+          break;
+        case 'ايمان صالح':
+        case 'ايمان صالح ':
+        case 'إيمان صالح':
+        case 'إيمان صالح ':
+          //////
+          // my statments go here...
+          Ema.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          mySwitcherBtn = document.createElement("button");
+          mySwitcherBtn.style.position = "fixed";
+          mySwitcherBtn.style.zIndex = 1200;
+          mySwitcherBtn.style.top = "12px";
+          mySwitcherBtn.style.right = "12px";
+          mySwitcherBtn.style.backgroundColor = "lightgreen";
+          mySwitcherBtn.style.maxWidth = "20px";
+          mySwitcherBtn.style.minWidth = "20px";
+          mySwitcherBtn.style.width = "20px";
+          mySwitcherBtn.style.height = "20px";
+          mySwitcherBtn.style.maxHeight = "20px";
+          mySwitcherBtn.style.minHeight = "20px";
+          mySwitcherBtn.id = "my_switcher_btn";
+          mySwitcherBtn.innerText = "";
+          mySwitcherBtn.onclick = () => {
+
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtn.style.display = "none";
+            }
+          }
+          document.body.appendChild(mySwitcherBtn);
+
+          ///////
           break;
         default:
           break;
