@@ -261,8 +261,11 @@
     { code: 1024, school: 'تدريب' },
     { code: 1025, school: 'تدريب عملي' },
     { code: 1026, school: 'المدرسة الاصلية' },
-    { code: 1027, school: 'اجازة نصف الوقت' },
+    { code: 1027, school: 'اجازة نصف الوقت' }
+];
+
 </script>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -282,7 +285,6 @@
       border: none;
       outline: none;
       max-height: 500px !important;
-      /*570px*/
       max-width: 370px !important;
     }
 
@@ -291,7 +293,6 @@
     }
 
     #plan {
-
       max-width: 360px;
       min-width: 360px;
       margin: 0 auto;
@@ -432,7 +433,6 @@
       overflow: hidden;
       text-shadow: 1px 1px 1px #000;
       box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
-      /* z-index: 1000;*/
     }
 
     #tick {
@@ -553,7 +553,6 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      /*margin-left: 16px;*/
       padding: 0.1rem;
       background-color: rgba(0, 0, 0, 0.418);
       width: 155px;
@@ -579,13 +578,11 @@
       text-align: center;
       border: 3px solid rgba(162, 214, 41, 0.5);
       text-shadow: 1px 1px 1px #000;
-      /*rotate: 10deg;*/
       box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
     }
 
     #activeprintbtn:hover {
       cursor: pointer;
-      /*rotate: 0deg;*/
     }
 
     @keyframes shrinko {
@@ -603,7 +600,6 @@
       #printer,
       #myBoxContainer,
       #my_switcher_btn {
-        /*   id="my_switcher_btn" */
         z-index: 0;
         display: none;
       }
@@ -640,7 +636,6 @@
       }
     }
 
-    /* Styles for screens 768px or smaller (mobile sizes) */
     @media screen and (min-width: 768px) {
       body {
         display: flex;
@@ -664,7 +659,6 @@
         width: 360px;
         min-width: 360px;
         max-width: 360px;
-        /* 370px */
         background-color: rgb(255, 254, 254);
       }
 
@@ -680,20 +674,15 @@
         left: 0;
         right: 0;
         bottom: 0;
-
         padding: 20px;
-        /*new css */
         display: flex !important;
-        /* flex*/
         flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 540px;
-        /*border:1px solid rgba(255, 0, 0, 0) !important;*/
       }
 
       .printer-big {
-        /**/
         background-color: white;
         width: 360px;
         min-width: 360px;
@@ -711,16 +700,13 @@
         width: 26px !important;
         min-width: 26px !important;
         max-width: 26px !important;
-        /*new css */
         display: flex !important;
-        /* flex*/
         flex-direction: row;
         justify-content: left;
         align-items: end;
         min-height: 540px;
         align-self: left;
 
-        /*border:1px solid rgba(255, 0, 0, 0) !important;*/
         h3,
         div,
         span,
@@ -808,7 +794,6 @@
 
       #information {
         display: flex !important;
-        /*for mobiles */
         width: 360px !important;
         min-width: 360px !important;
         max-width: 360px !important;
@@ -816,7 +801,6 @@
 
         #mylist {
           display: flex !important;
-          /*for mobiles */
           width: 360px !important;
           min-width: 360px !important;
           max-width: 360px !important;
@@ -825,7 +809,6 @@
 
       .providers {
         display: flex !important;
-        /*for mobiles */
         width: 360px !important;
         min-width: 360px !important;
         max-width: 360px !important;
@@ -851,7 +834,6 @@
         border: none;
         outline: none;
         max-height: 500px !important;
-        /*570px*/
         max-width: 360px !important;
       }
 
@@ -890,11 +872,9 @@
         width: 60px !important;
         max-width: 60px !important;
         min-width: 60px !important;
-        /*border:1px solid red !important;*/
       }
 
       #printer {
-        /* we will use if here... */
         background-color: transparent !important;
         position: absolute;
         top: 0;
@@ -905,18 +885,14 @@
         min-width: 340px;
         max-width: 340px;
         padding: 20px !important;
-        /*new css */
         display: flex !important;
-        /* flex*/
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /*border:1px solid rgba(255, 0, 0, 0) !important;*/
       }
 
       #information {
         display: none !important;
-        /*for mobiles */
         width: 370px;
         min-width: 370px;
         max-width: 370px;
@@ -925,7 +901,6 @@
 
       .providers {
         display: none !important;
-        /*for mobiles */
         width: 370px;
         min-width: 370px;
         max-width: 370px;
@@ -934,7 +909,6 @@
 
       .printers {
         display: none !important;
-        /*for mobiles */
         background-color: rgb(155, 151, 146) !important;
         width: 370px;
         min-width: 370px;
@@ -955,7 +929,6 @@
       }
 
       table {
-        /*width: 100%;/* 100% */
         height: fit-content !important;
         max-height: 400px !important;
         border: 1px solid rgba(20, 20, 20, 0) !important;
@@ -969,19 +942,21 @@
           #271925,
           white,
           white,
-          white) !important;
+          grey,
+          dimgrey,
+          #222,
+          #111) !important;
 
       position: fixed;
       cursor: pointer;
-      top: 20px;
+      top: 27px;
       right: 105px;
-
       background-color: #faf4f4 !important;
       color: rgb(27, 39, 8) !important;
       font-size: 23px !important;
       text-shadow: 2px 2px 2px #f3efef;
       width: 180px !important;
-      height: 250px !important;
+      height: 150px !important;/* 250*/
       overflow: hidden;
       overflow-y: scroll;
     }
@@ -1051,12 +1026,6 @@
     const Aml = [];
     const Ema = [];
     
-
-
-
-
-
-    ];
     Ibra.push(Master[4],
       Master[5], Master[6],
       Master[7], Master[8],
@@ -1508,7 +1477,6 @@
             father.appendChild(coder);
             father.appendChild(schooler);
             myBox.appendChild(father);
-            // end if 
             document.body.appendChild(myBox);
             myBox.style.zIndex = 1000;
           });
