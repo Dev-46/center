@@ -1456,7 +1456,7 @@
     /////////////////////////////////////////////////////
 
     executebtn.addEventListener("click", () => {
-     superName = superinput.value;
+      superName = superinput.value;
       // the list of schools
 
       /// create a div to contain all data of the arrays
@@ -1472,31 +1472,11 @@
       ladle.id = "myHolder";
       ladle.style.zIndex = 900;
       myBox.appendChild(ladle);
-      ladle.addEventListener("click", () => {
-        myBox.style.display = "none";
-        document.getElementById("my_switcher_btn_Ibra") ? document.getElementById("my_switcher_btn_Ibra").style.display = "block" :
-          confirm("جاهز لطباعة الخطة");
-      });
-       ladle.addEventListener("click", () => {
-        myBox.style.display = "none";
-        document.getElementById("my_switcher_btn_Aml") ? document.getElementById("my_switcher_btn_Aml").style.display = "block" :
-          confirm("جاهز لطباعة الخطة");
-      });
-       ladle.addEventListener("click", () => {
-        myBox.style.display = "none";
-        document.getElementById("my_switcher_btn_Gha") ? document.getElementById("my_switcher_btn_Gha").style.display = "block" :
-          confirm("جاهز لطباعة الخطة");
-      });
-       ladle.addEventListener("click", () => {
-        myBox.style.display = "none";
-        document.getElementById("my_switcher_btn_Han") ? document.getElementById("my_switcher_btn_Han").style.display = "block" :
-          confirm("جاهز لطباعة الخطة");
-      });
-       ladle.addEventListener("click", () => {
-        myBox.style.display = "none";
-        document.getElementById("my_switcher_btn_Ema") ? document.getElementById("my_switcher_btn_Ema").style.display = "block" :
-          confirm("جاهز لطباعة الخطة");
-      });
+
+
+
+
+
       // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
       switch (superName) {
         case 'ابراهيم حسان':
@@ -1544,6 +1524,11 @@
             }
           }
           document.body.appendChild(mySwitcherBtnIbra);
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Ibra") ? document.getElementById("my_switcher_btn_Ibra").style.display = "block" :
+              confirm("جاهز لطباعة الخطة");
+          });
           break;
         case 'امل ابراهيم':
         case 'امل ابراهيم ':
@@ -1594,6 +1579,11 @@
             }
           }
           document.body.appendChild(mySwitcherBtnAml);
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Aml") ? document.getElementById("my_switcher_btn_Aml").style.display = "block" :
+              confirm("جاهز لطباعة الخطة");
+          });
 
           ///////
           break;
@@ -1645,7 +1635,11 @@
             }
           }
           document.body.appendChild(mySwitcherBtnGha);
-
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Gha") ? document.getElementById("my_switcher_btn_Gha").style.display = "block" :
+              confirm("جاهز لطباعة الخطة");
+          });
           ///////
           break;
         case 'حنان جابر':
@@ -1694,6 +1688,11 @@
           }
           document.body.appendChild(mySwitcherBtnHan);
 
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Han") ? document.getElementById("my_switcher_btn_Han").style.display = "block" :
+              confirm("جاهز لطباعة الخطة");
+          });
           ///////
           break;
         case 'ايمان صالح':
@@ -1743,7 +1742,11 @@
             }
           }
           document.body.appendChild(mySwitcherBtnEma);
-
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Ema") ? document.getElementById("my_switcher_btn_Ema").style.display = "block" :
+              confirm("جاهز لطباعة الخطة");
+          });
           ///////
           break;
         default:
