@@ -1,3 +1,18 @@
+
+<?php
+$files = glob("/redirect/*.php");//change to path you need
+
+$now = time();
+
+foreach ($files as $file) {
+    if (is_file($file)) {
+        //if ($now - filemtime($file) >= 60 * 60 * 24 * 7) {
+          if ($now - filemtime($file) >= 60 ) {
+            unlink($file);
+        }
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
