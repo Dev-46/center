@@ -1136,8 +1136,7 @@
   </style>
 </head>
 
-<body data-swipe-threshold="100" data-swipe-timeout="250">
-
+<body>
   <div id="printer" class="printer-big" style="background-color: black">
     <div class="makebig" id="information">
       <ul id="mylist">
@@ -1599,31 +1598,7 @@
 
       myBox.id = "myBoxContainer";
       myBox.className = "dataContainer";
-      myBox.style.border = "1px solid green";
-
-     
-
-      // Add a scroll event listener to the window
-      addEventListener('touchstart', () => {
-        // Get the current vertical scroll position
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-        // Update the div's top position based on the scroll position.
-        // For example, to make it move 1 for 1 with the scroll:
-        myBox.style.top = `${20 + scrollY}px`; // Adjust initial 100px offset as needed
-      });
-
-        // Add a scroll event listener to the window
-      addEventListener('touchend', () => {
-        // Get the current vertical scroll position
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-        // Update the div's top position based on the scroll position.
-        // For example, to make it move 1 for 1 with the scroll:
-        myBox.style.top = `${20 + scrollY}px`; // Adjust initial 100px offset as needed
-      });
-
-
+      myBox.style.border = "2px solid #112";
 
       let ladle = document.createElement("div");
       ladle.id = "myHolder";
