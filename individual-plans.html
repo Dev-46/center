@@ -1600,6 +1600,20 @@
       myBox.className = "dataContainer";
       myBox.style.border = "1px solid green";
 
+     
+
+      // Add a scroll event listener to the window
+      addEventListener('scroll', () => {
+        // Get the current vertical scroll position
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+        // Update the div's top position based on the scroll position.
+        // For example, to make it move 1 for 1 with the scroll:
+        myBox.style.top = `${100 + scrollY}px`; // Adjust initial 100px offset as needed
+      });
+
+
+
       let ladle = document.createElement("div");
       ladle.id = "myHolder";
       ladle.style.zIndex = 900;
@@ -1644,21 +1658,6 @@
               // Code to run if the user clicks "OK" (true is returned)
               if (myBox.style.display === "none") {
                 myBox.style.display = "block";
-
-
-                  // Select the div element
-    const scrollDiv = document.getElementById('myBoxContainer');
-
-    // Add a scroll event listener to the window
-    addEventListener('scroll', () => {
-      // Get the current vertical scroll position
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-      // Update the div's top position based on the scroll position.
-      // For example, to make it move 1 for 1 with the scroll:
-      scrollDiv.style.top = `${100 + scrollY}px`; // Adjust initial 100px offset as needed
-    });
-    
               }
             } else {
               // Code to run if the user clicks "Cancel" (false is returned)
@@ -3746,7 +3745,7 @@
 
 
 
-  
+
   </script>
 </body>
 
