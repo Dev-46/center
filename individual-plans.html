@@ -1085,7 +1085,7 @@
     console.log(Ema);
 
 
-    let msg = "";
+    let msg = "";// the first appearance  of the msg virable
     const ar_letters = [
 
       " ",
@@ -1356,7 +1356,7 @@
         document.getElementById("mytable").innerHTML = "";
         executebtn.disabled = true;
       } else {
-        msg = "NUMBER IS VALID";
+        msg = "FULL MONTH OK";
         executebtn.disabled = false;
 
       }
@@ -1369,13 +1369,13 @@
         msg = "EMPTY VALUES";
       } else {
         if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
-          msg = "IT IS NOT NUMBER";
+          msg = "NOT NUMBERS";
           executebtn.disabled = true;
         } else if (monthinput.value < 3 || monthinput.value > 12) {
-          msg = "NOT VALID";
+          msg = "OUT OF MONTH";
           executebtn.disabled = true;
         } else {
-          msg = "NUMBER IS VALID";
+          msg = "READY!";
           executebtn.disabled = false;
         }
       }
@@ -1388,11 +1388,11 @@
         msg = "EMPTY VALUES";
       } else {
         if (isNaN(monthinput.value) || monthinput.value < 3 || monthinput.value > 12) {
-          msg = "NOT VALID";
+          msg = "NOT A NUMBER OR OUT";
 
           executebtn.disabled = true;
         } else {
-          msg = "NUMBER IS VALID";
+          msg = "MONTH OK";
           executebtn.disabled = false;
         }
       }
@@ -1405,11 +1405,11 @@
         msg = "EMPTY VALUES";
       } else {
         if (isNaN(yearinput.value) || yearinput.value > 2026 || yearinput.value < 2026) {
-          msg = "IT IS NOT PROPER YEAR";
+          msg = "NO NUMBER OR OUT";
 
           executebtn.disabled = true;
         } else {
-          msg = "PROPER YEAR";
+          msg = "YEAR OK";
           executebtn.disabled = false;
         }
       }
@@ -1419,13 +1419,13 @@
     superinput.addEventListener("keyup", () => {
       !ar_letters.includes(superinput.value) ? superinput.value = "" : superinput.value;
       if (monthinput.value === "" || yearinput.value === "" || superinput.value === "" || !ar_letters.includes(superinput.value) || superinput.value.length < 9) {
-        closeHolder.innerHTML = "X   " + "EMPTY CELLS!";
+        msg = "EMPTY OR NOT AR OR ONE";
         executebtn.disabled = true;
       } else {
-        msg = "GOOD JOB!";
-        closeHolder.innerHTML = "X   " + "GOOD JOB!";
+        msg = "NAME OK";
         executebtn.disabled = false;
       }
+      closeHolder.innerHTML = "X   " + msg;
 
     });
     /////////////////////////////////////////////////////////////////////////
