@@ -1603,13 +1603,23 @@
      
 
       // Add a scroll event listener to the window
-      addEventListener('scroll', () => {
+      addEventListener('touchstart', () => {
         // Get the current vertical scroll position
         const scrollY = window.scrollY || document.documentElement.scrollTop;
 
         // Update the div's top position based on the scroll position.
         // For example, to make it move 1 for 1 with the scroll:
-        myBox.style.top = `${100 + scrollY}px`; // Adjust initial 100px offset as needed
+        myBox.style.top = `${20 + scrollY}px`; // Adjust initial 100px offset as needed
+      });
+
+        // Add a scroll event listener to the window
+      addEventListener('touchstart', () => {
+        // Get the current vertical scroll position
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+        // Update the div's top position based on the scroll position.
+        // For example, to make it move 1 for 1 with the scroll:
+        myBox.style.top = `${20 + scrollY}px`; // Adjust initial 100px offset as needed
       });
 
 
