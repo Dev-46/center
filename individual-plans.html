@@ -1690,7 +1690,7 @@
               }
             };
             document.body.appendChild(mySwitcherBtnIbra);
-            /*
+            
           ladle.addEventListener("click", () => {
             myBox.style.display = "none";
             document.getElementById("my_switcher_btn_Ibra")
@@ -1699,8 +1699,10 @@
               ).style.display = "block")
               : confirm("جاهز لطباعة الخطة");
           });
-          */
+          
+            
 
+            /*
             const wrapper = document.querySelector(".wrapper");
 
             const header = wrapper.querySelector("header");
@@ -1722,6 +1724,7 @@
               header.classList.remove("active");
               header.removeEventListener("mousemove", onDrag);
             });
+            */
             break;
           case "امل ابراهيم":
           case "امل ابراهيم ":
@@ -3675,13 +3678,13 @@
       masterInfo.style.top = "0.3" + "%";
       document.body.appendChild(masterInfo);
       // code to prevent reload freely ////////////////////////////////////
-      //window.addEventListener("beforeunload", function (e) {
+      window.addEventListener("beforeunload", function (e) {
       // إلغاء الحدث كما هو محدد في القياسات
-      //e.preventDefault();
+      e.preventDefault();
 
       // بعض المتصفحات تتطلب تعيين قيمة لـ returnValue
-      //e.returnValue = "";
-      // });
+      e.returnValue = "";
+       });
       //////////////////////////////////////////////////////////////////
       //   حفظ البيانات عند التغيير
       //   localStorage.setItem('saved_data', inputField.value);
