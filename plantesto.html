@@ -806,9 +806,12 @@
         top:70px !important;
         left:36% !important;
       }
-      #myBoxContainer::scroll-behavior{
+     ::scroll-behavior{
         display: none;
       }
+      #myBoxContainer::-webkit-scrollbar{
+display:none;
+}
       #plan{
         min-width: 100%;
         font-size: 30px !important;
