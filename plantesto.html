@@ -397,7 +397,11 @@
   );
   // we will add the specific schools for the supervisor Eman
   //Ema.push(Master[86],Master[50],Master[219],Master[210],Master[80],Master[146],Master[87],Master[58],Master[43],Master[237],Master[238], Master[243],Master[244],Master[245],Master[246],Master[249],Master[261]);
-  Ema = Master;
+  //Ema = Master; // test
+
+  Master.forEach((item, index)=>{
+    Ema = Master[index];
+  })
 
   console.log(Ibra);
   console.log(Aml);
