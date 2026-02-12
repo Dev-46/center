@@ -1,0 +1,3823 @@
+<script>
+  const Master = [
+    { code: 1, school: "6 أكتوبر ب" },
+    { code: 2, school: "6 أكتوبر - فصول ع" },
+    { code: 3, school: "ص 2/241 ت أ ب" },
+    { code: 4, school: "ص 2/241 ت أ ع" },
+    { code: 5, school: "الأربع عزب ج ب" },
+    { code: 6, school: "البدوية ب" },
+    { code: 7, school: "البسلقون أ ص" },
+    { code: 8, school: "البسلقون ب م" },
+    { code: 9, school: "البسلقون ع" },
+    { code: 10, school: "البوصة ب" },
+    { code: 11, school: "البوصة ب - ف ع" },
+    { code: 12, school: "التراس ت أ ب" },
+    { code: 13, school: "التراس ت أ ع" },
+    { code: 14, school: "التمامة ت أ ب" },
+    { code: 15, school: "التمامة ت أ ع" },
+    { code: 16, school: "الجزيرة ص ف" },
+    { code: 17, school: "الجلاد ب" },
+    { code: 18, school: "الجيل الواعد لغات" },
+    { code: 19, school: "الخراشي ت أ ب" },
+    { code: 20, school: "الخراسي ت أ ع" },
+    { code: 21, school: "الخواجة الرسمية لغات" },
+    { code: 22, school: "الخواجة ت أ ب" },
+    { code: 23, school: "الدوار ت أ ب" },
+    { code: 24, school: "الدوار ت أ ع" },
+    { code: 25, school: "الربعمائة ت أ ب" },
+    { code: 26, school: "الربعمائة ت أ ع" },
+    { code: 27, school: "الروضة ت أ ب" },
+    { code: 28, school: "الروضة ت أ ع" },
+    { code: 29, school: "الريادة خ عربي" },
+    { code: 30, school: "الريادة خ لغات" },
+    { code: 31, school: "السبعين ت أ ب" },
+    { code: 32, school: "السبعين ت أ ع" },
+    { code: 33, school: "الستين لغات ب" },
+    { code: 34, school: "الستين ت أ ب" },
+    { code: 35, school: "الستين ت أ ع" },
+    { code: 36, school: "السلام ب" },
+    { code: 37, school: "الشعيرة ك ت أ ب" },
+    { code: 38, school: "الشعيرة ك ت أ ع" },
+    { code: 39, school: "الشنديدي الجديدة ب" },
+    { code: 40, school: "ش الصافي رجب ب" },
+    { code: 41, school: "ش إبراهيم مبارك ب" }, // هل هي الفرنساوي
+    { code: 42, school: "ش أحمد حامد ع" },
+    { code: 43, school: "ش تامر مصطفى ع" },
+    { code: 44, school: "ش سعيد سرحان ت أ ب" },
+    { code: 45, school: "ش سعيد سرحان ت أ ع" },
+    { code: 46, school: "ش شحاتة الدسوقي ب" },
+    { code: 47, school: "ش عادل صلاح ب" },
+    { code: 48, school: "ش فوزي ابراهيم ب" },
+    { code: 49, school: "ش كارم محمود ع" },
+    { code: 50, school: "ش محمد ابراهيم ب" },
+    { code: 51, school: "ش محمد سعد ت أ ب" }, //50
+    { code: 52, school: "ش محمد سعد ت أ ع" }, //51
+    { code: 53, school: "ش محمد عبدالمنعم ب" },
+    { code: 54, school: "ش مصطفى كامل ب" },
+    { code: 55, school: "الصيادين ت أ ب" },
+    { code: 56, school: "الصيادين ت أ ع" },
+    { code: 57, school: "الطاهر الصافي ب" },
+    { code: 58, school: "الطاهر الصافي ع" },
+    { code: 59, school: "الطرح ت أ ب" },
+    { code: 60, school: "الطرح ت أ ع" },
+    { code: 61, school: "العاشر من رمضان ت أ ب" },
+    { code: 62, school: "العاشر من رمضان ت أ ع" },
+    { code: 63, school: "العالي ب" },
+    { code: 64, school: "العالي ع" },
+    { code: 65, school: "العرقوب ت أ ب" },
+    { code: 66, school: "العرقوب ت أ ع" },
+    { code: 67, school: "الفقي ب" },
+    { code: 68, school: "القاضي ت أ ب" },
+    { code: 69, school: "القاضي ت أ ع" },
+    { code: 70, school: "القومية ت أ ب" },
+    { code: 71, school: "القومية ت أ ع" },
+    { code: 72, school: "الكريون ب" },
+    { code: 73, school: "الكريون ع" },
+    { code: 74, school: "الكنايس ب" },
+    { code: 75, school: "الكنايس ع" },
+    { code: 76, school: "ابراهيم شرف ت أ ب" },
+    { code: 77, school: "ابراهيم شرف ت أ ع" },
+    { code: 78, school: "السويسرية خ عربي" },
+    { code: 79, school: "السويسرية خ لغات" },
+    { code: 80, school: "الملقة ب" },
+    { code: 81, school: "الملقة ع" },
+    { code: 82, school: "النبراوية ب" },
+    { code: 83, school: "النبراوية ب - ف ع" },
+    { code: 84, school: "الوحدة ص ف" },
+    { code: 85, school: "الوسطانية الابتدائية أ" },
+    { code: 86, school: "الوسطانية الابتدائية ب" },
+    { code: 87, school: "الوكيل ب" },
+    { code: 88, school: "الوكيل ع" },
+    { code: 89, school: "الوكيل ت أ ب" },
+    { code: 90, school: "اليمينية ت ا ب" },
+    { code: 91, school: "اليمينية ت أ ع" },
+    { code: 92, school: "أبوحسين ب" },
+    { code: 93, school: "أبوحسين ع" },
+    { code: 94, school: "أبوزيد خليفة ت أ ب" },
+    { code: 95, school: "أبوزيد خليفة ت أ ع" },
+    { code: 96, school: "أبوغفيلة ب" },
+    { code: 97, school: "أبيس 1/5 ت م" },
+    { code: 98, school: "أبيس 3/10 ت م" },
+    { code: 99, school: "أبيس 3 ب" },
+    { code: 100, school: "أبيس 3 ع" },
+    { code: 101, school: "أبيس 3 الرسمية عربي" },
+    { code: 102, school: "أبيس 3 الرسمية لغات" },
+    { code: 103, school: "أبيس 5 ب" },
+    { code: 104, school: "أبيس 6 ب" },
+    { code: 105, school: "أبيس 6 ث تجاري" },
+    { code: 106, school: "أبيس 6 ث تجاري - ف خ" },
+    { code: 107, school: "أبيس 6 ث م" },
+    { code: 108, school: "أبيس 6 ث المشتركة - ف خ " },
+    { code: 109, school: "أبيس 8/3 ف واحد" },
+    { code: 110, school: "أحمد أبوزهرة ب" },
+    { code: 111, school: "باباه الكبرى ت أ ب" },
+    { code: 112, school: "باباه الكبرى ت أ ع" },
+    { code: 113, school: "بديوي ت أ ب" },
+    { code: 114, school: "بديوي ت أ ع" },
+    { code: 115, school: "بردلة ب" },
+    { code: 116, school: "بركات الحمراء ت أ ب" },
+    { code: 117, school: "بركات الحمراء ت أ ع" },
+    { code: 118, school: "بشير المختار ت أ ب" },
+    { code: 119, school: "بشير المختار ت أ ع" },
+    { code: 120, school: "توفيق الهلباوي ت أ ب" },
+    { code: 121, school: "توفيق الهلباوي ت أ ع" },
+    { code: 122, school: "جاب الله ت أ ب" },
+    { code: 123, school: "جاب الله ت أ ع" },
+    { code: 124, school: "جلال أبوالحاج ب" },
+    { code: 125, school: "حسن بيومي ب" },
+    { code: 126, school: "حلمي عامر ع" },
+    { code: 127, school: "حليص ت أ ب" },
+    { code: 128, school: "حليص ت أ ع" },
+    { code: 129, school: "حماد الصعيدي ت أ ب" },
+    { code: 130, school: "حماد الصعيدي ت أ ع" },
+    { code: 131, school: "حميد عبدالرحمن ت أ ب" },
+    { code: 132, school: "حميد عبدالرحمن ت أ ع" },
+    { code: 133, school: "حوض 7 ت أ ب" },
+    { code: 134, school: "حوض 7 ت أ ع" },
+    { code: 135, school: "خالد الأقرع ت أ ب" },
+    { code: 136, school: "خالد الأقرع ت أ ع" },
+    { code: 137, school: "خليل ت م" },
+    { code: 138, school: "زكي الابراشي ب" },
+    { code: 139, school: "زكي الابراشي ع" },
+    { code: 140, school: "زلط ت أ ب" },
+    { code: 141, school: "زلط ت أ ع" },
+    { code: 142, school: "زهرة الابتدائية م" },
+    { code: 143, school: "زهرة الاعدادية" },
+    { code: 144, school: "سليمان بلبع ب" },
+    { code: 145, school: "سيدي غازي ب ج" },
+    { code: 146, school: "سيدي غازي ث - فصول خ" },
+    { code: 147, school: "سيدي غازي ث م" },
+    { code: 148, school: "سيف النصر ب" },
+    { code: 149, school: "سيف النصر - ف ع" },
+    { code: 150, school: "شارلو ب" },
+    { code: 151, school: "شبل ب" },
+    { code: 152, school: "شحاتة ص ف" },
+    { code: 153, school: "شركة عواد ت أ ب" },
+    { code: 154, school: "شركة عواد ت أ ع" },
+    { code: 155, school: "شفيق أبوصالح ب" },
+    { code: 156, school: "صدقي ت أ ب" },
+    { code: 157, school: "صدقي ت أ ع" },
+    { code: 158, school: "صدقي سنيحة ت أ ب" },
+    { code: 159, school: "صدقي سنيحة ت أ ع" },
+    { code: 160, school: "صيدناوي الحمراء ت أ ب" },
+    { code: 161, school: "صيدناوي الحمراء ت أ ع" },
+    { code: 162, school: "صيدناوي الوسطى ب" },
+    { code: 163, school: "صيدناوي الوسطى ب - ف ع" },
+    { code: 164, school: "صيدناوي الكبرى ت ا ب" },
+    { code: 165, school: "صيدناوي الكبرى ت أ ع" },
+    { code: 166, school: "صيرة ع" },
+    { code: 167, school: "ضيف ب" },
+    { code: 168, school: "عاداة الغربية ب" },
+    { code: 169, school: "عباس سيد أحمد ع" },
+    { code: 170, school: "عبدالحميد عوت ت أ ب" },
+    { code: 171, school: "عبدالحميد عوت ت أ ع" },
+    { code: 172, school: "عبد الصمد النمر ب" },
+    { code: 173, school: "عبدالعزيز حبشي ب" },
+    { code: 174, school: "عبد العزيز حبشي ب - ف ع" },
+    { code: 175, school: "عبدالقادر خليف ت أ ع" },
+    { code: 176, school: "عبدالوهاب الخراشي ب" },
+    { code: 177, school: "عبدالوهاب الخراشي ع" },
+    { code: 178, school: "عزب نوبار ب م" },
+    { code: 179, school: "عزبة البنك ت أ ب" },
+    { code: 180, school: "عزبة البنك ت أ ع" },
+    { code: 181, school: "عمر الحريري ص ف" },
+    { code: 182, school: "عنتر درويش ب م" },
+    { code: 183, school: "عوض التبي ت أ ب" },
+    { code: 184, school: "عوض التبي ت أ ع" },
+    { code: 185, school: "فصول الحمراء ع" },
+    { code: 186, school: "قصول كرم 4 ع" },
+    { code: 187, school: "فصول مرجان ع" },
+    { code: 188, school: "قصول منشأة ناصر ع" },
+    { code: 189, school: "فصول هلل ع" },
+    { code: 190, school: "ق أبوقير ب" },
+    { code: 191, school: "ق أبوقير ع م" },
+    { code: 192, school: "ق لوقين ب" },
+    { code: 193, school: "ق لوقين ع" },
+    { code: 194, school: "كدوة الرويعي ف واحد" },
+    { code: 195, school: "كدوة الكريون ت أ ب" },
+    { code: 196, school: "كدوة الكريون ت أ ع" },
+    { code: 197, school: "كرم 4 ب" },
+    { code: 198, school: "كناكي ص ف" },
+    { code: 199, school: "كوم الطرفاية ب" },
+    { code: 200, school: "كوم الطرفاية ع" },
+    { code: 201, school: "كوم النص ب" },
+    { code: 202, school: "كوم النص ع" },
+    { code: 203, school: "كوم النص ص ف" },
+    { code: 204, school: "كوم دفشو ب القديمة" },
+    { code: 205, school: "كوم مازن ت أ ب" },
+    { code: 206, school: "كوم مازن ت أ ع" },
+    { code: 207, school: "مارون ت أ ب" },
+    { code: 208, school: "مارون ت أ ع" },
+    { code: 209, school: "محطة الكهرباء ب" },
+    { code: 210, school: "محطة الكهرباء ع" },
+    { code: 211, school: "محمد علي عودة ع" },
+    { code: 212, school: "مرتانة ت أ ب" },
+    { code: 213, school: "مرتانة ت أ ع" },
+    { code: 214, school: "مرجان ب" },
+    { code: 215, school: "معتوق ت أ ب" },
+    { code: 216, school: "معتوق ت أ ع" },
+    { code: 217, school: "معمل القزاز الجديدة" },
+    { code: 218, school: "معمل القزاز البلد ب" },
+    { code: 219, school: "معمل القزاز البلد ع" },
+    { code: 220, school: "معمل اقزاز البلد ث م" },
+    { code: 221, school: "معمل القزاز البلد ث م - ف خ" },
+    { code: 222, school: "منشأة بسيوني ب" },
+    { code: 223, school: "منشأة بسيوني ت أ ب" },
+    { code: 224, school: "منشأة بسيوني ت أ ع" },
+    { code: 225, school: "منشأة عامر ب" },
+    { code: 226, school: "منشأة ناصر ب بالكريون" },
+    { code: 227, school: "م أبوقير ت أ ب" },
+    { code: 228, school: "م أبوقير ت أ ع" },
+    { code: 229, school: "منشأة بلبع ب" },
+    { code: 230, school: "منشأة بولين ت أ ب" },
+    { code: 231, school: "منشأة بولين ت أ ع" },
+    { code: 232, school: "منشأة يونس ب" },
+    { code: 233, school: "منصور الشنديدي ب" },
+    { code: 234, school: "نجع الشيخ عون ت أ ب" },
+    { code: 235, school: "نجع الشيخ عون ت أ ع" },
+    { code: 236, school: "هشام فرج ب" },
+    { code: 237, school: "هلل ب" }, // End of schools
+    { code: 1001, school: "ديوان الادارة" }, // 237
+    { code: 1002, school: "أجازة" }, //238
+    { code: 1003, school: "ادارة بندر كفرالدوار" }, //239
+    { code: 1004, school: "ادارة المحمودية" }, //240
+    { code: 1005, school: "ادارة ادكو" }, //241
+    { code: 1006, school: "ادارة رشيد" }, //242
+    { code: 1007, school: "المديرية المركزية" }, //243
+    { code: 1008, school: "مأمورية" }, //244
+    { code: 1009, school: "مسابقة" }, //245
+    { code: 1010, school: "معرض" }, //246
+    { code: 1011, school: "المعسكر الكشفي" }, //247
+    { code: 1012, school: "جهات لاتتبع التعليم" }, //248
+    { code: 1013, school: "ديوان المحافظة" }, //249
+    { code: 1014, school: "ديوان الوزارة" }, //250
+    { code: 1015, school: "كنترول" }, //251
+    { code: 1016, school: "لجنة امتحانات" }, //252
+    { code: 1017, school: "لجنة ادارية" }, //253
+    { code: 1018, school: "المطبعة السرية" }, //254
+    { code: 1019, school: "المعرض" }, //255
+    { code: 1020, school: "مركز الموهوبين والتعيم الذكي" }, //256
+    { code: 1021, school: "مركز اعداد القادة" }, //257
+    { code: 1022, school: "مركز توزيع اسئلة" }, //258
+    { code: 1023, school: "رعاية الطلاب" }, //259
+    { code: 1024, school: "تدريب" }, //260
+    { code: 1025, school: "تدريب عملي" }, //261
+    { code: 1026, school: "المدرسة الاصلية" }, //262
+    { code: 1027, school: "اجازة نصف الوقت" }, //263
+  ];
+
+  // separated schools for every supervisor
+
+  // to drag element vedio
+  // https://www.youtube.com/watch?v=ymDjvycjgUM
+  // code...
+  // schools for each supervisor
+  let superName = "ابراهيم حسان";
+  const Ibra = [];
+  const Gha = [];
+  const Han = [];
+  const Aml = [];
+  const Ema = [];
+
+  Ibra.push(
+    Master[4],
+    Master[5],
+    Master[6],
+    Master[7],
+    Master[8],
+    Master[24],
+    Master[25],
+    Master[26],
+    Master[27],
+    Master[36],
+    Master[37],
+    Master[38],
+    Master[45],
+    Master[38],
+    Master[45],
+    Master[50],
+    Master[51],
+    Master[53],
+    Master[56],
+    Master[57],
+    Master[58],
+    Master[59],
+    Master[79],
+    Master[80],
+    Master[84],
+    Master[85],
+    Master[93],
+    Master[94],
+    Master[114],
+    Master[121],
+    Master[122],
+    Master[132],
+    Master[133],
+    Master[137],
+    Master[138],
+    Master[141],
+    Master[142],
+    Master[146],
+    Master[150],
+    Master[152],
+    Master[153],
+    Master[166],
+    Master[171],
+    Master[177],
+    Master[186],
+    Master[189],
+    Master[190],
+    Master[191],
+    Master[192],
+    Master[213],
+    Master[214],
+    Master[215],
+    Master[219],
+    Master[226],
+    Master[227],
+    Master[232],
+    Master[210],
+  );
+  // we will add the specific schools for the supervisor Amal
+  Aml.push(
+    Master[48],
+    Master[47],
+    Master[131],
+    Master[157],
+    Master[85], //
+    Master[207],
+    Master[168],
+    Master[170],
+    Master[44],
+    Master[23],
+    Master[185],
+    Master[16],
+    Master[220],
+    Master[84],
+    Master[116],
+    Master[95],
+    Master[210],
+  );
+  // we will add the specific schools for the supervisor Ghada
+  Gha.push(
+    Master[62],
+    Master[81],
+    Master[198],
+    Master[13],
+    Master[181],
+    Master[231],
+    Master[19],
+    Master[210],
+    Master[82],
+    Master[208],
+    Master[176],
+    Master[14],
+    Master[74],
+    Master[222],
+    Master[216],
+    Master[184],
+    Master[199],
+  );
+  // we will add the specific schools for the supervisor Hanan
+  Han.push(
+    Master[12],
+    Master[21],
+    Master[99],
+    Master[30],
+    Master[70],
+    Master[35],
+    Master[90],
+    Master[173],
+    Master[65],
+    Master[78],
+    Master[109],
+    Master[106],
+    Master[55],
+    Master[210],
+  );
+  // we will add the specific schools for the supervisor Eman
+  //Ema.push(Master[86],Master[50],Master[219],Master[210],Master[80],Master[146],Master[87],Master[58],Master[43],Master[237],Master[238], Master[243],Master[244],Master[245],Master[246],Master[249],Master[261]);
+  Ema = [...Master];
+
+  console.log(Ibra);
+  console.log(Aml);
+  console.log(Han);
+  console.log(Gha);
+  console.log(Ema);
+</script>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <title>individual-plans</title>
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    /**/
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-weight: bold !important;
+      direction: rtl;
+      border: none;
+      outline: none;
+      max-height: 500px !important;
+      max-width: 370px !important;
+    }
+
+    body {
+      background-color: rgba(0, 0, 0, 0.226);
+    }
+
+    #plan {
+      max-width: 360px;
+      min-width: 360px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sections {
+      background-color: rgb(255, 254, 254);
+    }
+
+    span {
+      font-weight: 900;
+      margin: 0;
+      margin-left: 3px;
+      margin-right: 3px;
+      text-align: right;
+      font-size: 1rem;
+    }
+
+    #plans {
+      min-height: fit-content !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    table {
+      width: 360px;
+      height: fit-content !important;
+      max-height: 400px !important;
+      border: 1px solid rgb(20, 20, 20) !important;
+    }
+
+    .cell1 {
+      max-width: 15px;
+    }
+
+    .cell2 {
+      max-width: 50px !important;
+    }
+
+    .cell3 {
+      max-width: 100px !important;
+      text-align: center;
+      font-size: 13px !important;
+      padding: 0 2px !important;
+    }
+
+    .cell4 {
+      max-width: 300px !important;
+      min-width: 155px !important;
+    }
+
+    .cell1,
+    .cell2,
+    .cell3,
+    .cell4,
+    .cell5 {
+      background-color: rgb(250, 250, 250);
+      text-align: center;
+      color: rgb(16, 17, 17);
+      font-weight: bold !important;
+      font-size: 12px !important;
+    }
+
+    .cell5 {
+      max-width: 55px !important;
+      min-width: 55px !important;
+      font-size: 14px !important;
+      padding: 0 auto;
+      line-height: 11px;
+    }
+
+    #printer {
+      border-right: 2px solid rgba(20, 20, 22, 0.336);
+      z-index: 100;
+      background-color: rgba(7, 7, 6, 0.363) !important;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 360px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      color: white;
+      font-size: 1.2rem;
+      animation: shrinko 9s linear ease-in-out;
+      transition: 5s ease-in-out;
+      min-height: 30px;
+      min-width: 30px;
+    }
+
+    #tabbing {
+      background-color: rgba(52, 70, 70, 0.438);
+    }
+
+    #information {
+      position: relative;
+      left: 0;
+      right: 0;
+      line-height: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      resize: none;
+      background-color: #00000002;
+      background-color: #0000003a;
+      border: 2px solid rgba(255, 0, 0, 0.014);
+      font-size: 1.2rem;
+      min-width: 150px;
+      max-width: 150px;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    #tools {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      line-height: 10px;
+      text-align: center;
+      width: 70px;
+      min-width: 70px;
+      max-width: 70px;
+      height: 30px;
+      min-height: 30px;
+      background-color: #00000002;
+      background-color: #0000003a;
+      border: 2px solid rgba(255, 0, 0, 0.014);
+      font-size: 1.2rem;
+      overflow: hidden;
+      text-shadow: 1px 1px 1px #000;
+      box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #tick {
+      background-color: #00000002 !important;
+      border: 2px solid rgba(255, 0, 0, 0.014);
+      font-size: 1.2rem;
+      overflow: hidden;
+      text-shadow: 1px 1px 1px #000;
+      color: aliceblue;
+    }
+
+    .btns {
+      background-color: #00000002;
+      border: 2px solid rgba(255, 0, 0, 0.014);
+      font-size: 1.2rem;
+      overflow: hidden;
+      text-shadow: 1px 1px 1px #000;
+      color: aliceblue;
+    }
+
+    #info-title,
+    li {
+      background-color: #00000057;
+      padding: 0 1px;
+      width: 100%;
+      text-align: left;
+      border-bottom: 2px solid #000;
+    }
+
+    #mylist {
+      padding: 5px 0;
+      background-color: rgb(10, 117, 117);
+    }
+
+    .makesmall {
+      transition: 5s ease-in-out;
+      background-color: rgb(123, 138, 133);
+      width: 150px !important;
+      min-width: 150px !important;
+      max-width: 150px !important;
+      box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .makebig {
+      transition: 5s ease-in-out;
+      background-color: rgb(52, 63, 59);
+
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .colorsbtn {
+      width: 100px !important;
+      min-width: 100px !important;
+      height: 100px !important;
+      min-height: 100px !important;
+      border: 2px solid white;
+    }
+
+    .yellow {
+      background-color: yellow;
+      color: yellow;
+      text-shadow: 1px 1px 1px yellow;
+    }
+
+    .red {
+      background-color: rgb(230, 37, 37);
+      color: rgb(238, 17, 17);
+      text-shadow: 1px 1px 1px rgb(243, 14, 14);
+    }
+
+    #printer button {
+      padding: 0.4rem;
+      font-size: 1rem;
+    }
+
+    #printer button:hover {
+      cursor: pointer;
+    }
+
+    #printer:hover {
+      animation: shrinko 5s linear ease-in-out;
+    }
+
+    #printer #provider {
+      padding: 0.5rem;
+      font-size: 0.7rem;
+    }
+
+    .providers {
+      border: 1px solid rgb(69, 82, 81);
+      margin-bottom: 22px;
+      padding: 1rem;
+      background-color: rgba(16, 36, 36, 0.014);
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      gap: 2px;
+    }
+
+    #providerinput {
+      background-color: rgba(0, 0, 0, 0.267) !important;
+      font-size: 35px;
+      color: rgb(82, 119, 116);
+      width: 75px !important;
+      border: 1px solid rgb(152, 170, 125);
+      text-align: right;
+    }
+
+    #providerbtn {
+      background-color: rgba(0, 0, 0, 0.541) !important;
+      font-size: 15px;
+      color: rgb(118, 139, 139);
+      border: 1px solid rgb(152, 170, 125);
+      text-align: center;
+    }
+
+    .printers {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.1rem;
+      background-color: rgba(0, 0, 0, 0.418);
+      width: 155px;
+      background-color: #00000002 !important;
+    }
+
+    #printbtn {
+      background-color: rgba(24, 29, 24, 0.836);
+      color: rgb(184, 211, 202);
+      border: 3px solid rgba(13, 14, 13, 0.5);
+      text-shadow: 1px 1px 1px #000;
+      box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #printbtn:hover {
+      cursor: pointer;
+    }
+
+    #activeprintbtn {
+      background-color: rgba(134, 153, 25, 0.541) !important;
+      font-size: 12px;
+      color: antiquewhite;
+      text-align: center;
+      border: 3px solid rgba(162, 214, 41, 0.5);
+      text-shadow: 1px 1px 1px #000;
+      box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #activeprintbtn:hover {
+      cursor: pointer;
+    }
+
+    @keyframes shrinko {
+      0% {
+        width: 27%;
+      }
+
+      100% {
+        width: 7%;
+      }
+    }
+    /* The final styles when we are ready to print the plan */
+    @media print {
+
+      #printer,
+      #myBoxContainer,
+      #my_switcher_btn_Ibra,
+      #my_switcher_btn_Aml,
+      #my_switcher_btn_Gha,
+      #my_switcher_btn_Han,
+      #my_switcher_btn_Ema {
+        z-index: 0;
+        display: none;
+      }
+
+      #plan {
+        display: block;
+        width: 100vw;
+        border: unset;
+        filter: contrast(200%);
+      }
+
+      .cell4,
+      .cell5 {
+        background-color: rgb(255, 255, 255) !important;
+        color: rgb(16, 17, 17) !important;
+        font-weight: bold !important;
+        text-shadow: none !important;
+      }
+
+      td {
+        border: 1px solid black;
+      }
+
+      input {
+        border: 1px solid black;
+      }
+
+      .rows {
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+        margin-top: 1px !important;
+        margin-bottom: 1px !important;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      body {
+        display: flex;
+        margin: 0 auto !important;
+        background-color: #b9b0b0;
+        background-color: rgba(255, 251, 0, 0.438);
+        max-width: 0vw;
+        min-width: 100vw;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .printers {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+        /*width: 360px;
+        min-width: 360px;
+        max-width: 360px;*/ /* test 1 */
+       /* background-color: rgb(255, 254, 254);*/
+       background-color: #000;
+       color: aliceblue;
+      }
+
+      #printer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 22px auto;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 540px;
+      }
+
+      .printer-big {
+        background-color: white;
+        width: 360px;
+        min-width: 360px;
+        max-width: 360px;
+      }
+
+      .printer-shrink {
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0) !important;
+        background-color: rgba(255, 255, 255, 0) !important;
+        border: none;
+        top: 0;
+        left: 20px;
+        bottom: 0;
+        width: 26px !important;
+        min-width: 26px !important;
+        max-width: 26px !important;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: left;
+        align-items: end;
+        min-height: 540px;
+        align-self: left;
+
+        h3,
+        div,
+        span,
+        #nextBtn,
+        #prevousBtn,
+        #info-title {
+          max-width: 150px !important;
+          min-width: 150px !important;
+          font-size: 13px !important;
+          margin: 0;
+          padding: 0;
+        }
+
+        #tabbing {
+          min-height: 33px !important;
+          max-height: 33px !important;
+          border: none !important;
+          max-width: 100px !important;
+          min-width: 100px !important;
+          background-color: transparent;
+          box-shadow: none;
+        }
+
+        #previousBtn {
+          position: relative;
+          background-color: rgba(145, 76, 59, 0.281) !important;
+          background: linear-gradient(to left,
+              rgb(26, 25, 25),
+              grey,
+              transparent);
+          max-width: 50px !important;
+          min-width: 50px !important;
+          border-radius: 50%;
+
+          span {
+            font-size: 20px !important;
+            color: #000 !important;
+          }
+        }
+
+        #nextBtn {
+          position: relative;
+          background-color: rgba(71, 124, 71, 0.253) !important;
+          background: linear-gradient(to right,
+              rgb(20, 20, 20),
+              grey,
+              transparent);
+          max-width: 50px !important;
+          min-width: 50px !important;
+          border-radius: 50%;
+
+          span {
+            font-size: 20px !important;
+            color: #000 !important;
+          }
+        }
+
+        #information {
+          display: none !important;
+        }
+
+        .printers {
+          background-color: #000;
+
+          #printbtn {
+            background-color: rgb(9, 99, 99) !important;
+          }
+
+          #activeprintbtn {
+            background-color: rgb(95, 110, 5) !important;
+          }
+        }
+      }
+
+      #plan {
+        width: 360px !important;
+        min-width: 360px !important;
+        max-width: 360px !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #information {
+        display: flex !important;
+        width: 360px !important;
+        min-width: 360px !important;
+        max-width: 360px !important;
+        border: 1px solid rgb(240, 211, 211) !important;
+
+        #mylist {
+          display: flex !important;
+          width: 360px !important;
+          min-width: 360px !important;
+          max-width: 360px !important;
+        }
+      }
+
+      .providers {
+        display: flex !important;
+        width: 360px !important;
+        min-width: 360px !important;
+        max-width: 360px !important;
+        border: 5px solid rgba(222, 231, 137, 0.911) !important;
+      }
+    }
+
+    /* Styles for screens 768px or smaller (mobile sizes) */
+    @media screen and (max-width: 768px) {
+      .printers {
+        flex-direction: column;
+      }
+    }
+
+    /* Styles for screens 768px or smaller (mobile sizes) */
+    @media screen and (max-width: 375px) {
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-weight: bold !important;
+        direction: rtl;
+        border: none;
+        outline: none;
+        max-height: 500px !important;
+        max-width: 360px !important;
+      }
+
+      body {
+        display: flex;
+        margin: 0 auto;
+      }
+
+      .printers {
+        flex-direction: column;
+      }
+
+      tr,
+      td,
+      .cell1,
+      .cell2,
+      .cell3,
+      .cell4,
+      .cell5 {
+        background-color: rgb(250, 250, 250);
+        text-align: center;
+        color: rgb(16, 17, 17);
+        font-weight: bold !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+      }
+
+      .rows {
+        padding: 0px !important;
+        margin: 0px !important;
+      }
+
+      .cell5 {
+        width: 30px !important;
+        max-width: 30px !important;
+        min-width: 30px !important;
+      }
+
+      #printer {
+        background-color: transparent !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 340px;
+        min-width: 340px;
+        max-width: 340px;
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #information {
+        display: none !important;
+        width: 370px;
+        min-width: 370px;
+        max-width: 370px;
+        border: 1px solid rgb(240, 211, 211) !important;
+      }
+
+      .providers {
+        display: none !important;
+        width: 370px;
+        min-width: 370px;
+        max-width: 370px;
+        border: 5px solid rgba(222, 231, 137, 0.911) !important;
+      }
+
+      .printers {
+        display: none !important;
+        background-color: rgb(155, 151, 146) !important;
+        width: 370px;
+        min-width: 370px;
+        max-width: 370px;
+        border: 2px solid rgb(250, 246, 246) !important;
+        border-radius: 25px;
+      }
+
+      .printer-big,
+      .printer-shrink {
+        display: none !important;
+      }
+
+      #plan {
+        width: 360px !important;
+        min-width: 360px !important;
+        max-width: 360px !important;
+      }
+
+      table {
+        height: fit-content !important;
+        max-height: 400px !important;
+        border: 1px solid rgba(20, 20, 20, 0) !important;
+        margin: 0 auto;
+      }
+    }
+
+    #myBoxContainer {
+      padding-top: 2px !important;
+      padding-bottom: 20px !important;
+      background: linear-gradient(to bottom,
+          #271925,
+          white,
+          white,
+          dimgrey,
+          #111) !important;
+
+      position: absolute;
+      cursor: grab;
+      top: 27px;
+      left: 41px;
+      /* right 1011*/
+      background-color: #faf4f4 !important;
+      color: rgb(27, 39, 8) !important;
+      font-size: 23px !important;
+      text-shadow: 2px 2px 2px #f3efef;
+      width: 195px !important;
+      /*178*/
+      height: 80px !important;
+      /* 250*/
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    #myHolder {
+
+      margin: 0 auto;
+
+    }
+
+    #myBoxContainer header {
+      cursor: pointer;
+      position: relative;
+      width: 180px !important;
+      height: 20px !important;
+      margin: 0 auto;
+      /*background-color: #457539 !important;*/
+      background: linear-gradient(to bottom, #e4e6e479);
+      border-bottom: 2px solid rgb(20, 20, 20) !important;
+    }
+
+    #myBoxContainer header.active {
+      cursor: move;
+      user-select: none;
+      position: relative;
+      width: 180px !important;
+      height: 20px !important;
+      margin: 0 auto;
+      /*background-color: #457539 !important;*/
+      background: linear-gradient(to bottom, #e4e6e479);
+      border-bottom: 2px solid rgb(20, 20, 20) !important;
+    }
+
+    .ourFathers {
+      border: 2px solid rgba(19, 19, 18, 0.979) !important;
+      border-left: 2px solid rgba(19, 19, 18, 0.979) !important;
+      border-right: 2px solid rgba(19, 19, 18, 0.979) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="printer" class="printer-big" style="background-color: black">
+    <div class="makebig" id="information">
+      <ul id="mylist">
+        <h3 id="info-title">IFORMATION</h3>
+        <li>Esc : <span class="colorsbtn yellow">10</span></li>
+        <li>Enter: <span class="colorsbtn red">10</span></li>
+      </ul>
+      <div id="tools">
+        <button id="tick" class="btns">click</button>
+      </div>
+    </div>
+    <div class="providers makebig" id="tabbing">
+      <button class="btns providerbtn" id="nextBtn" onclick="moveFocus(1)">
+        <span style="font-size: 100px">&#8594;</span>
+      </button>
+      <button class="btns providerbtn" id="previousBtn" onclick="moveFocus(-1)">
+        <span style="font-size: 100px">&#8592;</span>
+      </button>
+    </div>
+    <div class="printers">
+      <button id="printbtn" onclick="printPlan()" disabled></button>
+      <button id="activeprintbtn" onclick="activebtn()"></button>
+    </div>
+  </div>
+
+  <div id="plan">
+    <div class="sections" id="published">
+      <span id="inial"> الخطة الشهرية </span>
+      <span> أ/ </span>
+      <span id="sir">ابراهيم حسان</span>
+      <span> عن شهر </span>
+      <span id="month">مارس</span>
+      <span id="year">2026</span>
+    </div>
+
+    <div id="plans"></div>
+  </div>
+  <script>
+    let msg = ""; // the first appearance  of the msg virable
+    const ar_letters = [
+      " ",
+      "ا",
+      "اب",
+      "ابر",
+      "ابرا",
+      "ابراه",
+      "ابراهي",
+      "ابراهيم",
+      "ابراهيم ",
+      "ابراهيم ح",
+      "ابراهيم حس",
+      "ابراهيم حسا",
+      "ابراهيم حسان",
+      "ابراهيم حسان ",
+      "إ",
+      "إب",
+      "إبر",
+      "إبرا",
+      "إبراه",
+      "إبراهي",
+      "إبراهيم",
+      "إبراهيم ",
+      "إبراهيم ح",
+      "إبراهيم حس",
+      "إبراهيم حسا",
+      "إبراهيم حسان",
+      "إبراهيم حسان ",
+      "ا",
+      "ام",
+      "امل",
+      "امل ",
+      "امل إ",
+      "امل إب",
+      "امل إبر",
+      "امل إبرا",
+      "امل إبراه",
+      "امل إبراهي",
+      "امل إبراهيم",
+      "امل إبراهيم ",
+      "ا",
+      "ام",
+      "امل",
+      "امل ",
+      "امل ا",
+      "امل اب",
+      "امل ابر",
+      "امل ابرا",
+      "امل ابراه",
+      "امل ابراهي",
+      "امل ابراهيم",
+      "امل ابراهيم ",
+      "أ",
+      "أم",
+      "أمل",
+      "أمل ",
+      "أمل إ",
+      "أمل إب",
+      "أمل إبر",
+      "أمل إبرا",
+      "أمل إبراه",
+      "أمل إبراهي",
+      "أمل إبراهيم",
+      "أمل إبراهيم ",
+      "أ",
+      "أم",
+      "أمل",
+      "أمل ",
+      "أمل ا",
+      "أمل اب",
+      "أمل ابر",
+      "أمل ابرا",
+      "أمل ابراه",
+      "أمل ابراهي",
+      "أمل ابراهيم",
+      "أمل ابراهيم ",
+      "غ",
+      "غا",
+      "غاد",
+      "غاده",
+      "غاده ",
+      "غاده ا",
+      "غاده ال",
+      "غاده الس",
+      "غاده السع",
+      "غاده السعي",
+      "غاده السعيد",
+      "غاده السعيد ",
+      "غادة",
+      "غادة ",
+      "غادة ا",
+      "غادة ال",
+      "غادة الس",
+      "غادة السع",
+      "غادة السعي",
+      "غادة السعيد",
+      "غادة السعيد ",
+      "إ",
+      "إي",
+      "إيم",
+      "إيما",
+      "إيمان",
+      "إيمان ",
+      "إيمان ص",
+      "إيمان صا",
+      "إيمان صال",
+      "إيمان صالح",
+      "إيمان صالح ",
+      "اي",
+      "ايم",
+      "ايما",
+      "ايمان",
+      "ايمان ",
+      "ايمان ص",
+      "ايمان صا",
+      "ايمان صال",
+      "ايمان صالح",
+      "ايمان صالح ",
+      "ح",
+      "حن",
+      "حنا",
+      "حنان",
+      "حنان ",
+      "حنان ج",
+      "حنان جا",
+      "حنان جاب",
+      "حنان جابر",
+      "حنان جابر ",
+    ];
+
+    let year = "2026";
+
+    const SchoolCodes = [1, 2, 1002, 1001, 9];
+    const SchoolNames = [
+      "6 أكتوبر الابتدائية",
+      "6 أكتوبر الابتدائية - فصول إعدادي",
+      "أجازة",
+      "ديوان الادارة",
+      "البسلقون الاعدادية",
+    ];
+
+    const montharabic = [
+      "يناير",
+      "فبراير",
+      "مارس",
+      "أبريل",
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "أغسطس",
+      "سبتمبر",
+      "أكتوبر",
+      "نوفمبر",
+      "ديسمبر",
+    ];
+
+    let month_days = 24;
+    let monthn = 2;
+    let arabic_month_name = "فبراير";
+
+    let daysNamesOrder = [];
+    let allMonthDaysNames = [];
+    let allMonthDaysNumbers = [];
+
+    document.getElementById("month").innerHTML = arabic_month_name;
+    document.getElementById("year").innerHTML = year;
+
+    //change the supervisor name
+    //add year month manually or not
+    let mypoptogetinfo = document.createElement("div");
+    mypoptogetinfo.id = "mypoptogetinfo";
+    mypoptogetinfo.style.display = "flex";
+    mypoptogetinfo.style.flexDirection = "column";
+    mypoptogetinfo.style.justifyContent = "center";
+    mypoptogetinfo.style.alignItems = "center";
+    mypoptogetinfo.style.left = "0"; /* 160 */
+    mypoptogetinfo.style.right = "0"; /* 160 */
+    mypoptogetinfo.style.bottom = "0";
+    mypoptogetinfo.style.width = "340" + "px";
+    mypoptogetinfo.style.zIndex = 1001;
+    mypoptogetinfo.style.margin = "450px auto";
+
+    let closeHolder = document.createElement("button");
+    //closeHolder.style.maxWidth = "460" + "px";
+    closeHolder.style.minWidth = "300" + "px";
+    closeHolder.style.backgroundColor = "rgba(32, 1, 32, 0.9)";
+    closeHolder.style.color = "white";
+    closeHolder.style.fontSize = "15" + "px";
+    closeHolder.innerHTML = "X";
+    closeHolder.style.textAlign = "left";
+    closeHolder.style.paddingLeft = "15px";
+    closeHolder.style.cursor = "pointer";
+    closeHolder.style.border = "1px solid white";
+    closeHolder.style.boxShadow =
+      "inset 25px 20px 100px 44px rgba(100,20,100,0.5)";
+    closeHolder.style.borderRadius = "25px";
+    closeHolder.style.zIndex = 1000;
+    closeHolder.addEventListener("click", function () {
+      document.getElementById("printer").removeChild(mypoptogetinfo);
+      document.getElementById("printer").classList.add("printer-shrink");
+    });
+    mypoptogetinfo.appendChild(closeHolder);
+
+    let superinput = document.createElement("input");
+    superinput.type = "text";
+    superinput.style.fontSize = "30" + "px";
+    superinput.style.maxWidth = "300" + "px";
+    superinput.style.minWidth = "300" + "px";
+    superinput.style.width = "300" + "px";
+    superinput.style.backgroundColor = "#be0a0ac9";
+    superinput.style.color = "#f0e65b";
+    superinput.style.border = "1px solid #838582e3";
+    superinput.style.paddingTop = "16" + "px";
+    superinput.style.borderBottom = "1px solid #ecc2c2c0";
+    superinput.placeholder = "اسم الموجه ثنائي";
+    superinput.value = "ابراهيم حسان";
+    superName = superinput.value;
+
+    superinput.style.marginTop = "-12" + "px";
+    superinput.style.textIndent = "30" + "px";
+    mypoptogetinfo.appendChild(superinput);
+
+    let yearinput = document.createElement("input");
+    yearinput.type = "text";
+    yearinput.style.fontSize = "30" + "px";
+    yearinput.style.maxWidth = "300" + "px";
+    yearinput.style.minWidth = "300" + "px";
+    yearinput.style.width = "300" + "px";
+    yearinput.style.backgroundColor = "#fafafafd";
+    yearinput.style.color = "#f1f50c";
+    yearinput.style.border = "1px solid #81e075";
+    yearinput.style.borderBottom = "1px solid #b8a8a8";
+    yearinput.placeholder = "  السنة";
+    yearinput.value = 2026;
+    yearinput.style.zIndex = 1000;
+    yearinput.style.textShadow = "2px 2px 2px #000";
+    yearinput.style.textIndent = "30" + "px";
+
+    mypoptogetinfo.appendChild(yearinput);
+
+    let monthinput = document.createElement("input");
+
+    monthinput.style.fontSize = "30" + "px";
+    monthinput.style.maxWidth = "300" + "px";
+    monthinput.style.minWidth = "300" + "px";
+    monthinput.style.width = "300" + "px";
+    monthinput.style.backgroundColor = "#0f0f0e";
+    monthinput.style.color = "#fff";
+    monthinput.style.border = "1px solid #81e075";
+    monthinput.style.borderBottom = "1px solid #756d6d";
+    monthinput.placeholder = "رقم الشهر  4"; /////
+    ////////////////////////////////////////////////////////////////////
+    monthinput.value = 2;
+
+    ///////////////////////////////////////////////////////////
+    msg = "";
+    closeHolder.innerHTML = "X   " + msg;
+
+    //////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    addEventListener("load", function () {
+      if (
+        monthinput.value === "" ||
+        yearinput.value === "" ||
+        superinput.value === "" ||
+        isNaN(monthinput.value) ||
+        isNaN(yearinput.value) ||
+        monthinput.value < 2 ||
+        monthinput.value > 12
+      ) {
+        executebtn.disabled = true;
+        msg = "EMPTY VALUES";
+        document.getElementById("mytable").innerHTML = "";
+        executebtn.disabled = true;
+      } else {
+        msg = "FULL MONTH OK";
+        executebtn.disabled = false;
+      }
+      closeHolder.innerHTML = "X   " + msg;
+    });
+
+    monthinput.addEventListener("focus", function () {
+      if (
+        monthinput.value === "" ||
+        yearinput.value === "" ||
+        superinput.value === ""
+      ) {
+        executebtn.disabled = true;
+        msg = "EMPTY VALUES";
+      } else {
+        if (isNaN(monthinput.value) || isNaN(yearinput.value)) {
+          msg = "NOT NUMBERS";
+          executebtn.disabled = true;
+        } else if (monthinput.value < 2 || monthinput.value > 12) {
+          msg = "OUT OF MONTH";
+          executebtn.disabled = true;
+        } else {
+          msg = "READY!";
+          executebtn.disabled = false;
+        }
+      }
+      closeHolder.innerHTML = "X   " + msg;
+    });
+
+    monthinput.addEventListener("keyup", function () {
+      if (
+        monthinput.value === "" ||
+        yearinput.value === "" ||
+        superinput.value === ""
+      ) {
+        executebtn.disabled = true;
+        msg = "EMPTY VALUES";
+      } else {
+        if (
+          isNaN(monthinput.value) ||
+          monthinput.value < 2 ||
+          monthinput.value > 12
+        ) {
+          msg = "NOT A NUMBER OR OUT";
+
+          executebtn.disabled = true;
+        } else {
+          msg = "MONTH OK";
+          executebtn.disabled = false;
+        }
+      }
+      closeHolder.innerHTML = "X   " + msg;
+    });
+
+    yearinput.addEventListener("keyup", function () {
+      if (
+        monthinput.value === "" ||
+        yearinput.value === "" ||
+        superinput.value === ""
+      ) {
+        executebtn.disabled = true;
+        msg = "EMPTY VALUES";
+      } else {
+        if (
+          isNaN(yearinput.value) ||
+          yearinput.value > 2026 ||
+          yearinput.value < 2026
+        ) {
+          msg = "NO NUMBER OR OUT";
+
+          executebtn.disabled = true;
+        } else {
+          msg = "YEAR OK";
+          executebtn.disabled = false;
+        }
+      }
+      closeHolder.innerHTML = "X   " + msg;
+    });
+    //   https://www.youtube.com/watch?v=zRkHk2WZwjc   ////////////////////////////
+    superinput.addEventListener("keyup", () => {
+      !ar_letters.includes(superinput.value)
+        ? (superinput.value = "")
+        : superinput.value;
+      if (
+        monthinput.value === "" ||
+        yearinput.value === "" ||
+        superinput.value === "" ||
+        !ar_letters.includes(superinput.value) ||
+        superinput.value.length < 9
+      ) {
+        msg = "EMPTY OR NOT AR OR ONE";
+        executebtn.disabled = true;
+      } else {
+        msg = "NAME OK";
+        executebtn.disabled = false;
+      }
+      closeHolder.innerHTML = "X   " + msg;
+    });
+    /////////////////////////////////////////////////////////////////////////
+    monthinput.style.zIndex = 100;
+    monthinput.style.textIndent = "30" + "px";
+    mypoptogetinfo.appendChild(monthinput);
+
+    let executebtn = document.createElement("button");
+    executebtn.style.paddingTop = "30" + "px";
+    executebtn.style.marginTop = "-30" + "px";
+    executebtn.style.fontSize = "60" + "px";
+    executebtn.style.maxWidth = "300" + "px";
+    executebtn.style.minWidth = "300" + "px";
+    executebtn.style.backgroundColor = "#544757";
+    executebtn.style.color = "#c4a5b8";
+    executebtn.style.border = "2px double #8b126d";
+    executebtn.style.border = "1px double #8b126d";
+    executebtn.style.borderRadius = "25px";
+    executebtn.style.zIndex = 0;
+    executebtn.style.boxShadow = "2px 20px 1px 1px rgba(100,20,100,0.5)";
+    executebtn.style.borderBottom = "3px solid #270e29";
+    executebtn.disabled = true;
+    executebtn.innerText = "  تنفيذ ";
+    mypoptogetinfo.appendChild(executebtn);
+
+    document.getElementById("printer").appendChild(mypoptogetinfo);
+
+    executebtn.addEventListener("mouseover", function () {
+      executebtn.style.boxShadow = "1px 2px 1px 1px rgba(100,20,100,0.5)";
+      executebtn.style.transition = "0.5s";
+    });
+
+    executebtn.addEventListener("mouseout", function () {
+      executebtn.style.boxShadow = "2px 20px 1px 1px rgba(100,20,100,0.5)";
+      executebtn.style.transition = "0.5s";
+    });
+
+    /////////////////////////////////////////////////////
+
+    executebtn.addEventListener("click", () => {
+      superName = superinput.value;
+      // the list of schools
+
+      /// create a div to contain all data of the arrays
+      const myBox = document.createElement("div");
+      //properities
+      //all must go to the part of changing the super name
+
+      myBox.id = "myBoxContainer";
+      myBox.className = "wrapper";
+      myBox.style.border = "2px solid #112";
+      myBox.style.borderBottom = "2px solid #777";
+      myBox.style.borderLeft = "2px solid #999";
+      let ladle = document.createElement("header");
+      ladle.id = "myHolder";
+      ladle.style.zIndex = 900;
+      myBox.appendChild(ladle);
+
+      // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
+      switch (superName) {
+        case "ابراهيم حسان":
+        case "إبراهيم حسان":
+        case "ابراهيم حسان ":
+        case "إبراهيم حسان ":
+          Ibra.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          let mySwitcherBtnIbra = document.createElement("button");
+          mySwitcherBtnIbra.style.position = "fixed";
+          mySwitcherBtnIbra.style.zIndex = 1200;
+          mySwitcherBtnIbra.style.top = "12px";
+          mySwitcherBtnIbra.style.right = "12px";
+          mySwitcherBtnIbra.style.backgroundColor = "lightgreen";
+          mySwitcherBtnIbra.style.maxWidth = "20px";
+          mySwitcherBtnIbra.style.minWidth = "20px";
+          mySwitcherBtnIbra.style.width = "20px";
+          mySwitcherBtnIbra.style.height = "20px";
+          mySwitcherBtnIbra.style.maxHeight = "20px";
+          mySwitcherBtnIbra.style.minHeight = "20px";
+          mySwitcherBtnIbra.id = "my_switcher_btn_Ibra";
+          mySwitcherBtnIbra.innerText = "";
+          mySwitcherBtnIbra.onclick = () => {
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtnIbra.style.display = "none";
+            }
+          };
+          document.body.appendChild(mySwitcherBtnIbra);
+
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Ibra")
+              ? (document.getElementById(
+                "my_switcher_btn_Ibra",
+              ).style.display = "block")
+              : confirm("جاهز لطباعة الخطة");
+          });
+
+
+
+          /*
+          const wrapper = document.querySelector(".wrapper");
+
+          const header = wrapper.querySelector("header");
+
+          function onDrag({ movementX, movementY }) {
+            let getStyle = window.getComputedStyle(wrapper);
+            let leftVal = parseInt(getStyle.left);
+            let topVal = parseInt(getStyle.top);
+            wrapper.style.left = `${leftVal + movementX}px`;
+            wrapper.style.top = `${topVal + movementY}px`;
+          }
+
+          header.addEventListener("mousedown", () => {
+            header.classList.add("active");
+            header.addEventListener("mousemove", onDrag);
+          });
+
+          document.addEventListener("mouseup", () => {
+            header.classList.remove("active");
+            header.removeEventListener("mousemove", onDrag);
+          });
+          */
+          break;
+        case "امل ابراهيم":
+        case "امل ابراهيم ":
+        case "أمل ابراهيم":
+        case "أمل ابراهيم ":
+        case "أمل إبراهيم":
+        case "أمل إبراهيم ":
+      
+          // my statments go here...
+          Aml.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          let mySwitcherBtnAml = document.createElement("button");
+          mySwitcherBtnAml.style.position = "fixed";
+          mySwitcherBtnAml.style.zIndex = 1200;
+          mySwitcherBtnAml.style.top = "12px";
+          mySwitcherBtnAml.style.right = "12px";
+          mySwitcherBtnAml.style.backgroundColor = "lightgreen";
+          mySwitcherBtnAml.style.maxWidth = "20px";
+          mySwitcherBtnAml.style.minWidth = "20px";
+          mySwitcherBtnAml.style.width = "20px";
+          mySwitcherBtnAml.style.height = "20px";
+          mySwitcherBtnAml.style.maxHeight = "20px";
+          mySwitcherBtnAml.style.minHeight = "20px";
+          mySwitcherBtnAml.id = "my_switcher_btn_Aml";
+          mySwitcherBtnAml.innerText = "";
+          mySwitcherBtnAml.onclick = () => {
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtnAml.style.display = "none";
+            }
+          };
+          document.body.appendChild(mySwitcherBtnAml);
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Aml")
+              ? (document.getElementById(
+                "my_switcher_btn_Aml",
+              ).style.display = "block")
+              : confirm("جاهز لطباعة الخطة");
+          });
+
+          ///////
+          break;
+        case "غادة السعيد":
+        case "غادة السعيد ":
+        case "غاده السعيد":
+        case "غاده السعيد ":
+        
+          // my statments go here...
+          Gha.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          let mySwitcherBtnGha = document.createElement("button");
+          mySwitcherBtnGha.style.position = "fixed";
+          mySwitcherBtnGha.style.zIndex = 1200;
+          mySwitcherBtnGha.style.top = "12px";
+          mySwitcherBtnGha.style.right = "12px";
+          mySwitcherBtnGha.style.backgroundColor = "lightgreen";
+          mySwitcherBtnGha.style.maxWidth = "20px";
+          mySwitcherBtnGha.style.minWidth = "20px";
+          mySwitcherBtnGha.style.width = "20px";
+          mySwitcherBtnGha.style.height = "20px";
+          mySwitcherBtnGha.style.maxHeight = "20px";
+          mySwitcherBtnGha.style.minHeight = "20px";
+          mySwitcherBtnGha.id = "my_switcher_btn_Gha";
+          mySwitcherBtnGha.innerText = "";
+          mySwitcherBtnGha.onclick = () => {
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtnGha.style.display = "none";
+            }
+          };
+          document.body.appendChild(mySwitcherBtnGha);
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Gha")
+              ? (document.getElementById(
+                "my_switcher_btn_Gha",
+              ).style.display = "block")
+              : confirm("جاهز لطباعة الخطة");
+          });
+          ///////
+          break;
+        case "حنان جابر":
+        case "حنان جابر ":
+          
+          // my statments go here...
+          Han.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          let mySwitcherBtnHan = document.createElement("button");
+          mySwitcherBtnHan.style.position = "fixed";
+          mySwitcherBtnHan.style.zIndex = 1200;
+          mySwitcherBtnHan.style.top = "12px";
+          mySwitcherBtnHan.style.right = "12px";
+          mySwitcherBtnHan.style.backgroundColor = "lightgreen";
+          mySwitcherBtnHan.style.maxWidth = "20px";
+          mySwitcherBtnHan.style.minWidth = "20px";
+          mySwitcherBtnHan.style.width = "20px";
+          mySwitcherBtnHan.style.height = "20px";
+          mySwitcherBtnHan.style.maxHeight = "20px";
+          mySwitcherBtnHan.style.minHeight = "20px";
+          mySwitcherBtnHan.id = "my_switcher_btn_Han";
+          mySwitcherBtnHan.innerText = "";
+          mySwitcherBtnHan.onclick = () => {
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtnHan.style.display = "none";
+            }
+          };
+          document.body.appendChild(mySwitcherBtnHan);
+
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Han")
+              ? (document.getElementById(
+                "my_switcher_btn_Han",
+              ).style.display = "block")
+              : confirm("جاهز لطباعة الخطة");
+          });
+          ///////
+          break;
+        case "ايمان صالح":
+        case "ايمان صالح ":
+        case "إيمان صالح":
+        case "إيمان صالح ":
+          //////
+          // my statments go here...
+          Ema.forEach((item, index) => {
+            let coder = document.createElement("span");
+            let schooler = document.createElement("span");
+            coder.innerHTML = item.code;
+            schooler.innerHTML = item.school;
+            let father = document.createElement("div");
+            father.className = "ourFathers";
+            father.appendChild(coder);
+            father.appendChild(schooler);
+            myBox.appendChild(father);
+            document.body.appendChild(myBox);
+            myBox.style.zIndex = 1000;
+          });
+          //alert("my clicked is okay!");
+          let mySwitcherBtnEma = document.createElement("button");
+          mySwitcherBtnEma.style.position = "fixed";
+          mySwitcherBtnEma.style.zIndex = 1200;
+          mySwitcherBtnEma.style.top = "12px";
+          mySwitcherBtnEma.style.right = "12px";
+          mySwitcherBtnEma.style.backgroundColor = "lightgreen";
+          mySwitcherBtnEma.style.maxWidth = "20px";
+          mySwitcherBtnEma.style.minWidth = "20px";
+          mySwitcherBtnEma.style.width = "20px";
+          mySwitcherBtnEma.style.height = "20px";
+          mySwitcherBtnEma.style.maxHeight = "20px";
+          mySwitcherBtnEma.style.minHeight = "20px";
+          mySwitcherBtnEma.id = "my_switcher_btn_Ema";
+          mySwitcherBtnEma.innerText = "";
+          mySwitcherBtnEma.onclick = () => {
+            if (confirm("محتاج قائمة المدارس الخاصة بك")) {
+              // Code to run if the user clicks "OK" (true is returned)
+              if (myBox.style.display === "none") {
+                myBox.style.display = "block";
+              }
+            } else {
+              // Code to run if the user clicks "Cancel" (false is returned)
+              mySwitcherBtnEma.style.display = "none";
+            }
+          };
+          document.body.appendChild(mySwitcherBtnEma);
+          ladle.addEventListener("click", () => {
+            myBox.style.display = "none";
+            document.getElementById("my_switcher_btn_Ema")
+              ? (document.getElementById(
+                "my_switcher_btn_Ema",
+              ).style.display = "block")
+              : confirm("جاهز لطباعة الخطة");
+          });
+          ///////
+          break;
+        default:
+          break;
+      }
+    });
+
+    //*********************************************************************
+
+    //////////////////////////////////////////////////////////////////
+
+    let myplans = document.getElementById("plans");
+    let tabb = document.createElement("table");
+
+    tabb.id = "mytable";
+
+    document.getElementById("plans").appendChild(tabb);
+
+    const cells = [
+      "cell1",
+      "cell2",
+      "cell3",
+      "cell4",
+      "cell5",
+      "cell6",
+      "cell7",
+      "cell8",
+      "cell9",
+      "cell10",
+      "cell11",
+      "cell12",
+      "cell13",
+      "cell14",
+      "cell15",
+      "cell16",
+      "cell17",
+      "cell18",
+      "cell19",
+      "cell20",
+      "cell21",
+      "cell22",
+      "cell23",
+      "cell24",
+      "cell25",
+      "cell26",
+      "cell27",
+      "cell28",
+      "cell29",
+      "cell30",
+      "cell31",
+      "cell32",
+      "cell33",
+      "cell34",
+      "cell35",
+      "cell36",
+    ];
+
+    const recieverInput = [
+      "td5cell1",
+      "td5cell2",
+      "td5cell3",
+      "td5cell4",
+      "td5cell5",
+      "td5cell6",
+      "td5cell7",
+      "td5cell8",
+      "td5cell9",
+      "td5cell10",
+      "td5cell11",
+      "td5cell12",
+      "td5cell13",
+      "td5cell14",
+      "td5cell15",
+      "td5cell16",
+      "td5cell17",
+      "td5cell18",
+      "td5cell19",
+      "td5cell20",
+      "td5cell21",
+      "td5cell22",
+      "td5cell23",
+      "td5cell24",
+      "td5cell25",
+      "td5cell26",
+      "td5cell27",
+      "td5cell28",
+      "td5cell29",
+    ];
+
+    let myinput = document.getElementById("providerinput");
+
+    let currentInd = -1;
+
+    function moveFocus(direction) {
+      const inputs = document.querySelectorAll(".input-field");
+
+      // حساب المؤشر الجديد (مع معالجة الأرقام السالبة للرجوع للخلف)
+      currentInd = (currentInd + direction + inputs.length) % inputs.length;
+
+      inputs[currentInd].focus();
+
+      document.getElementById(
+        recieverInput[currentInd],
+      ).style.backgroundColor = "rgba(49, 47, 47, 0.18)";
+      document.getElementById(recieverInput[currentInd]).style.color =
+        "rgba(253, 251, 251, 0.93)";
+      document.getElementById(recieverInput[currentInd]).style.textShadow =
+        "1px 2px 3px rgba(5, 5, 5, 0.93)";
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////// **************************************************************************************************
+
+    executebtn.addEventListener("click", function () {
+      //empty the table.....
+      document.getElementById("mytable").innerHTML = "";
+      monthn = parseInt(monthinput.value);
+
+      if (monthn === 2) {
+        arabic_month_name = "فبراير";
+      } else if (monthn === 3) {
+        arabic_month_name = "مارس";
+      }
+      else if (monthn === 4) {
+        arabic_month_name = "أبريل";
+      } else if (monthn === 5) {
+        arabic_month_name = "مايو";
+      } else if (monthn === 6) {
+        arabic_month_name = "يونيو";
+      } else if (monthn === 7) {
+        arabic_month_name = "يوليو";
+      } else if (monthn === 8) {
+        arabic_month_name = "أغسطس";
+      } else if (monthn === 9) {
+        arabic_month_name = "سبتمبر";
+      } else if (monthn === 10) {
+        arabic_month_name = "أكتوبر";
+      } else if (month === 11) {
+        arabic_month_name = "نوفمبر";
+      } else if (monthn === 12) {
+        arabic_month_name = "ديسمبر";
+      } else if (monthn === 1) {
+        arabic_month_name = "يناير";
+      } else if (monthn === 2) {
+        arabic_month_name = "فبراير";
+      }
+      //show the month name in arabic
+      document.getElementById("month").innerHTML = arabic_month_name;
+
+      /////////////////////////////////////////////////////////////////////////////////////
+      // set the month days here...
+
+      switch (arabic_month_name) {
+        case "فبراير":
+          month_days = 24;
+          break;
+        case "مارس":
+          month_days = 27;
+          break;
+        case "أبريل":
+          month_days = 26;
+          break;
+        case "مايو":
+          month_days = 26;
+          break;
+        case "يونيو":
+          month_days = 26;
+          break;
+        case "يوليو":
+          month_days = 26;
+          break;
+        case "أغسطس":
+          month_days = 27;
+          break;
+        case "سبتمبر": ////////////////
+          month_days = 26;
+          break;
+        case "أكتوبر": ////////////////////////////////////
+          month_days = 26;
+          break;
+        case "نوفمبر":
+          month_days = 26;
+          break;
+        case "ديسمبر":
+          month_days = 27;
+          break;
+        default:
+          break;
+      }
+
+      /////////////////////////////////////////////////////////////////////////////////////////////// here ....
+
+      for (let index = 0; index < month_days; index++) {
+        //////////////////////////////////////////////////************************************ الايام
+
+        switch (arabic_month_name) {
+          case "فبراير":
+            daysNamesOrder = [
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+              22, 23, 24, 25, 26, 28,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+            break;
+
+          case "مارس":
+            daysNamesOrder = [
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+              22, 23, 24, 25, 26, 28, 29, 30, 31,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "أبريل":
+            daysNamesOrder = [
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
+              22, 23, 25, 26, 27, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "مايو":
+            daysNamesOrder = [
+              "السبت",
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+            ];
+
+            allMonthDaysNumbers = [
+              2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21,
+              23, 24, 25, 26, 27, 28, 30, 31,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "يونيو":
+            daysNamesOrder = [
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 20, 21,
+              22, 23, 24, 25, 27, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "يوليو":
+            daysNamesOrder = [
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
+              22, 23, 25, 26, 27, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "أغسطس":
+            daysNamesOrder = [
+              "السبت",
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20,
+              22, 23, 24, 25, 26, 27, 29, 30, 31,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "سبتمبر":
+            daysNamesOrder = [
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+              "الاثنين",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21,
+              22, 23, 24, 26, 27, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "أكتوبر":
+            daysNamesOrder = [
+              "الخميس",
+              "السبت",
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21,
+              22, 24, 26, 27, 28, 29, 30, 31,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "نوفمبر":
+            daysNamesOrder = [
+              "الأحد",
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+              22, 23, 24, 25, 26, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          case "ديسمبر":
+            daysNamesOrder = [
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+              "الاثنين",
+            ];
+
+            allMonthDaysNumbers = [
+              1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21,
+              22, 23, 24, 26, 27, 28, 29, 30, 31,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
+
+            break;
+
+          default:
+            monthn = 2;
+            arabic_month_name = "فبراير";
+            break;
+        }
+
+        // ******************************************************************** */
+        let tr = document.createElement("tr");
+        tr.setAttribute("id", "tr" + index);
+        tr.className = "rows";
+        let td1 = document.createElement("td");
+        td1.setAttribute("id", "td1" + cells[index]);
+        td1.setAttribute("class", "cell cell1");
+        td1.innerHTML = index + 1;
+
+        let td2 = document.createElement("td");
+        td2.setAttribute("id", "td2" + cells[index]);
+        td2.setAttribute("class", "cell cell2");
+        td2.innerHTML = allMonthDaysNames[index];
+
+        let td3 = document.createElement("td");
+        td3.setAttribute("id", "td3" + cells[index]);
+        td3.setAttribute("class", "cell cell3");
+        td3.innerHTML = `${year}-${monthn}-${allMonthDaysNumbers[index]}`;
+
+        let td4 = document.createElement("td");
+        td4.setAttribute("id", "td4" + cells[index]);
+        td4.setAttribute("class", "cell cell4");
+        td4.innerHTML = "";
+
+        ////////////////////////////////////////////
+        let td5 = document.createElement("input");
+        td5.setAttribute("id", "td5" + cells[index]);
+        td5.setAttribute("class", "cell cell5 input-field");
+
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+        document.getElementById("mytable").appendChild(tr);
+
+        ////////////////////////////////////////////////////-----------------------------------------
+
+        //////////////////////////////////////////////..............................................
+
+        const allTds = document.querySelectorAll(".cell2");
+        const allInputFields = document.querySelectorAll(".input-field");
+        const allSchoolsFields = document.querySelectorAll(".cell4");
+
+        // You can iterate over the resulting NodeList using forEach, for...of, etc.
+        allTds.forEach((cell, i) => {
+          if (cell.innerHTML === "الثلاثاء") {
+            allInputFields[i].value = "1001";
+            allSchoolsFields[i].innerHTML = "ديوان الادارة";
+          } else if (cell.innerHTML === "السبت" && index < 27) {
+            //cell.style.color = "red";
+            allInputFields[i].value = "1002";
+            allSchoolsFields[i].innerHTML = "أجازة";
+          }
+        });
+        /////////////////////////////////////////////.......................
+        const isMobileScreen =
+          window.matchMedia("(max-width: 768px)").matches;
+
+        if (isMobileScreen) {
+          // Code to run for mobile screens (viewport width <= 768px)
+          console.log("This is a mobile screen.");
+          document.getElementById("printer").style.backgroundColor =
+            "transparent";
+          document.getElementById("printer").style.color = "transparent";
+          document.getElementById("printer").style.zIndex = "0";
+          document.getElementById("printer").innerHTML = "";
+          document.getElementById("mytable").style.zIndex = "1000";
+        } else {
+          // Code to run for non-mobile screens (viewport width > 768px)
+          console.log("This is not a mobile screen.");
+        }
+
+        /////////////////////////////////////////////////////
+        td5.addEventListener("keyup", function () {
+          let code = td5.value;
+
+          switch (code) {
+            case "1":
+              td4.innerHTML = "6 أكتوبر الابتدائية";
+              break;
+            case "2":
+              td4.innerHTML = "6 أكتوبر الابتدائية - فصول إعدادي";
+              break;
+            case "3":
+              td4.innerHTML = "الإصلاح 241/2 تعليم أساسي - ابتدائي";
+              break;
+            case "4":
+              td4.innerHTML = "الإصلاح 241/2 تعليم أساسي - إعدادي";
+              break;
+
+            case "5":
+              td4.innerHTML = "الأربع عزب الجديدة الابتدائية";
+              break;
+
+            case "6":
+              td4.innerHTML = "البدوية الابتدائية";
+              break;
+            case "7":
+              td4.innerHTML = "البسلقون الابتدائية أ الصباحية ";
+              break;
+            case "8":
+              td4.innerHTML = "البسلقون الابتدائية ب المسائية ";
+              break;
+
+            case "9":
+              td4.innerHTML = "البسلقون الاعدادية ";
+              break;
+
+            case "10":
+              td4.innerHTML = "البوصة الابتدائية";
+              break;
+
+            case "11":
+              td4.innerHTML = "البوصة الابتدائية - فصول إعدادي";
+              break;
+
+            case "12":
+              td4.innerHTML = "التراس تعليم أساسي - ابتدائي";
+              break;
+
+            case "13":
+              td4.innerHTML = "التراس تعليم أساسي - إعدادي";
+              break;
+
+            case "14":
+              td4.innerHTML = "التمامة تعليم أساسي - ابتدائي";
+              break;
+
+            case "15":
+              td4.innerHTML = "التمامة تعليم أساسي - إعدادي";
+              break;
+
+            case "16":
+              td4.innerHTML = " الجزيرة صديقة الفتيات ";
+              break;
+
+            case "17":
+              td4.innerHTML = " الجلاد الإبتدائية ";
+              break;
+
+            case "18":
+              td4.innerHTML = " الجيل الواعد الخاصة لغات ";
+              break;
+            case "19":
+              td4.innerHTML = "الخراشي تعليم أساسي - ابتدائي";
+              break;
+            case "20":
+              td4.innerHTML = "الخراشي تعليم أساسي - إعدادي";
+              break;
+            case "21":
+              td4.innerHTML = "الخواجة الرسمية لغات";
+              break;
+            case "22":
+              td4.innerHTML = "الخواجة تعليم أساسي - ابدائي";
+              break;
+            case "23":
+              td4.innerHTML = "الدوار تعليم أساسي - ابتدائي";
+              break;
+            case "24":
+              td4.innerHTML = "الدوار تعليم أساسي - إعدادي";
+              break;
+            case "25":
+              td4.innerHTML = "الربعمائة تعليم أساسي - ابتدائي";
+              break;
+            case "26":
+              td4.innerHTML = "الربعمائة تعليم أساسي - إعدادي";
+              break;
+            case "27":
+              td4.innerHTML = "الروضة تعليم أساسي - ابتدائي";
+              break;
+            case "28":
+              td4.innerHTML = "الروضة تعليم أساسي - إعدادي";
+              break;
+            case "29":
+              td4.innerHTML = "الريادة الخاصة عربي";
+              break;
+            case "30":
+              td4.innerHTML = "الريادة الخاصة لغات";
+              break;
+            case "31":
+              td4.innerHTML = "السبعين تعليم أساسي  - ابتدائي"; //  td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- ابتدائي";
+              break;
+            case "32":
+              td4.innerHTML = "السبعين تعليم أساسي  - إعدادي"; //         td4.innerHTML = "السبعين تعليم أساسي بمركز كفرالدوار- إعدادي";
+              break;
+            case "33":
+              td4.innerHTML = "الستين الرسمية لغات - ابتدائي";
+              break;
+
+            case "34":
+              td4.innerHTML = "الستين تعليم أساسي - ابتدائي";
+              break;
+
+            case "35":
+              td4.innerHTML = "الستين تعليم أساسي - إعدادي";
+              break;
+
+            case "36":
+              td4.innerHTML = "السلام الابتدائية"; //     td4.innerHTML = "السلام الابتدائية بمركز كفرالدوار";
+              break;
+
+            case "37":
+              td4.innerHTML = "الشعيرة الكبرى تعليم أساسي - ابتدائي"; //   td4.innerHTML ="الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار - ابتدائي ";
+              break;
+
+            case "38":
+              td4.innerHTML = "الشعيرة الكبرى تعليم أساسي - إعدادي"; //    td4.innerHTML = "الشعيرة الكبرى تعليم أساسي بمركز كفرالدوار- إعدادي ";
+              break;
+
+            case "39":
+              td4.innerHTML = "الشنديدي الجديدة الابتدائية";
+              break;
+
+            case "40":
+              td4.innerHTML = "الشهيد الصافي رجب الابتدائية";
+              break;
+            case "41":
+              td4.innerHTML = "الشهيد ابراهيم مبارك الابتدائية";
+              break;
+
+            case "42":
+              td4.innerHTML = "الشهيد أحمد حامد خليفة الإعدادية";
+              break;
+
+            case "43":
+              td4.innerHTML = "الشهيد تامر محمد مصطفى محمد الإعدادية";
+              break;
+
+            case "44":
+              td4.innerHTML = "الشهيد سعيد سرحان تعليم أساسي - ابتدائي";
+              break;
+
+            case "45":
+              td4.innerHTML = "الشهيد سعيد سرحان تعليم أساسي - إعدادي";
+              break;
+            case "46":
+              td4.innerHTML = "الشهيد شحاتة عبدالفتاح الدسوقي - الابتدائية";
+              break;
+            case "47":
+              td4.innerHTML = "الشهيد عادل صلاح شرمانة - الابتدائية";
+              break;
+            case "48":
+              td4.innerHTML = "الشهيد فوزي ابراهيم - الابتدائية";
+              break;
+
+            case "49":
+              td4.innerHTML = "الشهيد كارم محمود يوسف - الإعدادية";
+              break;
+            case "50":
+              td4.innerHTML = "الشهيد محمد ابراهيم سلمان - الابتدائية";
+              break;
+
+            case "51":
+              td4.innerHTML = "الشهيد محمد سعد   تعليم أساسي-ابتدائي"; // "الشهيد محمد سعد عبد الواحد تعليم أساسي-ابتدائي";
+              break;
+            case "52":
+              td4.innerHTML = "الشهيد محمد سعد   تعليم أساسي-إعدادي"; // "الشهيد محمد سعد عبد الواحد تعليم أساسي-إعدادي";
+              break;
+
+            case "53":
+              td4.innerHTML = "الشهيد محمد عبدالمنعم - الابتدائية";
+              break;
+
+            case "54":
+              td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية"; //    td4.innerHTML = "الشهيد مصطفى كامل - الابتدائية بمركز كفرالدوار";
+              break;
+
+            case "55":
+              td4.innerHTML = "الصيادين تعليم أساسي - ابتدائي";
+              break;
+            case "56":
+              td4.innerHTML = "الصيادين تعليم أساسي - إعدادي";
+              break;
+            case "57":
+              td4.innerHTML = "الطاهرالصافي - الابتدائية";
+              break;
+            case "58":
+              td4.innerHTML = "الطاهرالصافي - الاعدادية";
+              break;
+            case "59":
+              td4.innerHTML = "الطرح تعليم أساسي - ابتدائي";
+              break;
+            case "60":
+              td4.innerHTML = "الطرح تعليم أساسي - إعدادي";
+              break;
+            case "61":
+              td4.innerHTML = "العاشر من رمضان تعليم أساسي - ابتدائي";
+              break;
+            case "62":
+              td4.innerHTML = "العاشر من رمضان تعليم أساسي - إعدادي";
+              break;
+            case "63":
+              td4.innerHTML = "العالي - الابتدائية";
+              break;
+            case "64":
+              td4.innerHTML = "العالي - الإعدادية";
+              break;
+            case "65":
+              td4.innerHTML = "العرقوب تعليم أساسي - ابتدائي";
+              break;
+            case "66":
+              td4.innerHTML = "العرقوب تعليم أساسي - إعدادي";
+              break;
+
+            case "67":
+              td4.innerHTML = "الفقي - الابتدائية بمركز كفرالدوار";
+              break;
+            case "68":
+              td4.innerHTML = "القاضي تعليم أساسي - ابتدائي";
+              break;
+            case "69":
+              td4.innerHTML = "القاضي تعليم أساسي - إعدادي";
+              break;
+            case "70":
+              td4.innerHTML = "القومية بأبيس تعليم أساسي - ابتدائي";
+              break;
+            case "71":
+              td4.innerHTML = "القومية بأبيس تعليم أساسي - إعدادي";
+              break;
+            case "72":
+              td4.innerHTML = "الكريون - الابتدائية "; //  td4.innerHTML = "الكريون - الابتدائية بمركز كفرالدوار";
+              break;
+            case "73":
+              td4.innerHTML = "الكريون - الإعدادية "; //  td4.innerHTML = "الكريون - الإعدادية بمركز كفرالدوار";
+              break;
+            case "74":
+              td4.innerHTML = "الكنايس الابتدائية المشتركة";
+              break;
+            case "75":
+              td4.innerHTML = "الكنايس الاعدادية";
+              break;
+            case "76":
+              td4.innerHTML = " إبراهيم شرف تعليم أساسي - ابتدائي";
+              break;
+            case "77":
+              td4.innerHTML = " إبراهيم شرف تعليم أساسي - إعدادي";
+              break;
+            case "78":
+              td4.innerHTML = "المصرية السويسرية الخاصة عربي";
+              break;
+            case "79":
+              td4.innerHTML = "المصرية السويسرية الخاصة لغات";
+              break;
+            case "80":
+              td4.innerHTML = "الملقة - الابتدائية";
+              break;
+            case "81":
+              td4.innerHTML = "الملقة - الإعدادية";
+              break;
+            case "82":
+              td4.innerHTML = "النبراوية - الابتدائية";
+              break;
+            case "83":
+              td4.innerHTML = "النبراوية  الابتدائية - فصول إعدادي";
+              break;
+            case "84":
+              td4.innerHTML = "الوحدة صديقة الفتيات";
+              break;
+
+            case "85":
+              td4.innerHTML = "الوسطانية الابتدائية أ";
+              break;
+            case "86":
+              td4.innerHTML = "الوسطانية الابتدائية ب";
+              break;
+            case "87":
+              td4.innerHTML = "الوكيل الابتدائية"; //   td4.innerHTML = "الوكيل الابتدائية بمركز كفرالدوار";
+              break;
+            case "88":
+              td4.innerHTML = "الوكيل الإعدادية "; //   td4.innerHTML = "الوكيل الإعدادية بمركز كفرالدوار";
+              break;
+
+            case "89":
+              td4.innerHTML = "الوكيل تعليم أساسي  - ابتدائي";
+              break;
+
+            case "90":
+              td4.innerHTML = "اليمينية تعليم أساسي - ابتدائي";
+              break;
+            case "91":
+              td4.innerHTML = "اليمينية تعليم أساسي - إعدادي";
+              break;
+
+            case "92":
+              td4.innerHTML = "أبوحسين الابتدائية";
+              break;
+            case "93":
+              td4.innerHTML = "أبوحسين الإعدادية";
+              break;
+
+            case "94":
+              td4.innerHTML = "أبوزيد خليفة تعليم أساسي - ابتدائي";
+              break;
+
+            case "95":
+              td4.innerHTML = "أبوزيد خليفة تعليم أساسي - إعدادي";
+              break;
+
+            case "96":
+              td4.innerHTML = "أبوغفيلة الابتدائية";
+              break;
+            case "97":
+              td4.innerHTML = "أبيس 1/5 تعليم مجتمعي";
+              break;
+            case "98":
+              td4.innerHTML = "أبيس 10/3 تعليم مجتمعي";
+              break;
+            case "99":
+              td4.innerHTML = "أبيس 3 الابتدائية";
+              break;
+            case "100":
+              td4.innerHTML = "أبيس 3 الإعدادية";
+              break;
+
+            case "101":
+              td4.innerHTML = "أبيس 3 الرسمية عربي";
+              break;
+            case "102":
+              td4.innerHTML = "أبيس 3 الرسمية لغات";
+              break;
+
+            case "103":
+              td4.innerHTML = "أبيس 5 الابتدائية";
+              break;
+
+            case "104":
+              td4.innerHTML = "أبيس 6 الابتدائية";
+              break;
+
+            case "105":
+              td4.innerHTML = "أبيس 6 الثانوية التجارية";
+              break;
+
+            case "106":
+              td4.innerHTML = "أبيس 6 الثانوية التجارية- فصول الخدمات";
+              break;
+
+            case "107":
+              td4.innerHTML = "أبيس 6 الثانوية المشتركة";
+              break;
+
+            case "108":
+              td4.innerHTML = "أبيس 6 الثانوية المشتركة - فصول الخدمات";
+              break;
+
+            case "109":
+              td4.innerHTML = "أبيس 8/3 فصل واحد";
+              break;
+
+            case "110":
+              td4.innerHTML = "أحمد أبوزهرة الابتدائية";
+              break;
+
+            case "111":
+              td4.innerHTML = "باباه الكبرى تعليم أساسي - ابتدائي";
+              break;
+            case "112":
+              td4.innerHTML = "باباه الكبرى تعليم أساسي - إعدادي";
+              break;
+
+            case "113":
+              td4.innerHTML = "بديوي  تعليم أساسي - ابتدائي";
+              break;
+            case "114":
+              td4.innerHTML = "بديوي  تعليم أساسي - إعدادي";
+              break;
+
+            case "115":
+              td4.innerHTML = " بردلة الابتدائية";
+              break;
+            case "116":
+              td4.innerHTML = "بركات الحمراء تعليم أساسي - ابتدائي";
+              break;
+            case "117":
+              td4.innerHTML = "بركات الحمراء تعليم أساسي - إعدادي";
+              break;
+
+            case "118":
+              td4.innerHTML = "بشير المختار تعليم أساسي - ابتدائي";
+              break;
+            case "119":
+              td4.innerHTML = "بشير المختار تعليم أساسي - إعدادي";
+              break;
+            case "120":
+              td4.innerHTML = "توفيق الهلباوي تعليم أساسي - ابتدائي";
+              break;
+            case "121":
+              td4.innerHTML = "توفيق الهلباوي تعليم أساسي - إعدادي";
+              break;
+            case "122":
+              td4.innerHTML = "جاب الله  تعليم أساسي - ابتدائي";
+              break;
+            case "123":
+              td4.innerHTML = "جاب الله  تعليم أساسي - إعدادي";
+              break;
+
+            case "124":
+              td4.innerHTML = "جلال أبوالحاج الابتدائية";
+              break;
+
+            case "125":
+              td4.innerHTML = "حسن محمد بيومي  الابتدائية";
+              break;
+            case "126":
+              td4.innerHTML = "حلمي إبراهيم عامر الإعدادية";
+              break;
+            case "127":
+              td4.innerHTML = "حليص  تعليم أساسي - ابتدائي";
+              break;
+            case "128":
+              td4.innerHTML = " حليص  تعليم أساسي - إعدادي";
+              break;
+            case "129":
+              td4.innerHTML = " حماد الصعيدي  تعليم أساسي - ابتدائي";
+              break;
+            case "130":
+              td4.innerHTML = " حماد الصعيدي  تعليم أساسي - إعدادي";
+              break;
+
+            case "131":
+              td4.innerHTML = " حميد عبدالرحمن  تعليم أساسي - ابتدائي";
+              break;
+            case "132":
+              td4.innerHTML = " حميد عبدالرحمن  تعليم أساسي - إعدادي";
+              break;
+            case "133":
+              td4.innerHTML = " حوض 7  تعليم أساسي - ابتدائي";
+              break;
+            case "134":
+              td4.innerHTML = " حوض 7  تعليم أساسي - إعدادي";
+              break;
+
+            case "135":
+              td4.innerHTML = " خالد الأقرع  تعليم أساسي - ابتدائي";
+              break;
+            case "136":
+              td4.innerHTML = " خالد الأقرع  تعليم أساسي - إعدادي";
+              break;
+
+            case "137":
+              td4.innerHTML = "خليل  تعليم مجتمعي";
+              break;
+
+            case "138":
+              td4.innerHTML = " زكي الابراشي  الابتدائية";
+              break;
+            case "139":
+              td4.innerHTML = " زكي الابراشي  الإعدادية";
+              break;
+
+            case "140":
+              td4.innerHTML = " زلط  تعليم أساسي - ابتدائي";
+              break;
+            case "141":
+              td4.innerHTML = " زلط  تعليم أساسي - إعدادي";
+              break;
+            case "142":
+              td4.innerHTML = "زهرة الابتدائية المشتركة";
+              break;
+            case "143":
+              td4.innerHTML = "زهرة الإعدادية";
+              break;
+            case "144":
+              td4.innerHTML = "سليمان بلبع  الابتدائية";
+              break;
+
+            case "145":
+              td4.innerHTML = "سيدي غازي  الابتدائية الجديدة";
+              break;
+
+            case "146":
+              td4.innerHTML = "سيدي غازي  الثانوية - فصول الخدمات ";
+              break;
+
+            case "147":
+              td4.innerHTML = "سيدي غازي  الثانوية المشتركة ";
+              break;
+
+            case "148":
+              td4.innerHTML = " سيف النصر  الابتدائية";
+              break;
+
+            case "149":
+              td4.innerHTML = " سيف النصر  الابتدائية - فصول إعدادي";
+              break;
+
+            case "150":
+              td4.innerHTML = " شارلو  الابتدائية";
+              break;
+
+            case "151":
+              td4.innerHTML = " شبل  الابتدائية";
+              break;
+
+            case "152":
+              td4.innerHTML = "شحاتة صديقة الفتيات";
+              break;
+
+            case "153":
+              td4.innerHTML = " شركة عواد  تعليم أساسي - ابتدائي";
+              break;
+            case "154":
+              td4.innerHTML = " شركة عواد  تعليم أساسي - إعدادي";
+              break;
+
+            case "155":
+              td4.innerHTML = " شفيق أبوصالح  الابتدائية";
+              break;
+
+            case "156":
+              td4.innerHTML = "  صدقي  تعليم أساسي - ابتدائي";
+              break;
+
+            case "157":
+              td4.innerHTML = "  صدقي  تعليم أساسي - إعدادي";
+              break;
+
+            case "158":
+              td4.innerHTML = "  صدقي سنيحة  تعليم أساسي - ابتدائي";
+              break;
+            case "159":
+              td4.innerHTML = "صدقي سنيحة  تعليم أساسي - إعدادي";
+              break;
+            case "160":
+              td4.innerHTML = "صيدناوي الحمراء  تعليم أساسي - ابتدائي";
+              break;
+            case "161":
+              td4.innerHTML = "صيدناوي الحمراء  تعليم أساسي - إعدادي";
+              break;
+            case "162":
+              td4.innerHTML = " صيدناوي الوسطى  الابتدائية";
+              break;
+            case "163":
+              td4.innerHTML = "صيدناوي الوسطى  الابتدائية - فصول إعدادي";
+              break;
+            case "164":
+              td4.innerHTML = "صيدناوي الكبرى  تعليم أساسي - ابتدائي";
+              break;
+            case "165":
+              td4.innerHTML = "صيدناوي الكبرى  تعليم أساسي - إعدادي";
+              break;
+
+            case "166":
+              td4.innerHTML = "صيرة الإعدادية";
+              break;
+            case "167":
+              td4.innerHTML = "  ضيف  الابتدائية";
+              break;
+
+            case "168":
+              td4.innerHTML = "  عاداه الغربية  الابتدائية";
+              break;
+
+            case "169":
+              td4.innerHTML = "عباس سيد أحمد الإعدادية";
+              break;
+
+            case "170":
+              td4.innerHTML = "عبدالحميد عزت زعتر  تعليم أساسي - ابتدائي";
+              break;
+
+            case "171":
+              td4.innerHTML = "عبدالحميد عزت زعتر  تعليم أساسي - إعدادي";
+              break;
+
+            case "172":
+              td4.innerHTML = " عبدالصمد النمر  الابتدائية - ابتدائي";
+              break;
+
+            case "173":
+              td4.innerHTML = "عبدالعزيز حبشي  الابتدائية";
+              break;
+            case "174":
+              td4.innerHTML = "عبدالعزيز حبشي  الابتدائية - فصول إعدادي";
+              break;
+
+            case "175":
+              td4.innerHTML = "عبدالقادر خليف  تعليم أساسي - إعدادي";
+              break;
+
+            case "176":
+              td4.innerHTML = "عبدالوهاب الخراشي  الابتدائية";
+              break;
+
+            case "177":
+              td4.innerHTML = "عبدالوهاب الخراشي  الإعدادية";
+              break;
+
+            case "178":
+              td4.innerHTML = "عزب نوبار الابتدائية المشتركة";
+              break;
+
+            case "179":
+              td4.innerHTML = "عزبة البنك  تعليم أساسي - ابتدائي";
+              break;
+
+            case "180":
+              td4.innerHTML = "عزبة البنك  تعليم أساسي - إعدادي";
+              break;
+
+            case "181":
+              td4.innerHTML = "عمر الحريري صديقة الفتيات";
+              break;
+
+            case "182":
+              td4.innerHTML = "عنتر درويش  الابتدائية المشتركة";
+              break;
+
+            case "183":
+              td4.innerHTML = " عوض التبي  تعليم أساسي - ابتدائي";
+              break;
+            case "184":
+              td4.innerHTML = " عوض التبي  تعليم أساسي - إعدادي";
+              break;
+
+            case "185":
+              td4.innerHTML = " فصول الحمراء  الإعدادية";
+              break;
+
+            case "186":
+              td4.innerHTML = " فصول كرم 4  الإعدادية";
+              break;
+
+            case "187":
+              td4.innerHTML = " فصول مرجان  الإعدادية";
+              break;
+            case "188":
+              td4.innerHTML = " فصول منشأة ناصر  الإعدادية";
+              break;
+            case "189":
+              td4.innerHTML = " فصول هلل  الإعدادية";
+              break;
+
+            case "190":
+              td4.innerHTML = " قومبانية أبوقير  الابتدائية";
+              break;
+            case "191":
+              td4.innerHTML = " قومبانية أبوقير  الإعدادية المشتركة";
+              break;
+            case "192":
+              td4.innerHTML = " قومبانية لوقين  الابتدائية";
+              break;
+            case "193":
+              td4.innerHTML = " قومبانية لوقين  الإعدادية";
+              break;
+
+            case "194":
+              td4.innerHTML = "كدوة الرويعي  فصل واحد ";
+              break;
+
+            case "195":
+              td4.innerHTML = "كدوة الكريون  تعليم أساسي - ابتدائي";
+              break;
+            case "196":
+              td4.innerHTML = "كدوة الكريون  تعليم أساسي - إعدادي";
+              break;
+            case "197":
+              td4.innerHTML = "كرم 4  الابتدائية";
+              break;
+
+            case "198":
+              td4.innerHTML = " كناكي صديقة الفتيات";
+              break;
+
+            case "199":
+              td4.innerHTML = "كوم الطرفاية الابتدائية";
+              break;
+
+            case "200":
+              td4.innerHTML = "كوم الطرفاية الإعدادية";
+              break;
+            case "201":
+              td4.innerHTML = "كوم النص الابتدائية";
+              break;
+            case "202":
+              td4.innerHTML = "كوم النص الإعدادية";
+              break;
+            case "203":
+              td4.innerHTML = " كوم النص صديقة الفتيات";
+              break;
+
+            case "204":
+              td4.innerHTML = "كوم دفشو الابتدائية القديمة";
+              break;
+
+            case "205":
+              td4.innerHTML = "كوم مازن  تعليم أساسي - ابتدائي";
+              break;
+            case "206":
+              td4.innerHTML = "كوم مازن  تعليم أساسي - إعدادي";
+              break;
+            case "207":
+              td4.innerHTML = "مارون  تعليم أساسي - ابتدائي";
+              break;
+            case "208":
+              td4.innerHTML = "مارون  تعليم أساسي - إعدادي";
+              break;
+            case "209":
+              td4.innerHTML = "محطة الكهرباء الابتدائية "; // td4.innerHTML = "محطة الكهرباء الابتدائية بمركز كفرالدوار";
+              break;
+            case "210":
+              td4.innerHTML = "محطة الكهرباء الإعدادية "; // td4.innerHTML = "محطة الكهرباء الإعدادية بمركز كفرالدوار";
+              break;
+            case "211":
+              td4.innerHTML = " محمد علي عودة الإعدادية";
+              break;
+
+            case "212":
+              td4.innerHTML = "مرتانة  تعليم أساسي - ابتدائي";
+              break;
+            case "213":
+              td4.innerHTML = "مرتانة  تعليم أساسي - إعدادي";
+              break;
+            case "214":
+              td4.innerHTML = " مرجان الابتدائية";
+              break;
+            case "215":
+              td4.innerHTML = "معتوق  تعليم أساسي - ابتدائي";
+              break;
+            case "216":
+              td4.innerHTML = "معتوق  تعليم أساسي - إعدادي";
+              break;
+            case "217":
+              td4.innerHTML = "معمل القزاز البلد الجديدة";
+              break;
+            case "218":
+              td4.innerHTML = "معمل القزاز البلد الابتدائية";
+              break;
+            case "219":
+              td4.innerHTML = "معمل القزاز البلد الإعدادية";
+              break;
+            case "220":
+              td4.innerHTML = "معمل القزاز البلد الثانوية المشتركة";
+              break;
+            case "221":
+              td4.innerHTML =
+                "معمل القزاز البلد الثانوية المشتركة - فصول الخدمات";
+              break;
+            case "222":
+              td4.innerHTML = "  منشأة بسيوني الابتدائية";
+              break;
+            case "223":
+              td4.innerHTML = "منشأة بسيوني  تعليم أساسي - ابتدائي";
+              break;
+            case "224":
+              td4.innerHTML = "منشأة بسيوني  تعليم أساسي - إعدادي";
+              break;
+            case "225":
+              td4.innerHTML = "  منشأة عامر الابتدائية";
+              break;
+            case "226":
+              td4.innerHTML = "منشأة ناصر الابتدائية بالكريون";
+              break;
+            case "227":
+              td4.innerHTML = "منشأة أبوقير  تعليم أساسي - ابتدائي";
+              break;
+            case "228":
+              td4.innerHTML = "منشأة أبوقير  تعليم أساسي - إعدادي";
+              break;
+
+            case "229":
+              td4.innerHTML = "  منشأة بلبع الابتدائية";
+              break;
+            case "230":
+              td4.innerHTML = "منشأة بولين  تعليم أساسي - ابتدائي";
+              break;
+            case "231":
+              td4.innerHTML = "منشأة بولين  تعليم أساسي - إعدادي";
+              break;
+            case "232":
+              td4.innerHTML = "منشأة يونس الابتدائية";
+              break;
+            case "233":
+              td4.innerHTML = "منصور الشنديدي الابتدائية";
+              break;
+            case "234":
+              td4.innerHTML = " نجع الشيخ عون  تعليم أساسي - ابتدائي";
+              break;
+            case "235":
+              td4.innerHTML = " نجع الشيخ عون  تعليم أساسي - إعدادي";
+              break;
+            case "236":
+              td4.innerHTML = " هشام فرج شهاب الابتدائية";
+              break;
+            case "237":
+              td4.innerHTML = " هلل الابتدائية";
+              break;
+
+            /////////////////(new series of code)///////////////////////
+            case "1001":
+              td4.innerHTML = "ديوان الادارة";
+              break;
+
+            case "1002":
+              td4.innerHTML = "أجازة";
+              break;
+
+            case "1003":
+              td4.innerHTML = "ادارة بندر كفرالدوار";
+              break;
+            case "1004":
+              td4.innerHTML = "ادارة المحمودية";
+              break;
+            case "1005":
+              td4.innerHTML = "ادارة ادكو";
+              break;
+            case "1006":
+              td4.innerHTML = "ادارة رشيد";
+              break;
+            case "1007":
+              td4.innerHTML = "المديرية المركزية";
+              break;
+            case "1008":
+              td4.innerHTML = "مأمورية";
+              break;
+            case "1009":
+              td4.innerHTML = "مسابقة";
+              break;
+            case "1010":
+              td4.innerHTML = "معرض";
+              break;
+            case "1011":
+              td4.innerHTML = "المعسكر الكشفي";
+              break;
+            case "1012":
+              td4.innerHTML = "جهات لا تتبع التعليم";
+              break;
+            case "1013":
+              td4.innerHTML = "ديوان المحافظة";
+              break;
+            case "1014":
+              td4.innerHTML = "ديوان الوزارة";
+              break;
+            case "1015":
+              td4.innerHTML = "كنترول";
+              break;
+            case "1016":
+              td4.innerHTML = "لجنة امتحانات";
+              break;
+            case "1017":
+              td4.innerHTML = "لجنة إدارية";
+              break;
+            case "1018":
+              td4.innerHTML = "المطبعة السرية";
+              break;
+            case "1019":
+              td4.innerHTML = "المعرض";
+              break;
+            case "1020":
+              td4.innerHTML = "مركز الموهوبين والتعليم الذكي";
+              break;
+            case "1021":
+              td4.innerHTML = "مركز إعداد قادة";
+              break;
+            case "1022":
+              td4.innerHTML = "مركز توزيع الأسئلة";
+              break;
+            case "1023":
+              td4.innerHTML = "رعاية الطلاب";
+              break;
+            case "1024":
+              td4.innerHTML = "تدريب";
+              break;
+            case "1025":
+              td4.innerHTML = "تدريب عملي";
+              break;
+            case "1026":
+              td4.innerHTML = "المدرسة الأصلية";
+              break;
+            case "1027":
+              td4.innerHTML = "إجازة نصف الوقت";
+              break;
+
+            /////////////////(new series of code)
+
+            default:
+              td4.innerHTML = "لم تكود بعد";
+              break;
+          }
+        });
+      }
+
+      if (superinput.value.length > 0) {
+        document.getElementById("sir").innerHTML = superinput.value;
+        return superinput.value;
+      }
+
+      if (yearinput.value.length === 4) {
+        year = parseInt(yearinput.value);
+        document.getElementById("year").innerHTML = year;
+        return year;
+      }
+
+      ////////////////// functions///////////////////////////////
+
+      ///////////////////////////////////////////////////////////
+
+      ///////////////////////////////////////////////////
+
+      ///////////////////////////////////////////////////
+    });
+    //***************************************************************** */
+    //////// the year of the plan
+    if (year === "2026") {
+      switch (monthn) {
+        case 2:
+          daysNamesOrder = [
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+          ];
+          arabic_month_name = "فبراير";
+          allMonthDaysNumbers = [
+            1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+            22, 23, 24, 25, 26, 28,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+          break;
+
+        case 3:
+          daysNamesOrder = [
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+          ];
+          arabic_month_name = "مارس";
+          allMonthDaysNumbers = [
+            1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+            22, 23, 24, 25, 26, 28, 29, 30, 31,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 4:
+          arabic_month_name = "أبريل";
+          daysNamesOrder = [
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
+            22, 23, 25, 26, 27, 28, 29, 30,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+          tr.appendChild(td1);
+
+          break;
+
+        case 5:
+          arabic_month_name = "مايو";
+
+          daysNamesOrder = [
+            "السبت",
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+          ];
+
+          allMonthDaysNumbers = [
+            2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21,
+            23, 24, 25, 26, 27, 28, 30, 31,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 6:
+          arabic_month_name = "يونيو";
+          daysNamesOrder = [
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+            "الأحد",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 20, 21,
+            22, 23, 24, 25, 27, 28, 29, 30,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 7:
+          arabic_month_name = "يوليو";
+          daysNamesOrder = [
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
+            22, 23, 25, 26, 27, 28, 29, 30,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 8:
+          arabic_month_name = "أغسطس";
+          daysNamesOrder = [
+            "السبت",
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20,
+            22, 23, 24, 25, 26, 27, 29, 30, 31,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 9:
+          arabic_month_name = "سبتمبر";
+          daysNamesOrder = [
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+            "الأحد",
+            "الاثنين",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21,
+            22, 23, 24, 26, 27, 28, 29, 30,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 10:
+          arabic_month_name = "أكتوبر";
+          daysNamesOrder = [
+            "الخميس",
+            "السبت",
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21,
+            22, 24, 26, 27, 28, 29, 30, 31,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 11:
+          arabic_month_name = "نوفمبر";
+          daysNamesOrder = [
+            "الأحد",
+            "الاثنين",
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21,
+            22, 23, 24, 25, 26, 28, 29, 30,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        case 12:
+          arabic_month_name = "ديسمبر";
+          daysNamesOrder = [
+            "الثلاثاء",
+            "الأربعاء",
+            "الخميس",
+            "السبت",
+            "الأحد",
+            "الاثنين",
+          ];
+
+          allMonthDaysNumbers = [
+            1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21,
+            22, 23, 24, 26, 27, 28, 29, 30, 31,
+          ];
+          allMonthDaysNames = [
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+            ...daysNamesOrder,
+          ];
+          month_days = allMonthDaysNumbers.length;
+
+          break;
+
+        default:
+          monthn = 2;
+          arabic_month_name = "فبراير";
+          break;
+      }
+      document.getElementById("month").innerHTML = arabic_month_name;
+    }
+
+    let masterInfo = document.createElement("span");
+    masterInfo.setAttribute("id", "masterInfo");
+    masterInfo.style.color = "black";
+    masterInfo.style.position = "fixed";
+    masterInfo.style.width = "fit-content";
+    masterInfo.style.right = "5" + "%";
+    masterInfo.style.top = "0.3" + "%";
+    document.body.appendChild(masterInfo);
+    // code to prevent reload freely ////////////////////////////////////
+    window.addEventListener("beforeunload", function (e) {
+      // إلغاء الحدث كما هو محدد في القياسات
+      e.preventDefault();
+
+      // بعض المتصفحات تتطلب تعيين قيمة لـ returnValue
+      e.returnValue = "";
+    });
+    //////////////////////////////////////////////////////////////////
+    //   حفظ البيانات عند التغيير
+    //   localStorage.setItem('saved_data', inputField.value);
+
+    document.getElementById("tick").onclick = () => {
+      document.getElementById("printer").classList.add("printer-shrink");
+    };
+
+    function printPlan() {
+      document.getElementById("printbtn").disabled = true;
+      document.getElementById("printbtn").style.backgroundColor =
+        "rgba(12,199,12,.3)";
+      document.getElementById("printbtn").style.color = "rgba(1,101,1,.6)";
+      document.getElementById("printbtn").style.rotate = "0" + "deg";
+      document.getElementById("activeprintbtn").style.transform =
+        "scale(1.1)";
+      document.getElementById("printbtn").style.transform = "scale(1.1)";
+      document.getElementById("printer").style.width = "32" + "%";
+      ///////////////////////////////////////////////////////////////////////////
+      const allTds = document.querySelectorAll("tr");
+
+      // You can iterate over the resulting NodeList using forEach, for...of, etc.
+      allTds.forEach((td) => {
+        td.style.paddingBottom = "1" + "px";
+        td.style.paddingTop = "1" + "px";
+      });
+      /////////////////////////////////////////////////////////////////////////////////
+      window.print();
+    }
+
+    function btnDisable(element, status) {
+      document.getElementById(element).disabled = `${status}`;
+    }
+
+    function activebtn() {
+      document.getElementById("printbtn").disabled = false;
+      document.getElementById("printbtn").style.backgroundColor =
+        "rgba(190,12,12,.9)";
+      document.getElementById("printbtn").style.color = "rgb(221,219,212)";
+      document.getElementById("printbtn").style.rotate = "45" + "deg";
+      document.getElementById("activeprintbtn").style.transform =
+        "scale(1.2)";
+      document.getElementById("printbtn").style.transform = "scale(1.5)";
+      document.getElementById("printbtn").style.zIndex = "123";
+      document.getElementById("printer").style.width = "200" + "px";
+
+      setTimeout(() => {
+        document.getElementById("printbtn").disabled = true;
+        document.getElementById("printbtn").style.backgroundColor =
+          "rgba(12,199,12,.3)";
+        document.getElementById("printbtn").style.color = "rgba(1,101,1,.6)";
+        document.getElementById("printbtn").style.rotate = "0" + "deg";
+        document.getElementById("activeprintbtn").style.transform =
+          "scale(1.1)";
+        document.getElementById("printbtn").style.transform = "scale(1.1)";
+        document.getElementById("printer").style.width = "32" + "%";
+      }, 10000);
+    }
+
+    addEventListener("keyup", (e) => {
+      if (e.key == "Escape") {
+        document.getElementById("printbtn").disabled = false;
+        document.getElementById("printbtn").style.backgroundColor =
+          "rgba(190,12,12,.9)";
+        document.getElementById("printbtn").style.color = "rgb(221,219,212)";
+        document.getElementById("printbtn").style.rotate = "45" + "deg";
+        document.getElementById("activeprintbtn").style.transform =
+          "scale(1.2)";
+        document.getElementById("printbtn").style.transform = "scale(1.5)";
+        document.getElementById("printbtn").style.zIndex = "123";
+        document.getElementById("printer").style.width = "200" + "px";
+        setTimeout(() => {
+          document.getElementById("printbtn").disabled = true;
+          document.getElementById("printbtn").style.backgroundColor =
+            "rgba(12,199,12,.3)";
+          document.getElementById("printbtn").style.color =
+            "rgba(1,101,1,.6)";
+          document.getElementById("printbtn").style.rotate = "0" + "deg";
+          document.getElementById("activeprintbtn").style.transform =
+            "scale(1.1)";
+          document.getElementById("printbtn").style.transform = "scale(1.1)";
+          document.getElementById("printer").style.width = "32" + "%";
+        }, 10000);
+      } else if (e.key == "Enter") {
+        printPlan();
+      } else if (e.key == "ArrowRight") {
+        moveFocus(1);
+      } else if (e.key == "ArrowLeft") {
+        moveFocus(-1);
+      }
+    });
+
+    let myinfoopener = document.getElementById("inial");
+    myinfoopener.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      myinfocloser.parentNode.style.display = "flex";
+    });
+
+    let myinfocloser = document.getElementById("information");
+    myinfocloser.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      myinfocloser.parentNode.style.display = "none";
+    });
+  </script>
+</body>
+
+</html>
