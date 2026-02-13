@@ -816,26 +816,30 @@
                 border: unset;
                 margin: auto;
                 align-items: center;
-                background: linear-gradient(
-                    to left,
-                    rgb(123, 156, 123),
-                    rgb(54, 73, 54),
-                    rgb(21, 29, 21)
-                );
-                box-shadow:inset 2px 4px 6px 8px rgba(21, 29, 21, 0.658);
+                background: linear-gradient(to left,
+                        rgb(123, 156, 123),
+                        rgb(54, 73, 54),
+                        rgb(21, 29, 21));
+                box-shadow: inset 2px 4px 6px 8px rgba(21, 29, 21, 0.658);
             }
-            #my_switcher_btn_Ibra{
-                right:50% !important;
+
+            #my_switcher_btn_Ibra,
+            #my_switcher_btn_Ema,
+            #my_switcher_btn_Han,
+            #my_switcher_btn_Gha,
+            #my_switcher_btn_Aml {
+                right: 50% !important;
             }
-            #myHolder{
-                width:100%;
-                min-width:100%;
-                max-width:100%;
-                background:linear-gradient(to top,
-                  grey,
-                 #0c291c,
-                 #081d14,
-                 #000)  !important;
+
+            #myHolder {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                background: linear-gradient(to top,
+                        grey,
+                        #0c291c,
+                        #081d14,
+                        #000) !important;
                 color: #55724c;
                 text-align: left !important;
                 padding-bottom: 2px !important;
@@ -843,23 +847,26 @@
 
             .ourFathers,
             header {
-                width: 100% ;
-                 border: unset;
+                width: 100%;
+                border: unset;
             }
-            .ourFathers{
+
+            .ourFathers {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 font-size: 22px;
                 border: none;
-                    border-top: 2px solid #112708 !important;
-                    border-bottom: 2px solid #112708 !important;
-                span{
+                border-top: 2px solid #112708 !important;
+                border-bottom: 2px solid #112708 !important;
+
+                span {
                     border: none;
                     font-size: 22px;
                 }
             }
-            .wrapper{
+
+            .wrapper {
                 border-color: transparent !important;
             }
 
@@ -1802,7 +1809,7 @@
             let ladle = document.createElement("header");
             ladle.id = "myHolder";
             ladle.style.zIndex = 900;
-            ladle.innerText="";
+            ladle.innerText = "";
             myBox.appendChild(ladle);
 
             // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
