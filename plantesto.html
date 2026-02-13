@@ -828,7 +828,20 @@
             #my_switcher_btn_Han,
             #my_switcher_btn_Gha,
             #my_switcher_btn_Aml {
-                right: 50% !important;
+                top:36px !important;
+                right: 47.5% !important;
+                clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+                background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
+            }
+            #my_switcher_btn_Ibra:hover,
+            #my_switcher_btn_Ema:hover,
+            #my_switcher_btn_Han:hover,
+            #my_switcher_btn_Gha:hover,
+            #my_switcher_btn_Aml:hover{
+                clip-path: none;
+                background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
+                border-radius:50%;
+                cursor:pointer;
             }
 
             #myHolder {
