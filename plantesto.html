@@ -822,7 +822,7 @@
                     rgb(54, 73, 54),
                     rgb(21, 29, 21)
                 );
-                box-shadow:inset 2px 8px 10px 12px rgb(21, 29, 21);
+                box-shadow:inset 2px 8px 10px 12px rgba(21, 29, 21, 0.658);
             }
             #my_switcher_btn_Ibra{
                 right:50% !important;
@@ -831,6 +831,8 @@
                 width:100%;
                 min-width:100%;
                 max-width:100%;
+                background-color: #0c130a;
+                color: #3b5233;
             }
 
             .ourFathers,
@@ -840,7 +842,7 @@
             }
             .ourFathers{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 font-size: 22px;
                 border: none;
@@ -1794,6 +1796,7 @@
             let ladle = document.createElement("header");
             ladle.id = "myHolder";
             ladle.style.zIndex = 900;
+            ladle.innerText="X";
             myBox.appendChild(ladle);
 
             // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
