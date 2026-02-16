@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="dollar">CURRENCY</title>
+<style>
+           *{
+             font-weight:bold;
+             text-align:center;
+             color:white;
+             margin:0;
+             padding:0;
+    }
+    body{
+             background:linear-gradient(#123,#987,#980);
+             height:100vh;
+             text-align:center;
+             display:flex-column;
+    }
+    span{
+             color:powderblue;
+             font-size:40px;
+             font-weight:bold;
+             text-shadow:2px 2px 2px black;
+    }
+    .price1{
+            font-size:35px;
+            opacity:1;
+            margin-left:1px;
+            margin:auto;
+            display:block;
+            padding:16px;
+            color:black;
+            width:550px;
+            background:linear-gradient(to left,black,silver,navy,red,orange,yellow,gold,yellow,silver);
+     }
+     .price1 > input{
+            color:white;
+            width:500px;
+            font-size:55px;
+            background:black;
+            margin-left: 0px;
+     }
+     .span-master{
+            color:orange;
+            background:linear-gradient(gold,yellow,silver);
+     }
+    .price2{
+            opacity:1;
+            margin:auto;
+            display:flex;
+            justify-content: space-between;
+            padding:2px;
+            color:black;
+            width:fit-content;
+            background:linear-gradient(gold,yellow,silver);
+           box-shadow: 10px 10px 10px 10px black;
+     }
+
+    .egp{
+          color:powderblue;
+    }
+    .egp input{
+          color:navy;
+          padding:1px;
+          margin:1px;
+          background:silver;
+          width:150px;
+          height:50px;
+          font-size:20px;
+          background:white;
+          border:none;
+          outline:none;
+          border:1px outset navy;
+    }
+    .sar{
+          color:lightgreen;
+    }
+    .sar input{
+          color:darkgreen;
+          padding:1px;
+          margin:1px;
+          background:silver;
+          width:150px;
+          height:50px;
+          font-size:20px;
+          background:white;
+          border:none;
+          outline:none;
+          border:1px outset navy;
+    }
+    .eur input{
+          color:darkgreen;
+          padding:1px;
+          margin:1px;
+          background:silver;
+          width:150px;
+          height:50px;
+          font-size:20px;
+          background:white;
+          border:none;
+          outline:none;
+          border:1px outset navy;
+    }
+    #controls{
+      background:linear-gradient(to top,#111,#777,#349,#934,#963,#865,gold,yellow,#222);
+      color:silver;
+      margin:10px auto;
+      display:block;
+      padding:16px;
+      color:black;
+      width:500px;
+      height:100px;
+      opacity:.6;
+    }
+    #addy{
+      color:black;
+      font-size: 80px;
+      text-align: center;
+      align-items: baseline;
+      justify-content: center;
+      border-radius: 12%;
+      width:100px;
+      height:100px;
+      box-shadow: 5px 7px 10px 12px black;
+      transition: .2s;
+      padding: 12px;
+      margin-left: 22px;
+      cursor: pointer;
+    }
+    #suby{
+      color:black;
+      font-size: 80px;
+      text-align: center;
+      align-items: baseline;
+      justify-content: center;
+      border-radius: 12%;
+      width:100px;
+      height:100px;
+      box-shadow: 5px 7px 10px 12px black;
+      transition: .2s;
+      padding: 12px;
+      margin-left: 22px;
+      cursor: pointer;
+    }
+    #suby:hover, #addy:hover{
+      box-shadow: 1px 1px 1px 1px black;
+      transition: .3s;
+      cursor:pointer;
+    }
+    #show{
+      display:flex;
+      width:500px;
+      height:100px;
+      margin:1px auto;
+      z-index:100;
+      opacity:1;
+      color:black;
+      font-size: 50px;
+      justify-content: space-between;
+      text-shadow:2px 2px 2px black;
+    }
+    #urope{
+      background: red;
+      width:150px;
+      height:100px;
+    }
+    #miser{
+      background: green;
+      width:150px;
+      height:100px;
+    }
+    #saudi{
+      background:blue;
+      width:150px;
+      height:100px;
+    }
+    #urope > h1, #miser > h1, #saudi > h1{
+      color:white;
+      display:none;
+    }
+    #urope > button,#miser > button,#saudi > button{
+      margin:10px auto;
+      color:#999;
+      width:150px;
+      height:100px;
+      cursor:pointer;
+      font-size: 50px;
+      transition:5.5s;
+      background:linear-gradient(rgba(123,32,143,0.4),rgba(123,132,243,0.6),rgba(123,232,143,0.8));
+    }
+ #urope > button:hover,#miser > button:hover,#saudi > button:hover{
+      background:linear-gradient(rgba(123,32,43,0.1),rgba(123,32,43,0.2),rgba(123,32,43,0.3));
+      transition:.5s;
+    }
+    #master{
+      text-shadow:4px 4px 4px black;
+      width:100%;
+      height:100px;
+      background:linear-gradient(to top, rgba(0,0,0,0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    }
+   #marq{
+      background:linear-gradient(to top, rgba(0,0,0,0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    }
+
+</style>
+</head>
+<body>
+  <h1>CURRENCY Converter</h1>
+   <div class="price1">
+              <h1 id="master">1</h1><br>
+            <input type="text" class="amount" value=1 maxlength="9" min=1 max=100000000 /><span >&#36;</span>
+   </div>
+   <div class="price2">
+      <div class="eur"><input /><span >&#x20AC;</span></div>
+      <div class="egp"><input /><span>E£</span></div>
+      <div class="sar"><input /><span>SR</span></div>
+   </div>
+   <div id="controls">
+      <button id="suby">-</button><button id="addy">+</button>
+   </div>
+   <div id="show">
+      <div id="urope"><h1 id="uropehead">12</h1><button id="urobtn">URO</button></div>
+      <div id="miser"><h1 id="miserhead">12</h1><button id="egybtn">EGY</button></div>
+      <div id="saudi" ><h1 id="saudihead">12</h1><button id="sarbtn">SR</button></div>
+   </div>
+
+<script>
+      let bell = new Audio("coins.wav");
+      let master = document.querySelector("#master"),
+          urobtn = document.querySelector("#urobtn"),
+          egybtn = document.querySelector("#egybtn"),
+          sarbtn = document.querySelector("#sarbtn");
+      master.style.visibility='hidden';
+      let headU = document.querySelector("#uropehead"),
+          headE = document.querySelector("#miserhead"),
+          headS = document.querySelector("#saudihead");
+      let amount = document.querySelector(".amount");
+            amount.length=9;
+      let addy = document.querySelector("#addy");
+      let suby = document.querySelector("#suby");
+      amount.disabled = false;
+function addMe(){
+        master.style.visibility='hidden';
+        amount.disabled =true;
+        if(amount.value <100000000){
+          amount.value = Math.round(amount.value )+ 1;
+          bell.play();
+        }else{
+          alert("WE CANT COUNT MORE THAN 100000000 !");
+        }
+
+ }
+     function subMe(){
+       master.style.visibility='hidden';
+         amount.disabled =true;
+       if(amount.value >1){
+         amount.value = Math.round(amount.value )- 1;
+       }else{
+         alert("ZERO OR NEGATIVE NUMBERS CAN NOT BE ALLOWED!");
+       }
+
+ }
+      //https://currencyfreaks.com/
+      fetch("https://api.currencyfreaks.com/latest?apikey=35fe5593a6ac4a7a96ac37cb47f90f84")
+         .then((result)=>{
+         let myData = result.json();
+         return myData;
+     })
+         .then((currency)=>{
+          let dollar = document.querySelector("#dollar");
+          let dollar_vs_egp=0;
+
+          let eurPrice = document.querySelector(".eur input");
+          let egpPrice = document.querySelector(".egp input");
+          let sarPrice = document.querySelector(".sar input");
+
+          eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+          egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+          sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+          headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+          headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+          headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+
+          amount.addEventListener("change",()=>{
+                        master.style.visibility='hidden';
+                         amount.length=9;
+                        dollar_vs_egp = Math.round(amount.value * currency.rates["EGP"]);
+                        eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        dollar.textContent = amount.value+' $ equals '+dollar_vs_egp +' E£';
+          });
+          addy.addEventListener("click",()=>{
+
+                        addMe()
+                        dollar_vs_egp = Math.round(amount.value * currency.rates["EGP"]);
+                        eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        dollar.textContent = amount.value+' $ equals '+dollar_vs_egp +' E£';
+          });
+          suby.addEventListener("click",()=>{
+                        subMe()
+                        dollar_vs_egp = Math.round(amount.value * currency.rates["EGP"]);
+                        eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        dollar.textContent = amount.value+' $ equals '+dollar_vs_egp +' E£';
+          });
+          addEventListener("keypress",(e)=>{
+                       master.style.visibility='hidden';
+                       var x = e.charCode;
+                       if(x === 43 && amount.value <= 99999999){
+                        amount.disabled =true;
+                        amount.value++;
+                        bell.play();
+                        dollar_vs_egp = Math.round(amount.value * currency.rates["EGP"]);
+                        eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        dollar.textContent = amount.value+' $ equals '+dollar_vs_egp +' E£';
+
+                      }else if(x === 45 && amount.value > 1 ){
+                        amount.value--;
+                        dollar_vs_egp = Math.round(amount.value * currency.rates["EGP"]);
+                        eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        headU.textContent = eurPrice.value = Math.round(amount.value * currency.rates["EUR"]);
+                        headE.textContent = egpPrice.value = Math.round(amount.value * currency.rates["EGP"]);
+                        headS.textContent = sarPrice.value = Math.round(amount.value * currency.rates["SAR"]);
+                        dollar.textContent = amount.value+' $ equals '+dollar_vs_egp +' E£';
+                     }
+                     if(amount.value < 2){
+                        alert("ZERO OR NEGATIVE NUMBERS CAN NOT BE ALLOWED!");
+
+                    }
+                   if(amount.value > 99999999){
+                        alert("WE CANT COUNT MORE THAN 100000000 !");
+
+                    }
+          });
+          urobtn.addEventListener("click",()=>{
+            master.style.visibility='visible';
+            //master.textContent = eurPrice.value +' eur';
+            master.innerHTML = ' <marquee id="marq" behavior="slide" width="400" height="100">'+eurPrice.value +'<span style="color:gold;font-size:70px"> eur</span>'+'</marquee>';
+          });
+          egybtn.addEventListener("click",()=>{
+            master.style.visibility='visible';
+            //master.textContent = egpPrice.value +' E£';
+            master.innerHTML = ' <marquee id="marq" behavior="slide" width="400" height="100">'+egpPrice.value +'<span style="color:gold;font-size:70px"> E£</span>'+'</marquee>';
+          });
+          sarbtn.addEventListener("click",()=>{
+            master.style.visibility='visible';
+            //master.textContent = sarPrice.value +' SR';
+            master.innerHTML = ' <marquee id="marq" behavior="slide" width="400" height="100">'+sarPrice.value +'<span style="color:gold;font-size:70px"> SR</span> '+'</marquee>';
+          });
+          addEventListener("click",()=>{
+                 amount.disabled =false;
+         });
+   });
+</script>
+</body>
+</html>
