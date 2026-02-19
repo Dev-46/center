@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Shorts...</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+      }
+      body {
+        background-color: rgb(43, 39, 39);
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: rgb(46, 44, 44);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      select {
+        position: fixed;
+        top: 3.6%;
+        width: 270px;
+        height: 32px;
+        border: none;
+        background-color: rgb(29, 28, 28);
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: start !important;
+        align-items: center;
+        height: 5vh;
+
+      }
+      option {
+        background-color: rgb(91, 110, 76);
+        color: rgb(29, 25, 25);
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        text-align: center;
+      }
+      option:hover,
+      select:hover {
+        background-color: crimson;
+        color: white;
+      }
+      option:hover {
+        cursor: pointer;
+      }
+
+      iframe {
+        background-color: blueviolet;
+        border: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <iframe
+        id="mysecondframe"
+        width="267"
+        height="591"
+        style="border: none; overflow: hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          picture-in-picture;
+          web-share;
+        "
+        allowfullscreen="true"
+      ></iframe>
+
+    </div>
+    <script>
+      let mysecondframe = document.getElementById("mysecondframe");
+      const codes = [
+        { code: `1861905007795619`, title: "English can be tricky!" },
+        { code: `888080090785142`, title: "Arrive, Reach, Get to" },
+        { code: `1364312555382517`, title: `tricky words!` },
+        { code: `4156014904710461`, title: `find a mistake` },
+        { code: `900585675649261`, title: `a dozen` },
+        { code: `888898543729888`, title: `find a mistake` },
+        { code: `1276479724377790`, title: `muzzy` },
+        { code: `776263601534243`, title: `cutting techniques` },
+        { code: `1387576703107492`, title: `neither am I` },
+        { code: `1274474291269830`, title: `end with mn` },
+        { code: `2091838471564929`, title: `speak with vaneca` },
+        { code: `4226094147677897`, title: `vowel sounds` },
+        { code: `1206618321636982`, title: `speed limit` },
+        { code: `1914592192827740`, title: `stressed parts` },
+        { code: `734670165691362`, title: `apple skin` },
+        { code: `2060767024769095`, title: `work-out vocab` },
+        { code: `856664147210980`, title: `parts of a human leg` },
+        { code: `1535421727747777`, title: `Dark L` },
+        { code: `1609398403986334`, title: `vocab` },
+        { code: `860081506795345`, title: `moving vocab` },
+        { code: `1233957564940436`, title: `Facing` },
+        { code: `843232492086039`, title: `Ramadan Vocab` },
+        { code: `1574053020588707`, title: `cooking tools` },
+      ];
+
+      mysecondframe.src = `https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F${codes[0].code}%2F&show_text=true&width=267&t=0`;
+      let mybox = document.createElement("select");
+      mybox.size = mybox.options.length;
+      
+    
+      document.body.appendChild(mybox);
+    
+      for (let i = 0; i < codes.length; i++) {
+        let myoption = document.createElement("option");
+        myoption.value = codes[i].code;
+        myoption.text = codes[i].title;
+        mybox.appendChild(myoption);
+      }
+      mybox.title =  mybox.options.length;
+      mybox.onchange = function () {
+        mysecondframe.src = `https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F${mybox.value}%2F&show_text=true&width=267&t=0`;
+        
+      };
+    </script>
+  </body>
+</html>
