@@ -275,11 +275,11 @@
   // code...
   // schools for each supervisor
   let superName = "ابراهيم حسان";
-  const Ibra = [];
-  const Gha = [];
-  const Han = [];
-  const Aml = [];
-  const Ema = [];
+  let Ibra = [];
+  let Gha = [];
+  let Han = [];
+  let Aml = [];
+  let Ema = [];
 
   Ibra.push(
     Master[4],
@@ -398,6 +398,19 @@
     Master[55],
     Master[210],
   );
+   Han=[];
+   Aml=[];
+   Gha=[];
+  
+   Master.forEach((item, index) => {
+    Han.push(item);
+  });
+   Master.forEach((item, index) => {
+    Aml.push(item);
+  });
+   Master.forEach((item, index) => {
+    Gha.push(item);
+  });
   // we will add the specific schools for the supervisor Eman
   //Ema.push(Master[86],Master[50],Master[219],Master[210],Master[80],Master[146],Master[87],Master[58],Master[43],Master[237],Master[238], Master[243],Master[244],Master[245],Master[246],Master[249],Master[261]);
   //Ema = Master; // test
@@ -1884,6 +1897,7 @@
             mySwitcherBtnAml.style.zIndex = 1200;
             mySwitcherBtnAml.style.bottom = "66px";//top 12px
             mySwitcherBtnAml.style.left = "12px";//right
+             mySwitcherBtnAml.style.borderRadius="50%";
             mySwitcherBtnAml.style.backgroundColor = "rgba(3,255,4,0.4)";
             mySwitcherBtnAml.style.maxWidth= "60px";
             mySwitcherBtnAml.style.minWidth= "60px";
@@ -1940,6 +1954,7 @@
             mySwitcherBtnGha.style.zIndex = 1200;
             mySwitcherBtnGha.style.bottom = "66px";//top 12px
             mySwitcherBtnGha.style.left = "12px";/*right*/
+            mySwitcherBtnGha.style.borderRadius="50%";
             mySwitcherBtnGha.style.backgroundColor = "rgba(3,255,4,0.4)";
             mySwitcherBtnGha.style.maxWidth = "60px";
             mySwitcherBtnGha.style.minWidth = "60px";
@@ -1993,6 +2008,7 @@
             mySwitcherBtnHan.style.zIndex = 1200;
             mySwitcherBtnHan.style.bottom = "106px";//top 12px
             mySwitcherBtnHan.style.left = "12px";//right
+            mySwitcherBtnHan.style.borderRadius="50%";
             mySwitcherBtnHan.style.backgroundColor = "rgba(3,255,4,0.4)";
             mySwitcherBtnHan.style.maxWidth = "60px";
             mySwitcherBtnHan.style.minWidth= "60px";
@@ -2053,6 +2069,7 @@
             mySwitcherBtnEma.style.backgroundColor = "rgba(3,255,4,0.4)";
             mySwitcherBtnEma.style.maxWidth= "60px";
             mySwitcherBtnEma.style.minWidth = "60px";
+            mySwitcherBtnEma.style.borderRadius="50%";
             mySwitcherBtnEma.style.width = "60px";
             mySwitcherBtnEma.style.height = "60px";
             mySwitcherBtnEma.style.maxHeight = "60px";
