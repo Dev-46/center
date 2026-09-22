@@ -1877,29 +1877,7 @@
                 : confirm("جاهز لطباعة الخطة");
             });
 
-            /*
-                    const wrapper = document.querySelector(".wrapper");
-          
-                    const header = wrapper.querySelector("header");
-          
-                    function onDrag({ movementX, movementY }) {
-                      let getStyle = window.getComputedStyle(wrapper);
-                      let leftVal = parseInt(getStyle.left);
-                      let topVal = parseInt(getStyle.top);
-                      wrapper.style.left = `${leftVal + movementX}px`;
-                      wrapper.style.top = `${topVal + movementY}px`;
-                    }
-          
-                    header.addEventListener("mousedown", () => {
-                      header.classList.add("active");
-                      header.addEventListener("mousemove", onDrag);
-                    });
-          
-                    document.addEventListener("mouseup", () => {
-                      header.classList.remove("active");
-                      header.removeEventListener("mousemove", onDrag);
-                    });
-                    */
+            
             break;
           case "امل ابراهيم":
           case "امل ابراهيم ":
@@ -2257,7 +2235,7 @@
           arabic_month_name = "سبتمبر";
         } else if (monthn === 10) {
           arabic_month_name = "أكتوبر";
-        } else if (month === 11) {
+        } else if (monthn === 11) {
           arabic_month_name = "نوفمبر";
         } else if (monthn === 12) {
           arabic_month_name = "ديسمبر";
