@@ -1119,9 +1119,6 @@
         }
 
         #plan {
-          /*width: 360px !important;
-        min-width: 360px !important;
-        max-width: 360px !important;*/
           position: absolute;
           top: 0;
           left: 0;
@@ -1161,7 +1158,6 @@
       }
 
       /* end of mw-768 */
-
       /* Styles for screens 768px or smaller (mobile sizes) */
       @media screen and (max-width: 768px) {
         .printers {
@@ -1321,7 +1317,6 @@
         width: 180px !important;
         height: 20px !important;
         margin: 0 auto;
-        /*background-color: #457539 !important;*/
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
@@ -1333,7 +1328,6 @@
         width: 180px !important;
         height: 20px !important;
         margin: 0 auto;
-        /*background-color: #457539 !important;*/
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
@@ -1546,9 +1540,9 @@
         "ديسمبر",
       ];
 
-      let month_days = 24;
-      let monthn = 2;
-      let arabic_month_name = "فبراير";
+      let month_days;
+      let monthn;
+      let arabic_month_name;
 
       let daysNamesOrder = [];
       let allMonthDaysNames = [];
@@ -1573,7 +1567,6 @@
       mypoptogetinfo.style.margin = "450px auto";
 
       let closeHolder = document.createElement("button");
-      //closeHolder.style.maxWidth = "460" + "px";
       closeHolder.style.minWidth = "300" + "px";
       closeHolder.style.backgroundColor = "rgba(32, 1, 32, 0.9)";
       closeHolder.style.color = "white";
