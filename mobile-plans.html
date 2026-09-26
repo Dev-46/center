@@ -1,9 +1,4 @@
 <script>
-  /*
-  tools
-  
-  */
-
   const Master = [
     { code: 1, school: "6 أكتوبر ب" },
     { code: 2, school: "6 أكتوبر - فصول ع" },
@@ -55,8 +50,8 @@
     { code: 48, school: "ش فوزي ابراهيم ب" },
     { code: 49, school: "ش كارم محمود ع" },
     { code: 50, school: "ش محمد ابراهيم ب" },
-    { code: 51, school: "ش محمد سعد ت أ ب" }, //50
-    { code: 52, school: "ش محمد سعد ت أ ع" }, //51
+    { code: 51, school: "ش محمد سعد ت أ ب" },
+    { code: 52, school: "ش محمد سعد ت أ ع" },
     { code: 53, school: "ش محمد عبدالمنعم ب" },
     { code: 54, school: "ش مصطفى كامل ب" },
     { code: 55, school: "الصيادين ت أ ب" },
@@ -805,6 +800,7 @@
         }
       }
 
+      /*
       @media screen and (min-width: 768px) {
         * {
           max-width: fit-content;
@@ -813,7 +809,6 @@
         body {
           display: flex;
           margin: 0 auto !important;
-          /*test*/
           background-color: #b9b0b0;
           background-color: rgba(7, 7, 7, 0.438);
           background-color: rgb(40, 66, 42);
@@ -917,7 +912,7 @@
           font-size: 30px !important;
         }
 
-        /*test*/
+       
         table {
           height: 100%;
           max-height: 100%;
@@ -985,7 +980,7 @@
           }
         }
 
-        /* test */
+    
 
         .printers {
           display: flex;
@@ -995,11 +990,11 @@
           margin: 0 auto;
           display: flex;
           font-size: 25px;
-          /*test*/
+         
           background-color: #000;
-          /*test*/
+          
           color: aliceblue;
-          /*test*/
+          
         }
 
         #printer {
@@ -1018,9 +1013,8 @@
           justify-content: center;
           align-items: center;
 
-          /*test*/
-          min-height: 180px; /*480*/
-          height: 180px; /*480*/
+          min-height: 180px; 
+          height: 180px;
           font-size: 25px;
           color: aliceblue;
           background-color: transparent !important;
@@ -1148,6 +1142,394 @@
           border: 5px solid rgba(222, 231, 137, 0.911) !important;
         }
       }
+      */
+
+      /*repeate 768px*/
+      @media screen and (min-width: 768px) {
+        * {
+          max-width: fit-content;
+        }
+
+        body {
+          display: flex;
+          margin: 0 auto !important;
+          background-color: #b9b0b0;
+          max-width: 0vw;
+          min-width: 100vw;
+          width: 100vw;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          overflow-x: hidden;
+        }
+        .printbtns {
+          font-size: 40px !important;
+          padding: 12px;
+          width: 100px;
+          height: 100px;
+        }
+        #myBoxContainer {
+          /*roller of the schools info*/
+          position: absolute;
+          top: 253px !important;
+          left: 2% !important; /*32%*/
+          min-width: 288px !important;
+          max-width: 288px !important;
+          width: 288px !important;
+          border: unset;
+          margin: auto;
+          justify-content: space-between !important;
+          align-items: center;
+          background: linear-gradient(
+            to left,
+            rgb(123, 156, 123),
+            rgb(54, 73, 54),
+            rgb(21, 29, 21)
+          );
+          box-shadow: inset 2px 4px 6px 8px rgba(21, 29, 21, 0.658);
+        }
+
+        #my_switcher_btn_Ibra,
+        #my_switcher_btn_Ema,
+        #my_switcher_btn_Han,
+        #my_switcher_btn_Gha,
+        #my_switcher_btn_Aml {
+          bottom: 36px !important;
+          left: 1.5% !important; /*47.5%*/
+          clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+          background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
+        }
+        #my_switcher_btn_Ibra:hover,
+        #my_switcher_btn_Ema:hover,
+        #my_switcher_btn_Han:hover,
+        #my_switcher_btn_Gha:hover,
+        #my_switcher_btn_Aml:hover {
+          clip-path: none;
+          background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        #myHolder {
+          /*the holder of the schools roller*/
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          background: linear-gradient(
+            to top,
+            rgb(184, 182, 182),
+            #577065,
+            #234235,
+            #1a221f
+          ) !important;
+          color: #55724c;
+          text-align: left !important;
+          padding-bottom: 6px !important;
+        }
+
+        .ourFathers,
+        header {
+          width: 100%;
+          border: unset;
+        }
+
+        .ourFathers {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 24px;
+
+          border: none;
+          border-top: 2px solid #112708 !important;
+          border-bottom: 2px solid #112708 !important;
+
+          span {
+            font-size: 24px;
+          }
+          .numbers {
+            font-size: 24px;
+            margin-right: 20px !important;
+          }
+          .texts {
+            font-size: 24px;
+            margin-left: 20px !important;
+            min-width: 30% !important;
+          }
+        }
+
+        .wrapper {
+          border-color: transparent !important;
+        }
+
+        #myBoxContainer::-webkit-scrollbar {
+          display: none;
+        }
+
+        #plan {
+          /*plan before excute*/
+          min-width: 100%;
+          font-size: 30px !important;
+        }
+
+        /*test*/
+        table {
+          height: 100%;
+          max-height: 100%;
+          min-height: 100%;
+          border: 1px solid rgba(20, 20, 20, 0) !important;
+          margin: 0 auto;
+          min-width: 100%;
+          background-color: rgba(123, 255, 0, 0.219);
+          background-color: #111010ce;
+        }
+        tr,
+        td,
+        .cell1,
+        .cell2,
+        .cell3,
+        .cell4,
+        .cell5 {
+          background-color: rgb(40, 66, 42);
+          background-color: #e7e0e0;
+          text-align: center;
+          color: rgb(221, 241, 163);
+          color: #000;
+          font-weight: bold !important;
+          padding-top: 1px !important;
+          padding-bottom: 0px !important;
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+          font-size: 30px !important;
+        }
+
+        .cell1 {
+          min-width: 10px;
+          font-size: 28px !important;
+        }
+
+        .cell2 {
+          min-width: 70px;
+        }
+
+        .cell3 {
+          min-width: 100px;
+        }
+
+        .cell4 {
+          min-width: 540px;
+          font-size: 25px !important;
+        }
+
+        .cell5 {
+          min-width: 80px;
+          font-size: 26px !important;
+        }
+
+        .sections {
+          min-width: 700px !important;
+          width: 800px !important;
+        }
+
+        #published {
+          background-color: rgb(40, 66, 42);
+          background-color: #f7f2f2;
+          color: rgb(221, 241, 163);
+          color: #000;
+          font-size: 30px;
+          padding: 4px auto;
+          span {
+            min-width: 100px;
+            font-size: 30px;
+          }
+        }
+
+        /* test */
+
+        .printers {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          display: flex;
+          font-size: 25px;
+          /*test*/
+          background-color: #000;
+          /*test*/
+          color: aliceblue;
+          /*test*/
+        }
+
+        #printer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 2px auto;
+
+          position: absolute;
+          top: 20px;
+          left: 2%;
+          padding: 10px 0;
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          /*test*/
+          min-height: 180px; /*480*/
+          height: 180px; /*480*/
+          font-size: 25px;
+          color: aliceblue;
+          background-color: transparent !important;
+        }
+
+        .printer-shrink {
+          box-sizing: border-box;
+          border: none;
+          top: 0;
+          left: 20px;
+          bottom: 0;
+          width: 16px !important;
+          min-width: 16px !important;
+          max-width: 16px !important;
+          display: flex !important;
+          flex-direction: row;
+          justify-content: left;
+          align-items: end;
+          min-height: 140px;
+          align-self: left;
+
+          h3,
+          div,
+          span,
+          #nextBtn,
+          #prevousBtn,
+          #info-title {
+            max-width: 100px !important;
+            min-width: 100px !important;
+            font-size: 13px !important;
+            margin: 0;
+            padding: 0;
+            display: none !important;
+          }
+
+          #tabbing {
+            min-height: 33px !important;
+            max-height: 33px !important;
+            border: none !important;
+            max-width: 100px !important;
+            min-width: 100px !important;
+            box-shadow: none;
+          }
+
+          #previousBtn {
+            position: relative;
+            background-color: rgba(145, 76, 59, 0.281) !important;
+            background: linear-gradient(to left, rgb(247, 245, 245), grey);
+            max-width: 40px !important;
+            min-width: 40px !important;
+            max-height: 40px !important;
+            min-height: 40px !important;
+            border-radius: 50%;
+            display: none !important;
+            span {
+              font-size: 20px !important;
+              color: #000 !important;
+            }
+          }
+
+          #nextBtn {
+            position: relative;
+            background-color: rgba(71, 124, 71, 0.253) !important;
+            background: linear-gradient(to right, rgb(250, 248, 248), grey);
+            max-width: 40px !important;
+            min-width: 40px !important;
+            max-height: 40px !important;
+            min-height: 40px !important;
+            border-radius: 50%;
+            display: none !important;
+            span {
+              font-size: 20px !important;
+              color: #000 !important;
+            }
+          }
+
+          #information {
+            display: none !important;
+          }
+
+          .printers {
+            background-color: #000;
+
+            #printbtn {
+              background-color: rgb(9, 99, 99) !important;
+            }
+
+            #activeprintbtn {
+              background-color: rgb(95, 110, 5) !important;
+            }
+          }
+        }
+
+        #plan {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          min-width: 700px !important;
+          width: 800px !important;
+
+          table {
+            min-width: 700px !important;
+            width: 800px !important;
+          }
+        }
+
+        #information {
+          display: flex !important;
+          width: 360px !important;
+          min-width: 360px !important;
+          max-width: 360px !important;
+          border: 1px solid rgb(240, 211, 211) !important;
+
+          #mylist {
+            display: flex !important;
+            width: 360px !important;
+            min-width: 360px !important;
+            max-width: 360px !important;
+          }
+        }
+
+        .providers {
+          display: flex !important;
+          border: 5px solid rgba(222, 231, 137, 0.911) !important;
+        }
+
+        #mypoptogetinfo {
+          min-width: 70%;
+          max-width: 70% !important;
+          background-color: rgba(255, 0, 0, 0) !important;
+        }
+        #printer,
+        .printer-big {
+          left: 0% !important;
+        }
+
+        #my_switcher_btn_Ibra,
+        #my_switcher_btn_Ema,
+        #my_switcher_btn_Han,
+        #my_switcher_btn_Gha,
+        #my_switcher_btn_Aml {
+          bottom: 77px !important;
+          left: 10.5% !important; /*47.5%*/
+          clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+          background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
+        }
+      }
+
+      /*end of repeate*/
 
       /* end of mw-768 */
       /* Styles for screens 768px or smaller (mobile sizes) */
@@ -1363,7 +1745,7 @@
       <div class="sections" id="published">
         <span id="inial"> الخطة الشهرية </span>
         <span> أ/ </span>
-        <span id="sir">ابراهيم حسان</span>
+        <span id="sir">الموجه</span>
         <span> عن شهر </span>
         <span id="month">يناير</span>
         <span id="year">2027</span>
@@ -1516,6 +1898,7 @@
       document.getElementById("month").innerHTML = arabic_month_name;
       document.getElementById("year").innerHTML = year;
 
+
       //change the supervisor name
       //add year month manually or not
       let mypoptogetinfo = document.createElement("div");
@@ -1564,8 +1947,8 @@
       superinput.style.paddingTop = "16" + "px";
       superinput.style.borderBottom = "1px solid #ecc2c2c0";
       superinput.placeholder = "اسم الموجه ثنائي";
-      superinput.value = "ابراهيم حسان";
-      superName = superinput.value;
+      superinput.value =localStorage.getItem("super") || "ابراهيم حسان";
+      superName = localStorage.getItem("super") || superinput.value;
 
       superinput.style.marginTop = "-12" + "px";
       superinput.style.textIndent = "30" + "px";
@@ -1721,6 +2104,7 @@
         } else {
           msg = "NAME OK";
           executebtn.disabled = false;
+          localStorage.setItem("super", superinput.value)
         }
         closeHolder.innerHTML = "X   " + msg;
       });
@@ -1763,6 +2147,7 @@
 
       executebtn.addEventListener("click", () => {
         superName = superinput.value;
+        localStorage.setItem("super", superinput.value);/*new */
         // the list of schools
 
         /// create a div to contain all data of the arrays
@@ -1792,6 +2177,8 @@
             Ibra.forEach((item, index) => {
               let coder = document.createElement("span");
               let schooler = document.createElement("span");
+              coder.className = "numbers";
+              schooler.className = "texts";
               coder.innerHTML = item.code;
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
@@ -1830,6 +2217,7 @@
               }
             };
             document.body.appendChild(mySwitcherBtnIbra);
+            //document.body.removeChild(mySwitcherBtnIbra);
 
             ladle.addEventListener("click", () => {
               myBox.style.display = "none";
@@ -1851,6 +2239,8 @@
             Aml.forEach((item, index) => {
               let coder = document.createElement("span");
               let schooler = document.createElement("span");
+              coder.className = "numbers";
+              schooler.className = "texts";
               coder.innerHTML = item.code;
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
@@ -1865,8 +2255,8 @@
             let mySwitcherBtnAml = document.createElement("button");
             mySwitcherBtnAml.style.position = "fixed";
             mySwitcherBtnAml.style.zIndex = 1200;
-            mySwitcherBtnAml.style.bottom = "26px"; //top 12px
-            mySwitcherBtnAml.style.left = "12px"; //right
+            mySwitcherBtnAml.style.bottom = "26px";
+            mySwitcherBtnAml.style.left = "12px";
             mySwitcherBtnAml.style.borderRadius = "50%";
             mySwitcherBtnAml.style.backgroundColor = "rgba(3,255,4,0.4)";
             mySwitcherBtnAml.style.maxWidth = "60px";
@@ -1908,6 +2298,8 @@
             Gha.forEach((item, index) => {
               let coder = document.createElement("span");
               let schooler = document.createElement("span");
+              coder.className = "numbers";
+              schooler.className = "texts";
               coder.innerHTML = item.code;
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
@@ -1962,6 +2354,8 @@
             Han.forEach((item, index) => {
               let coder = document.createElement("span");
               let schooler = document.createElement("span");
+              coder.className = "numbers";
+              schooler.className = "texts";
               coder.innerHTML = item.code;
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
@@ -2020,6 +2414,8 @@
             Ema.forEach((item, index) => {
               let coder = document.createElement("span");
               let schooler = document.createElement("span");
+              coder.className = "numbers";
+              schooler.className = "texts";
               coder.innerHTML = item.code;
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
@@ -2258,10 +2654,7 @@
             break;
         }
 
-      
         for (let index = 0; index < month_days; index++) {
-          
-
           switch (arabic_month_name) {
             case "يناير":
               daysNamesOrder = [
@@ -2360,7 +2753,6 @@
               month_days = allMonthDaysNumbers.length;
 
               break;
-            
 
             case "مايو":
               daysNamesOrder = [
@@ -2460,7 +2852,7 @@
               ];
               month_days = allMonthDaysNumbers.length;
               break;
-            
+
             case "سبتمبر":
               daysNamesOrder = [
                 "الأربعاء",
@@ -2487,34 +2879,31 @@
               break;
 
             case "أكتوبر":
-
               daysNamesOrder = [
-             
-              "السبت",
-              "الأحد",
-              "الاثنين",
-              "الثلاثاء",
-              "الأربعاء",
-               "الخميس",
-            ];
+                "السبت",
+                "الأحد",
+                "الاثنين",
+                "الثلاثاء",
+                "الأربعاء",
+                "الخميس",
+              ];
 
-            allMonthDaysNumbers = [
-              2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21,
-              23, 24, 25, 26, 27, 28, 30, 31,
-            ];
-            allMonthDaysNames = [
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-            ];
-            month_days = allMonthDaysNumbers.length;
+              allMonthDaysNumbers = [
+                2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21,
+                23, 24, 25, 26, 27, 28, 30, 31,
+              ];
+              allMonthDaysNames = [
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+              ];
+              month_days = allMonthDaysNumbers.length;
 
               break;
             case "نوفمبر":
               daysNamesOrder = [
-                
                 "الاثنين",
                 "الثلاثاء",
                 "الأربعاء",
@@ -2539,27 +2928,26 @@
               break;
             case "ديسمبر":
               daysNamesOrder = [
-              
-              "الأربعاء",
-              "الخميس",
-              "السبت",
-              "الأحد",
-              "الاثنين",
-              "الثلاثاء",
-            ];
+                "الأربعاء",
+                "الخميس",
+                "السبت",
+                "الأحد",
+                "الاثنين",
+                "الثلاثاء",
+              ];
 
-            allMonthDaysNumbers = [
-              1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
-              22, 23, 25, 26, 27, 28, 29, 30,
-            ];
-            allMonthDaysNames = [
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-              ...daysNamesOrder,
-            ];
-            month_days = allMonthDaysNumbers.length;
+              allMonthDaysNumbers = [
+                1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21,
+                22, 23, 25, 26, 27, 28, 29, 30,
+              ];
+              allMonthDaysNames = [
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+                ...daysNamesOrder,
+              ];
+              month_days = allMonthDaysNumbers.length;
 
               break;
 
@@ -2617,7 +3005,8 @@
             if (cell.innerHTML === "الأربعاء") {
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
-            } else if (cell.innerHTML === "السبت" && i< 24) { ///****************************
+            } else if (cell.innerHTML === "السبت" && i < 24) {
+              ///****************************
               //cell.style.color = "red";
               allInputFields[i].value = "1002";
               allSchoolsFields[i].innerHTML = "أجازة";
@@ -2647,6 +3036,10 @@
           } else {
             // Code to run for non-mobile screens (viewport width > 768px)
             console.log("This is not a mobile screen.");
+            //
+
+            document.getElementById("printer").innerHTML =
+              `<button class="printbtns" onclick="print()">print</button>`;
           }
 
           /////////////////////////////////////////////////////
@@ -3810,13 +4203,12 @@
           case 10:
             arabic_month_name = "أكتوبر";
             daysNamesOrder = [
-             
               "السبت",
               "الأحد",
               "الاثنين",
               "الثلاثاء",
               "الأربعاء",
-               "الخميس",
+              "الخميس",
             ];
 
             allMonthDaysNumbers = [
@@ -3833,38 +4225,36 @@
             month_days = allMonthDaysNumbers.length;
 
             break;
-//////////////////////////////////////////*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+          //////////////////////////////////////////*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
           case 11:
             arabic_month_name = "نوفمبر";
             daysNamesOrder = [
-                
-                "الاثنين",
-                "الثلاثاء",
-                "الأربعاء",
-                "الخميس",
-                "السبت",
-                "الأحد",
-              ];
+              "الاثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "السبت",
+              "الأحد",
+            ];
 
-              allMonthDaysNumbers = [
-                1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 20, 21,
-                22, 23, 24, 25, 27, 28, 29, 30,
-              ];
-              allMonthDaysNames = [
-                ...daysNamesOrder,
-                ...daysNamesOrder,
-                ...daysNamesOrder,
-                ...daysNamesOrder,
-                ...daysNamesOrder,
-              ];
-              month_days = allMonthDaysNumbers.length;
+            allMonthDaysNumbers = [
+              1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 20, 21,
+              22, 23, 24, 25, 27, 28, 29, 30,
+            ];
+            allMonthDaysNames = [
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+              ...daysNamesOrder,
+            ];
+            month_days = allMonthDaysNumbers.length;
 
             break;
-/////////////////////////////////////////////////
+          /////////////////////////////////////////////////
           case 12:
             arabic_month_name = "ديسمبر";
             daysNamesOrder = [
-              
               "الأربعاء",
               "الخميس",
               "السبت",
@@ -4021,26 +4411,6 @@
         myinfocloser.parentNode.style.display = "none";
       });
     </script>
-    <script>
-      // Source - https://stackoverflow.com/q/66526673
-      // Posted by Suny
-      // Retrieved 2026-09-22, License - CC BY-SA 4.0
-
-      //Make the DIV element draggagle:
-
-      /* if present, the header is where you move the DIV from:*/
-
-      /* otherwise, move the DIV from anywhere inside the DIV:*/
-
-      // get the mouse cursor position at startup:
-
-      // call a function whenever the cursor moves:
-
-      // calculate the new cursor position:
-
-      // set the element's new position:
-
-      /* stop moving when mouse button is released:*/
-    </script>
+  
   </body>
 </html>
