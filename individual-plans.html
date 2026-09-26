@@ -1745,7 +1745,7 @@
       <div class="sections" id="published">
         <span id="inial"> الخطة الشهرية </span>
         <span> أ/ </span>
-        <span id="sir">ابراهيم حسان</span>
+        <span id="sir">الموجه</span>
         <span> عن شهر </span>
         <span id="month">يناير</span>
         <span id="year">2027</span>
@@ -1898,6 +1898,7 @@
       document.getElementById("month").innerHTML = arabic_month_name;
       document.getElementById("year").innerHTML = year;
 
+
       //change the supervisor name
       //add year month manually or not
       let mypoptogetinfo = document.createElement("div");
@@ -1946,8 +1947,8 @@
       superinput.style.paddingTop = "16" + "px";
       superinput.style.borderBottom = "1px solid #ecc2c2c0";
       superinput.placeholder = "اسم الموجه ثنائي";
-      superinput.value = "ابراهيم حسان";
-      superName = superinput.value;
+      superinput.value =localStorage.getItem("super") || "ابراهيم حسان";
+      superName = localStorage.getItem("super") || superinput.value;
 
       superinput.style.marginTop = "-12" + "px";
       superinput.style.textIndent = "30" + "px";
@@ -2103,6 +2104,7 @@
         } else {
           msg = "NAME OK";
           executebtn.disabled = false;
+          localStorage.setItem("super", superinput.value)
         }
         closeHolder.innerHTML = "X   " + msg;
       });
@@ -2145,6 +2147,7 @@
 
       executebtn.addEventListener("click", () => {
         superName = superinput.value;
+        localStorage.setItem("super", superinput.value);/*new */
         // the list of schools
 
         /// create a div to contain all data of the arrays
@@ -4408,5 +4411,6 @@
         myinfocloser.parentNode.style.display = "none";
       });
     </script>
+  
   </body>
 </html>
