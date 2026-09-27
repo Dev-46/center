@@ -1237,7 +1237,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          font-size: 24px;
+          font-size: 20px;
 
           border: none;
           border-top: 2px solid #112708 !important;
@@ -1247,12 +1247,12 @@
             font-size: 24px;
           }
           .numbers {
-            font-size: 24px;
-            margin-right: 20px !important;
+            font-size: 20px;
+            margin-left: 40px !important;
           }
           .texts {
-            font-size: 24px;
-            margin-left: 20px !important;
+            font-size: 20px;
+            margin-right: 20px !important;
             min-width: 30% !important;
           }
         }
@@ -2420,8 +2420,9 @@
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
               father.className = "ourFathers";
-              father.appendChild(coder);
               father.appendChild(schooler);
+              father.appendChild(coder);
+              
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
