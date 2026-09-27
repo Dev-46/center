@@ -1703,11 +1703,36 @@
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
 
-      .ourFathers {
+      /*.ourFathers {
         border: 2px solid rgba(19, 19, 18, 0.979) !important;
         border-left: 2px solid rgba(19, 19, 18, 0.979) !important;
         border-right: 2px solid rgba(19, 19, 18, 0.979) !important;
-      }
+      }*/
+
+
+      .ourFathers {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+
+          border: none;
+          border-top: 2px solid #112708 !important;
+          border-bottom: 2px solid #112708 !important;
+
+          span {
+            font-size: 24px;
+          }
+          .numbers {
+            font-size: 20px;
+            margin-left: 40px !important;
+          }
+          .texts {
+            font-size: 20px;
+            margin-right: 20px !important;
+            min-width: 30% !important;
+          }
+        }
     </style>
   </head>
 
