@@ -1740,16 +1740,21 @@
         <button id="activeprintbtn" onclick="activebtn()"></button>
       </div>
     </div>
-
+  
     <div id="plan">
       <div class="sections" id="published">
         <span id="inial"> الخطة الشهرية </span>
         <span> أ/ </span>
-        <span id="sir">الموجه</span>
+        <span id="sir"></span>
+         <script>
+    document.getElementById("sir").innerHTML =`${localStorage.getItem("super") || "الموجه"}`;
+    
+   </script>
         <span> عن شهر </span>
         <span id="month">يناير</span>
         <span id="year">2027</span>
       </div>
+
 
       <div id="plans"></div>
     </div>
@@ -1898,7 +1903,6 @@
       document.getElementById("month").innerHTML = arabic_month_name;
       document.getElementById("year").innerHTML = year;
 
-
       //change the supervisor name
       //add year month manually or not
       let mypoptogetinfo = document.createElement("div");
@@ -1947,7 +1951,7 @@
       superinput.style.paddingTop = "16" + "px";
       superinput.style.borderBottom = "1px solid #ecc2c2c0";
       superinput.placeholder = "اسم الموجه ثنائي";
-      superinput.value =localStorage.getItem("super") || "ابراهيم حسان";
+      superinput.value = localStorage.getItem("super") || "ابراهيم حسان";
       superName = localStorage.getItem("super") || superinput.value;
 
       superinput.style.marginTop = "-12" + "px";
@@ -2104,7 +2108,7 @@
         } else {
           msg = "NAME OK";
           executebtn.disabled = false;
-          localStorage.setItem("super", superinput.value)
+          localStorage.setItem("super", superinput.value);
         }
         closeHolder.innerHTML = "X   " + msg;
       });
@@ -2147,7 +2151,7 @@
 
       executebtn.addEventListener("click", () => {
         superName = superinput.value;
-        localStorage.setItem("super", superinput.value);/*new */
+        localStorage.setItem("super", superinput.value); /*new */
         // the list of schools
 
         /// create a div to contain all data of the arrays
@@ -2183,8 +2187,9 @@
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
               father.className = "ourFathers";
-              father.appendChild(coder);
               father.appendChild(schooler);
+              father.appendChild(coder);
+
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
@@ -2245,8 +2250,9 @@
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
               father.className = "ourFathers";
-              father.appendChild(coder);
+
               father.appendChild(schooler);
+              father.appendChild(coder);
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
@@ -2304,8 +2310,9 @@
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
               father.className = "ourFathers";
-              father.appendChild(coder);
+
               father.appendChild(schooler);
+              father.appendChild(coder);
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
@@ -2360,8 +2367,9 @@
               schooler.innerHTML = item.school;
               let father = document.createElement("div");
               father.className = "ourFathers";
-              father.appendChild(coder);
+
               father.appendChild(schooler);
+              father.appendChild(coder);
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
@@ -2422,7 +2430,7 @@
               father.className = "ourFathers";
               father.appendChild(schooler);
               father.appendChild(coder);
-              
+
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
@@ -2972,20 +2980,36 @@
           td2.setAttribute("class", "cell cell2");
           td2.innerHTML = allMonthDaysNames[index];
 
+          //////////////////////////////////////////////////////////////////
+          td2.style.backgroundColor = "lightgreen"; ///////////////////(days names)/////td2
+          ///////////////////////////////////////////////////////////////////
+
           let td3 = document.createElement("td");
           td3.setAttribute("id", "td3" + cells[index]);
           td3.setAttribute("class", "cell cell3");
           td3.innerHTML = `${year}-${monthn}-${allMonthDaysNumbers[index]}`;
+
+          //////////////////////////////////////////////////////////
+          td3.style.backgroundColor = "lightblue"; ///////////////////(date)/////td3
+          ////////////////////////////////////////////////////////////
 
           let td4 = document.createElement("td");
           td4.setAttribute("id", "td4" + cells[index]);
           td4.setAttribute("class", "cell cell4");
           td4.innerHTML = "";
 
+          //////////////////////////////////////////////////////////
+          td4.style.backgroundColor = "lightgrey"; ///////////////////(school)/////td4
+          ////////////////////////////////////////////////////////////
+
           ////////////////////////////////////////////
           let td5 = document.createElement("input");
           td5.setAttribute("id", "td5" + cells[index]);
           td5.setAttribute("class", "cell cell5 input-field");
+
+          //////////////////////////////////////////////////////////
+          td5.style.backgroundColor = "#d9265355"; ///////////////////(code)/////td5
+          ////////////////////////////////////////////////////////////
 
           tr.appendChild(td2);
           tr.appendChild(td3);
@@ -3953,8 +3977,6 @@
           });
         }
 
-        ////
-
         if (superinput.value.length > 0) {
           document.getElementById("sir").innerHTML = superinput.value;
           return superinput.value;
@@ -4412,6 +4434,5 @@
         myinfocloser.parentNode.style.display = "none";
       });
     </script>
-  
   </body>
 </html>
