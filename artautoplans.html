@@ -2558,7 +2558,7 @@
           /////////////////////////////////////////////////////
           td5.addEventListener("keyup", function () {
             let code = td5.value;
-
+      
             switch (code) {
               case "1":
                 td4.innerHTML = "6 أكتوبر الابتدائية";
@@ -3460,9 +3460,17 @@
 
               default:
                 td4.innerHTML = "سجل رقم المدرسة";
-                td4.style.color="lightgrey";
+              
                 break;
             }
+            // make the wrong choice clear with color light grey
+            if( td4.innerHTML === "سجل رقم المدرسة" ){
+              td4.style.color="lightgrey"
+            }else{
+              td4.style.color="#000000"
+            }
+
+            
           });
         }
 
