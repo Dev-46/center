@@ -2490,6 +2490,14 @@
           td4.style.backgroundColor = "lightgrey"; ///////////////////(school)/////td4
           ////////////////////////////////////////////////////////////
 
+            td4.innerHTML = "سجل رقم المدرسة";
+             // make the wrong choice clear with color light grey
+            if( td4.innerHTML === "سجل رقم المدرسة" ){
+              td4.style.color="#b4b4b4"
+            }else{
+              td4.style.color="#000000"
+            }
+
           ////////////////////////////////////////////
           let td5 = document.createElement("input");
           td5.setAttribute("id", "td5" + cells[index]);
@@ -2556,13 +2564,7 @@
           }
 
           /////////////////////////////////////////////////////
-           td4.innerHTML = "سجل رقم المدرسة";
-             // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
-            }
+         
           
           td5.addEventListener("keyup", function () {
             let code = td5.value;
