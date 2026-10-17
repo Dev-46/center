@@ -2505,7 +2505,7 @@
 
           //////////////////////////////////////////////////////////
           td5.style.backgroundColor = "#d9265355"; ///////////////////(code)/////td5
-          if(td5.innerHTML===""){td5.style.backgroundColor = "#d92653"}else{td5.style.backgroundColor = "#d9265355"}
+         
           ////////////////////////////////////////////////////////////
 
           tr.appendChild(td2);
@@ -3477,6 +3477,13 @@
               
                 break;
             }
+             // change back of code input if empty
+             if(td5.innerHTML===""){
+               td5.style.backgroundColor = "#cdcdcd";
+             }else{
+               td5.style.backgroundColor = "#d9265355";
+             }
+            
             // make the wrong choice clear with color light grey
             if( td4.innerHTML === "سجل رقم المدرسة" ){
               td4.style.color="#b4b4b4"
