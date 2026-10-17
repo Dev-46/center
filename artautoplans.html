@@ -2568,6 +2568,22 @@
           }
 
           /////////////////////////////////////////////////////
+
+          ////////////////////////////////////////////////////////////////////
+                 // change back of code input if empty
+             if(td5.innerHTML===""){
+               td5.style.backgroundColor = "#d9265399";
+             }else{
+               td5.style.backgroundColor = "#d9265355";
+             }
+            
+            // make the wrong choice clear with color light grey
+            if( td4.innerHTML === "سجل رقم المدرسة" ){
+              td4.style.color="#b4b4b4"
+            }else{
+              td4.style.color="#000000"
+            }
+                ///////////////////////////////////////////////////////
          
           
           td5.addEventListener("keyup", function () {
@@ -3474,7 +3490,10 @@
 
               default:
                 td4.innerHTML = "سجل رقم المدرسة";
-                ////////////////////////////////////////////////////////////////////
+                break;
+            }
+            
+////////////////////////////////////////////////////////////////////
                  // change back of code input if empty
              if(td5.innerHTML===""){
                td5.style.backgroundColor = "#d9265399";
@@ -3489,11 +3508,6 @@
               td4.style.color="#000000"
             }
                 ///////////////////////////////////////////////////////
-              
-                break;
-            }
-            
-
             
           });
         }
