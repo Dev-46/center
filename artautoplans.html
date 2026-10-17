@@ -2572,21 +2572,22 @@
           ////////////////////////////////////////////////////////////////////
                  // change back of code input if empty
              if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265399";
-             }else{
                td5.style.backgroundColor = "#d9265355";
+             }else{
+               td5.style.backgroundColor = "#DAB1DA";
              }
-            
-            // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
-            }
+        
                 ///////////////////////////////////////////////////////
          
           
           td5.addEventListener("keyup", function () {
+                  // change back of code input if empty
+             if(td5.innerHTML===""){
+               td5.style.backgroundColor = "#d9265355";
+             }else{
+               td5.style.backgroundColor = "#DAB1DA";
+             }
+        
             let code = td5.value;
            // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
             switch (code) {
@@ -3494,12 +3495,13 @@
             }
             
 ////////////////////////////////////////////////////////////////////
-                 // change back of code input if empty
+                  // change back of code input if empty
              if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265399";
-             }else{
                td5.style.backgroundColor = "#d9265355";
+             }else{
+               td5.style.backgroundColor = "#DAB1DA";
              }
+        
             
             // make the wrong choice clear with color light grey
             if( td4.innerHTML === "سجل رقم المدرسة" ){
