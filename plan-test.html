@@ -1958,22 +1958,6 @@
             let mySwitcherBtnEma = document.createElement("button");
             mySwitcherBtnEma.style.position = "fixed";
             mySwitcherBtnEma.className = "switchers";
-            /*
-            mySwitcherBtnEma.style.zIndex = 1200;
-            mySwitcherBtnEma.style.bottom = "10px"; //top 12px
-            mySwitcherBtnEma.style.left = "24px"; //right
-            mySwitcherBtnEma.style.backgroundColor = "rgba(3,255,4,0.4)";
-        
-            mySwitcherBtnEma.style.borderRadius = "50%";
-            mySwitcherBtnEma.style.border="8px double black";
-
-                mySwitcherBtnEma.style.maxWidth = "80px";
-            mySwitcherBtnEma.style.minWidth = "80px";
-            mySwitcherBtnEma.style.width = "80px";
-            mySwitcherBtnEma.style.height = "80px";
-            mySwitcherBtnEma.style.maxHeight = "80px";
-            mySwitcherBtnEma.style.minHeight = "80px";
-            */
             mySwitcherBtnEma.id = "my_switcher_btn_Ema";
             mySwitcherBtnEma.innerText = "";
             mySwitcherBtnEma.onclick = () => {
@@ -2531,7 +2515,7 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الأربعاء") {
+            if (cell.innerHTML === "االثلاثاء") {
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
             } else if (cell.innerHTML === "السبت" && i < 24) {
@@ -2541,7 +2525,7 @@
               allSchoolsFields[i].innerHTML = "أجازة";
             }
             if (superName === "ايمان صالح") {
-              if (cell.innerHTML === "الاثنين") {
+              if (cell.innerHTML === "الاثنين" || cell.innerHTML==="الأربعاء") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
               }
