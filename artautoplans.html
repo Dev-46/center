@@ -2556,9 +2556,17 @@
           }
 
           /////////////////////////////////////////////////////
+           td4.innerHTML = "سجل رقم المدرسة";
+             // make the wrong choice clear with color light grey
+            if( td4.innerHTML === "سجل رقم المدرسة" ){
+              td4.style.color="#b4b4b4"
+            }else{
+              td4.style.color="#000000"
+            }
+          
           td5.addEventListener("keyup", function () {
             let code = td5.value;
-            td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
+           // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
             switch (code) {
               case "1":
                 td4.innerHTML = "6 أكتوبر الابتدائية";
