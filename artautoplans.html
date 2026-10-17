@@ -2526,16 +2526,19 @@
             if (cell.innerHTML === "الثلاثاء") { /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
+               allSchoolsFields[i].style.color="#000000";
             } else if (cell.innerHTML === "السبت" && i < 24) {
               ///****************************
               //cell.style.color = "red";
               allInputFields[i].value = "1002";
               allSchoolsFields[i].innerHTML = "أجازة";
+              allSchoolsFields[i].style.color="#000000";
             }
             if (superName === "ايمان صالح") {
               if (cell.innerHTML === "الاثنين" || cell.innerHTML==="الأربعاء") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
+                allSchoolsFields[i].style.color="#000000";
               }
             }
           });
