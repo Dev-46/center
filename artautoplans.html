@@ -17,7 +17,9 @@
         max-height: 500px !important;
         max-width: 370px !important;
       }
-
+      #myBoxContainer{
+        padding-bottom: 2px !important;
+       }
       body {
         background-color: rgba(0, 0, 0, 0.226);
       }
@@ -101,9 +103,7 @@
       }
 
       #printer {
-        /*border-right: 2px solid rgba(20, 20, 22, 0.336);*/
         z-index: 100;
-        /*background-color: rgba(7, 7, 6, 0.363) !important;*/
         position: fixed;
         top: 0px;
         left: 0px;
@@ -212,7 +212,6 @@
       .makebig {
         transition: 1s ease-in-out;
         background-color: rgb(52, 63, 59);
-
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
       }
 
@@ -366,348 +365,6 @@
           margin-bottom: 1px !important;
         }
       }
-
-      /*
-      @media screen and (min-width: 768px) {
-        * {
-          max-width: fit-content;
-        }
-
-        body {
-          display: flex;
-          margin: 0 auto !important;
-          background-color: #b9b0b0;
-          background-color: rgba(7, 7, 7, 0.438);
-          background-color: rgb(40, 66, 42);
-          max-width: 0vw;
-          min-width: 100vw;
-          width: 100vw;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          overflow-x: hidden;
-        }
-
-        #myBoxContainer {
-          position: absolute;
-          top: 33px !important;
-          left: 32% !important;
-          min-width: 280px !important;
-          max-width: 280px !important;
-          width: 280px !important;
-          border: unset;
-          margin: auto;
-          align-items: center;
-          background: linear-gradient(
-            to left,
-            rgb(123, 156, 123),
-            rgb(54, 73, 54),
-            rgb(21, 29, 21)
-          );
-          box-shadow: inset 2px 4px 6px 8px rgba(21, 29, 21, 0.658);
-        }
-
-        #my_switcher_btn_Ibra,
-        #my_switcher_btn_Ema,
-        #my_switcher_btn_Han,
-        #my_switcher_btn_Gha,
-        #my_switcher_btn_Aml {
-          top: 36px !important;
-          right: 47.5% !important;
-          clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
-          background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
-        }
-        #my_switcher_btn_Ibra:hover,
-        #my_switcher_btn_Ema:hover,
-        #my_switcher_btn_Han:hover,
-        #my_switcher_btn_Gha:hover,
-        #my_switcher_btn_Aml:hover {
-          clip-path: none;
-          background: linear-gradient(45deg, #ff0ccc 50%, #ccff0c 50%);
-          border-radius: 50%;
-          cursor: pointer;
-        }
-
-        #myHolder {
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-          background: linear-gradient(
-            to top,
-            grey,
-            #0c291c,
-            #081d14,
-            #000
-          ) !important;
-          color: #55724c;
-          text-align: left !important;
-          padding-bottom: 2px !important;
-        }
-
-        .ourFathers,
-        header {
-          width: 100%;
-          border: unset;
-        }
-
-        .ourFathers {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          font-size: 24px;
-          text-align: center;
-          border: none;
-          border-top: 2px solid #112708 !important;
-          border-bottom: 2px solid #112708 !important;
-
-          span {
-            border: none;
-            font-size: 24px;
-          }
-        }
-
-        .wrapper {
-          border-color: transparent !important;
-        }
-
-        #myBoxContainer::-webkit-scrollbar {
-          display: none;
-        }
-
-        #plan {
-          min-width: 100%;
-          font-size: 30px !important;
-        }
-
-       
-        table {
-          height: 100%;
-          max-height: 100%;
-          min-height: 100%;
-          border: 1px solid rgba(20, 20, 20, 0) !important;
-          margin: 0 auto;
-          min-width: 100%;
-          background-color: rgba(123, 255, 0, 0.219);
-        }
-        tr,
-        td,
-        .cell1,
-        .cell2,
-        .cell3,
-        .cell4,
-        .cell5 {
-          background-color: rgb(40, 66, 42);
-          text-align: center;
-          color: rgb(221, 241, 163);
-          font-weight: bold !important;
-          padding-top: 1px !important;
-          padding-bottom: 0px !important;
-          margin-top: 0px !important;
-          margin-bottom: 0px !important;
-          font-size: 30px !important;
-        }
-
-        .cell1 {
-          min-width: 10px;
-          font-size: 28px !important;
-        }
-
-        .cell2 {
-          min-width: 70px;
-        }
-
-        .cell3 {
-          min-width: 100px;
-        }
-
-        .cell4 {
-          min-width: 540px;
-          font-size: 25px !important;
-        }
-
-        .cell5 {
-          min-width: 80px;
-          font-size: 26px !important;
-        }
-
-        .sections {
-          min-width: 700px !important;
-          width: 800px !important;
-        }
-
-        #published {
-          background-color: rgb(40, 66, 42);
-          color: rgb(221, 241, 163);
-          font-size: 30px;
-          padding: 4px auto;
-
-          span {
-            min-width: 100px;
-            font-size: 30px;
-          }
-        }
-
-    
-
-        .printers {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          display: flex;
-          font-size: 25px;
-         
-          background-color: #000;
-          
-          color: aliceblue;
-          
-        }
-
-        #printer {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 12px auto;
-
-          position: absolute;
-          top: 50px;
-          left: 42%;
-          padding: 10px 0;
-          display: flex !important;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-
-          min-height: 180px; 
-          height: 180px;
-          font-size: 25px;
-          color: aliceblue;
-          background-color: transparent !important;
-        }
-
-        .printer-shrink {
-          box-sizing: border-box;
-          border: none;
-          top: 0;
-          left: 20px;
-          bottom: 0;
-          width: 16px !important;
-          min-width: 16px !important;
-          max-width: 16px !important;
-          display: flex !important;
-          flex-direction: row;
-          justify-content: left;
-          align-items: end;
-          min-height: 140px;
-          align-self: left;
-
-          h3,
-          div,
-          span,
-      
-        
-          #info-title {
-            max-width: 100px !important;
-            min-width: 100px !important;
-            font-size: 13px !important;
-            margin: 0;
-            padding: 0;
-          }
-
-          #tabbing {
-            min-height: 33px !important;
-            max-height: 33px !important;
-            border: none !important;
-            max-width: 100px !important;
-            min-width: 100px !important;
-            box-shadow: none;
-          }
-
-          #previousBtn {
-            position: relative;
-            background-color: rgba(145, 76, 59, 0.281) !important;
-            background: linear-gradient(to left, rgb(247, 245, 245), grey);
-            max-width: 40px !important;
-            min-width: 40px !important;
-            max-height: 40px !important;
-            min-height: 40px !important;
-            border-radius: 50%;
-
-            span {
-              font-size: 20px !important;
-              color: #000 !important;
-            }
-          }
-
-          #nextBtn {
-            position: relative;
-            background-color: rgba(71, 124, 71, 0.253) !important;
-            background: linear-gradient(to right, rgb(250, 248, 248), grey);
-            max-width: 40px !important;
-            min-width: 40px !important;
-            max-height: 40px !important;
-            min-height: 40px !important;
-            border-radius: 50%;
-
-            span {
-              font-size: 20px !important;
-              color: #000 !important;
-            }
-          }
-
-          #information {
-            display: none !important;
-          }
-
-          .printers {
-            background-color: #000;
-
-            #printbtn {
-              background-color: rgb(9, 99, 99) !important;
-            }
-
-            #activeprintbtn {
-              background-color: rgb(95, 110, 5) !important;
-            }
-          }
-        }
-
-        #plan {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          min-width: 700px !important;
-          width: 800px !important;
-
-          table {
-            min-width: 700px !important;
-            width: 800px !important;
-          }
-        }
-
-        #information {
-          display: flex !important;
-          width: 360px !important;
-          min-width: 360px !important;
-          max-width: 360px !important;
-          border: 1px solid rgb(240, 211, 211) !important;
-
-          #mylist {
-            display: flex !important;
-            width: 360px !important;
-            min-width: 360px !important;
-            max-width: 360px !important;
-          }
-        }
-
-        
-      }
-      */
-
       /*repeate 768px*/
       @media screen and (min-width: 768px) {
         * {
@@ -802,7 +459,6 @@
           justify-content: space-between;
           align-items: center;
           font-size: 20px;
-
           border: none;
           border-top: 2px solid #112708 !important;
           border-bottom: 2px solid #112708 !important;
@@ -1010,7 +666,7 @@
         }
       }
 
-      /* Styles for screens 768px or smaller (mobile sizes) */
+      /* Styles for screens 768px or smaller (mobile sizes) ********************************************************************  */
       @media screen and (max-width: 375px) {
         * {
           padding: 0;
@@ -1077,9 +733,7 @@
           justify-content: center;
           align-items: center;
         }
-
        
-
         .printers {
           display: none !important;
           background-color: rgb(155, 151, 146) !important;
@@ -1111,7 +765,7 @@
 
       #myBoxContainer {
         padding-top: 5px !important;
-        padding-bottom: 20px !important;
+        padding-bottom: 10px !important;
         background: linear-gradient(
           to bottom,
           #271925,
@@ -1123,13 +777,13 @@
 
         position: absolute;
         cursor: grab;
-        bottom: 10px !important; /*top*/
+        bottom: 3px !important; /* was 10px */
         left: 22px; /*85*/
         background-color: #faf4f4 !important;
         font-size: 26px !important;
         text-shadow: 2px 2px 2px #f3efef;
         width: 345px !important; /*195*/
-        height: 80px !important; /*80*/
+        height: 70px !important; /*was 80px */
         overflow: hidden;
         overflow-y: scroll;
        
@@ -1137,7 +791,7 @@
 
       #myHolder {
         margin: 0 auto;
-        padding:25px 0 !important;
+        padding:25px 0 !important;/*was 25px*/
         text-align: center !important;
         color:#000 !important;
         min-width:fit-content !important;
@@ -1163,7 +817,6 @@
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
-
   
       .ourFathers {
         display: flex;
@@ -1191,22 +844,31 @@
 
        .switchers {
         z-index: 1200;
-        bottom: 85px;
+        bottom: 65px;/*65px*/
         left: 45%;
         border-radius: 50%;
-        border: 18px solid grey;
-        background-color: rgba(3, 255, 3, 0.164);
-        max-width: 25px;
-        min-width: 25px;
-        width: 25px;
-        max-height: 25px;
-        min-height: 25px;
-        height: 25px;
+        /*border: 18px solid rgba(120, 170, 110, 0.411);*/
+        /*background-color: rgb(120, 170, 110);*/
+         background:linear-gradient(
+           -222deg,
+           transparent,
+           transparent,
+           transparent,
+           rgb(120, 170, 110)
+        
+         );
+        max-width: 45px;
+        min-width: 45px;
+        width: 45px;
+        max-height: 45px;
+        min-height: 45px;
+        height: 45px;
+         box-shadow: 0px 5px 30px 0px rgb(164, 69, 237);
       }
       /* new code .....*/
 
       #published {
-        margin: 6px !important;
+        margin: 3px 2px !important;
         margin-bottom: 0 !important;
       }
 
@@ -2296,22 +1958,6 @@
             let mySwitcherBtnEma = document.createElement("button");
             mySwitcherBtnEma.style.position = "fixed";
             mySwitcherBtnEma.className = "switchers";
-            /*
-            mySwitcherBtnEma.style.zIndex = 1200;
-            mySwitcherBtnEma.style.bottom = "10px"; //top 12px
-            mySwitcherBtnEma.style.left = "24px"; //right
-            mySwitcherBtnEma.style.backgroundColor = "rgba(3,255,4,0.4)";
-        
-            mySwitcherBtnEma.style.borderRadius = "50%";
-            mySwitcherBtnEma.style.border="8px double black";
-
-                mySwitcherBtnEma.style.maxWidth = "80px";
-            mySwitcherBtnEma.style.minWidth = "80px";
-            mySwitcherBtnEma.style.width = "80px";
-            mySwitcherBtnEma.style.height = "80px";
-            mySwitcherBtnEma.style.maxHeight = "80px";
-            mySwitcherBtnEma.style.minHeight = "80px";
-            */
             mySwitcherBtnEma.id = "my_switcher_btn_Ema";
             mySwitcherBtnEma.innerText = "";
             mySwitcherBtnEma.onclick = () => {
@@ -2869,7 +2515,7 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الأربعاء") {
+            if (cell.innerHTML === "الثلاثاء") { /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
             } else if (cell.innerHTML === "السبت" && i < 24) {
@@ -2879,7 +2525,7 @@
               allSchoolsFields[i].innerHTML = "أجازة";
             }
             if (superName === "ايمان صالح") {
-              if (cell.innerHTML === "الاثنين") {
+              if (cell.innerHTML === "الاثنين" || cell.innerHTML==="الأربعاء") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
               }
