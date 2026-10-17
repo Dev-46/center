@@ -2515,7 +2515,7 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "االثلاثاء") {
+            if (cell.innerHTML === "الثلاثاء") { /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
             } else if (cell.innerHTML === "السبت" && i < 24) {
