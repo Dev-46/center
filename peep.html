@@ -896,9 +896,9 @@
         /*max-width: 110px;*/ /*35px*/
         min-width: 110px;
         width: 110px;
-        max-height: 2px; /*45px*/
-        min-height: 2px;
-        height: 2px;
+        max-height: 1px; /*45px*/
+        min-height: 1px;
+        height: 1px;
         box-shadow: 0px 5px 30px 0px rgb(59, 24, 87);
       }
       #clickerPeep:hover {
@@ -906,7 +906,7 @@
       }
 
       #clickerPeepHeader {
-        padding: 22px;
+        padding: 1px;
         cursor: move;
         z-index: 1222;
         background-color: #2196f3;
@@ -923,16 +923,28 @@
 
       @keyframes peepo {
         0% {
-          width: 20%;
+          min-width: 110px;
+        width: 110px;
+        max-height: 1px; /*45px*/
+        min-height: 1px;
         }
         30% {
-          width: 25%;
+          min-width: 110px;
+        width: 250px;
+        max-height: 2px; /*45px*/
+        min-height: 2px;
         }
         70% {
-          width: 66%;
+          min-width: 170px;
+        width: 370px;
+        max-height: 3px; /*45px*/
+        min-height: 3px;
         }
         100% {
-          width: 100%;
+          min-width: 110px;
+        width: 110px;
+        max-height: 1px; /*45px*/
+        min-height: 1px;
         }
       }
 
@@ -971,7 +983,7 @@
       class="your-draggable-element ifVisible"
       draggable="true"
     >
-      <div id="clickerPeepHeader">أكمل المدارس</div>
+      <div id="clickerPeepHeader"></div>
     </div>
 
     <script>
