@@ -906,11 +906,11 @@
       }
 
       #clickerPeepHeader {
-        padding: 1px;
+        padding: 2px;
         cursor: move;
         z-index: 1222;
         background-color: #2196f3;
-        background-color: #fbfcfd;
+        background-color: #e90f0f;
       }
 
       .your-draggable-element {
@@ -951,19 +951,35 @@
       /* clicker css */
 
       @media screen and (max-width: 375px) {
+        
+      #clickerPeepHeader {
+        padding: 1px;
+        cursor: move;
+        z-index: 1222;
+        background-color: #2196f3;
+        background-color: #e90f0f;
+      }
         #clickerPeep {
           position: fixed;
           z-index: 1220;
-          top: 5px; /*65px*/
-          left: 20%;/*1%*/
+          top: 2% !important; /*65px*/
+          left: 2% !important;/*1%*/
         }
       }
     </style>
   </head>
 
   <body>
+    
     <div id="printer"></div>
-
+<!-- clicker -->
+    <div
+      id="clickerPeep"
+      class="your-draggable-element ifVisible"
+      draggable="true"
+    >
+      <div id="clickerPeepHeader"></div>
+    </div>
     <div id="plan">
       <div class="sections" id="published">
         <span id="inial"> الخطة الشهرية </span>
@@ -977,14 +993,7 @@
 
       <div id="plans"></div>
     </div>
-    <!-- clicker -->
-    <div
-      id="clickerPeep"
-      class="your-draggable-element ifVisible"
-      draggable="true"
-    >
-      <div id="clickerPeepHeader"></div>
-    </div>
+    
 
     <script>
       ///////////////////////////////////////drag
