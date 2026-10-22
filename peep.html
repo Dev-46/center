@@ -17,9 +17,9 @@
         max-height: 500px !important;
         max-width: 370px !important;
       }
-      #myBoxContainer{
+      #myBoxContainer {
         padding-bottom: 2px !important;
-       }
+      }
       body {
         background-color: rgba(0, 0, 0, 0.226);
       }
@@ -733,7 +733,7 @@
           justify-content: center;
           align-items: center;
         }
-       
+
         .printers {
           display: none !important;
           background-color: rgb(155, 151, 146) !important;
@@ -786,15 +786,14 @@
         height: 70px !important; /*was 80px */
         overflow: hidden;
         overflow-y: scroll;
-       
       }
 
       #myHolder {
         margin: 0 auto;
-        padding:25px 0 !important;/*was 25px*/
+        padding: 25px 0 !important; /*was 25px*/
         text-align: center !important;
-        color:#000 !important;
-        min-width:fit-content !important;
+        color: #000 !important;
+        min-width: fit-content !important;
       }
 
       #myBoxContainer header {
@@ -817,13 +816,13 @@
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
-  
+
       .ourFathers {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
-        padding:4px 0;
+        padding: 4px 0;
         border: none;
         border-top: 2px solid #112708 !important;
         border-bottom: 2px solid #112708 !important;
@@ -842,28 +841,27 @@
         }
       }
 
-       .switchers {
+      .switchers {
         z-index: 1200;
-        bottom: 65px;/*65px*/
+        bottom: 65px; /*65px*/
         left: 45%;
         border-radius: 50%;
         /*border: 18px solid rgba(120, 170, 110, 0.411);*/
         /*background-color: rgb(120, 170, 110);*/
-         background:linear-gradient(
-           -222deg,
-           transparent,
-           transparent,
-           transparent,
-           rgb(120, 170, 110)
-        
-         );
+        background: linear-gradient(
+          -222deg,
+          transparent,
+          transparent,
+          transparent,
+          rgb(120, 170, 110)
+        );
         max-width: 45px;
         min-width: 45px;
         width: 45px;
         max-height: 45px;
         min-height: 45px;
         height: 45px;
-         box-shadow: 0px 5px 30px 0px rgb(164, 69, 237);
+        box-shadow: 0px 5px 30px 0px rgb(164, 69, 237);
       }
       /* new code .....*/
 
@@ -877,32 +875,38 @@
         border: 1px solid rgb(72, 107, 59) !important;
       }
       /* clicker css */
-      #clickerPeep{
- 
-        position: fixed;
+      #clickerPeep {
+        position: absolute;
         z-index: 1220;
-        top: 5px;/*65px*/
-        left: 1% !important;/*1%*/
+        /*top: 5px;*/ /*65px*/
+        /*left: 1%;*/ /*1%*/
         border-radius: 5px;
-         background:linear-gradient(
-           -222deg,
-           transparent,
-           transparent,
-           transparent,
-           rgb(120, 170, 110)
-        
-         );
-        max-width: 100px;/*35px*/
+        background: linear-gradient(
+          -222deg,
+          transparent,
+          transparent,
+          transparent,
+          rgb(120, 170, 110)
+        );
+        max-width: 100px; /*35px*/
         min-width: 100px;
         width: 100px;
-        max-height: 25px;/*45px*/
+        max-height: 25px; /*45px*/
         min-height: 25px;
         height: 25px;
-         box-shadow: 0px 5px 30px 0px rgb(59, 24, 87);
-         font-weight: bolder;
+        box-shadow: 0px 5px 30px 0px rgb(59, 24, 87);
+        font-weight: bolder;
       }
-      #clickerPeep:hover{
+      #clickerPeep:hover {
         cursor: pointer;
+      }
+
+      #clickerPeepHeader {
+        padding: 12px;
+        cursor: move;
+        z-index: 1222;
+        background-color: #2196f3;
+        color: #fff;
       }
 
       /* clicker css */
@@ -910,8 +914,7 @@
   </head>
 
   <body>
-    <div id="printer">
-    </div>
+    <div id="printer"></div>
 
     <div id="plan">
       <div class="sections" id="published">
@@ -927,9 +930,58 @@
       <div id="plans"></div>
     </div>
     <!-- clicker -->
-    <button id="clickerPeep">أكمل المدارس</button>
-   
+    <div id="clickerPeep">
+      <div id="clickerPeepHeader">أكمل المدارس</div>
+    </div>
+
     <script>
+      ///////////////////////////////////////drag
+
+// Make the DIV element draggable:
+dragElement(document.getElementById("clickerPeep"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+      ///////////////////////////////////////drop
       // ==========================================
       // 2. دالة صفارة المنبه الصوتي
       // ==========================================
@@ -972,7 +1024,7 @@
         }
         // تحقق إذا كانت هناك خلية فارغة
         const hasEmpty = Array.from(allInputFields).some(
-          (input) => input.value.trim() === ""
+          (input) => input.value.trim() === "",
         );
         if (hasEmpty) {
           // يوجد فراغ → أظهر الزر وشغّل الصوت
@@ -999,7 +1051,7 @@
         checkInputFields();
       });
     </script>
-   <!-- clicker -->
+    <!-- clicker -->
     <script>
       const Master = [
         { code: 1, school: "6 أكتوبر ب" },
@@ -2593,13 +2645,13 @@
           td4.style.backgroundColor = "lightgrey"; ///////////////////(school)/////td4
           ////////////////////////////////////////////////////////////
 
-            td4.innerHTML = "سجل رقم المدرسة";
-             // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
-            }
+          td4.innerHTML = "سجل رقم المدرسة";
+          // make the wrong choice clear with color light grey
+          if (td4.innerHTML === "سجل رقم المدرسة") {
+            td4.style.color = "#b4b4b4";
+          } else {
+            td4.style.color = "#000000";
+          }
 
           ////////////////////////////////////////////
           let td5 = document.createElement("input");
@@ -2608,7 +2660,7 @@
 
           //////////////////////////////////////////////////////////
           td5.style.backgroundColor = "#d9265355"; ///////////////////(code)/////td5
-         
+
           ////////////////////////////////////////////////////////////
 
           tr.appendChild(td2);
@@ -2627,22 +2679,26 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الثلاثاء") { /*   the day of .............................................................    */
+            if (cell.innerHTML === "الثلاثاء") {
+              /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
-               allSchoolsFields[i].style.color="#000000";
+              allSchoolsFields[i].style.color = "#000000";
             } else if (cell.innerHTML === "السبت" && i < 24) {
               ///****************************
               //cell.style.color = "red";
               allInputFields[i].value = "1002";
               allSchoolsFields[i].innerHTML = "أجازة";
-              allSchoolsFields[i].style.color="#000000";
+              allSchoolsFields[i].style.color = "#000000";
             }
             if (superName === "ايمان صالح") {
-              if (cell.innerHTML === "الاثنين" || cell.innerHTML==="الأربعاء") {
+              if (
+                cell.innerHTML === "الاثنين" ||
+                cell.innerHTML === "الأربعاء"
+              ) {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
-                allSchoolsFields[i].style.color="#000000";
+                allSchoolsFields[i].style.color = "#000000";
               }
             }
           });
@@ -2673,26 +2729,25 @@
           /////////////////////////////////////////////////////
 
           ////////////////////////////////////////////////////////////////////
-                 // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
-                ///////////////////////////////////////////////////////
-         
-          
+          // change back of code input if empty
+          if (td5.innerHTML === "") {
+            td5.style.backgroundColor = "#d9265355";
+          } else {
+            td5.style.backgroundColor = "#DAB1DA";
+          }
+
+          ///////////////////////////////////////////////////////
+
           td5.addEventListener("keyup", function () {
-                  // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
+            // change back of code input if empty
+            if (td5.innerHTML === "") {
+              td5.style.backgroundColor = "#d9265355";
+            } else {
+              td5.style.backgroundColor = "#DAB1DA";
+            }
+
             let code = td5.value;
-           // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
+            // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
             switch (code) {
               case "1":
                 td4.innerHTML = "6 أكتوبر الابتدائية";
@@ -3596,27 +3651,25 @@
                 td4.innerHTML = "سجل رقم المدرسة";
                 break;
             }
-            
-////////////////////////////////////////////////////////////////////
-                  // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
-            
-            // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
+
+            ////////////////////////////////////////////////////////////////////
+            // change back of code input if empty
+            if (td5.innerHTML === "") {
+              td5.style.backgroundColor = "#d9265355";
+            } else {
+              td5.style.backgroundColor = "#DAB1DA";
             }
-                ///////////////////////////////////////////////////////
+
+            // make the wrong choice clear with color light grey
+            if (td4.innerHTML === "سجل رقم المدرسة") {
+              td4.style.color = "#b4b4b4";
+            } else {
+              td4.style.color = "#000000";
+            }
+            ///////////////////////////////////////////////////////
 
             // فحص جميع الخلايا بعد كل إدخال
             checkInputFields();
-            
           });
         }
 
@@ -3635,7 +3688,6 @@
 
         // بعد بناء الجدول: فحص الخلايا مباشرةً
         checkInputFields();
-
       });
       //***************************************************************** */
       //////// the year of the plan
