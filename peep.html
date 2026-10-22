@@ -888,9 +888,9 @@
           transparent,
           rgb(120, 170, 110)
         );
-        max-width: 110px; /*35px*/
-        min-width: 110px;
-        width: 110px;
+        max-width: 100px; /*35px*/
+        min-width: 100px;
+        width: 100px;
         max-height: 25px; /*45px*/
         min-height: 25px;
         height: 25px;
@@ -907,6 +907,10 @@
         z-index: 1222;
         background-color: #2196f3;
         color: #fff;
+      }
+
+      .your-draggable-element {
+        touch-action: none; /* Prevents mobile scrolling while dragging */
       }
 
       /* clicker css */
@@ -931,55 +935,94 @@
     </div>
     <!-- clicker -->
     <div id="clickerPeep">
-      <div id="clickerPeepHeader">أكمل المدارس</div>
+      <div id="clickerPeepHeader" class="your-draggable-element">
+        أكمل المدارس
+      </div>
     </div>
 
     <script>
       ///////////////////////////////////////drag
 
-// Make the DIV element draggable:
-dragElement(document.getElementById("clickerPeep"));
+      // Make the DIV element draggable:
+      dragElement(document.getElementById("clickerPeep"));
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
+      // Desktop Mouse Events
+      draggable.addEventListener("mousedown", startDrag);
+      document.addEventListener("mousemove", drag);
+      document.addEventListener("mouseup", endDrag);
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+      // Mobile Touch Events
+      draggable.addEventListener("touchstart", startDrag);
+      document.addEventListener("touchmove", drag);
+      document.addEventListener("touchend", endDrag);
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
+      let isDragging = false;
 
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+      function startDrag(e) {
+        isDragging = true;
+        // Use e.touches[0] for mobile to find where the finger is touching
+        const event = e.touches ? e.touches[0] : e;
+        console.log("Started at: ", event.clientX, event.clientY);
+      }
+
+      function drag(e) {
+        if (!isDragging) return;
+
+        // If moving on mobile, prevent standard page scrolling
+        if (e.type === "touchmove") e.preventDefault();
+
+        const event = e.touches ? e.touches[0] : e;
+        // Your code to update element's top/left styles goes here
+      }
+
+      function endDrag() {
+        isDragging = false;
+      }
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          // if present, the header is where you move the DIV from:
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          // otherwise, move the DIV from anywhere inside the DIV:
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
 
       ///////////////////////////////////////drop
       // ==========================================
