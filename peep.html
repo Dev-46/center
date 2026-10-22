@@ -881,8 +881,8 @@
  
         position: fixed;
         z-index: 1220;
-        bottom: 15px;/*65px*/
-        left: 4%;/*1%*/
+        top: 5px;/*65px*/
+        left: 1% !important;/*1%*/
         border-radius: 5px;
          background:linear-gradient(
            -222deg,
@@ -892,13 +892,14 @@
            rgb(120, 170, 110)
         
          );
-        max-width: 40px;
-        min-width: 40px;
-        width: 40px;
-        max-height: 45px;
-        min-height: 45px;
-        height: 45px;
+        max-width: 100px;/*35px*/
+        min-width: 100px;
+        width: 100px;
+        max-height: 25px;/*45px*/
+        min-height: 25px;
+        height: 25px;
          box-shadow: 0px 5px 30px 0px rgb(59, 24, 87);
+         font-weight: bolder;
       }
       #clickerPeep:hover{
         cursor: pointer;
@@ -926,7 +927,7 @@
       <div id="plans"></div>
     </div>
     <!-- clicker -->
-    <button id="clickerPeep" onclick="playBeepAlarm()">تأكيد</button>
+    <button id="clickerPeep">أكمل المدارس</button>
    
     <script>
       // ==========================================
@@ -958,6 +959,45 @@
           console.log("يجب النقر في الصفحة لتفعيل الصوت.");
         }
       }
+
+      // فحص كل خلايا المتحكمة في الاكواد الرقمية
+      // اذا كانت اي واحدة مازالت خالية شغل الزر الخاص بالصوت
+      // ولو لم يكن ذلك اخفي الزر معلنا السماح باخذ سكرين للشاشة
+      function checkInputFields() {
+        const allInputFields = document.querySelectorAll(".input-field");
+        // لا توجد خلايا بعد (الجدول لم يُنشأ) → أظهر الزر
+        if (allInputFields.length === 0) {
+          document.getElementById("clickerPeep").style.display = "block";
+          return;
+        }
+        // تحقق إذا كانت هناك خلية فارغة
+        const hasEmpty = Array.from(allInputFields).some(
+          (input) => input.value.trim() === ""
+        );
+        if (hasEmpty) {
+          // يوجد فراغ → أظهر الزر وشغّل الصوت
+          document.getElementById("clickerPeep").style.display = "block";
+          //playBeepAlarm();
+        } else {
+          // جميع الخلايا ممتلئة → أخفِ الزر وأعلن السماح بالسكرين شات
+          document.getElementById("clickerPeep").style.display = "none";
+          document.title = "✅ جاهز للسكرين شات";
+          console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
+          playBeepAlarm();
+        }
+      }
+
+      // تشغيل الفحص عند تغيير أي حقل إدخال (delegation على document)
+      document.addEventListener("input", function (e) {
+        if (e.target && e.target.classList.contains("input-field")) {
+          checkInputFields();
+        }
+      });
+
+      // تشغيل الفحص عند أول تحميل الصفحة
+      window.addEventListener("load", function () {
+        checkInputFields();
+      });
     </script>
    <!-- clicker -->
     <script>
@@ -3573,6 +3613,9 @@
               td4.style.color="#000000"
             }
                 ///////////////////////////////////////////////////////
+
+            // فحص جميع الخلايا بعد كل إدخال
+            checkInputFields();
             
           });
         }
@@ -3589,6 +3632,10 @@
         }
 
         ////////////////// functions///////////////////////////////
+
+        // بعد بناء الجدول: فحص الخلايا مباشرةً
+        checkInputFields();
+
       });
       //***************************************************************** */
       //////// the year of the plan
