@@ -6,9 +6,9 @@
     <title id="mysupername">individual-plans</title>
     <script src="https://unpkg.com"></script>
     <script src="https://jquery.com"></script>
-<script src="https://jquery.com"></script>
-<!-- Add this line below them -->
-<script src="https://cloudflare.com"></script>
+    <script src="https://jquery.com"></script>
+    <!-- Add this line below them -->
+    <script src="https://cloudflare.com"></script>
     <!--<link rel="icon" href="/favicon.ico" />-->
     <style>
       * {
@@ -915,7 +915,7 @@
       }
 
       .your-draggable-element {
-        touch-action: none; /* Prevents mobile scrolling while dragging */
+        touch-action: none !important; /* Prevents mobile scrolling while dragging */
       }
 
       /* clicker css */
@@ -939,8 +939,12 @@
       <div id="plans"></div>
     </div>
     <!-- clicker -->
-    <div id="clickerPeep">
-      <div id="clickerPeepHeader" class="your-draggable-element" draggable="true">
+    <div id="clickerPeep" class="your-draggable-element"
+        draggable="true">
+      <div
+        id="clickerPeepHeader"
+        
+      >
         أكمل المدارس
       </div>
     </div>
