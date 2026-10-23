@@ -920,6 +920,16 @@
           top: 4% !important; /*65px*/
           left: 2% !important;/*1%*/
         }
+        #clickerBannar{
+        position: fixed;
+         z-index: 1220;
+          top:.8% !important; /*65px*/
+          left: 28% !important;/*1%*/
+          background-color: #f7fafc;
+          width: 100%;
+          text-align: center;
+        
+      }
 
       .your-draggable-element {
         touch-action: none !important; /* Prevents mobile scrolling while dragging */
@@ -959,6 +969,14 @@
       /* clicker css */
 
       @media screen and (max-width: 375px) {
+      #clickerBannar{
+        position: fixed;
+         z-index: 1220;
+          top: 4% !important; /*65px*/
+          left: 1% !important;/*1%*/
+          width: 100%;
+         
+      }
         
       #clickerPeepHeader {
         padding: 1px !important;
@@ -1001,6 +1019,9 @@
       draggable="true"
     >
       <div id="clickerPeepHeader"></div>
+    </div>
+    <div id="clickerBannar">
+      سجل خطتك الفردية ، مع تحياتي/ابراهيم حسان
     </div>
     <!-- /section1 -->
     <div id="plan">
@@ -1150,6 +1171,7 @@ dragElement(document.getElementById("clickerPeep2"));
         if (allInputFields.length === 0) {
           document.getElementById("clickerPeep").style.display = "block";
           document.getElementById("clickerPeep2").style.display = "block";
+           document.getElementById("clickerBannar").style.display = "block";
           return;
         }
         // تحقق إذا كانت هناك خلية فارغة
@@ -1160,11 +1182,13 @@ dragElement(document.getElementById("clickerPeep2"));
           // يوجد فراغ → أظهر الزر وشغّل الصوت
           document.getElementById("clickerPeep").style.display = "block";
            document.getElementById("clickerPeep2").style.display = "block";
+           document.getElementById("clickerBannar").style.display = "block";
           //playBeepAlarm();
         } else {
           // جميع الخلايا ممتلئة → أخفِ الزر وأعلن السماح بالسكرين شات
           document.getElementById("clickerPeep").style.display = "none";
            document.getElementById("clickerPeep2").style.display = "none";
+           document.getElementById("clickerBannar").style.display = "none";
           document.title = "✅ جاهز للسكرين شات";
           console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
           playBeepAlarm();
