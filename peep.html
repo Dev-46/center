@@ -578,11 +578,8 @@
           margin: 0 auto;
           display: flex;
           font-size: 25px;
-          /*test*/
           background-color: #000;
-          /*test*/
           color: aliceblue;
-          /*test*/
         }
 
         #printer {
@@ -591,7 +588,6 @@
           justify-content: center;
           align-items: center;
           margin: 2px auto;
-
           position: absolute;
           top: 20px;
           left: 2%;
@@ -600,8 +596,6 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-
-          /*test*/
           min-height: 180px; /*480*/
           height: 180px; /*480*/
           font-size: 25px;
@@ -851,8 +845,6 @@
         bottom: 65px; /*65px*/
         left: 45%;
         border-radius: 50%;
-        /*border: 18px solid rgba(120, 170, 110, 0.411);*/
-        /*background-color: rgb(120, 170, 110);*/
         background: linear-gradient(
           -222deg,
           transparent,
@@ -879,6 +871,9 @@
         margin: 0 6px !important;
         border: 1px solid rgb(72, 107, 59) !important;
       }
+
+
+
       /* clicker css */
       #clickerPeep {
         position: absolute;
@@ -906,12 +901,25 @@
       }
 
       #clickerPeepHeader {
-        padding: 2px;
+        padding: 1px;
         cursor: move;
         z-index: 1222;
         background-color: #2196f3;
         background-color: #e90f0f;
       }
+
+        #clickerPeepHeader2 {
+        padding: 1px !important;
+        cursor: move;
+        z-index: 1222;
+        background-color: #0f0f0e;
+      }
+        #clickerPeep2 {
+          position: fixed;
+          z-index: 1220;
+          top: 4% !important; /*65px*/
+          left: 2% !important;/*1%*/
+        }
 
       .your-draggable-element {
         touch-action: none !important; /* Prevents mobile scrolling while dragging */
@@ -953,7 +961,7 @@
       @media screen and (max-width: 375px) {
         
       #clickerPeepHeader {
-        padding: 1px;
+        padding: 1px !important;
         cursor: move;
         z-index: 1222;
         background-color: #2196f3;
@@ -965,6 +973,20 @@
           top: 2% !important; /*65px*/
           left: 2% !important;/*1%*/
         }
+
+
+        #clickerPeepHeader2 {
+        padding: 1px !important;
+        cursor: move;
+        z-index: 1222;
+        background-color: #4de90f;
+      }
+        #clickerPeep2 {
+          position: fixed;
+          z-index: 1220;
+          top: 12% !important; /*65px*/
+          left: 2% !important;/*1%*/
+        }
       }
     </style>
   </head>
@@ -972,7 +994,7 @@
   <body>
     
     <div id="printer"></div>
-<!-- clicker -->
+<!-- clicker section1-->
     <div
       id="clickerPeep"
       class="your-draggable-element ifVisible"
@@ -980,6 +1002,7 @@
     >
       <div id="clickerPeepHeader"></div>
     </div>
+    <!-- /section1 -->
     <div id="plan">
       <div class="sections" id="published">
         <span id="inial"> الخطة الشهرية </span>
@@ -990,7 +1013,15 @@
         <span id="month">يناير</span>
         <span id="year">2027</span>
       </div>
-
+      <!-- section2 -->
+      <div
+      id="clickerPeep2"
+      class="your-draggable-element ifVisible"
+      draggable="true"
+    >
+      <div id="clickerPeepHeader2"></div>
+    </div>
+    <!-- /section2 -->
       <div id="plans"></div>
     </div>
     
@@ -1000,7 +1031,7 @@
 
       // Make the DIV element draggable:
       dragElement(document.getElementById("clickerPeep"));
-
+dragElement(document.getElementById("clickerPeep2"));
       // Desktop Mouse Events
       draggable.addEventListener("mousedown", startDrag);
       document.addEventListener("mousemove", drag);
@@ -1118,6 +1149,7 @@
         // لا توجد خلايا بعد (الجدول لم يُنشأ) → أظهر الزر
         if (allInputFields.length === 0) {
           document.getElementById("clickerPeep").style.display = "block";
+          document.getElementById("clickerPeep2").style.display = "block";
           return;
         }
         // تحقق إذا كانت هناك خلية فارغة
@@ -1127,10 +1159,12 @@
         if (hasEmpty) {
           // يوجد فراغ → أظهر الزر وشغّل الصوت
           document.getElementById("clickerPeep").style.display = "block";
+           document.getElementById("clickerPeep2").style.display = "block";
           //playBeepAlarm();
         } else {
           // جميع الخلايا ممتلئة → أخفِ الزر وأعلن السماح بالسكرين شات
           document.getElementById("clickerPeep").style.display = "none";
+           document.getElementById("clickerPeep2").style.display = "none";
           document.title = "✅ جاهز للسكرين شات";
           console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
           playBeepAlarm();
