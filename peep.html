@@ -980,6 +980,9 @@
   </head>
 
   <body>
+    <!-- موسيقى الخلفية أثناء الإدخال -->
+    <audio id="bgMusic" src="general-aims.mp4" loop preload="auto"></audio>
+
     <div id="printer"></div>
     <!-- clicker section1-->
     <div
@@ -1133,6 +1136,8 @@
       // ولو لم يكن ذلك اخفي الزر معلنا السماح باخذ سكرين للشاشة
       function checkInputFields() {
         const allInputFields = document.querySelectorAll(".input-field");
+        const bgMusic = document.getElementById("bgMusic");
+
         // لا توجد خلايا بعد (الجدول لم يُنشأ) → أظهر الزر
         if (allInputFields.length === 0) {
           document.getElementById("clickerPeep").style.display = "block";
@@ -1145,13 +1150,17 @@
           (input) => input.value.trim() === "",
         );
         if (hasEmpty) {
-          // يوجد فراغ → أظهر الزر وشغّل الصوت
+          // يوجد فراغ → أظهر الزر وشغّل موسيقى الخلفية
           document.getElementById("clickerPeep").style.display = "block";
           document.getElementById("clickerPeep2").style.display = "block";
           document.getElementById("clickerBannar").style.display = "block";
-          //playBeepAlarm();
+          if (bgMusic.paused) {
+            bgMusic.play().catch(() => {});
+          }
         } else {
-          // جميع الخلايا ممتلئة → أخفِ الزر وأعلن السماح بالسكرين شات
+          // جميع الخلايا ممتلئة → أوقف الموسيقى، شغّل البيب، أخفِ الزر
+          bgMusic.pause();
+          bgMusic.currentTime = 0;
           document.getElementById("clickerPeep").style.display = "none";
           document.getElementById("clickerPeep2").style.display = "none";
           document.getElementById("clickerBannar").style.display = "none";
