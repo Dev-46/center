@@ -9,7 +9,7 @@
     <script src="https://jquery.com"></script>
     <!-- Add this line below them -->
     <script src="https://cloudflare.com"></script>
-    <!--<link rel="icon" href="/favicon.ico" />-->
+    <link rel="icon" href="/favicon.ico" />
     <style>
       * {
         padding: 0;
@@ -128,28 +128,6 @@
 
       #tabbing {
         background-color: rgba(52, 70, 70, 0.438);
-      }
-
-      #information {
-        position: relative;
-        left: 0;
-        right: 0;
-        line-height: 20px;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        resize: none;
-        background-color: #00000002;
-        background-color: #0000003a;
-        border: 2px solid rgba(255, 0, 0, 0.014);
-        font-size: 1.2rem;
-        min-width: 150px;
-        max-width: 150px;
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        text-shadow: 1px 1px 1px #000;
       }
 
       #tools {
@@ -618,24 +596,10 @@
           }
         }
 
-        #information {
-          display: flex !important;
-          width: 360px !important;
-          min-width: 360px !important;
-          max-width: 360px !important;
-          border: 1px solid rgb(240, 211, 211) !important;
-
-          #mylist {
-            display: flex !important;
-            width: 360px !important;
-            min-width: 360px !important;
-            max-width: 360px !important;
-          }
-        }
-
         #mypoptogetinfo {
           min-width: 70%;
           max-width: 70% !important;
+          top: 250px !important;
           background-color: rgba(255, 0, 0, 0) !important;
         }
         #printer,
@@ -842,7 +806,7 @@
 
       .switchers {
         z-index: 1200;
-        bottom: 65px; /*65px*/
+        bottom: 65px;
         left: 45%;
         border-radius: 50%;
         background: linear-gradient(
@@ -872,14 +836,10 @@
         border: 1px solid rgb(72, 107, 59) !important;
       }
 
-
-
       /* clicker css */
       #clickerPeep {
         position: absolute;
         z-index: 1220;
-        /*top: 5px;*/ /*65px*/
-        /*left: 1%;*/ /*1%*/
         border-radius: 5px;
         background: linear-gradient(
           -222deg,
@@ -888,10 +848,9 @@
           transparent,
           rgb(120, 170, 110)
         );
-        /*max-width: 110px;*/ /*35px*/
         min-width: 110px;
         width: 110px;
-        max-height: 1px; /*45px*/
+        max-height: 1px;
         min-height: 1px;
         height: 1px;
         box-shadow: 0px 5px 30px 0px rgb(59, 24, 87);
@@ -904,34 +863,44 @@
         padding: 1px;
         cursor: move;
         z-index: 1222;
-        background-color: #2196f3;
         background-color: #e90f0f;
       }
 
-        #clickerPeepHeader2 {
+      #clickerPeepHeader2 {
         padding: 1px !important;
         cursor: move;
         z-index: 1222;
         background-color: #0f0f0e;
       }
-        #clickerPeep2 {
-          position: fixed;
-          z-index: 1220;
-          top: 4% !important; /*65px*/
-          left: 3% !important;/*1%*/
-        }
-        #clickerBannar{
+      #clickerPeep2 {
         position: fixed;
-         z-index: 1220;
-          top:.8% !important; /*65px*/
-          left: 3% !important;/*1%*/
-          background:linear-gradient(to right,#000,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#f7fafc,#900);
-          /*background-color: #f7fafc;*/
-          border-left:10px solid black;
-          border-right:10px solid red;
-          width: 100%;
-          text-align: center;
-        
+        z-index: 1220;
+        top: 4% !important; /*65px*/
+        left: 3% !important; /*1%*/
+      }
+      #clickerBannar {
+        position: fixed;
+        z-index: 1220;
+        top: 0.8% !important;
+        left: 3% !important;
+        background: linear-gradient(
+          to right,
+          #000,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          #f7fafc,
+          rgb(126, 6, 6)
+        );
+        border-left: 10px solid black;
+        border-right: 10px solid rgb(126, 6, 6);
+        width: 100%;
+        text-align: center;
       }
 
       .your-draggable-element {
@@ -945,77 +914,74 @@
       @keyframes peepo {
         0% {
           min-width: 110px;
-        width: 110px;
-        max-height: 1px; /*45px*/
-        min-height: 1px;
+          width: 110px;
+          max-height: 1px; /*45px*/
+          min-height: 1px;
         }
         30% {
           min-width: 110px;
-        width: 250px;
-        max-height: 2px; /*45px*/
-        min-height: 2px;
+          width: 250px;
+          max-height: 2px; /*45px*/
+          min-height: 2px;
         }
         70% {
           min-width: 170px;
-        width: 370px;
-        max-height: 3px; /*45px*/
-        min-height: 3px;
+          width: 370px;
+          max-height: 3px; /*45px*/
+          min-height: 3px;
         }
         100% {
           min-width: 110px;
-        width: 110px;
-        max-height: 1px; /*45px*/
-        min-height: 1px;
+          width: 110px;
+          max-height: 1px; /*45px*/
+          min-height: 1px;
         }
       }
 
       /* clicker css */
 
       @media screen and (max-width: 375px) {
-      #clickerBannar{
-        position: fixed;
-         z-index: 1220;
+        #clickerBannar {
+          position: fixed;
+          z-index: 1220;
           top: 4% !important; /*65px*/
-          left: 3% !important;/*1%*/
+          left: 3% !important; /*1%*/
           width: 100%;
-         
-      }
-        
-      #clickerPeepHeader {
-        padding: 1px !important;
-        cursor: move;
-        z-index: 1222;
-        background-color: #2196f3;
-        background-color: #e90f0f;
-      }
+        }
+
+        #clickerPeepHeader {
+          padding: 1px !important;
+          cursor: move;
+          z-index: 1222;
+          background-color: #2196f3;
+          /*background-color: #e90f0f;*/
+        }
         #clickerPeep {
           position: fixed;
           z-index: 1220;
           top: 2% !important; /*65px*/
-          left: 3% !important;/*1%*/
+          left: 3% !important; /*1%*/
         }
 
-
         #clickerPeepHeader2 {
-        padding: 1px !important;
-        cursor: move;
-        z-index: 1222;
-        background-color: #4de90f;
-      }
+          padding: 1px !important;
+          cursor: move;
+          z-index: 1222;
+          /*background-color: #4de90f;*/
+        }
         #clickerPeep2 {
           position: fixed;
           z-index: 1220;
           top: 12% !important; /*65px*/
-          left: 3% !important;/*1%*/
+          left: 3% !important; /*1%*/
         }
       }
     </style>
   </head>
 
   <body>
-    
     <div id="printer"></div>
-<!-- clicker section1-->
+    <!-- clicker section1-->
     <div
       id="clickerPeep"
       class="your-draggable-element ifVisible"
@@ -1023,9 +989,7 @@
     >
       <div id="clickerPeepHeader"></div>
     </div>
-    <div id="clickerBannar">
-      سجل خطتك الفردية ، مع تحياتي/ابراهيم حسان
-    </div>
+    <div id="clickerBannar">سجل خطتك الفردية ، مع تحياتي/ابراهيم حسان</div>
     <!-- /section1 -->
     <div id="plan">
       <div class="sections" id="published">
@@ -1039,23 +1003,22 @@
       </div>
       <!-- section2 -->
       <div
-      id="clickerPeep2"
-      class="your-draggable-element ifVisible"
-      draggable="true"
-    >
-      <div id="clickerPeepHeader2"></div>
-    </div>
-    <!-- /section2 -->
+        id="clickerPeep2"
+        class="your-draggable-element ifVisible"
+        draggable="true"
+      >
+        <div id="clickerPeepHeader2"></div>
+      </div>
+      <!-- /section2 -->
       <div id="plans"></div>
     </div>
-    
 
     <script>
       ///////////////////////////////////////drag
 
       // Make the DIV element draggable:
       dragElement(document.getElementById("clickerPeep"));
-dragElement(document.getElementById("clickerPeep2"));
+      dragElement(document.getElementById("clickerPeep2"));
       // Desktop Mouse Events
       draggable.addEventListener("mousedown", startDrag);
       document.addEventListener("mousemove", drag);
@@ -1174,7 +1137,7 @@ dragElement(document.getElementById("clickerPeep2"));
         if (allInputFields.length === 0) {
           document.getElementById("clickerPeep").style.display = "block";
           document.getElementById("clickerPeep2").style.display = "block";
-           document.getElementById("clickerBannar").style.display = "block";
+          document.getElementById("clickerBannar").style.display = "block";
           return;
         }
         // تحقق إذا كانت هناك خلية فارغة
@@ -1184,14 +1147,14 @@ dragElement(document.getElementById("clickerPeep2"));
         if (hasEmpty) {
           // يوجد فراغ → أظهر الزر وشغّل الصوت
           document.getElementById("clickerPeep").style.display = "block";
-           document.getElementById("clickerPeep2").style.display = "block";
-           document.getElementById("clickerBannar").style.display = "block";
+          document.getElementById("clickerPeep2").style.display = "block";
+          document.getElementById("clickerBannar").style.display = "block";
           //playBeepAlarm();
         } else {
           // جميع الخلايا ممتلئة → أخفِ الزر وأعلن السماح بالسكرين شات
           document.getElementById("clickerPeep").style.display = "none";
-           document.getElementById("clickerPeep2").style.display = "none";
-           document.getElementById("clickerBannar").style.display = "none";
+          document.getElementById("clickerPeep2").style.display = "none";
+          document.getElementById("clickerBannar").style.display = "none";
           document.title = "✅ جاهز للسكرين شات";
           console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
           playBeepAlarm();
@@ -1791,7 +1754,7 @@ dragElement(document.getElementById("clickerPeep2"));
       mypoptogetinfo.style.bottom = "0";
       mypoptogetinfo.style.width = "340" + "px";
       mypoptogetinfo.style.zIndex = 1001;
-      mypoptogetinfo.style.margin = "450px auto";
+      //mypoptogetinfo.style.margin = "450px auto";
 
       let closeHolder = document.createElement("button");
       closeHolder.style.minWidth = "300" + "px";
@@ -2006,7 +1969,18 @@ dragElement(document.getElementById("clickerPeep2"));
       executebtn.disabled = true;
       executebtn.innerText = "  تنفيذ ";
       mypoptogetinfo.appendChild(executebtn);
-
+      // added fasal to the code....................................
+      let fasal = document.createElement("div");
+      fasal.style.height = "320px";
+      fasal.style.width = "200px";
+      fasal.style.visibility = "hidden";
+      fasal.textContent = "font size";
+      fasal.style.backgroundColor = "green";
+      fasal.style.paddingTop = "12%";
+      fasal.style.marginTop = "12%";
+      fasal.style.marginBottom = "12%";
+      document.getElementById("printer").appendChild(fasal);
+      // added fasal to the code......................................
       document.getElementById("printer").appendChild(mypoptogetinfo);
 
       executebtn.addEventListener("mouseover", function () {
