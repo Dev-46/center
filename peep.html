@@ -2836,9 +2836,9 @@
           const allInputFields = document.querySelectorAll(".input-field");
           const allSchoolsFields = document.querySelectorAll(".cell4");
 
-          // You can iterate over the resulting NodeList using forEach, for...of, etc.
+            // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الثلاثاء") {
+            if (cell.innerHTML === "الأربعاء") {
               /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
@@ -2851,10 +2851,7 @@
               allSchoolsFields[i].style.color = "#000000";
             }
             if (superName === "ايمان صالح") {
-              if (
-                cell.innerHTML === "الاثنين" ||
-                cell.innerHTML === "الأربعاء"
-              ) {
+              if (cell.innerHTML === "الاثنين") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
                 allSchoolsFields[i].style.color = "#000000";
