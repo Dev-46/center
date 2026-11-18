@@ -3855,7 +3855,9 @@
     </script>
 
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
 const mycontainer = document.getElementById('myBoxContainer');
+        if(mycontainer){
   const firstItem = document.getElementById('myHolder');
   let inactivityTimer;
 
@@ -3880,6 +3882,8 @@ const mycontainer = document.getElementById('myBoxContainer');
 
   // Start the timer initially when the page loads
   startTimer();
+        }
+      });
 </script>
   </body>
 </html>
