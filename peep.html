@@ -751,29 +751,29 @@
         overflow-y: scroll;
       }
 
-      #myHolder {
+      #chaios {
         margin: 0 auto;
-        padding: 25px 0 !important; /*was 25px*/
+        padding: 25px 0 !important; 
         text-align: center !important;
         color: #000 !important;
         min-width: fit-content !important;
       }
 
-      #myBoxContainer header {
+      #myBoxContainer #chaios {
         cursor: pointer;
         position: relative;
-        width: 180px !important;
+        width: 280px !important;
         height: 20px !important;
         margin: 0 auto;
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
 
-      #myBoxContainer header.active {
+      #myBoxContainer #chaios.active {
         cursor: move;
         user-select: none;
         position: relative;
-        width: 180px !important;
+        width: 280px !important;
         height: 20px !important;
         margin: 0 auto;
         background: linear-gradient(to bottom, #e4e6e479);
@@ -2020,11 +2020,29 @@
         myBox.style.border = "2px solid #112";
         myBox.style.borderBottom = "2px solid #777";
         myBox.style.borderLeft = "2px solid #999";
-        let ladle = document.createElement("header");
-        ladle.id = "myHolder";
+
+        
+        /////////////////////////////////////////////////////////////////////
+        let ladle = document.createElement("div");////from header to div
+        ///////////////////////////////////////////////////////////////////
+        ladle.className="ourFathers"//add class it the same as others
+        //ladle.id = "myHolder";
+        ladle.id="chaios";
         ladle.style.zIndex = 900;
-        ladle.innerText = "دور لتعرف مدارسك";
+        ladle.style.minWidth="100%";
+        //ladle.innerText = "دور لتعرف مدارسك";
         myBox.appendChild(ladle);
+
+        if(ladle){
+           let txtspan = document.createElement("span");
+           let closespan = document.createElement("span");
+           txtspan.innerText="دور على مدارسك ";
+           closespan.innerText="x";
+           txtspan.style.color="navy";
+           closespan.style.color="red";
+           ladle.appendChild(txtspan);
+           ladle.appendChild(closespan);
+        }
 
         // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
         switch (superName) {
@@ -4169,5 +4187,38 @@
         document.getElementById(element).disabled = `${status}`;
       }
     </script>
+
+    <script>
+     
+      // Wait for myBoxContainer to be added to the DOM dynamically
+      const observer = new MutationObserver(() => {
+        const mycontainer = document.getElementById('myBoxContainer');
+
+        if (mycontainer) {
+          // Container found — stop watching
+          observer.disconnect();
+
+          let timer;
+
+          function resetTimer() {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+              const firstItem = mycontainer.getElementsByTagName('div')[0];
+              if (firstItem) {
+                firstItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 5000); // 5 seconds of inactivity
+          }
+
+          // Listen for scrolling inside the container
+          mycontainer.addEventListener('scroll', resetTimer);
+
+          // Start the timer initially
+          resetTimer();
+        }
+      });
+      // Start observing the DOM for dynamically added elements, specifically waiting for myBoxContainer
+      observer.observe(document.body, { childList: true, subtree: true });
+       </script>
   </body>
 </html>
