@@ -985,13 +985,13 @@
 
       #ranger {
         position: fixed;
-        left: 10px;
+        left: 5px;
         top: 20px;
         z-index: 5000;
         cursor: pointer;
       }
 
-
+      /*     https://www.youtube.com/watch?v=AvvXZL3mKhc*/
       :root {
         /*color-scheme: light dark;*/
 
@@ -1014,6 +1014,7 @@
         margin: 0;
         display: block;
         background: transparent;
+        background: grey;
         &::-webkit-slider-thumb {
           appearance: none;
           background: linear-gradient(
@@ -1025,7 +1026,7 @@
           border-radius: 4px;
           width: 10px;
           scale: 1.4 1;
-          height: 18px;
+          height: 12px;
         }
         &::-moz-range-thumb {
           appearance: none;
@@ -1201,6 +1202,8 @@
           document.getElementById("clickerPeep").style.display = "block";
           document.getElementById("clickerPeep2").style.display = "block";
           document.getElementById("clickerBannar").style.display = "block";
+          document.getElementById("ranger").style.display = "block";
+          document.getElementById("myBoxContainer").style.display = "block";
           if (bgMusic.paused) {
             bgMusic.play().catch(() => {});
           }
@@ -1210,6 +1213,8 @@
           document.getElementById("clickerPeep").style.display = "none";
           document.getElementById("clickerPeep2").style.display = "none";
           document.getElementById("clickerBannar").style.display = "none";
+           document.getElementById("ranger").style.display = "none";
+           document.getElementById("myBoxContainer").style.display = "none";
           document.title = "✅ جاهز للسكرين شات";
           console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
           playBeepAlarm();
@@ -4267,3 +4272,4 @@
     </script>
   </body>
 </html>
+
