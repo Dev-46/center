@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="mysupername">individual-plans</title>
+    <title id="mysupername"></title>
     <script src="https://unpkg.com"></script>
     <script src="https://jquery.com"></script>
     <script src="https://jquery.com"></script>
     <!-- Add this line below them -->
     <script src="https://cloudflare.com"></script>
-    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      href="/favicon.ico "
+    />
+
     <style>
       * {
         padding: 0;
@@ -753,7 +757,7 @@
 
       #chaios {
         margin: 0 auto;
-        padding: 25px 0 !important; 
+        padding: 25px 0 !important;
         text-align: center !important;
         color: #000 !important;
         min-width: fit-content !important;
@@ -982,6 +986,10 @@
   <body>
     <!-- موسيقى الخلفية أثناء الإدخال -->
     <audio id="bgMusic" src="general-aims.mp4" loop preload="auto"></audio>
+    <script>
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.04; // Sets volume to 20%
+    </script>
 
     <div id="printer"></div>
     <!-- clicker section1-->
@@ -1017,89 +1025,6 @@
     </div>
 
     <script>
-      ///////////////////////////////////////drag
-
-      // Make the DIV element draggable:
-      dragElement(document.getElementById("clickerPeep"));
-      dragElement(document.getElementById("clickerPeep2"));
-      // Desktop Mouse Events
-      draggable.addEventListener("mousedown", startDrag);
-      document.addEventListener("mousemove", drag);
-      document.addEventListener("mouseup", endDrag);
-
-      // Mobile Touch Events
-      draggable.addEventListener("touchstart", startDrag);
-      document.addEventListener("touchmove", drag);
-      document.addEventListener("touchend", endDrag);
-
-      let isDragging = false;
-
-      function startDrag(e) {
-        isDragging = true;
-        // Use e.touches[0] for mobile to find where the finger is touching
-        const event = e.touches ? e.touches[0] : e;
-        console.log("Started at: ", event.clientX, event.clientY);
-      }
-
-      function drag(e) {
-        if (!isDragging) return;
-
-        // If moving on mobile, prevent standard page scrolling
-        if (e.type === "touchmove") e.preventDefault();
-
-        const event = e.touches ? e.touches[0] : e;
-        // Your code to update element's top/left styles goes here
-      }
-
-      function endDrag() {
-        isDragging = false;
-      }
-
-      function dragElement(elmnt) {
-        var pos1 = 0,
-          pos2 = 0,
-          pos3 = 0,
-          pos4 = 0;
-        if (document.getElementById(elmnt.id + "header")) {
-          // if present, the header is where you move the DIV from:
-          document.getElementById(elmnt.id + "header").onmousedown =
-            dragMouseDown;
-        } else {
-          // otherwise, move the DIV from anywhere inside the DIV:
-          elmnt.onmousedown = dragMouseDown;
-        }
-
-        function dragMouseDown(e) {
-          e = e || window.event;
-          e.preventDefault();
-          // get the mouse cursor position at startup:
-          pos3 = e.clientX;
-          pos4 = e.clientY;
-          document.onmouseup = closeDragElement;
-          // call a function whenever the cursor moves:
-          document.onmousemove = elementDrag;
-        }
-
-        function elementDrag(e) {
-          e = e || window.event;
-          e.preventDefault();
-          // calculate the new cursor position:
-          pos1 = pos3 - e.clientX;
-          pos2 = pos4 - e.clientY;
-          pos3 = e.clientX;
-          pos4 = e.clientY;
-          // set the element's new position:
-          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-        }
-
-        function closeDragElement() {
-          // stop moving when mouse button is released:
-          document.onmouseup = null;
-          document.onmousemove = null;
-        }
-      }
-
       ///////////////////////////////////////drop
       // ==========================================
       // 2. دالة صفارة المنبه الصوتي
@@ -2021,27 +1946,26 @@
         myBox.style.borderBottom = "2px solid #777";
         myBox.style.borderLeft = "2px solid #999";
 
-        
         /////////////////////////////////////////////////////////////////////
-        let ladle = document.createElement("div");////from header to div
+        let ladle = document.createElement("div"); ////from header to div
         ///////////////////////////////////////////////////////////////////
-        ladle.className="ourFathers"//add class it the same as others
+        ladle.className = "ourFathers"; //add class it the same as others
         //ladle.id = "myHolder";
-        ladle.id="chaios";
+        ladle.id = "chaios";
         ladle.style.zIndex = 900;
-        ladle.style.minWidth="100%";
+        ladle.style.minWidth = "100%";
         //ladle.innerText = "دور لتعرف مدارسك";
         myBox.appendChild(ladle);
 
-        if(ladle){
-           let txtspan = document.createElement("span");
-           let closespan = document.createElement("span");
-           txtspan.innerText="دور على مدارسك ";
-           closespan.innerText="x";
-           txtspan.style.color="navy";
-           closespan.style.color="red";
-           ladle.appendChild(txtspan);
-           ladle.appendChild(closespan);
+        if (ladle) {
+          let txtspan = document.createElement("span");
+          let closespan = document.createElement("span");
+          txtspan.innerText = "دور على مدارسك ";
+          closespan.innerText = "x";
+          txtspan.style.color = "navy";
+          closespan.style.color = "red";
+          ladle.appendChild(txtspan);
+          ladle.appendChild(closespan);
         }
 
         // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
@@ -2836,7 +2760,7 @@
           const allInputFields = document.querySelectorAll(".input-field");
           const allSchoolsFields = document.querySelectorAll(".cell4");
 
-            // You can iterate over the resulting NodeList using forEach, for...of, etc.
+          // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
             if (cell.innerHTML === "الأربعاء") {
               /*   the day of .............................................................    */
@@ -2903,11 +2827,11 @@
             }
 
             // تحويل الأرقام العربية/الفارسية إلى أرقام غربية بسطر واحد
-            let code = td5.value.replace(/[٠١٢٣٤٥٦٧٨٩]/g, d => d.charCodeAt(0) - 1632)
-                                 .replace(/[۰۱۲۳۴۵۶۷۸۹]/g, d => d.charCodeAt(0) - 1776);
+            let code = td5.value
+              .replace(/[٠١٢٣٤٥٦٧٨٩]/g, (d) => d.charCodeAt(0) - 1632)
+              .replace(/[۰۱۲۳۴۵۶۷۸۹]/g, (d) => d.charCodeAt(0) - 1776);
 
             td5.value = code;
-
 
             // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
             switch (code) {
@@ -4186,10 +4110,9 @@
     </script>
 
     <script>
-     
       // Wait for myBoxContainer to be added to the DOM dynamically
       const observer = new MutationObserver(() => {
-        const mycontainer = document.getElementById('myBoxContainer');
+        const mycontainer = document.getElementById("myBoxContainer");
 
         if (mycontainer) {
           // Container found — stop watching
@@ -4200,15 +4123,18 @@
           function resetTimer() {
             clearTimeout(timer);
             timer = setTimeout(() => {
-              const firstItem = mycontainer.getElementsByTagName('div')[0];
+              const firstItem = mycontainer.getElementsByTagName("div")[0];
               if (firstItem) {
-                firstItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                firstItem.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
               }
             }, 5000); // 5 seconds of inactivity
           }
 
           // Listen for scrolling inside the container
-          mycontainer.addEventListener('scroll', resetTimer);
+          mycontainer.addEventListener("scroll", resetTimer);
 
           // Start the timer initially
           resetTimer();
@@ -4216,6 +4142,6 @@
       });
       // Start observing the DOM for dynamically added elements, specifically waiting for myBoxContainer
       observer.observe(document.body, { childList: true, subtree: true });
-       </script>
+    </script>
   </body>
 </html>
