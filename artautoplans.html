@@ -17,9 +17,9 @@
         max-height: 500px !important;
         max-width: 370px !important;
       }
-      #myBoxContainer{
+      #myBoxContainer {
         padding-bottom: 2px !important;
-       }
+      }
       body {
         background-color: rgba(0, 0, 0, 0.226);
       }
@@ -731,7 +731,7 @@
           justify-content: center;
           align-items: center;
         }
-       
+
         .printers {
           display: none !important;
           background-color: rgb(155, 151, 146) !important;
@@ -784,44 +784,43 @@
         height: 70px !important; /*was 80px */
         overflow: hidden;
         overflow-y: scroll;
-       
       }
 
-      #myHolder {
+      #chaios {
         margin: 0 auto;
-        padding:25px 0 !important;/*was 25px*/
+        padding: 25px 0 !important; 
         text-align: center !important;
-        color:#000 !important;
-        min-width:fit-content !important;
+        color: #000 !important;
+        min-width: fit-content !important;
       }
 
-      #myBoxContainer header {
+      #myBoxContainer #chaios {
         cursor: pointer;
         position: relative;
-        width: 180px !important;
+        width: 280px !important;
         height: 20px !important;
         margin: 0 auto;
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
 
-      #myBoxContainer header.active {
+      #myBoxContainer #chaios.active {
         cursor: move;
         user-select: none;
         position: relative;
-        width: 180px !important;
+        width: 280px !important;
         height: 20px !important;
         margin: 0 auto;
         background: linear-gradient(to bottom, #e4e6e479);
         border-bottom: 2px solid rgb(20, 20, 20) !important;
       }
-  
+
       .ourFathers {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
-        padding:4px 0;
+        padding: 4px 0;
         border: none;
         border-top: 2px solid #112708 !important;
         border-bottom: 2px solid #112708 !important;
@@ -840,26 +839,25 @@
         }
       }
 
-       .switchers {
+      .switchers {
         z-index: 1200;
-        bottom: 65px;/*65px*/
+        bottom: 65px; /*65px*/
         left: 45%;
         border-radius: 50%;
-         background:linear-gradient(
-           -222deg,
-           transparent,
-           transparent,
-           transparent,
-           rgb(120, 170, 110)
-        
-         );
+        background: linear-gradient(
+          -222deg,
+          transparent,
+          transparent,
+          transparent,
+          rgb(120, 170, 110)
+        );
         max-width: 45px;
         min-width: 45px;
         width: 45px;
         max-height: 45px;
         min-height: 45px;
         height: 45px;
-         box-shadow: 0px 5px 30px 0px rgb(164, 69, 237);
+        box-shadow: 0px 5px 30px 0px rgb(164, 69, 237);
       }
       /* new code .....*/
 
@@ -876,8 +874,7 @@
   </head>
 
   <body>
-    <div id="printer">
-    </div>
+    <div id="printer"></div>
 
     <div id="plan">
       <div class="sections" id="published">
@@ -1720,11 +1717,27 @@
         myBox.style.border = "2px solid #112";
         myBox.style.borderBottom = "2px solid #777";
         myBox.style.borderLeft = "2px solid #999";
-        let ladle = document.createElement("header");
-        ladle.id = "myHolder";
+        /////////////////////////////////////////////////////////////////////
+        let ladle = document.createElement("div");////from header to div
+        //////////////////////////////////////////////////////
+        ladle.className="ourFathers"//add class it the same as others
+        //ladle.id = "myHolder";
+        ladle.id="chaios";
         ladle.style.zIndex = 900;
-        ladle.innerText = "دور لتعرف مدارسك";
+        ladle.style.minWidth="100%";
+        //ladle.innerText = "دور لتعرف مدارسك";
         myBox.appendChild(ladle);
+
+        if(ladle){
+           let txtspan = document.createElement("span");
+           let closespan = document.createElement("span");
+           txtspan.innerText="دور على مدارسك ";
+           closespan.innerText="x";
+           txtspan.style.color="navy";
+           closespan.style.color="red";
+           ladle.appendChild(txtspan);
+           ladle.appendChild(closespan);
+        }
 
         // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
         switch (superName) {
@@ -2486,13 +2499,13 @@
           td4.style.backgroundColor = "lightgrey"; ///////////////////(school)/////td4
           ////////////////////////////////////////////////////////////
 
-            td4.innerHTML = "سجل رقم المدرسة";
-             // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
-            }
+          td4.innerHTML = "سجل رقم المدرسة";
+          // make the wrong choice clear with color light grey
+          if (td4.innerHTML === "سجل رقم المدرسة") {
+            td4.style.color = "#b4b4b4";
+          } else {
+            td4.style.color = "#000000";
+          }
 
           ////////////////////////////////////////////
           let td5 = document.createElement("input");
@@ -2501,7 +2514,7 @@
 
           //////////////////////////////////////////////////////////
           td5.style.backgroundColor = "#d9265355"; ///////////////////(code)/////td5
-         
+
           ////////////////////////////////////////////////////////////
 
           tr.appendChild(td2);
@@ -2520,22 +2533,23 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الأربعاء") { /*   the day of .............................................................    */
+            if (cell.innerHTML === "الأربعاء") {
+              /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
-               allSchoolsFields[i].style.color="#000000";
+              allSchoolsFields[i].style.color = "#000000";
             } else if (cell.innerHTML === "السبت" && i < 24) {
               ///****************************
               //cell.style.color = "red";
               allInputFields[i].value = "1002";
               allSchoolsFields[i].innerHTML = "أجازة";
-              allSchoolsFields[i].style.color="#000000";
+              allSchoolsFields[i].style.color = "#000000";
             }
             if (superName === "ايمان صالح") {
               if (cell.innerHTML === "الاثنين") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
-                allSchoolsFields[i].style.color="#000000";
+                allSchoolsFields[i].style.color = "#000000";
               }
             }
           });
@@ -2566,23 +2580,23 @@
           /////////////////////////////////////////////////////
 
           ////////////////////////////////////////////////////////////////////
-                 // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
+          // change back of code input if empty
+          if (td5.innerHTML === "") {
+            td5.style.backgroundColor = "#d9265355";
+          } else {
+            td5.style.backgroundColor = "#DAB1DA";
+          }
+
           td5.addEventListener("keyup", function () {
-                  // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
+            // change back of code input if empty
+            if (td5.innerHTML === "") {
+              td5.style.backgroundColor = "#d9265355";
+            } else {
+              td5.style.backgroundColor = "#DAB1DA";
+            }
+
             let code = td5.value;
-           // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
+            // td4.innerHTML = "سجل رقم المدرسة"; /* new code 2026*/
             switch (code) {
               case "1":
                 td4.innerHTML = "6 أكتوبر الابتدائية";
@@ -3486,24 +3500,22 @@
                 td4.innerHTML = "سجل رقم المدرسة";
                 break;
             }
-            
-////////////////////////////////////////////////////////////////////
-                  // change back of code input if empty
-             if(td5.innerHTML===""){
-               td5.style.backgroundColor = "#d9265355";
-             }else{
-               td5.style.backgroundColor = "#DAB1DA";
-             }
-        
-            
-            // make the wrong choice clear with color light grey
-            if( td4.innerHTML === "سجل رقم المدرسة" ){
-              td4.style.color="#b4b4b4"
-            }else{
-              td4.style.color="#000000"
+
+            ////////////////////////////////////////////////////////////////////
+            // change back of code input if empty
+            if (td5.innerHTML === "") {
+              td5.style.backgroundColor = "#d9265355";
+            } else {
+              td5.style.backgroundColor = "#DAB1DA";
             }
-                ///////////////////////////////////////////////////////
-            
+
+            // make the wrong choice clear with color light grey
+            if (td4.innerHTML === "سجل رقم المدرسة") {
+              td4.style.color = "#b4b4b4";
+            } else {
+              td4.style.color = "#000000";
+            }
+            ///////////////////////////////////////////////////////
           });
         }
 
@@ -3855,35 +3867,37 @@
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-const mycontainer = document.getElementById('myBoxContainer');
-        if(mycontainer){
-  const firstItem = document.getElementById('myHolder');
-  let inactivityTimer;
+     
+      // Wait for myBoxContainer to be added to the DOM dynamically
+      const observer = new MutationObserver(() => {
+        const mycontainer = document.getElementById('myBoxContainer');
 
-  function startTimer() {
-    // Clear any existing timer
-    clearTimeout(inactivityTimer);
+        if (mycontainer) {
+          // Container found — stop watching
+          observer.disconnect();
 
-    // Start a new 60-second countdown
-    inactivityTimer = setTimeout(() => {
-      // Smoothly scroll the container back to the first item
-      mycontainer.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 100); // 60,000 ms = 60 seconds
-  }
+          let timer;
 
-  // Reset the timer every time the user scrolls
-  mycontainer.addEventListener('scroll', () => {
-    startTimer();
-  });
+          function resetTimer() {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+              const firstItem = mycontainer.getElementsByTagName('div')[0];
+              if (firstItem) {
+                firstItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 5000); // 60 seconds of inactivity
+          }
 
-  // Start the timer initially when the page loads
-  startTimer();
+          // Listen for scrolling inside the container
+          mycontainer.addEventListener('scroll', resetTimer);
+
+          // Start the timer initially
+          resetTimer();
         }
       });
-</script>
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+    </script>
   </body>
 </html>
