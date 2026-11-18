@@ -665,8 +665,6 @@
           flex-direction: column;
         }
       }
-
-      /* Styles for screens 768px or smaller (mobile sizes) ********************************************************************  */
       @media screen and (max-width: 375px) {
         * {
           padding: 0;
@@ -847,8 +845,6 @@
         bottom: 65px;/*65px*/
         left: 45%;
         border-radius: 50%;
-        /*border: 18px solid rgba(120, 170, 110, 0.411);*/
-        /*background-color: rgb(120, 170, 110);*/
          background:linear-gradient(
            -222deg,
            transparent,
@@ -2524,7 +2520,7 @@
 
           // You can iterate over the resulting NodeList using forEach, for...of, etc.
           allTds.forEach((cell, i) => {
-            if (cell.innerHTML === "الثلاثاء") { /*   the day of .............................................................    */
+            if (cell.innerHTML === "الأربعاء") { /*   the day of .............................................................    */
               allInputFields[i].value = "1001";
               allSchoolsFields[i].innerHTML = "ديوان الادارة";
                allSchoolsFields[i].style.color="#000000";
@@ -2536,7 +2532,7 @@
               allSchoolsFields[i].style.color="#000000";
             }
             if (superName === "ايمان صالح") {
-              if (cell.innerHTML === "الاثنين" || cell.innerHTML==="الأربعاء") {
+              if (cell.innerHTML === "الاثنين") {
                 allInputFields[i].value = "1025";
                 allSchoolsFields[i].innerHTML = "تدريب عملي";
                 allSchoolsFields[i].style.color="#000000";
@@ -2577,9 +2573,6 @@
                td5.style.backgroundColor = "#DAB1DA";
              }
         
-                ///////////////////////////////////////////////////////
-         
-          
           td5.addEventListener("keyup", function () {
                   // change back of code input if empty
              if(td5.innerHTML===""){
@@ -3860,5 +3853,33 @@
         document.getElementById(element).disabled = `${status}`;
       }
     </script>
+
+    <script>
+const container = document.getElementById('myBoxContainer');
+  const firstItem = document.getElementById('myHolder');
+  let inactivityTimer;
+
+  function startTimer() {
+    // Clear any existing timer
+    clearTimeout(inactivityTimer);
+
+    // Start a new 60-second countdown
+    inactivityTimer = setTimeout(() => {
+      // Smoothly scroll the container back to the first item
+      container.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 6000); // 60,000 ms = 60 seconds
+  }
+
+  // Reset the timer every time the user scrolls
+  container.addEventListener('scroll', () => {
+    startTimer();
+  });
+
+  // Start the timer initially when the page loads
+  startTimer();
+</script>
   </body>
 </html>
