@@ -3855,7 +3855,7 @@
     </script>
 
     <script>
-const container = document.getElementById('myBoxContainer');
+const mycontainer = document.getElementById('myBoxContainer');
   const firstItem = document.getElementById('myHolder');
   let inactivityTimer;
 
@@ -3866,15 +3866,15 @@ const container = document.getElementById('myBoxContainer');
     // Start a new 60-second countdown
     inactivityTimer = setTimeout(() => {
       // Smoothly scroll the container back to the first item
-      container.scrollTo({
+      mycontainer.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-    }, 6000); // 60,000 ms = 60 seconds
+    }, 100); // 60,000 ms = 60 seconds
   }
 
   // Reset the timer every time the user scrolls
-  container.addEventListener('scroll', () => {
+  mycontainer.addEventListener('scroll', () => {
     startTimer();
   });
 
