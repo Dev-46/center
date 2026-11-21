@@ -9,10 +9,8 @@
     <script src="https://jquery.com"></script>
     <!-- Add this line below them -->
     <script src="https://cloudflare.com"></script>
-    <link
-      rel="icon"
-      href="/favicon.ico "
-    />
+
+    <link rel="icon" href="/favicon.ico" />
 
     <style>
       * {
@@ -1005,8 +1003,6 @@
         --bg: light-dark (var(--white), var(--black));
       }
 
-
-
       input[type="range"] {
         writing-mode: vertical-lr;
         direction: rtl;
@@ -1083,12 +1079,26 @@
       }
 
       /**/
+      .infolists {
+        position: fixed;
+        left: 50px;
+        top: 30px;
+        background: #11111133;
+        color: white;
+        font-size: 14px;
+        list-style: none;
+        max-height: 80px;
+        height: 50px;
+        min-height: 50px;
+        overflow-y: scroll;
+      }
     </style>
   </head>
 
   <body>
     <!-- موسيقى الخلفية أثناء الإدخال -->
-    <audio id="bgMusic" src="general-aims.mp4" loop preload="auto"></audio>
+    <audio id="bgMusic" src="" loop preload="auto"></audio
+    ><!-- general-aims.mp4 -->
     <div style="z-index: 2000" id="ranger">
       <label for="volumeSlider"></label>
       <input
@@ -1101,8 +1111,9 @@
       />
     </div>
     <script>
+      let timerList = 5000;
       const music = document.getElementById("bgMusic");
-      music.volume = 0.00; // Sets volume to 20%
+      music.volume = 0.0; // Sets volume to 20%
       const slider = document.getElementById("volumeSlider");
 
       // Set initial volume to match slider
@@ -1146,7 +1157,46 @@
       <!-- /section2 -->
       <div id="plans"></div>
     </div>
+    <script>
+      const infoList = document.createElement("ul");
+      infoList.style.zIndex = "6666";
+      infoList.className = "infolists";
+      infoList.dataset.noDuplicates = "";
+      document.body.appendChild(infoList);
+      infoList.addEventListener("click", () => {
+        infoList.style.display = "none";
+      });
 
+      function enableNoDuplicates(ul) {
+        // Ensure the attribute is set if passed directly to this function
+        ul.dataset.noDuplicates = "";
+
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeName === "LI") {
+                const newText = node.textContent.trim();
+                const existingItems = Array.from(ul.querySelectorAll("li"));
+
+                const isDuplicate = existingItems.some(
+                  (item) =>
+                    item !== node && item.textContent.trim() === newText,
+                );
+
+                if (isDuplicate) {
+                  node.remove();
+                }
+              }
+            });
+          });
+        });
+
+        observer.observe(ul, { childList: true });
+      }
+
+      // 3. Apply it to your list
+      enableNoDuplicates(infoList);
+    </script>
     <script>
       ///////////////////////////////////////drop
       // ==========================================
@@ -1175,7 +1225,12 @@
           oscillator.start();
           oscillator.stop(audioCtx.currentTime + 0.8);
         } catch (error) {
+          console.clear();
           console.log("يجب النقر في الصفحة لتفعيل الصوت.");
+          infoList.innerHTML += "<li> يجب النقر الصوت.</li>";
+          setTimeout(() => {
+            document.body.removeChild(infoList);
+          }, timerList);
         }
       }
 
@@ -1213,10 +1268,16 @@
           document.getElementById("clickerPeep").style.display = "none";
           document.getElementById("clickerPeep2").style.display = "none";
           document.getElementById("clickerBannar").style.display = "none";
-           document.getElementById("ranger").style.display = "none";
-           document.getElementById("myBoxContainer").style.display = "none";
+          document.getElementById("ranger").style.display = "none";
+          document.getElementById("myBoxContainer").style.display = "none";
+          console.clear();
           document.title = "✅ جاهز للسكرين شات";
           console.log("✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات");
+          infoList.innerHTML +=
+            "<li>✅ جميع الخلايا ممتلئة - مسموح بأخذ سكرين شات</li>";
+          setTimeout(() => {
+            document.body.removeChild(infoList);
+          }, timerList);
           playBeepAlarm();
         }
       }
@@ -2094,7 +2155,7 @@
           ladle.appendChild(txtspan);
           ladle.appendChild(closespan);
         }
-
+        let backsounds;
         // if supervisor is Ibrahim | Ghada | Hanan | Amal | Eman *************************************
         switch (superName) {
           case "ابراهيم حسان":
@@ -2112,11 +2173,20 @@
               father.className = "ourFathers";
               father.appendChild(schooler);
               father.appendChild(coder);
-
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
             });
+            //audio empty//////////////////////////////////////////////////////////////////////
+            backsounds = document.getElementById("bgMusic");
+            backsounds.src = "general-aims.mp4";
+            console.clear();
+            console.log("THERE IS A BACKGROUND SOUND WITH", superName);
+            infoList.innerHTML += `<li>BACKGROUND SOUND : ${superName}</li>`;
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
+            //////////////////////////////////////////////////////////////////////////////////////
             //alert("my clicked is okay!");
             let mySwitcherBtnIbra = document.createElement("button");
             mySwitcherBtnIbra.style.position = "fixed";
@@ -2170,8 +2240,18 @@
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
-              document.getElementById("ranger").innerHTML="";//////////////////////////////////////
             });
+            //audio empty//////////////////////////////////////////////////////////////////////
+            document.getElementById("ranger").innerHTML = "";
+            backsounds = document.getElementById("bgMusic");
+            backsounds.src = "";
+            console.clear();
+            console.log("THERE IS NOT A BACKGROUND SOUND WITH", superName);
+            infoList.innerHTML += `<li>NO BACKGROUND SOUND ${superName}</li>`;
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
+            //////////////////////////////////////////////////////////////////////////////////////
             //alert("my clicked is okay!");
             let mySwitcherBtnAml = document.createElement("button");
             mySwitcherBtnAml.style.position = "fixed";
@@ -2221,8 +2301,18 @@
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
-              document.getElementById("ranger").innerHTML="";
             });
+            //audio empty//////////////////////////////////////////////////////////////////////
+            document.getElementById("ranger").innerHTML = "";
+            backsounds = document.getElementById("bgMusic");
+            backsounds.src = "";
+            console.clear();
+            console.log("NO BACKGROUND SOUND: ", superName);
+            infoList.innerHTML += `<li>NO BACKGROUND SOUND: ${superName}</li>`;
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
+            //////////////////////////////////////////////////////////////////////////////////////
             //alert("my clicked is okay!");
             let mySwitcherBtnGha = document.createElement("button");
             mySwitcherBtnGha.style.position = "fixed";
@@ -2269,8 +2359,18 @@
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
-              document.getElementById("ranger").innerHTML="";
             });
+            //audio empty//////////////////////////////////////////////////////////////////////
+            document.getElementById("ranger").innerHTML = "";
+            backsounds = document.getElementById("bgMusic");
+            backsounds.src = "";
+            console.clear();
+            console.log("NO BACKGROUND SOUND: ", superName);
+            infoList.innerHTML += `<li>NO BACKGROUND SOUND:  ${superName}</li>`;
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
+            //////////////////////////////////////////////////////////////////////////////////////
             //alert("my clicked is okay!");
             let mySwitcherBtnHan = document.createElement("button");
             mySwitcherBtnHan.style.position = "fixed";
@@ -2321,8 +2421,18 @@
               myBox.appendChild(father);
               document.body.appendChild(myBox);
               myBox.style.zIndex = 1000;
-              document.getElementById("ranger").innerHTML="";
             });
+            //audio empty//////////////////////////////////////////////////////////////////////
+            document.getElementById("ranger").innerHTML = "";
+            backsounds = document.getElementById("bgMusic");
+            backsounds.src = "";
+            console.clear();
+            console.log("NO BACKGROUND SOUND: ", superName);
+            infoList.innerHTML += `<li>NO BACKGROUND SOUND: ${superName}</li>`;
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
+            //////////////////////////////////////////////////////////////////////////////////////
             //alert("my clicked is okay!");
             let mySwitcherBtnEma = document.createElement("button");
             mySwitcherBtnEma.style.position = "fixed";
@@ -2921,7 +3031,12 @@
 
           if (isMobileScreen) {
             // Code to run for mobile screens (viewport width <= 768px)
+            console.clear();
             console.log("This is a mobile screen.");
+            infoList.innerHTML += "<li>A mobile screen.</li>";
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
             document.getElementById("printer").style.backgroundColor =
               "transparent";
             document.getElementById("printer").style.color = "transparent";
@@ -2930,7 +3045,12 @@
             document.getElementById("mytable").style.zIndex = "1000";
           } else {
             // Code to run for non-mobile screens (viewport width > 768px)
+            console.clear();
             console.log("This is not a mobile screen.");
+            infoList.innerHTML += "<li>Not a mobile screen.</li>";
+            setTimeout(() => {
+              document.body.removeChild(infoList);
+            }, timerList);
             //
 
             document.getElementById("printer").innerHTML =
@@ -4276,10 +4396,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
